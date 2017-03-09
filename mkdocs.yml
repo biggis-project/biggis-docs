@@ -1,7 +1,0 @@
-site_name: BigGIS documentation
-
-pages:
-  - index.md
-  - contributing.md
-
-theme: readthedocs
