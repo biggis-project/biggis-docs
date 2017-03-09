@@ -9,8 +9,7 @@ data, that are unstructured and from unreliable sources. The system provides
 predictive, prescriptive and visual tool integrated in a common analytical
 pipeline.
 
-.. figure:: images/biggis-scenarios.svg
-  :alt:
+.. figure:: images/biggis-scenarios.*
   
 The project is evaluated on three scenarios:
  - “Smart city”
