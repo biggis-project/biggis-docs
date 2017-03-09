@@ -1,11 +1,36 @@
-.. BigGIS documentation master file, created by
-   sphinx-quickstart on Thu Mar  9 09:33:32 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+About BigGIS?
+=====================
 
-Welcome to BigGIS's documentation!
-==================================
+BigGIS is a new generation of GIS that supports decision making in multiple
+scenarios which require processing of large and heterogeneous data sets.
 
+The novelty lies in an integrated analytical approach to spatio-temporal
+data, that are unstructured and from unreliable sources. The system provides
+predictive, prescriptive and visual tool integrated in a common analytical
+pipeline.
+
+.. figure:: images/biggis-scenarios.svg
+  :alt:
+  
+The project is evaluated on three scenarios:
+ - “Smart city”
+ - “Environmental management”
+ - “Disaster control”.
+
+
+Please visit the `project site <http://biggis-project.eu>`__ for more
+information as well as some interactive demos.
+
+
+Why BigGIS?
+=================
+
+TODO
+
+Contact and Support
+-------------------
+
+TODO
 
 .. ===============================================
    Here comes the side menu with links to chapters
