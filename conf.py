@@ -282,3 +282,9 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+numfig = True
+# numfig_format = {
+#     'figure': 'Figure %s',
+#     'table': 'My tab %s',
+#     'code-block': 'My code %s' }
