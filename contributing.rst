@@ -83,3 +83,30 @@ yourself. Steps:
 
 .. note:: Changes you make will not be automatically applied; you will have
           to rebuild the docs yourself. Luckily the docs build in about a second.
+
+Notes about sphinx format
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Currently, we use `sphinx <http://sphinx-doc.org>`__ and its RST format to write the documentation.
+We also tried the `mkdocs <http://mkdocs.org>`__ tool which uses Markdown as input format.
+Markdown is easier and more familiar to github users than RST but it has some drawbacks.
+
+The main showstoppers are the following:
+
+1. PDF cannot be generated using [mkdocs]
+2. Generated HTML hosted at `readthedocs.io <http://readthedocs.io>`__ is not
+   searchable which is a known bug. There are some half-working workarounds
+   e.g. used by the `Gobblin project <https://github.com/linkedin/gobblin>`__.
+
+Since we want to generate HTML as well as PDF documents, we would like to use
+images in a vector format. For HTML it is SVG that is vector-based and rendered
+by new browesers. For PDF, we had to resort to PDF format due to some bug
+in the sphinx tool. Luckily, we can convert all SVG files automatically using
+the `figconv tool <https://github.com/vsimko/figconv>`__. Figconv converts multiple
+input formats into PDF and automatically crops the output. Moreover, It only
+converts changed files, therefore it can be called multiple times, e.g. before
+every push to github.
+
+- TODO: how to include images into text
+- TODO: how to include figures into text (and using references to figures)
+
+
