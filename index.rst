@@ -27,8 +27,8 @@ information as well as some interactive demos.
 Why BigGIS?
 -------------------
 
-Current GIS solution are mostly tackling big data related requirements
-in terms of data volume or data velocity. In the era of cloud computing,
+Current GIS solution are mostly tackling big data related requirements in
+terms of data volume or data velocity. In the era of cloud computing,
 leveraging cloud-based resources is a widely adopted pattern. In addition,
 with the advent of big data analytics, performing massively parallel
 analytical tasks on large-scale data at rest or data in motion is as well
@@ -40,16 +40,17 @@ schema heterogeneity, e.g., to describe locations such as addresses, relative
 spatial relationships or different coordinates reference systems. Secondly,
 modeling the inherent uncertainties in data (veracity), e.g., real-world
 noise and erroneous values due to the nature of the data collecting process.
-Both being crucial tasks in data management and analytics that directly affect
-the information retrieval and decision-making quality and moreover the generated
-knowledge on human-side (value). By leveraging the the continuous refinement
-model, we present a holistic approach that explicitly deals with all big data
-dimensions. By integrating the user in the process, computers can learn from
-the cognitive and perceptive skills of human analysis to create hidden
-connections between data and the problem domain. This helps to decrease
-the noise and uncertainty and allows to build up trust in the analysis results
-on user side which will eventually lead to an increasing likelihood of relevant
-findings and generated knowledge.
+Both being crucial tasks in data management and analytics that directly
+affect the information retrieval and decision-making quality and moreover
+the generated knowledge on human-side (value). By leveraging the the
+continuous refinement model, we present a holistic approach that explicitly
+deals with all big data dimensions. By integrating the user in the
+process, computers can learn from the cognitive and perceptive skills of
+human analysis to create hidden connections between data and the problem
+domain. This helps to decrease the noise and uncertainty and allows to
+build up trust in the analysis results on user side which will eventually
+lead to an increasing likelihood of relevant findings and generated
+knowledge.
 
 Contact and Support
 -------------------
