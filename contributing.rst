@@ -84,6 +84,16 @@ yourself. Steps:
 .. note:: Changes you make will not be automatically applied; you will have
           to rebuild the docs yourself. Luckily the docs build in about a second.
 
+
+Recreating documentation on the fly
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There is a way to recreate the doc automatically when you make changes, you
+need to install python package watchdog (``pip install watchdog``) and then use::
+
+    make watch
+
+
 Notes about sphinx format
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 Currently, we use `sphinx <http://sphinx-doc.org>`__ and its RST format to write the documentation.
@@ -92,10 +102,11 @@ Markdown is easier and more familiar to github users than RST but it has some dr
 
 The main showstoppers are the following:
 
-1. PDF cannot be generated using [mkdocs]
+1. PDF cannot be generated using ``mkdocs``
 2. Generated HTML hosted at `readthedocs.io <http://readthedocs.io>`__ is not
-   searchable which is a known bug. There are some half-working workarounds
-   e.g. used by the `Gobblin project <https://github.com/linkedin/gobblin>`__.
+   searchable which is a known bug. There are some
+   `half-working workaround <https://github.com/linkedin/gobblin/blob/master/gobblin-docs/js/extra.js>`__
+   used by the `Gobblin project <https://github.com/linkedin/gobblin>`__.
 
 Since we want to generate HTML as well as PDF documents, we would like to use
 images in a vector format. For HTML it is SVG that is vector-based and rendered
@@ -106,7 +117,6 @@ input formats into PDF and automatically crops the output. Moreover, It only
 converts changed files, therefore it can be called multiple times, e.g. before
 every push to github.
 
-- TODO: how to include images into text
-- TODO: how to include figures into text (and using references to figures)
-
-
+.. note::
+  - TODO: how to include images into text
+  - TODO: how to include figures into text (and using references to figures)
