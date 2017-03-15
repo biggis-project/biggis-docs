@@ -288,3 +288,13 @@ numfig = True
 #     'figure': 'Figure %s',
 #     'table': 'My tab %s',
 #     'code-block': 'My code %s' }
+
+# Added by Viliam Simko on 15.3.2017 based on readthedocs documentation:
+# - https://read-the-docs.readthedocs.io/en/latest/getting_started.html#in-markdown
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+  '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
