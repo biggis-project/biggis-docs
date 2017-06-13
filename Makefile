@@ -20,6 +20,7 @@ help:
 	@/bin/echo -e "\e[36m  open-html \e[0m: Opens HTML document in browser"
 	@/bin/echo -e "\e[36m  open-pdf  \e[0m: Opens PDF document in browser"
 	@/bin/echo -e "\e[36m  watch     \e[0m: Opens HTML in browser and recompile on change"
+	@/bin/echo -e "\e[36m  clean     \e[0m: Removes everything under '_build'"
 
 .PHONY: help
 
