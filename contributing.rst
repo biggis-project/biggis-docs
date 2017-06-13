@@ -117,6 +117,5 @@ input formats into PDF and automatically crops the output. Moreover, It only
 converts changed files, therefore it can be called multiple times, e.g. before
 every push to github.
 
-.. note::
-  - TODO: how to include images into text
-  - TODO: how to include figures into text (and using references to figures)
+.. todo:: how to include images into text
+.. todo:: how to include figures into text (and using references to figures)
