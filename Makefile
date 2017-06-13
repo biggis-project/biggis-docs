@@ -26,13 +26,11 @@ help:
 img:
 	cd images; figconv
 
-# how to compile HTML documents
 %.html:
 	make html
 
-# how to compile PDF documents
-%.pdf: latexpdf
-	@echo "PDF ready"
+%.pdf:
+	make latexpdf
 
 # open documents in the browser
 open-html: $(OUT_HTML_DOC)
