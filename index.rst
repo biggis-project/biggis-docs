@@ -67,6 +67,7 @@ TODO
    :hidden:
 
    contributing
+   rst-examples
 
 .. toctree::
    :maxdepth: 2
