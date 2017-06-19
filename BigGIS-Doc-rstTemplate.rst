@@ -30,7 +30,7 @@ Detailed information on `footnotes <http://docutils.sourceforge.net/docs/user/rs
 Citation
 ----------
 
-Citation are implemented as: 
+Citations are implemented as: 
 
 .. code::
 
