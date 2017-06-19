@@ -118,6 +118,3 @@ the `figconv tool <https://github.com/vsimko/figconv>`__. Figconv converts multi
 input formats into PDF and automatically crops the output. Moreover, It only
 converts changed files, therefore it can be called multiple times, e.g. before
 every push to github.
-
-.. todo:: how to include images into text
-.. todo:: how to include figures into text (and using references to figures)
