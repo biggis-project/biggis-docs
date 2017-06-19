@@ -63,6 +63,13 @@ MacOS
 
 ``brew`` doesn't supply the sphinx binaries, so use ``pip`` here.
 
+Windows
+'''''''''''
+
+Install Python and pip as described `here <http://www.sphinx-doc.org/en/stable/install.html#windows-install-python-and-sphinx>`_.
+
+Then install sphinx using ``pip`` as described below.
+
 Pip
 '''
 
@@ -70,7 +77,7 @@ Pip
 
    > pip install sphinx sphinx_rtd_theme
    
-.. todo:: if markdown sninppets should also be able to be rendered, ``> pip install commonmark recommonmark`` is required.
+.. todo:: if markdown sninppets should also be rendered, ``> pip install commonmark recommonmark`` is required.
 
 Building the Docs
 ^^^^^^^^^^^^^^^^^
