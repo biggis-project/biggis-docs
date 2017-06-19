@@ -69,6 +69,8 @@ Pip
 .. code:: console
 
    > pip install sphinx sphinx_rtd_theme
+   
+.. todo:: if markdown sninppets should also be able to be rendered, ``> pip install commonmark recommonmark`` is required.
 
 Building the Docs
 ^^^^^^^^^^^^^^^^^

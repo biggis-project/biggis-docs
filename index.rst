@@ -67,7 +67,7 @@ TODO
    :hidden:
 
    contributing
-   rst-examples
+   BigGIS-Doc-rstTemplate
 
 .. toctree::
    :maxdepth: 2
