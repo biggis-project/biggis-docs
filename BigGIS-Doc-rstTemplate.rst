@@ -144,7 +144,7 @@ Or it can be displayed in a code block with optional syntax highlighting if the 
       "just a test"
       print 8/2 
 
-Further information on `Code Blocks <http://docutils.sourceforge.net/docs/ref/rst/directives.html#code>`_.	  
+Further information on Code Blocks can be found `here <http://docutils.sourceforge.net/docs/ref/rst/directives.html#code>`_.	  
 
 References
 -------------
