@@ -107,7 +107,7 @@ True   True   True
 
 Further information about `tables <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#tables>`_.
 
-Forumulas
+Formulas
 -------------
 
 The math syntax for RST is the same as for Latex. Details can be found `here <http://www.ams.org/publications/authors/tex/amslatex>`_. 
