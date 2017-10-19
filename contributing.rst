@@ -49,14 +49,14 @@ Ubuntu 16.04
 
 .. code:: console
 
-   > sudo apt-get install python-sphinx python-sphinx-rtd-theme
+   $ sudo apt install python-sphinx python-sphinx-rtd-theme
 
 Arch Linux
 ''''''''''
 
 .. code:: console
 
-   > sudo pacman -S python-sphinx python-sphinx_rtd_theme
+   $ sudo pacman -S python-sphinx python-sphinx_rtd_theme
 
 MacOS
 '''''
