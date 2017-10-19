@@ -44,19 +44,17 @@ for everyting else. To build docs on your own machine, ensure that
 Installing Dependencies
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 16.04
-''''''''''''
+Ubuntu and Mint
+'''''''''''''''
 
 .. code:: console
 
    $ sudo apt install python-sphinx python-sphinx-rtd-theme
-
-Arch Linux
-''''''''''
-
-.. code:: console
-
-   $ sudo pacman -S python-sphinx python-sphinx_rtd_theme
+   $ pip install --user commonmark recommonmark
+   
+   # Install figconv
+   $ wget https://github.com/vsimko/figconv/releases/download/v4.3/figconv_4.3.deb
+   $ sudo dpkg -i figconv_4.3.deb
 
 MacOS
 '''''
