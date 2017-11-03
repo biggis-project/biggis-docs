@@ -1,4 +1,7 @@
-Data pre-cached / downloaded to bwCloud as a part of BigGIS
+## Data in bwCloud
+
+Pre-cached / downloaded to bwCloud as a part of BigGIS
+
 - ATKIS land use data (multiple options possible - TODO:Matthias) TODO:how big
   - shapefiles in a directory
   - data in Accumulo/Exasolution
@@ -13,7 +16,7 @@ Data pre-cached / downloaded to bwCloud as a part of BigGIS
   - DWD (REST API for pulling)
   - Wunderground (TODO:UKON)
 
-Connectors to external services
+## Connectors to external services
 The following connectors to external data sources should be available (for pulling data as a stream).
 
 - Pulling data:

@@ -1,5 +1,4 @@
-About BigGIS?
--------------------
+## About BigGIS?
 
 BigGIS is a new generation of GIS that supports decision making in multiple
 scenarios which require processing of large and heterogeneous data sets.
@@ -9,23 +8,22 @@ data, that are unstructured and from unreliable sources. The system provides
 predictive, prescriptive and visual tool integrated in a common analytical
 pipeline.
 
-.. |scen1| image:: images/scen-smartcity.*
-.. |scen2| image:: images/scen-environment.*
-.. |scen3| image:: images/scen-disaster.*
+![](scenarios/img/scen-smartcity.svg)
+![](scenarios/img/scen-environment.svg)
+![](scenarios/img/scen-disaster.svg)
 
-.. centered:: |scen1| |scen2| |scen3|
 
 The project is evaluated on three scenarios:
- - “Smart city” (urban heat islands, particulate matter)
- - “Environmental management” (health threatening animals and plants)
- - “Disaster control, civil protection” (air pollution, toxic chemicals)
 
-Please visit the `project site <http://biggis-project.eu>`__ for more
+ - [Smart city](scenarios/Smart%20City) (urban heat islands, particulate matter)
+ - [Environmental management](scenarios/Environment) (health threatening animals and plants)
+ - [Disaster control, civil protection](scenarios/Disaster%20Management) (air pollution, toxic chemicals)
+
+Please visit the [project website](http://biggis-project.eu) for more
 information as well as some interactive demos.
 
 
-Why BigGIS?
--------------------
+## Why BigGIS?
 
 Current GIS solution are mostly tackling big data related requirements in
 terms of data volume or data velocity. In the era of cloud computing,
@@ -52,29 +50,9 @@ build up trust in the analysis results on user side which will eventually
 lead to an increasing likelihood of relevant findings and generated
 knowledge.
 
-Contact and Support
--------------------
+## Contact and Support
 
-TODO
-
-.. ===============================================
-   Here comes the side menu with links to chapters
-   ===============================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Home
-   :hidden:
-
-   contributing
-   BigGIS-Doc-rstTemplate
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Architecture
-   :glob:
-   :hidden:
-
-   architecture/containers
-   architecture/bwcloud-infra
-
+Role                      | Name                     | E-mail
+--------------------------|--------------------------|---------------
+**Contact person**        | Prof. Dr. Thomas Setzer  | setzer@fzi.de
+**Project coordination**  | Dr. Viliam Simko         | simko@fzi.de

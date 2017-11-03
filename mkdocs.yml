@@ -1,0 +1,41 @@
+# Project information
+site_name: 'BigGIS Documentation'
+site_author: 'BigGIS Project'
+site_description: 'Documentation of all components within the project'
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/biggis-project/biggis-docs'
+
+# Copyright
+#copyright: 'Copyright &copy; 2017 - 2021 SeRoNet Project'
+
+# Documentation and theme
+theme: material
+
+
+site_favicon: 'img/favicon.ico'
+
+extra:
+#  logo: 'img/seronet-logo-icon.svg'
+  palette:
+    primary: 'dark blue'
+    accent: 'blue'
+  feature:
+      tabs: true
+  social: # see http://fontawesome.io/icons/ for allowed 'type' values
+      - type: 'globe'
+        link: 'https://www.seronet-projekt.de'
+      - type: 'github'
+        link: 'https://github.com/seronet-project'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.magiclink: # see https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
+      repo_url_shortener: true
+
