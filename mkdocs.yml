@@ -31,11 +31,16 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - codehilite:
+  - footnotes                   # https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
+  - pymdownx.arithmatex         # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax
+  - pymdownx.smartsymbols       # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#smartsymbols
+  - admonition                  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - pymdownx.magiclink:         # https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
+      repo_url_shortener: true
+  - codehilite:                 # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
       guess_lang: false
   - toc:
       permalink: true
-  - pymdownx.magiclink: # see https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
-      repo_url_shortener: true
 
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
