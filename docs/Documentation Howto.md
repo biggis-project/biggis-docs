@@ -62,8 +62,6 @@ and deploy it automatically as a github page (served from `gh-pages` branch).
 
 ## Formatting examples
 
-see also
-
 ### Sectioning
 
     # Chapter
@@ -72,123 +70,94 @@ see also
     
     ### Subsection
 
-
 ### Footnotes
 
-!!! TODO
-    Viliam
+See also https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
 
-### Citations
+    Some text with a footnote[^1]
+    
+    [^1]: Text of the footnote
+
+### Citations, Notes
 
     !!! Citation
         Here comes the citation including authors, title, year, doi, url ...
 
 !!! Citation
     Here comes the citation including authors, title, year, doi, url ...
-    
+
 ### Images and Figures
 
-    ![Image "alt" description](path/to)
+You can include images into the documentation in the following format:
 
-A "figure" consists of image data (including image options), an optional caption (a single paragraph), and an optional legend (arbitrary body elements). This is an example for a centered figure scaled to 50% with caption and legend.
+  - **SVG** (scalable vectors).
+  - **JPG** (photos)
+  - **PNG** (raster graphics)
 
-.. figure:: images/scen-smartcity.*
-	:name: my-figure
-	:scale: 50 %
-	:alt: smartcity symbol
-	:align: center
+In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.
+See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
 
-	This is the caption of the figure (a simple paragraph).
 
-	The legend consists of all elements after the caption. In this case, the legend consists of this paragraph
+    ![Image "alt" description](path/to/image.svg)
 
-Reference to the figure :numref:`my-figure`
 
-All images in the BigGIS documentation should be vector graphics. The sphinx builder uses different input image formats for different output formats (svg for html output, and pdf for pdflatex output). When including the image in the document use the syntax as in the example above, so that sphinx automatically includes the right format:
+![Disaster Icon](scenarios/img/scen-disaster.svg)
 
-.. code::
-   
-   .. figure:: images/scen-smartcity.*
 
-Please always provide at least the svg-Version of your image.
+### Tables
 
-.. TODO: Figure enumeration and referencing (siehe http://www.sphinx-doc.org/en/stable/markup/inline.html#cross-referencing-figures-by-figure-number )
+See also http://www.mkdocs.org/user-guide/writing-your-docs/#tables
 
-For further reading on `images <http://docutils.sourceforge.net/docs/ref/rst/directives.html#image>`_ and `figures <http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure>`_ refer to the RST documentation.
+    First Header | Second Header | Third Header
+    ------------ | ------------- | ------------
+    Content Cell | Content Cell  | Content Cell
+    Content Cell | Content Cell  | Content Cell
 
-Tables
----------
+First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
 
-Grid table:
 
-+------------+------------+-----------+ 
-| Header 1   | Header 2   | Header 3  | 
-+============+============+===========+ 
-| body row 1 | column 2   | column 3  | 
-+------------+------------+-----------+ 
-| body row 2 | Cells may span columns.| 
-+------------+------------+-----------+ 
-| body row 3 | Cells may  | - Cells   | 
-+------------+ span rows. | - contain | 
-| body row 4 |            | - blocks. | 
-+------------+------------+-----------+
+### Formulas
 
-Simple table:
+Formula are generated using [MathJax](https://www.mathjax.org/), which is similar to LaTeX.
+See also this [quick reference][MathJaxRef].
 
-=====  =====  ====== 
-   Inputs     Output 
-------------  ------ 
-  A      B    A or B 
-=====  =====  ====== 
-False  False  False 
-True   False  True 
-False  True   True 
-True   True   True 
-=====  =====  ======
+[MathJaxRef]: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
-Further information about `tables <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#tables>`_.
+    $$
+    \frac{n!}{k!(n-k)!} = \binom{n}{k}
+    $$
 
-Formulas
--------------
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
 
-The math syntax for RST is the same as for Latex. Details can be found `here <http://www.ams.org/publications/authors/tex/amslatex>`_. 
 
-Inline use of mathematic terms looks this :math:`\frac{ abc}{N}`
+### Source Code
 
-The other option is to present formulas in an own environment using ``..math::``
+Code can be displayed inline like this:
 
-.. code::
-   
-   .. math::
-      
-      \frac{ \sum_{t=0}^{N}f(t,k) }{N}
- 
-Which then looks like this:
-
-.. math::
-   
-   \frac{ \sum_{t=0}^{N}f(t,k) }{N}
- 
-Further information about formulas and math in RST can be found `here <http://www.sphinx-doc.org/en/stable/ext/math.html>`_.
-
-Source Code
-------------
-Code can be displayed inline like this :samp:`print 1+{variable}` 
-
-or like this ``print 8/2``
+    `print 1+{variable}`
 
 Or it can be displayed in a code block with optional syntax highlighting if the language is specified.
 
-.. code:: python
-   
-   def my_function():
-      "just a test"
-      print 8/2 
+    ```python
+    def my_function():
+        "just a test"
+        print 8/2 
+    ```
 
-Further information on Code Blocks can be found `here <http://docutils.sourceforge.net/docs/ref/rst/directives.html#code>`_.	  
+```python
+def my_function():
+    "just a test"
+    print 8/2 
+```
 
-References
--------------
+### Smart Symbols
+See also https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
 
-.. [RSTSections] RST documentation (Sections), http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#sections
-.. [RST-Doc2017] RST documentation, http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+    Some smart symbols: -->,  <--, 1st, 2nd, 1/4
+    
+Some smart symbols: -->,  <--, 1st, 2nd, 1/4
