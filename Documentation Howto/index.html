@@ -372,8 +372,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#citations" title="Citations" class="md-nav__link">
-    Citations
+  <a href="#citations-notes" title="Citations, Notes" class="md-nav__link">
+    Citations, Notes
   </a>
   
 </li>
@@ -385,36 +385,36 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#tables" title="Tables" class="md-nav__link">
     Tables
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#formulas" title="Formulas" class="md-nav__link">
     Formulas
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#source-code" title="Source Code" class="md-nav__link">
     Source Code
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
+        
+          <li class="md-nav__item">
+  <a href="#smart-symbols" title="Smart Symbols" class="md-nav__link">
+    Smart Symbols
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -834,8 +834,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#citations" title="Citations" class="md-nav__link">
-    Citations
+  <a href="#citations-notes" title="Citations, Notes" class="md-nav__link">
+    Citations, Notes
   </a>
   
 </li>
@@ -847,36 +847,36 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#tables" title="Tables" class="md-nav__link">
     Tables
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#formulas" title="Formulas" class="md-nav__link">
     Formulas
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#source-code" title="Source Code" class="md-nav__link">
     Source Code
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
+        
+          <li class="md-nav__item">
+  <a href="#smart-symbols" title="Smart Symbols" class="md-nav__link">
+    Smart Symbols
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -949,7 +949,6 @@ docs/
 
 
 <h2 id="formatting-examples">Formatting examples<a class="headerlink" href="#formatting-examples" title="Permanent link">&para;</a></h2>
-<p>see also</p>
 <h3 id="sectioning">Sectioning<a class="headerlink" href="#sectioning" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span># Chapter
 
@@ -960,11 +959,14 @@ docs/
 
 
 <h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h3>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Viliam</p>
-</div>
-<h3 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h3>
+<p>See also <a href="https://squidfunk.github.io/mkdocs-material/extensions/footnotes/">https://squidfunk.github.io/mkdocs-material/extensions/footnotes/</a></p>
+<div class="codehilite"><pre><span></span>Some text with a footnote[^1]
+
+[^1]: Text of the footnote
+</pre></div>
+
+
+<h3 id="citations-notes">Citations, Notes<a class="headerlink" href="#citations-notes" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>!!! Citation
     Here comes the citation including authors, title, year, doi, url ...
 </pre></div>
@@ -975,80 +977,88 @@ docs/
 <p>Here comes the citation including authors, title, year, doi, url ...</p>
 </div>
 <h3 id="images-and-figures">Images and Figures<a class="headerlink" href="#images-and-figures" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>![Image &quot;alt&quot; description](path/to)
+<p>You can include images into the documentation in the following format:</p>
+<ul>
+<li><strong>SVG</strong> (scalable vectors).</li>
+<li><strong>JPG</strong> (photos)</li>
+<li><strong>PNG</strong> (raster graphics)</li>
+</ul>
+<p>In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.
+See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media">http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media</a></p>
+<div class="codehilite"><pre><span></span>![Image &quot;alt&quot; description](path/to/image.svg)
 </pre></div>
 
 
-<p>A "figure" consists of image data (including image options), an optional caption (a single paragraph), and an optional legend (arbitrary body elements). This is an example for a centered figure scaled to 50% with caption and legend.</p>
-<p>.. figure:: images/scen-smartcity.*
-    :name: my-figure
-    :scale: 50 %
-    :alt: smartcity symbol
-    :align: center</p>
-<div class="codehilite"><pre><span></span>This is the caption of the figure (a simple paragraph).
-
-The legend consists of all elements after the caption. In this case, the legend consists of this paragraph
+<p><img alt="Disaster Icon" src="../scenarios/img/scen-disaster.svg" /></p>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#tables">http://www.mkdocs.org/user-guide/writing-your-docs/#tables</a></p>
+<div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
+------------ | ------------- | ------------
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
 </pre></div>
 
 
-<p>Reference to the figure :numref:<code>my-figure</code></p>
-<p>All images in the BigGIS documentation should be vector graphics. The sphinx builder uses different input image formats for different output formats (svg for html output, and pdf for pdflatex output). When including the image in the document use the syntax as in the example above, so that sphinx automatically includes the right format:</p>
-<p>.. code::</p>
-<p>.. figure:: images/scen-smartcity.*</p>
-<p>Please always provide at least the svg-Version of your image.</p>
-<p>.. TODO: Figure enumeration and referencing (siehe <a href="http://www.sphinx-doc.org/en/stable/markup/inline.html#cross-referencing-figures-by-figure-number">http://www.sphinx-doc.org/en/stable/markup/inline.html#cross-referencing-figures-by-figure-number</a> )</p>
-<p>For further reading on <code>images &lt;http://docutils.sourceforge.net/docs/ref/rst/directives.html#image&gt;</code><em> and <code>figures &lt;http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure&gt;</code></em> refer to the RST documentation.</p>
-<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
-<p>Grid table:</p>
-<p>+------------+------------+-----------+ 
-| Header 1   | Header 2   | Header 3  | 
-+============+============+===========+ 
-| body row 1 | column 2   | column 3  | 
-+------------+------------+-----------+ 
-| body row 2 | Cells may span columns.| 
-+------------+------------+-----------+ 
-| body row 3 | Cells may  | - Cells   | 
-+------------+ span rows. | - contain | 
-| body row 4 |            | - blocks. | 
-+------------+------------+-----------+</p>
-<p>Simple table:</p>
-<p>=====  =====  ====== 
-   Inputs     Output </p>
-<hr />
-<p>A      B    A or B 
-=====  =====  ====== 
-False  False  False 
-True   False  True 
-False  True   True 
-True   True   True 
-=====  =====  ======</p>
-<p>Further information about <code>tables &lt;http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#tables&gt;</code>_.</p>
-<h2 id="formulas">Formulas<a class="headerlink" href="#formulas" title="Permanent link">&para;</a></h2>
-<p>The math syntax for RST is the same as for Latex. Details can be found <code>here &lt;http://www.ams.org/publications/authors/tex/amslatex&gt;</code>_. </p>
-<p>Inline use of mathematic terms looks this :math:<code>\frac{ abc}{N}</code></p>
-<p>The other option is to present formulas in an own environment using <code>..math::</code></p>
-<p>.. code::</p>
-<p>.. math::</p>
-<div class="codehilite"><pre><span></span>  \frac{ \sum_{t=0}^{N}f(t,k) }{N}
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formulas">Formulas<a class="headerlink" href="#formulas" title="Permanent link">&para;</a></h3>
+<p>Formula are generated using <a href="https://www.mathjax.org/">MathJax</a>, which is similar to LaTeX.
+See also this <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">quick reference</a>.</p>
+<div class="codehilite"><pre><span></span>$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
 </pre></div>
 
 
-<p>Which then looks like this:</p>
-<p>.. math::</p>
-<p>\frac{ \sum_{t=0}^{N}f(t,k) }{N}</p>
-<p>Further information about formulas and math in RST can be found <code>here &lt;http://www.sphinx-doc.org/en/stable/ext/math.html&gt;</code>_.</p>
-<h2 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
-<p>Code can be displayed inline like this :samp:<code>print 1+{variable}</code> </p>
-<p>or like this <code>print 8/2</code></p>
+<span>\[
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+\]</span><h3 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h3>
+<p>Code can be displayed inline like this:</p>
+<div class="codehilite"><pre><span></span>`print 1+{variable}`
+</pre></div>
+
+
 <p>Or it can be displayed in a code block with optional syntax highlighting if the language is specified.</p>
-<p>.. code:: python</p>
-<p>def my_function():
-      "just a test"
-      print 8/2 </p>
-<p>Further information on Code Blocks can be found <code>here &lt;http://docutils.sourceforge.net/docs/ref/rst/directives.html#code&gt;</code>_.      </p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>.. [RSTSections] RST documentation (Sections), <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#sections">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#sections</a>
-.. [RST-Doc2017] RST documentation, <a href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html</a></p>
+<div class="codehilite"><pre><span></span>```python
+def my_function():
+    &quot;just a test&quot;
+    print 8/2 
+```
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
+    <span class="s2">&quot;just a test&quot;</span>
+    <span class="k">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span> 
+</pre></div>
+
+
+<h3 id="smart-symbols">Smart Symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">&para;</a></h3>
+<p>See also <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/">https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/</a></p>
+<div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
+</pre></div>
+
+
+<p>Some smart symbols: &rarr;,  &larr;, 1<sup>st</sup>, 2<sup>nd</sup>, &frac14;</p>
                 
                   
                 
@@ -1132,6 +1142,8 @@ True   True   True
       
       
       <script>app.initialize({version:"0.16.3",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
     
