@@ -849,10 +849,7 @@
 <p><strong>Example:</strong></p>
 <ul>
 <li><strong>Sample Request:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/info</code></li>
-<li><strong>Sample Response:</strong></li>
-</ul>
-</li>
-</ul>
+<li><strong>Sample Response:</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="s2">&quot;heat stress routing&quot;</span><span class="p">,</span>
     <span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="s2">&quot;0.0.1-SNAPSHOT&quot;</span><span class="p">,</span>
@@ -890,9 +887,10 @@
         <span class="s2">&quot;fast_food&quot;</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</pre></div>
-
-
+</pre></div></li>
+</ul>
+</li>
+</ul>
 <h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -933,8 +931,7 @@
 <p><strong>Example:</strong></p>
 </li>
 <li><strong>Sample Request:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/routing?start=49.0118083,8.4251357&amp;destination=49.0126868,8.4065707&amp;time=2015-08-31T10:00:00&amp;weighting=shortest,heatindex,temperature</code></li>
-<li><strong>Sample Response:</strong></li>
-</ul>
+<li><strong>Sample Response:</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status_code&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
@@ -1040,9 +1037,8 @@
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
-
-
+</pre></div></li>
+</ul>
 <h2 id="optimal-time">Optimal time<a class="headerlink" href="#optimal-time" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -1093,8 +1089,7 @@
 <p><strong>Example:</strong></p>
 </li>
 <li><strong>Sample Request:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/optimaltime?start=49.0118083,8.4251357&amp;time=2015-08-31T10:00:00&amp;place_type=supermarket&amp;max_distance=1000&amp;max_results=5&amp;time_buffer=15&amp;earliest_time=2015-08-31T09:00:00&amp;latest_time=2015-08-31T20:00:00</code></li>
-<li><strong>Sample Response:</strong></li>
-</ul>
+<li><strong>Sample Response:</strong>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;OK&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status_code&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span>
@@ -1193,9 +1188,8 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</pre></div>
-
-
+</pre></div></li>
+</ul>
 <h2 id="error-messages">Error messages:<a class="headerlink" href="#error-messages" title="Permanent link">&para;</a></h2>
 <p>If an error occurs, e.g. because a bade request were send to the server or an internal server errors occurs, the server is sending a JSON response with the following content:</p>
 <ul>
@@ -1206,8 +1200,7 @@
 <p><strong>Example:</strong></p>
 <ul>
 <li><em>Example Request:</em> <code>http://localhost:8080/heatstressrouting/api/v1/optimaltime?start=Schloss,%20Karlsruhe&amp;time=2015-08-31T10:00:00&amp;place_type=supermarket</code></li>
-<li><em>Example Response:</em> </li>
-</ul>
+<li><em>Example Response:</em> 
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;BAD_REQUEST&quot;</span><span class="p">,</span>
     <span class="nt">&quot;status_code&quot;</span><span class="p">:</span><span class="mi">400</span><span class="p">,</span>
@@ -1215,9 +1208,8 @@
         <span class="s2">&quot;start (Schloss, Karlsruhe) could not be parsed: failed to parse coordinate; &#39;start&#39; must be a pair of latitude and longitude seperated by a comma (&#39;,&#39;), e.g. &#39;49.0118083,8.4251357&#39;)&quot;</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</pre></div>
-
-
+</pre></div></li>
+</ul>
 <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h1>
 <div class="admonition citation">
 <p class="admonition-title">Citation</p>
@@ -1312,7 +1304,17 @@ Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-045
       
       <script>app.initialize({version:"0.16.3",url:{base:"../.."}})</script>
       
+        <script src="../../extra.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
       
     
     

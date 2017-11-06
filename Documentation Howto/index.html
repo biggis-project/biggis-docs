@@ -417,6 +417,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sequence-diagrams" title="Sequence diagrams" class="md-nav__link">
+    Sequence diagrams
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -879,6 +886,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sequence-diagrams" title="Sequence diagrams" class="md-nav__link">
+    Sequence diagrams
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -934,7 +948,6 @@ INFO    -  Cleaning site directory
 [I 171024 15:03:51 server:283] Serving on http://127.0.0.1:8000
 [I 171024 15:03:51 handlers:60] Start watching changes
 </pre></div>
-
 
 <p>You can now edit the markdown documents with the <code>docs/</code> directory.</p>
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
@@ -1055,7 +1068,6 @@ def my_function():
     <span class="k">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span> 
 </pre></div>
 
-
 <h3 id="smart-symbols">Smart Symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">&para;</a></h3>
 <p>See also <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/">https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/</a></p>
 <div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
@@ -1063,6 +1075,23 @@ def my_function():
 
 
 <p>Some smart symbols: &rarr;,  &larr;, 1<sup>st</sup>, 2<sup>nd</sup>, &frac14;</p>
+<h3 id="sequence-diagrams">Sequence diagrams<a class="headerlink" href="#sequence-diagrams" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>```sequence
+Title: Example sequence diagram
+A-&gt;B: Sync call
+B--&gt;A: Sync return
+A-&gt;C: Another sync call
+C-&gt;&gt;D: Async call
+D--&gt;&gt;C: Async return
+```
+</pre></div>
+
+<pre class="uml-sequence-diagram"><code>Title: Example sequence diagram
+A-&gt;B: Sync call
+B--&gt;A: Sync return
+A-&gt;C: Another sync call
+C-&gt;&gt;D: Async call
+D--&gt;&gt;C: Async return</code></pre>
                 
                   
                 
@@ -1151,7 +1180,17 @@ def my_function():
       
       <script>app.initialize({version:"0.16.3",url:{base:".."}})</script>
       
+        <script src="../extra.js"></script>
+      
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
       
     
     
