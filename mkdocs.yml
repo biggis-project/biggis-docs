@@ -1,23 +1,33 @@
 # Project information
 site_name: 'BigGIS Documentation'
-site_author: 'BigGIS Project'
-site_description: 'Documentation of all components within the project'
+site_description: 'Central documentation of the BigGIS project'
+site_author: 'BigGIS Team'
+
+# You can set the 'site_url' parameter explicitly, otherwise it points to the documentation root
+#site_url: 'http://biggis-project.eu/biggis-docs'
 
 # Repository
 repo_name: 'GitHub'
 repo_url: 'https://github.com/biggis-project/biggis-docs'
 
+# You can disable edit icon for pages by setting edit_uri:"", otherwise it points to github
+#edit_uri: ""
+
+
 # Copyright
+copyright: '<a href="https://www.fzi.de/footer/impressum/">Impressum: FZI Forschungszentrum Informatik am Karlsruher
+Institut für Technologie.</a>'
+
 #copyright: 'Copyright &copy; 2017 - 2021 SeRoNet Project'
 
 # Documentation and theme
 theme: material
 
 
-site_favicon: 'img/favicon.ico'
+site_favicon: 'favicon.ico'
 
 extra:
-#  logo: 'img/seronet-logo-icon.svg'
+  logo: 'favicon.svg'
   palette:
     primary: 'dark blue'
     accent: 'blue'
@@ -25,9 +35,9 @@ extra:
       tabs: true
   social: # see http://fontawesome.io/icons/ for allowed 'type' values
       - type: 'globe'
-        link: 'https://www.seronet-projekt.de'
+        link: 'http://biggis-project.eu'
       - type: 'github'
-        link: 'https://github.com/seronet-project'
+        link: 'https://github.com/biggis-project'
 
 # Extensions
 markdown_extensions:
@@ -35,6 +45,7 @@ markdown_extensions:
   - pymdownx.arithmatex         # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax
   - pymdownx.smartsymbols       # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#smartsymbols
   - admonition                  # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - def_list                    # https://pythonhosted.org/Markdown/extensions/definition_lists.html
   - pymdownx.magiclink:         # https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
       repo_url_shortener: true
   - codehilite:                 # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
