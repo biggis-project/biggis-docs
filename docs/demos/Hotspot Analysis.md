@@ -3,3 +3,6 @@
 
 !!! TODO
     We can take some text from GISCUP and from our papers.
+
+!!! TODO
+    Marc's master thesis about stability of hotspots
