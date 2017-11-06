@@ -161,3 +161,25 @@ See also https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbo
     Some smart symbols: -->,  <--, 1st, 2nd, 1/4
     
 Some smart symbols: -->,  <--, 1st, 2nd, 1/4
+
+### Sequence diagrams
+
+~~~.markdown
+```sequence
+Title: Example sequence diagram
+A->B: Sync call
+B-->A: Sync return
+A->C: Another sync call
+C->>D: Async call
+D-->>C: Async return
+```
+~~~
+
+```sequence
+Title: Example sequence diagram
+A->B: Sync call
+B-->A: Sync return
+A->C: Another sync call
+C->>D: Async call
+D-->>C: Async return
+```
