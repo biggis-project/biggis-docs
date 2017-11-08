@@ -21,18 +21,17 @@ Institut für Technologie.</a>'
 #copyright: 'Copyright &copy; 2017 - 2021 SeRoNet Project'
 
 # Documentation and theme
-theme: material
-
-
-site_favicon: 'favicon.ico' # this icon appears in the browser's tab
-
-extra:
+theme:
+  name: material
+  favicon: 'favicon.ico' # this icon appears in the browser's tab
   logo: 'favicon.svg' # this icon appears in the top left corner on each page
   palette:
     primary: 'dark blue'
     accent: 'blue'
   feature:
       tabs: true
+
+extra:
   social: # see http://fontawesome.io/icons/ for allowed 'type' values
       - type: 'globe'
         link: 'http://biggis-project.eu'
@@ -56,9 +55,9 @@ markdown_extensions:
 
 
 extra_javascript:
-  - extra.js
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML # required by arithmatex
-  - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
+  - 'extra.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML' # required by arithmatex
+  - 'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
