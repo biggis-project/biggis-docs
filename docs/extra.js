@@ -95,5 +95,10 @@ const uml = (converter, className, settings) => {
     mathjaxscript.setAttribute('comment', 'Workaround for mkdocs <= 0.17.1')
     document.querySelector('body').appendChild(mathjaxscript)
 
+    // - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+    // - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
+    // - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
+    // - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
+    // - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
   })
 })()
