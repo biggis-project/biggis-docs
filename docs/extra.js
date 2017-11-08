@@ -88,5 +88,12 @@ const uml = (converter, className, settings) => {
     if (typeof Diagram !== "undefined") {
       uml(Diagram, "uml-sequence-diagram", {theme: "simple"})
     }
+
+    // workaround for mkdocs until release 0.17.2 (the url should be in mkdocs.yml after)
+    const mathjaxscript = document.createElement('script')
+    mathjaxscript.setAttribute('scr', 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML')
+    mathjaxscript.setAttribute('comment', 'Workaround for mkdocs <= 0.17.1')
+    document.querySelector('body').appendChild(mathjaxscript)
+
   })
 })()
