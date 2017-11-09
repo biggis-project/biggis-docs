@@ -25,6 +25,9 @@ You can install the packages either locally as a user into `~/.local/` or system
     pip install --user mkdocs
     pip install --user mkdocs-material
 
+!!! note
+    Make sure you are using **mkdocs version 0.17.1+**
+
 ## How to edit
 
 Before editing the documentation, start the live-reloading docs server
