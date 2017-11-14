@@ -1,6 +1,13 @@
 # Documentation Howto
 
 We use **[mkdocs]** for documenting the project.
+The goal is to make the documentation process as simple as possible,
+to allow versioning and to use pull requests for text reviews.
+
+The amount of formatting elements is deliberately small.
+Apart from wiki, we try to keep each page self contained and to minimize
+interlinking between pages because it only complicates reading of the docs.
+
 
 The documentation is written as a set of Markdown files within the `docs/` directory and after deployment
 available as a static website: [Docs Website].
@@ -63,6 +70,12 @@ and deploy it automatically as a github page (served from `gh-pages` branch).
       index.md    # The documentation homepage.
       ...         # Other markdown pages, images and other files.
 
+For the sake of simplicity, we use two-level hierarchy inside `docs/`:
+ 
+  - **Level 1** : areas (directories) that appear in the main menu.
+  - **Level 2** : pages (markdown files) that appear in the left side bar.
+  - **Level 3** : headings (H1, H2, ...) that appear in the table of contents on the right
+  
 ## Formatting examples
 
 ### Sectioning
@@ -83,11 +96,26 @@ See also https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
 
 ### Citations, Notes
 
-    !!! Citation
+    !!! cite
         Here comes the citation including authors, title, year, doi, url ...
 
-!!! Citation
+!!! cite
     Here comes the citation including authors, title, year, doi, url ...
+
+---
+
+    !!! note
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+        nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+        massa, nec semper lorem quam in massa.
+
+!!! note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+---  
+For more options see https://squidfunk.github.io/mkdocs-material/extensions/admonition/
 
 ### Images and Figures
 

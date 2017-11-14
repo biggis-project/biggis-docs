@@ -376,6 +376,6 @@ If an error occurs, e.g. because a bade request were send to the server or an in
 
 # References
 
-!!! Citation
+!!! cite "Reference"
     Steadman, R. G. **The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.**
     Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018<0861:TAOSPI>2.0.CO;2
