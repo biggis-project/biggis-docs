@@ -42,7 +42,6 @@ extra:
 markdown_extensions:
   - footnotes:                  # https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
   - admonition:                 # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
-  - def_list:                   # https://pythonhosted.org/Markdown/extensions/definition_lists.html
   - pymdownx.arithmatex:        # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax
   - pymdownx.smartsymbols:      # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#smartsymbols
   - pymdownx.superfences:       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
