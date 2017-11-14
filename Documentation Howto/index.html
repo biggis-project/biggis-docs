@@ -911,7 +911,12 @@
                 
                 
                 <h1 id="documentation-howto">Documentation Howto<a class="headerlink" href="#documentation-howto" title="Permanent link">&para;</a></h1>
-<p>We use <strong><a href="http://mkdocs.org">mkdocs</a></strong> for documenting the project.</p>
+<p>We use <strong><a href="http://mkdocs.org">mkdocs</a></strong> for documenting the project.
+The goal is to make the documentation process as simple as possible,
+to allow versioning and to use pull requests for text reviews.</p>
+<p>The amount of formatting elements is deliberately small.
+Apart from wiki, we try to keep each page self contained and to minimize
+interlinking between pages because it only complicates reading of the docs.</p>
 <p>The documentation is written as a set of Markdown files within the <code>docs/</code> directory and after deployment
 available as a static website: <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>.</p>
 <h2 id="before-building-the-docs">Before building the docs<a class="headerlink" href="#before-building-the-docs" title="Permanent link">&para;</a></h2>
@@ -964,6 +969,12 @@ docs/
 </pre></div>
 
 
+<p>For the sake of simplicity, we use two-level hierarchy inside <code>docs/</code>:</p>
+<ul>
+<li><strong>Level 1</strong> : areas (directories) that appear in the main menu.</li>
+<li><strong>Level 2</strong> : pages (markdown files) that appear in the left side bar.</li>
+<li><strong>Level 3</strong> : headings (H1, H2, ...) that appear in the table of contents on the right</li>
+</ul>
 <h2 id="formatting-examples">Formatting examples<a class="headerlink" href="#formatting-examples" title="Permanent link">&para;</a></h2>
 <h3 id="sectioning">Sectioning<a class="headerlink" href="#sectioning" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span># Chapter
@@ -983,15 +994,31 @@ docs/
 
 
 <h3 id="citations-notes">Citations, Notes<a class="headerlink" href="#citations-notes" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>!!! Citation
+<div class="codehilite"><pre><span></span>!!! cite
     Here comes the citation including authors, title, year, doi, url ...
 </pre></div>
 
 
-<div class="admonition citation">
-<p class="admonition-title">Citation</p>
+<div class="admonition cite">
+<p class="admonition-title">Cite</p>
 <p>Here comes the citation including authors, title, year, doi, url ...</p>
 </div>
+<hr />
+<div class="codehilite"><pre><span></span>!!! note
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<hr />
+<p>For more options see <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">https://squidfunk.github.io/mkdocs-material/extensions/admonition/</a></p>
 <h3 id="images-and-figures">Images and Figures<a class="headerlink" href="#images-and-figures" title="Permanent link">&para;</a></h3>
 <p>You can include images into the documentation in the following format:</p>
 <ul>
