@@ -16,4 +16,4 @@
 
 
 ## Related Scenarios
-- [Smart City](../scenarios/Smart City.md)
+- [Smart City](../scenarios/01_city.md)

@@ -20,5 +20,5 @@
 - Weitere Klassifikatoren
 
 ## Related Scenarios
-- [Environment](../scenarios/Environment.md)
-- [Smart City](../scenarios/Smart City.md)
+- [Environment](../scenarios/03_env.md)
+- [Smart City](../scenarios/01_city.md)

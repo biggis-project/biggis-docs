@@ -22,4 +22,4 @@ Hypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse
   - Nähe zu Wald -> Refugium für Kirschessigfliege zum Überleben bei widrigen Wetterbedingungen
 
 ## Related Scenarios
-- [Environment](../scenarios/Environment.md)
+- [Environment](../scenarios/03_env.md)

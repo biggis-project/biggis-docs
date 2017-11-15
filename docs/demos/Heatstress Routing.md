@@ -5,7 +5,7 @@
     **Julian's student** - related repository is https://github.com/biggis-project/path-optimizer
 
 ## Related Scenarios
-- [Smart City](../scenarios/Smart City.md)
+- [Smart City](../scenarios/01_city.md)
 
 
 ## Back-end REST-API

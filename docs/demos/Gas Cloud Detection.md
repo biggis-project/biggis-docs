@@ -18,5 +18,5 @@
     - Übertragung von Flugplan-Daten/Bildergebnissen
 
 ## Related Scenarios
-- [Disaster Management](../scenarios/Disaster Management.md)
-- [Smart City](../scenarios/Smart City.md)
+- [Disaster Management](../scenarios/02_bos.md)
+- [Smart City](../scenarios/01_city.md)
