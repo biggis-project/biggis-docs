@@ -5,14 +5,16 @@
 # Created by Viliam Simko (viliam.simko@gmail.com)
 # License: MIT
 #
-# Generated `pages:` section within mkdocs.yml
+# Generates `pages:` section within `mkdocs.yml` file.
 # The sections are ordered by filenames, however the section
-# titles are taken either from the first H1 from the document
+# titles are taken either from the first H1 within a document
 # or from the filename if H1 is missing.
 #
 # Limitations:
-# - Using plain sed instead of Markdown parser (only "# Section" syntax supported)
-# - Directories use their name as a sorting key and as a section title.
+# - Using plain `sed` instead of a Markdown parser (only "# Section" syntax supported)
+# - Inline markup (bold, italic, etc.) in headers not supported
+# - Directories use their name as a sorting key as well as a section title.
+# - Expects that the script is executed inside the project's root dir and the root dir contains `docs/` dir
 # - Tested only on Linux Mint 18 (Ubuntu 16.04)
 
 MKDOCSYML=$(realpath "$1")
@@ -21,8 +23,13 @@ MKDOCSYML=$(realpath "$1")
     exit 1
 }
 
+# Note:
+# - STDOUT inside this function goes to `mkdocs.yml`
+# - if you need to print some messages, use: `echo message >&2`
 get_new_pages_config() {
 
+    # These are all temporary files used in the transformation
+    # You can debug them by running `$ DEBUG=1 ./fix-mkdocs-pages.sh mkdocs.yml`
     TMP=`mktemp /tmp/mkdocs.tmp.XXXXX`
     TREE="$TMP"_tree
     H1MAP="$TMP"_h1
@@ -30,42 +37,68 @@ get_new_pages_config() {
     NAMEMAP_NORM="$TMP"_norm
     INDENTATION="$TMP"_indent
 
+    # TODO: make this as a CLI parameter
     DOCS_DIR='docs'
     cd "$DOCS_DIR"
 
-    find . -name '*.md' | sed -e 's/^\(\.\/.*\)\/\([^\/]*\.md\)/\1\n\1\/\2/' >"$TREE"
-    grep -e '^#[^#].*' -m 1 --include='*.md' -r ./ >"$H1MAP"
+    # get a list markdown files in form `./path/to/file.md`
+    find . -name '*.md' |
+        # extract subdirs in form of `./path/to`
+        # at this point, there will be many subdirs duplicates
+        sed -e 's/^\(\.\/.*\)\/\([^\/]*\.md\)/\1\n\1\/\2/' > "$TREE"
 
+    # extract H1 heading from files
+    grep -e '^#[^#].*' -m 1 --include='*.md' -r ./ > "$H1MAP"
+
+    # filenames `index.md` are special and need to be on top
+    # trick: index.md -> !!!index.md
     sed -i 's/\/\(index.md\)/\/!!!\1/' "$TREE" "$H1MAP"
 
+    # we need to sort both file before joining
     LC_ALL=C sort --ignore-case --unique --output="$TREE" "$TREE"
     LC_ALL=C sort --ignore-case --unique --output="$H1MAP" "$H1MAP"
 
+    # this goes to the mkdocs.yml
     echo "pages: # Generated using $0 on $(date)"
 
+    # joining on pathname (outer left join)
+    # we get `path:# H1` after this operation
     join --ignore-case -a 1 -t: "$TREE" "$H1MAP" |
-    sed -e 's/!!!//' \
-        -e 's/\(.*\):\(#.*\)/\2: \1/' \
-        -e 's/^\([^#].*\)\/\(.*\).md/\2: \1\/\2.md/' \
-        -e 's/^#\s*//' > "$NAMEMAP"
+        # convert back: !!!index.md -> index.md
+        sed 's/!!!//' |
+        # convert `path:# H1` to `# H1: path`
+        sed 's/\(.*\):\(#.*\)/\2: \1/' |
+        # convert lines without H1 to `file: path`
+        sed 's/^\([^#].*\)\/\(.*\).md/\2: \1\/\2.md/' |
+        # let's remove the # char because it is not needed anymore
+        sed 's/^#\s*//' > "$NAMEMAP"
 
-    sed -e 's/\.\///' \
+    # here we compute the indentation levels by using `/` characters
+    # the indentation is later prepended before every line
+    sed \
         -e 's/[^/]//g' \
         -e 's/\//    /g' \
-        -e 's/$/-/' -e 's/^/    /' "$NAMEMAP" > "$INDENTATION"
+        -e 's/$/-/' "$NAMEMAP" > "$INDENTATION"
 
-    sed -e 's/^\..*\/\([^\/]*\)$/\1:/' \
-        -e 's/^./\U&/' "$NAMEMAP" > "$NAMEMAP_NORM"
+    # Here we normalize the section names
+    cat "$NAMEMAP" |
+        # Keeping only the filename from the whole path
+        sed 's/^\..*\/\([^\/]*\)$/\1:/' |
+        # First letter to uppercase
+        sed 's/^./\U&/'  > "$NAMEMAP_NORM"
 
+    # now preprending indentation to every line
     paste -d' ' "$INDENTATION" "$NAMEMAP_NORM"
 
-    #
     # clenup
     if [ -z "$DEBUG" ]; then
+        # clenup if not debuging
         echo "$TMP"* | while read FNAME; do
             rm $FNAME
         done
     else
+        # keeping tmp files for debugging
+        # you need to delete them manually
         echo "$TREE" >&2
         echo "$H1MAP" >&2
         echo "$NAMEMAP" >&2

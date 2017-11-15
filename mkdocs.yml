@@ -54,7 +54,7 @@ markdown_extensions:
 
 extra_javascript:
   - 'extra.js'
-pages: # Generated using ./fix-mkdocs-pages.sh on Wed Nov 15 14:44:12 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Wed Nov 15 17:15:33 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Overview: ./architecture/BigGIS Overview.md
