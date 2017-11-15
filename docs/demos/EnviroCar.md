@@ -7,4 +7,4 @@ Visualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in F
     
 ## Related Scenarios
 - [Environment](../scenarios/Environment.md)
-- [Smart City](../scenarios/Smart City.md)
+- [Smart City](../scenarios/Smart%20City.md)

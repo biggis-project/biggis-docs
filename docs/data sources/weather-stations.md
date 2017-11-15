@@ -1,5 +1,4 @@
-Weather stations
-==================
+# Weather stations
 
 !!! TODO
     Julian, Hannes, Jochen

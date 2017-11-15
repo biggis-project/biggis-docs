@@ -1,4 +1,4 @@
-## About BigGIS?
+# About BigGIS
 
 BigGIS is a new generation of GIS that supports decision making in multiple
 scenarios which require processing of large and heterogeneous data sets.

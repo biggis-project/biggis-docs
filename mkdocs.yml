@@ -52,6 +52,5 @@ markdown_extensions:
   - toc:
       permalink: true
 
-
 extra_javascript:
   - 'extra.js'
