@@ -1,5 +1,4 @@
-BigGIS Architecture Overview
-----------------------------
+# BigGIS Architecture Overview
 
 !!! TODO
     This image is actually not the overview of BigGIS :-)
