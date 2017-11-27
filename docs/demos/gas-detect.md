@@ -1,5 +1,5 @@
 !!! note "Responsible person for this section"
-    Bodo Bernsdorf
+    Alexander Groeschel
 
 # Gas Cloud Detection
 
