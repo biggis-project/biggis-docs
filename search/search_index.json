@@ -151,6 +151,16 @@
             "title": "Web-based mobile-friendly app"
         }, 
         {
+            "location": "/demos/", 
+            "text": "About demos ...\n\n\n\n\nTodo\n\n\n\n\nadd some more text\n\n\n\n\n\n\nHere you can find all demos", 
+            "title": "About demos ..."
+        }, 
+        {
+            "location": "/demos/#about-demos", 
+            "text": "Todo   add some more text    Here you can find all demos", 
+            "title": "About demos ..."
+        }, 
+        {
             "location": "/demos/enviro-car/", 
             "text": "Responsible person for this section\n\n\nManuel Stein\n\n\n\n\nEnviroCar (Smart City)\n\n\nVisualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in Fahrzeugen\n\n\nRelated Scenarios\n\n\n\n\nSmart City\n\n\nEnvironment", 
             "title": "EnviroCar (Smart City)"
@@ -373,7 +383,7 @@
         {
             "location": "/demos/optimize-sensors/", 
             "text": "Responsible person for this section\n\n\nKatharina Glock\n\n\n\n\nPlacement of sensors under uncertainty\n\n\n\n\nTodo\n\n\n\n\ndescribe the idea\n\n\nadd some images\n\n\nadd some links to related papers\n\n\nadd links to related github repos\n\n\nadd links to related scenarios", 
-            "title": "Optimize-sensors"
+            "title": "Placement of sensors under uncertainty"
         }, 
         {
             "location": "/demos/optimize-sensors/#placement-of-sensors-under-uncertainty", 
