@@ -72,6 +72,16 @@ INFO    -  Cleaning site directory
 
 You can now edit the markdown documents with the `docs/` directory.
 
+!!! warning
+    If you are renaming or creating new markdown files (`*.md` extension), you should also update the
+    `pages` configuration section in `mkdocs.yml`. Otherwise the update will not be reloaded in your browser.
+    This is a known limitation of mkdocs that will be addressed in future releases. Until then, there is
+    a small shell script that updates the `pages` section automatically. However, it only works on Unix systems.
+    ```sh
+    # refreshes the pages section
+    ./fix-mkdocs-pages.sh mkdocs.yml
+    ```
+      
 
 ## Deployment
 
