@@ -23,7 +23,7 @@
         {
             "location": "/architecture/BigGIS_Overview/", 
             "text": "BigGIS Architecture Overview\n\n\n\n\nTodo\n\n\nThis image is actually not the overview of BigGIS :-)", 
-            "title": "BigGIS_Overview"
+            "title": "BigGIS Architecture Overview"
         }, 
         {
             "location": "/architecture/BigGIS_Overview/#biggis-architecture-overview", 
@@ -43,7 +43,7 @@
         {
             "location": "/architecture/Infrastructure_on_bwCloud/", 
             "text": "BW Cloud\n\n\n\n\nTodo\n\n\nPatrick\n\n\n\n\n\n\nbwCloud VMs should be available, latest status here: bwCloud Status\n\n\nWeb-based admin. interface - dashboard - based on Ambari", 
-            "title": "Infrastructure_on_bwCloud"
+            "title": "BW Cloud"
         }, 
         {
             "location": "/architecture/Infrastructure_on_bwCloud/#bw-cloud", 
@@ -52,7 +52,12 @@
         }, 
         {
             "location": "/architecture/StreamPipes/", 
-            "text": "Todo\n\n\nMatthias Frank", 
+            "text": "StreamPipes\n\n\n\n\nTodo\n\n\nMatthias Frank\n\n\n\n\n\n\nNote\n\n\nPlease also add link to the official mkdocs-based documentation of StreamPipes.", 
+            "title": "StreamPipes"
+        }, 
+        {
+            "location": "/architecture/StreamPipes/#streampipes", 
+            "text": "Todo  Matthias Frank    Note  Please also add link to the official mkdocs-based documentation of StreamPipes.", 
             "title": "StreamPipes"
         }, 
         {
