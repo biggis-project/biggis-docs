@@ -1,7 +1,7 @@
-# Disaster Management
+!!! note "Responsible person for this section"
+    Alexander Groeschel
 
-!!! TODO
-    Bodo, Julian, Alex
+# Disaster Management
 
 ![Disaster Management Icon](img/scen-disaster.svg)
 
