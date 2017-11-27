@@ -406,87 +406,87 @@
             "title": "Related Scenarios"
         }, 
         {
-            "location": "/Documentation_Howto/", 
+            "location": "/docs-howto/", 
             "text": "Documentation Howto\n\n\nWe use \nmkdocs\n for documenting the project.\nThe goal is to make the documentation process as simple as possible,\nto allow versioning and to use pull requests for text reviews.\nI should edit the docs locally, preview it in a browser and then suggest a pull request.\n\n\nThe amount of formatting elements is deliberately small.\nApart from wiki, we try to keep each page self contained and to minimize\ninterlinking between pages because it only complicates reading of the docs.\n\n\nThe documentation is written as a set of Markdown files within the \ndocs/\n directory and after deployment\navailable as a static website: \nDocs Website\n.\n\n\nBefore building the docs\n\n\nFirst of all, you need \npython\n and \npip\n to be installed.\nUsing pip, you need to install the following packages:\n\n\n\n\nmkdocs\n : Provides the executable command \nmkdocs\n.\n\n\nmkdocs-material\n : A material design theme, see also \nthis page\n.\n\n\n\n\nYou can install the packages either locally as a user into \n~/.local/\n or system-wide\n(when omitting the \n--user\n parameter).\n\n\n1\n2\npip install --user mkdocs\npip install --user mkdocs-material\n\n\n\n\n\n\n\n\nNote\n\n\nMake sure you are using \nmkdocs version 0.17.1+\n\n\n\n\nRecommended editor\n\n\nSince we use the markdown format, you can use any plain text editor.\nHowever, we suggest to use \nIntelliJ IDEA\n\nwith the \nMarkdown Support plugin\n (both are free) which gives you:\n\n\n\n\nsyntax highlighting\n\n\npath completion of links such as image file names\n\n\nrefactoring, which is handy when renaming markdown files which are liked from other files\n\n\nfancy search\n\n\noutline of the document structure\n\n\nautomated simplified preview (which is not that important due to the mkdocs hotreload)\n\n\n\n\nHow to edit\n\n\nBefore editing the documentation, start the live-reloading docs server\nusing \nmkdocs serve\n within the project root directory.\nThen, open the page \nhttp://127.0.0.1:8000\n in your\nbrowser and watch your edits being reloaded automatically.\n\n\n1\nmkdocs serve\n\n\n\n\n\n\nINFO    -  Building documentation... \nINFO    -  Cleaning site directory \n[I 171024 15:03:51 server:283] Serving on http://127.0.0.1:8000\n[I 171024 15:03:51 handlers:60] Start watching changes\n\n\n\n\nYou can now edit the markdown documents with the \ndocs/\n directory.\n\n\nDeployment\n\n\nUsing the command \nmkdocs gh-deploy\n we can generate a static \nDocs Website\n\nand deploy it automatically as a github page (served from \ngh-pages\n branch).\n\n\n\n\nNote\n\n\nThe newly deployed version appears after few seconds.\n\n\n\n\n\n\nWarning\n\n\nThis operation is relevant only to the administrators of the \nbiggis-docs\n repository.\nAs a regular contributor, you should only preview your local changes and create\na pull request instead of directly deploying the built docs to the gh-pages branch.\n\n\n\n\nDocumentation layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n  index.md    # The documentation homepage.\n  ...         # Other markdown pages, images and other files.\n\n\n\n\n\nFor the sake of simplicity, we use two-level hierarchy inside \ndocs/\n:\n\n\n\n\nLevel 1\n : areas (directories) that appear in the main menu.\n\n\nLevel 2\n : pages (markdown files) that appear in the left side bar.\n\n\nLevel 3\n : headings (H1, H2, ...) that appear in the table of contents on the right\n\n\n\n\n\n\nNode\n\n\nDo not use spaces in file names. Replace them with underscores \n_\n.\nThis allows for easier refactoring because spaces are transformed to \n%20\n in markdown.\n\n\n\n\nFormatting examples\n\n\nSectioning\n\n\n# Chapter\n\n## Section\n\n### Subsection\n\n\n\n\n\nFootnotes\n\n\nSee also \nhttps://squidfunk.github.io/mkdocs-material/extensions/footnotes/\n\n\nSome text with a footnote[^1]\n\n[^1]: Text of the footnote\n\n\n\n\n\nCitations, Notes\n\n\n!!! cite\n    Here comes the citation including authors, title, year, doi, url ...\n\n\n\n\n\n\n\nCite\n\n\nHere comes the citation including authors, title, year, doi, url ...\n\n\n\n\n\n\n!!! note\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\n    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\n    massa, nec semper lorem quam in massa.\n\n\n\n\n\n\n\nNote\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\nnulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\nmassa, nec semper lorem quam in massa.\n\n\n\n\n\n\nFor more options see \nhttps://squidfunk.github.io/mkdocs-material/extensions/admonition/\n\n\nImages and Figures\n\n\nYou can include images into the documentation in the following format:\n\n\n\n\nSVG\n (scalable vectors).\n\n\nJPG\n (photos)\n\n\nPNG\n (raster graphics)\n\n\n\n\nIn contrast to scientific papers, it is not possible to create references to numbered figures in markdown.\nSee also \nhttp://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media\n\n\n![Image \nalt\n description](path/to/image.svg)\n\n\n\n\n\n\n\n\n\nNote\n\n\nWhen editing a file \npath/to/ABC.md\n, store all related images in folder \npath/to/ABC\n.\nThis way, different topics are better encapsulated.\n\n\n\n\nTables\n\n\nSee also \nhttp://www.mkdocs.org/user-guide/writing-your-docs/#tables\n\n\nFirst Header | Second Header | Third Header\n------------ | ------------- | ------------\nContent Cell | Content Cell  | Content Cell\nContent Cell | Content Cell  | Content Cell\n\n\n\n\n\n\n\n\n\n\n\nFirst Header\n\n\nSecond Header\n\n\nThird Header\n\n\n\n\n\n\n\n\n\n\nContent Cell\n\n\nContent Cell\n\n\nContent Cell\n\n\n\n\n\n\nContent Cell\n\n\nContent Cell\n\n\nContent Cell\n\n\n\n\n\n\n\n\nFormulas\n\n\nFormula are generated using \nMathJax\n, which is similar to LaTeX.\nSee also this \nquick reference\n.\n\n\n$$\n\\frac{n!}{k!(n-k)!} = \\binom{n}{k}\n$$\n\n\n\n\n\n\\[\n\\frac{n!}{k!(n-k)!} = \\binom{n}{k}\n\\]\nSource Code\n\n\nCode can be displayed inline like this:\n\n\n`print 1+{variable}`\n\n\n\n\n\nOr it can be displayed in a code block with optional syntax highlighting if the language is specified.\n\n\n```python\ndef my_function():\n    \njust a test\n\n    print 8/2 \n```\n\n\n\n\n\ndef\n \nmy_function\n():\n\n    \njust a test\n\n    \nprint\n \n8\n/\n2\n \n\n\n\n\nSmart Symbols\n\n\nSee also \nhttps://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/\n\n\nSome smart symbols: --\n,  \n--, 1st, 2nd, 1/4\n\n\n\n\n\nSome smart symbols: \n,  \n, 1\nst\n, 2\nnd\n, \n\n\nSequence diagrams\n\n\n```sequence\nTitle: Example sequence diagram\nA-\nB: Sync call\nB--\nA: Sync return\nA-\nC: Another sync call\nC-\nD: Async call\nD--\nC: Async return\n```\n\n\n\n\nTitle: Example sequence diagram\nA-\nB: Sync call\nB--\nA: Sync return\nA-\nC: Another sync call\nC-\nD: Async call\nD--\nC: Async return", 
             "title": "Documentation Howto"
         }, 
         {
-            "location": "/Documentation_Howto/#documentation-howto", 
+            "location": "/docs-howto/#documentation-howto", 
             "text": "We use  mkdocs  for documenting the project.\nThe goal is to make the documentation process as simple as possible,\nto allow versioning and to use pull requests for text reviews.\nI should edit the docs locally, preview it in a browser and then suggest a pull request.  The amount of formatting elements is deliberately small.\nApart from wiki, we try to keep each page self contained and to minimize\ninterlinking between pages because it only complicates reading of the docs.  The documentation is written as a set of Markdown files within the  docs/  directory and after deployment\navailable as a static website:  Docs Website .", 
             "title": "Documentation Howto"
         }, 
         {
-            "location": "/Documentation_Howto/#before-building-the-docs", 
+            "location": "/docs-howto/#before-building-the-docs", 
             "text": "First of all, you need  python  and  pip  to be installed.\nUsing pip, you need to install the following packages:   mkdocs  : Provides the executable command  mkdocs .  mkdocs-material  : A material design theme, see also  this page .   You can install the packages either locally as a user into  ~/.local/  or system-wide\n(when omitting the  --user  parameter).  1\n2 pip install --user mkdocs\npip install --user mkdocs-material    Note  Make sure you are using  mkdocs version 0.17.1+", 
             "title": "Before building the docs"
         }, 
         {
-            "location": "/Documentation_Howto/#recommended-editor", 
+            "location": "/docs-howto/#recommended-editor", 
             "text": "Since we use the markdown format, you can use any plain text editor.\nHowever, we suggest to use  IntelliJ IDEA \nwith the  Markdown Support plugin  (both are free) which gives you:   syntax highlighting  path completion of links such as image file names  refactoring, which is handy when renaming markdown files which are liked from other files  fancy search  outline of the document structure  automated simplified preview (which is not that important due to the mkdocs hotreload)", 
             "title": "Recommended editor"
         }, 
         {
-            "location": "/Documentation_Howto/#how-to-edit", 
+            "location": "/docs-howto/#how-to-edit", 
             "text": "Before editing the documentation, start the live-reloading docs server\nusing  mkdocs serve  within the project root directory.\nThen, open the page  http://127.0.0.1:8000  in your\nbrowser and watch your edits being reloaded automatically.  1 mkdocs serve   INFO    -  Building documentation... \nINFO    -  Cleaning site directory \n[I 171024 15:03:51 server:283] Serving on http://127.0.0.1:8000\n[I 171024 15:03:51 handlers:60] Start watching changes  You can now edit the markdown documents with the  docs/  directory.", 
             "title": "How to edit"
         }, 
         {
-            "location": "/Documentation_Howto/#deployment", 
+            "location": "/docs-howto/#deployment", 
             "text": "Using the command  mkdocs gh-deploy  we can generate a static  Docs Website \nand deploy it automatically as a github page (served from  gh-pages  branch).   Note  The newly deployed version appears after few seconds.    Warning  This operation is relevant only to the administrators of the  biggis-docs  repository.\nAs a regular contributor, you should only preview your local changes and create\na pull request instead of directly deploying the built docs to the gh-pages branch.", 
             "title": "Deployment"
         }, 
         {
-            "location": "/Documentation_Howto/#documentation-layout", 
+            "location": "/docs-howto/#documentation-layout", 
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n  index.md    # The documentation homepage.\n  ...         # Other markdown pages, images and other files.  For the sake of simplicity, we use two-level hierarchy inside  docs/ :   Level 1  : areas (directories) that appear in the main menu.  Level 2  : pages (markdown files) that appear in the left side bar.  Level 3  : headings (H1, H2, ...) that appear in the table of contents on the right    Node  Do not use spaces in file names. Replace them with underscores  _ .\nThis allows for easier refactoring because spaces are transformed to  %20  in markdown.", 
             "title": "Documentation layout"
         }, 
         {
-            "location": "/Documentation_Howto/#formatting-examples", 
+            "location": "/docs-howto/#formatting-examples", 
             "text": "", 
             "title": "Formatting examples"
         }, 
         {
-            "location": "/Documentation_Howto/#sectioning", 
+            "location": "/docs-howto/#sectioning", 
             "text": "# Chapter\n\n## Section\n\n### Subsection", 
             "title": "Sectioning"
         }, 
         {
-            "location": "/Documentation_Howto/#footnotes", 
+            "location": "/docs-howto/#footnotes", 
             "text": "See also  https://squidfunk.github.io/mkdocs-material/extensions/footnotes/  Some text with a footnote[^1]\n\n[^1]: Text of the footnote", 
             "title": "Footnotes"
         }, 
         {
-            "location": "/Documentation_Howto/#citations-notes", 
+            "location": "/docs-howto/#citations-notes", 
             "text": "!!! cite\n    Here comes the citation including authors, title, year, doi, url ...   Cite  Here comes the citation including authors, title, year, doi, url ...    !!! note\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\n    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\n    massa, nec semper lorem quam in massa.   Note  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\nnulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\nmassa, nec semper lorem quam in massa.    For more options see  https://squidfunk.github.io/mkdocs-material/extensions/admonition/", 
             "title": "Citations, Notes"
         }, 
         {
-            "location": "/Documentation_Howto/#images-and-figures", 
+            "location": "/docs-howto/#images-and-figures", 
             "text": "You can include images into the documentation in the following format:   SVG  (scalable vectors).  JPG  (photos)  PNG  (raster graphics)   In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.\nSee also  http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media  ![Image  alt  description](path/to/image.svg)    Note  When editing a file  path/to/ABC.md , store all related images in folder  path/to/ABC .\nThis way, different topics are better encapsulated.", 
             "title": "Images and Figures"
         }, 
         {
-            "location": "/Documentation_Howto/#tables", 
+            "location": "/docs-howto/#tables", 
             "text": "See also  http://www.mkdocs.org/user-guide/writing-your-docs/#tables  First Header | Second Header | Third Header\n------------ | ------------- | ------------\nContent Cell | Content Cell  | Content Cell\nContent Cell | Content Cell  | Content Cell     First Header  Second Header  Third Header      Content Cell  Content Cell  Content Cell    Content Cell  Content Cell  Content Cell", 
             "title": "Tables"
         }, 
         {
-            "location": "/Documentation_Howto/#formulas", 
+            "location": "/docs-howto/#formulas", 
             "text": "Formula are generated using  MathJax , which is similar to LaTeX.\nSee also this  quick reference .  $$\n\\frac{n!}{k!(n-k)!} = \\binom{n}{k}\n$$  \\[\n\\frac{n!}{k!(n-k)!} = \\binom{n}{k}\n\\]", 
             "title": "Formulas"
         }, 
         {
-            "location": "/Documentation_Howto/#source-code", 
+            "location": "/docs-howto/#source-code", 
             "text": "Code can be displayed inline like this:  `print 1+{variable}`  Or it can be displayed in a code block with optional syntax highlighting if the language is specified.  ```python\ndef my_function():\n     just a test \n    print 8/2 \n```  def   my_function (): \n     just a test \n     print   8 / 2", 
             "title": "Source Code"
         }, 
         {
-            "location": "/Documentation_Howto/#smart-symbols", 
+            "location": "/docs-howto/#smart-symbols", 
             "text": "See also  https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/  Some smart symbols: -- ,   --, 1st, 2nd, 1/4  Some smart symbols:  ,   , 1 st , 2 nd ,", 
             "title": "Smart Symbols"
         }, 
         {
-            "location": "/Documentation_Howto/#sequence-diagrams", 
+            "location": "/docs-howto/#sequence-diagrams", 
             "text": "```sequence\nTitle: Example sequence diagram\nA- B: Sync call\nB-- A: Sync return\nA- C: Another sync call\nC- D: Async call\nD-- C: Async return\n```  Title: Example sequence diagram\nA- B: Sync call\nB-- A: Sync return\nA- C: Another sync call\nC- D: Async call\nD-- C: Async return", 
             "title": "Sequence diagrams"
         }, 
