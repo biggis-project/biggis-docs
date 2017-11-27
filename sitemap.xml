@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,26 +12,26 @@
     
         
     <url>
-     <loc>/architecture/BigGIS Overview/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/architecture/BigGIS_Overview/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/architecture/Docker Containers/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/architecture/Docker_Containers/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/architecture/Infrastructure on bwCloud/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/architecture/Infrastructure_on_bwCloud/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/StreamPipes/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -40,7 +40,7 @@
     
     <url>
      <loc>/contributing/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -49,13 +49,13 @@
         
     <url>
      <loc>/data sources/datasets/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data sources/weather-stations/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -64,68 +64,68 @@
     
         
     <url>
-     <loc>/demos/EnviroCar/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/enviro-car/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Gas_Cloud_Detection/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/gas-detect/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Heatstress_Routing/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/gas-predict/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Hotspot Analysis/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/heatstress/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Invasive Species/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/hotspots/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Land Use Classification/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/invasive-spec/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Optimal Flight Plan for Drones/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/landuse/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Placement of Sensors/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/optimize-drones/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Prediction of Gas Dispersion/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/optimize-sensors/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/Stability_of_hotspots/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/Urban Heat Islands/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/demos/urban-heat-islands/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -133,8 +133,8 @@
 
     
     <url>
-     <loc>/Documentation Howto/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <loc>/Documentation_Howto/</loc>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -143,19 +143,19 @@
         
     <url>
      <loc>/scenarios/01_city/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/02_bos/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/03_env/</loc>
-     <lastmod>2017-11-20</lastmod>
+     <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
