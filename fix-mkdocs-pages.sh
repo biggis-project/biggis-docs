@@ -45,7 +45,9 @@ get_new_pages_config() {
     find . -name '*.md' |
         # extract subdirs in form of `./path/to`
         # at this point, there will be many subdirs duplicates
-        sed -e 's/^\(\.\/.*\)\/\([^\/]*\.md\)/\1\n\1\/\2/' > "$TREE"
+        sed -e 's/^\(\.\/.*\)\/\([^\/]*\.md\)/\1\n\1\/\2/' |
+        # Section names need to be cleaned up
+        sed -r '/\.md$/! {s/[-_]+/ /g}' > "$TREE"
 
     # extract H1 heading from files
     grep -e '^#[^#].*' -m 1 --include='*.md' -r ./ > "$H1MAP"
@@ -58,7 +60,7 @@ get_new_pages_config() {
     LC_ALL=C sort --ignore-case --unique --output="$TREE" "$TREE"
     LC_ALL=C sort --ignore-case --unique --output="$H1MAP" "$H1MAP"
 
-    # this goes to the mkdocs.yml
+    # this output goes directly to mkdocs.yml
     echo "pages: # Generated using $0 on $(date)"
 
     # joining on pathname (outer left join)
