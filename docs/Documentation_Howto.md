@@ -132,7 +132,7 @@ See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
     ![Image "alt" description](path/to/image.svg)
 
 
-![Disaster Icon](scenarios/img/scen-disaster.svg)
+![Sample image](scenarios/img/scen-disaster.svg)
 
 
 ### Tables

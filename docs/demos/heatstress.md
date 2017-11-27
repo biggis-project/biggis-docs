@@ -1,4 +1,3 @@
-
 # Heatstress Routing App
 
 !!! TODO

@@ -1,3 +1,5 @@
+# Hotspot analysis demo
+
 !!! TODO
     Phillip Zehnder used the NY-Taxi data in stream pipes
 

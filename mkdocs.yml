@@ -54,30 +54,30 @@ markdown_extensions:
 
 extra_javascript:
   - 'extra.js'
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 20 15:33:54 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 19:44:43 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
-        - BigGIS Overview: ./architecture/BigGIS Overview.md
-        - Docker containers: ./architecture/Docker Containers.md
-        - Infrastructure on bwCloud: ./architecture/Infrastructure on bwCloud.md
+        - BigGIS_Overview: ./architecture/BigGIS_Overview.md
+        - Docker containers: ./architecture/Docker_Containers.md
+        - Infrastructure_on_bwCloud: ./architecture/Infrastructure_on_bwCloud.md
         - StreamPipes: ./architecture/StreamPipes.md
     - Contributing: ./contributing.md
     - Data sources:
         - Datasets in BigGIS: ./data sources/datasets.md
         - Weather stations: ./data sources/weather-stations.md
     - Demos:
-        - EnviroCar: ./demos/EnviroCar.md
-        - Gas Cloud Detection: ./demos/Gas_Cloud_Detection.md
-        - Heatstress Routing App: ./demos/Heatstress_Routing.md
-        - Hotspot Analysis: ./demos/Hotspot Analysis.md
-        - Invasive Species: ./demos/Invasive Species.md
-        - Land Use Classification: ./demos/Land Use Classification.md
-        - Optimal Flight Plan for Drones: ./demos/Optimal Flight Plan for Drones.md
-        - Placement of Sensors: ./demos/Placement of Sensors.md
-        - Prediction of Gas Dispersion: ./demos/Prediction of Gas Dispersion.md
+        - EnviroCar (Smart City): ./demos/enviro-car.md
+        - Gas Cloud Detection: ./demos/gas-detect.md
+        - Gas Cloud Prediction: ./demos/gas-predict.md
+        - Heatstress Routing App: ./demos/heatstress.md
+        - Hotspot analysis demo: ./demos/hotspots.md
+        - Invasive species: ./demos/invasive-spec.md
+        - Landuse classification: ./demos/landuse.md
+        - Optimal flight plan for drones: ./demos/optimize-drones.md
+        - Optimize-sensors: ./demos/optimize-sensors.md
         - Stability of hotspots: ./demos/Stability_of_hotspots.md
-        - Urban Heat Islands: ./demos/Urban Heat Islands.md
-    - Documentation Howto: ./Documentation Howto.md
+        - Urban Heat Islands: ./demos/urban-heat-islands.md
+    - Documentation Howto: ./Documentation_Howto.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md

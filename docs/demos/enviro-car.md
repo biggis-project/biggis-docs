@@ -1,4 +1,4 @@
-## EnviroCar (Smart City)
+# EnviroCar (Smart City)
 
 Visualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in Fahrzeugen
 

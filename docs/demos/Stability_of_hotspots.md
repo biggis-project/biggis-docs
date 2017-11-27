@@ -5,4 +5,3 @@
 
 - comparison of different metrics (soh, jaccard, ...)
 - comparison of different methods (gstar, focalgstar, ...)
- 
