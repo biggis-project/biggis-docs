@@ -982,7 +982,11 @@ pip install --user mkdocs-material
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure you are using <strong>mkdocs version 0.17.1+</strong></p>
+<p>Make sure you are using <strong>mkdocs version 0.17.2+</strong>.
+<div class="codehilite"><pre><span></span><span class="c1"># to upgrade use this instead</span>
+pip install -U --user mkdocs
+pip install -U --user mkdocs-material
+</pre></div></p>
 </div>
 <h2 id="recommended-editor">Recommended editor<a class="headerlink" href="#recommended-editor" title="Permanent link">&para;</a></h2>
 <p>Since we use the markdown format, you can use any plain text editor.
@@ -1012,6 +1016,16 @@ INFO    -  Cleaning site directory
 </pre></div>
 
 <p>You can now edit the markdown documents with the <code>docs/</code> directory.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are renaming or creating new markdown files (<code>*.md</code> extension), you should also update the
+<code>pages</code> configuration section in <code>mkdocs.yml</code>. Otherwise the update will not be reloaded in your browser.
+This is a known limitation of mkdocs that will be addressed in future releases. Until then, there is
+a small shell script that updates the <code>pages</code> section automatically. However, it only works on Unix systems.
+<div class="codehilite"><pre><span></span><span class="c1"># refreshes the pages section</span>
+./fix-mkdocs-pages.sh mkdocs.yml
+</pre></div></p>
+</div>
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
 <p>Using the command <code>mkdocs gh-deploy</code> we can generate a static <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>
 and deploy it automatically as a github page (served from <code>gh-pages</code> branch).</p>
