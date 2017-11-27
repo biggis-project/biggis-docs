@@ -21,12 +21,12 @@
             "title": "Contact and Support"
         }, 
         {
-            "location": "/architecture/BigGIS_Overview/", 
+            "location": "/architecture/", 
             "text": "BigGIS Architecture Overview\n\n\n\n\nTodo\n\n\nThis image is actually not the overview of BigGIS :-)", 
             "title": "BigGIS Architecture Overview"
         }, 
         {
-            "location": "/architecture/BigGIS_Overview/#biggis-architecture-overview", 
+            "location": "/architecture/#biggis-architecture-overview", 
             "text": "Todo  This image is actually not the overview of BigGIS :-)", 
             "title": "BigGIS Architecture Overview"
         }, 
@@ -502,22 +502,22 @@
         }, 
         {
             "location": "/scenarios/01_city/", 
-            "text": "Smart City\n\n\n\n\nTodo\n\n\nJulian, ...", 
+            "text": "Responsible person for this section\n\n\nJulian Bruns\n\n\n\n\nSmart City", 
             "title": "Smart City"
         }, 
         {
             "location": "/scenarios/01_city/#smart-city", 
-            "text": "Todo  Julian, ...", 
+            "text": "", 
             "title": "Smart City"
         }, 
         {
             "location": "/scenarios/02_bos/", 
-            "text": "Disaster Management\n\n\n\n\nTodo\n\n\nBodo, Julian, Alex\n\n\n\n\n\n\nGoals\n\n\n\n\nOptimal support of the command and control team\n\n\nInformation is needed quickly (real time)\n\n\nRequirements / challenges:\n\n\nFast\n\n\nHow can data be delivered to the consumers through slow connection lines?\n\n\nDecision makers often without IT background", 
+            "text": "Responsible person for this section\n\n\nAlexander Groeschel\n\n\n\n\nDisaster Management\n\n\n\n\nGoals\n\n\n\n\nOptimal support of the command and control team\n\n\nInformation is needed quickly (real time)\n\n\nRequirements / challenges:\n\n\nFast\n\n\nHow can data be delivered to the consumers through slow connection lines?\n\n\nDecision makers often without IT background", 
             "title": "Disaster Management"
         }, 
         {
             "location": "/scenarios/02_bos/#disaster-management", 
-            "text": "Todo  Bodo, Julian, Alex", 
+            "text": "", 
             "title": "Disaster Management"
         }, 
         {
@@ -527,12 +527,12 @@
         }, 
         {
             "location": "/scenarios/03_env/", 
-            "text": "Environment\n\n\n\n\nTodo\n\n\nJohannes (DISY), Manuel (UKON)", 
+            "text": "Responsible person for this section\n\n\nJohannes Kutterer\n\n\n\n\nEnvironment", 
             "title": "Environment"
         }, 
         {
             "location": "/scenarios/03_env/#environment", 
-            "text": "Todo  Johannes (DISY), Manuel (UKON)", 
+            "text": "", 
             "title": "Environment"
         }
     ]
