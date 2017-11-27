@@ -54,7 +54,8 @@ markdown_extensions:
 
 extra_javascript:
   - 'extra.js'
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 21:20:13 CET 2017
+
+pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 22:24:33 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/index.md
@@ -63,8 +64,8 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 21:20:13 CET 2017
         - StreamPipes: ./architecture/StreamPipes.md
     - Contributing: ./contributing.md
     - Data sources:
-        - Datasets in BigGIS: ./data sources/datasets.md
-        - Weather stations: ./data sources/weather-stations.md
+        - Datasets in BigGIS: ./data-sources/index.md
+        - Weather stations: ./data-sources/weather-stations.md
     - Demos:
         - About demos ...: ./demos/index.md
         - EnviroCar (Smart City): ./demos/enviro-car.md
