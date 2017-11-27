@@ -1,8 +1,10 @@
+!!! note "Responsible person for this section"
+    - Hannes Müller (LUBW)
+    - Johannes Kutterer (Disy)
+    - Daniel Seebacher (Uni Konstanz)
+
 # Invasive species
 
-!!! TODO
-    Hannes Müller (LUBW), Johannes Kutterer (Disy), Daniel Seebacher (Uni Konstanz)
-    
 ## Drosophila Suzuki
 
 - Überwachung des invasiven Schädlings Kirschessigfliege (KEF)

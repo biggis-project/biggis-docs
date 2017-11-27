@@ -1,7 +1,7 @@
-# Docker containers
+!!! note "Responsible person for this section"
+    Patrick Wiener
 
-!!! TODO
-    Patrick
+# Docker containers
 
 - all sources should be on github
 - images should be hosted on dockerhub

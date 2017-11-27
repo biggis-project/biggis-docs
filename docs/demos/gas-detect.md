@@ -1,7 +1,7 @@
-# Gas Cloud Detection
+!!! note "Responsible person for this section"
+    Bodo Bernsdorf
 
-!!! TODO
-    Bodo
+# Gas Cloud Detection
 
 - Chlorophyll-Erkennung im Befliegungsexperiment
 - Unsichtbare Schadgaswolke (IR-Bereich)

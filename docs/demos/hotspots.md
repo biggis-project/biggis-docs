@@ -1,10 +1,7 @@
+!!! note "Responsible person for this section"
+    Viliam Simko
+    
 # Hotspot analysis demo
 
-!!! TODO
-    Phillip Zehnder used the NY-Taxi data in stream pipes
-
-!!! TODO
-    We can take some text from GISCUP and from our papers.
-
-!!! TODO
-    Marc's master thesis about stability of hotspots
+- Phillip Zehnder used the NY-Taxi data in stream pipes
+- We can take some text from GISCUP and from our papers.
