@@ -54,7 +54,7 @@ markdown_extensions:
 
 extra_javascript:
   - 'extra.js'
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:12:14 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:56:09 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/BigGIS_Overview.md
@@ -77,7 +77,7 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:12:14 CET 2017
         - Optimize-sensors: ./demos/optimize-sensors.md
         - Stability of hotspots: ./demos/Stability_of_hotspots.md
         - Urban Heat Islands: ./demos/urban-heat-islands.md
-    - Documentation Howto: ./Documentation_Howto.md
+    - Documentation Howto: ./docs-howto.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md
