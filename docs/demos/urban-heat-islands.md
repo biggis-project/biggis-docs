@@ -1,8 +1,15 @@
+!!! note "Responsible person for this section"
+    Julian Bruns
+
 # Urban Heat Islands
 
 !!! TODO
-    Julian
-
+    - Translate to English
+    - add links to related github repos
+    - add some images (but not too many)
+    - add links to related papers
+    - describe APIs especially from the end-users' point of view
+    
 - Temperaturinseln in Karlsruhe und anderen Städten
 - Temperaturdaten: Volunteered geographic data (z.B. wunderground.com)
 - Korrelation zwischen Bereichen in verschiedenen Städten mit ähnlichem Temperaturverlauf -> Zugang zu Ursachen für Temperaturentwicklung

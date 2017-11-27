@@ -1,8 +1,14 @@
+!!! note "Responsible person for this section"
+    Adrian Klink (EFTAS)
+
 # Landuse classification
 
 !!! TODO
-    Adrian
-
+    - Translate to English
+    - Describe the idea
+    - Maybe add some geotrellis examples
+    - add link to the related github repository. 
+  
 ## Klassifikation von Luftbildern nach Nutzungsklassen
 
 ## Tools
