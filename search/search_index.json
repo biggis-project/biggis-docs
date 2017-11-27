@@ -106,47 +106,47 @@
             "title": "Contributing documentation"
         }, 
         {
-            "location": "/data sources/datasets/", 
+            "location": "/data-sources/", 
             "text": "Datasets in BigGIS\n\n\nData in bwCloud\n\n\nPre-cached / downloaded to bwCloud as a part of BigGIS\n\n\n\n\nATKIS land use data (multiple options possible - TODO:Matthias) TODO:how big\n\n\nshapefiles in a directory\n\n\ndata in Accumulo/Exasolution\n\n\nNew York taxi drives\n\n\n2GB/month -\n for years 2009-2015 potentially ~160GB of storage space\n\n\nmultiple options possible - TODO:Matthias\n\n\nbunch of CSV files in a directories organized per year\n\n\npoints stored in Accumulo\n\n\npoints stored in Exasolution\n\n\nLarge historical data sets (HDFS/Accumulo - TODO:Matthias):\n\n\nLUBW (REST API for pulling)\n\n\nDWD (REST API for pulling)\n\n\nWunderground (TODO:UKON)\n\n\n\n\nConnectors to external services\n\n\nThe following connectors to external data sources should be available (for pulling data as a stream).\n\n\n\n\nPulling data:\n\n\nEnvisat raster data\n\n\nLandsat raster data\n\n\nDWD weather stations\n\n\nLUBW weather stations\n\n\n\n\nWunderground weather stations\n\n\n\n\n\n\nPushing data (REST API needs to be developed from our side):\n\n\n\n\nSensor data from LoRa weather stations\n\n\nVGI data -\n compare KA Feedback (TODO)\n\n\nTODO: hyperspectral images from drones (TODO)\n\n\nTODO: other sensor data from drones (TODO)", 
             "title": "Datasets in BigGIS"
         }, 
         {
-            "location": "/data sources/datasets/#datasets-in-biggis", 
+            "location": "/data-sources/#datasets-in-biggis", 
             "text": "", 
             "title": "Datasets in BigGIS"
         }, 
         {
-            "location": "/data sources/datasets/#data-in-bwcloud", 
+            "location": "/data-sources/#data-in-bwcloud", 
             "text": "Pre-cached / downloaded to bwCloud as a part of BigGIS   ATKIS land use data (multiple options possible - TODO:Matthias) TODO:how big  shapefiles in a directory  data in Accumulo/Exasolution  New York taxi drives  2GB/month -  for years 2009-2015 potentially ~160GB of storage space  multiple options possible - TODO:Matthias  bunch of CSV files in a directories organized per year  points stored in Accumulo  points stored in Exasolution  Large historical data sets (HDFS/Accumulo - TODO:Matthias):  LUBW (REST API for pulling)  DWD (REST API for pulling)  Wunderground (TODO:UKON)", 
             "title": "Data in bwCloud"
         }, 
         {
-            "location": "/data sources/datasets/#connectors-to-external-services", 
+            "location": "/data-sources/#connectors-to-external-services", 
             "text": "The following connectors to external data sources should be available (for pulling data as a stream).   Pulling data:  Envisat raster data  Landsat raster data  DWD weather stations  LUBW weather stations   Wunderground weather stations    Pushing data (REST API needs to be developed from our side):   Sensor data from LoRa weather stations  VGI data -  compare KA Feedback (TODO)  TODO: hyperspectral images from drones (TODO)  TODO: other sensor data from drones (TODO)", 
             "title": "Connectors to external services"
         }, 
         {
-            "location": "/data sources/weather-stations/", 
+            "location": "/data-sources/weather-stations/", 
             "text": "Weather stations\n\n\n\n\nTodo\n\n\nJulian, Hannes, Jochen\n\n\n\n\nLUBW weather station at FZI\n\n\n\n\nthe device should be mounted at FZI (January 2017)\n\n\ndata should be available through some api (REST pull ? TODO:Hannes)\n\n\n\n\nLoRa-based weather stations\n\n\n\n\nTwo LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)\n\n\nData received by the LoRa gateways:\n\n\nshould be handled in a stream-processing way (pipeline modeled using StreamPipes)\n\n\nshould be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)\n\n\nshould be sent to \nhttps://opensensemap.org/\n (TODO:Jochen)\n\n\n34 LoRa sensor units should be deployed (by Jochen Lutz)\n\n\nREST API for pushing developed using Play2 framework (REST-\nkafka)\n\n\nOutlier filtering node (kafka-\nflink-\nkafka)\n\n\nData persisting node (kafka-\nflink-\naccumulo)\n\n\n\n\nWeb-based mobile-friendly app\n\n\n\n\nQR code contains stations id and URL that leads to public web\n\n\nthe web page contains info about the station and the project\n\n\nadmin can click and change station information (or register a new station)\n\n\nlat/lon is taken from the phone (HTML5 geolocation api)\n\n\nadmin can add additional parameters (placement details)", 
             "title": "Weather stations"
         }, 
         {
-            "location": "/data sources/weather-stations/#weather-stations", 
+            "location": "/data-sources/weather-stations/#weather-stations", 
             "text": "Todo  Julian, Hannes, Jochen", 
             "title": "Weather stations"
         }, 
         {
-            "location": "/data sources/weather-stations/#lubw-weather-station-at-fzi", 
+            "location": "/data-sources/weather-stations/#lubw-weather-station-at-fzi", 
             "text": "the device should be mounted at FZI (January 2017)  data should be available through some api (REST pull ? TODO:Hannes)", 
             "title": "LUBW weather station at FZI"
         }, 
         {
-            "location": "/data sources/weather-stations/#lora-based-weather-stations", 
+            "location": "/data-sources/weather-stations/#lora-based-weather-stations", 
             "text": "Two LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)  Data received by the LoRa gateways:  should be handled in a stream-processing way (pipeline modeled using StreamPipes)  should be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)  should be sent to  https://opensensemap.org/  (TODO:Jochen)  34 LoRa sensor units should be deployed (by Jochen Lutz)  REST API for pushing developed using Play2 framework (REST- kafka)  Outlier filtering node (kafka- flink- kafka)  Data persisting node (kafka- flink- accumulo)", 
             "title": "LoRa-based weather stations"
         }, 
         {
-            "location": "/data sources/weather-stations/#web-based-mobile-friendly-app", 
+            "location": "/data-sources/weather-stations/#web-based-mobile-friendly-app", 
             "text": "QR code contains stations id and URL that leads to public web  the web page contains info about the station and the project  admin can click and change station information (or register a new station)  lat/lon is taken from the phone (HTML5 geolocation api)  admin can add additional parameters (placement details)", 
             "title": "Web-based mobile-friendly app"
         }, 

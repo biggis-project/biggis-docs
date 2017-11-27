@@ -48,13 +48,13 @@
     
         
     <url>
-     <loc>/data sources/datasets/</loc>
+     <loc>/data-sources/</loc>
      <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/data sources/weather-stations/</loc>
+     <loc>/data-sources/weather-stations/</loc>
      <lastmod>2017-11-27</lastmod>
      <changefreq>daily</changefreq>
     </url>

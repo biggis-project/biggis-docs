@@ -32,21 +32,21 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.0.4">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.0">
     
     
       
-        <title>Datasets in BigGIS - BigGIS Documentation</title>
+        <title>Weather stations - BigGIS Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-709eec9410.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.5d3fffba.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.fbd935c7.css">
       
     
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -91,18 +91,18 @@
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  Data sources
-                </span>
-              
+              <span class="md-header-nav__topic">
+                BigGIS Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Weather stations
+              </span>
             
-            Datasets in BigGIS
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
@@ -164,6 +164,9 @@
     <div class="md-container">
       
         
+      
+      
+        
 
   
 
@@ -201,7 +204,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="Data sources" class="md-tabs__link md-tabs__link--active">
+        <a href="../" title="Data sources" class="md-tabs__link md-tabs__link--active">
           Data sources
         </a>
       
@@ -403,6 +406,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../" title="Datasets in BigGIS" class="md-nav__link">
+      Datasets in BigGIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -414,11 +429,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Datasets in BigGIS
+        Weather stations
       </label>
     
-    <a href="./" title="Datasets in BigGIS" class="md-nav__link md-nav__link--active">
-      Datasets in BigGIS
+    <a href="./" title="Weather stations" class="md-nav__link md-nav__link--active">
+      Weather stations
     </a>
     
       
@@ -432,15 +447,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-in-bwcloud" title="Data in bwCloud" class="md-nav__link">
-    Data in bwCloud
+  <a href="#lubw-weather-station-at-fzi" title="LUBW weather station at FZI" class="md-nav__link">
+    LUBW weather station at FZI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connectors-to-external-services" title="Connectors to external services" class="md-nav__link">
-    Connectors to external services
+  <a href="#lora-based-weather-stations" title="LoRa-based weather stations" class="md-nav__link">
+    LoRa-based weather stations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-based-mobile-friendly-app" title="Web-based mobile-friendly app" class="md-nav__link">
+    Web-based mobile-friendly app
   </a>
   
 </li>
@@ -451,18 +473,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../weather-stations/" title="Weather stations" class="md-nav__link">
-      Weather stations
-    </a>
   </li>
 
         
@@ -732,15 +742,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-in-bwcloud" title="Data in bwCloud" class="md-nav__link">
-    Data in bwCloud
+  <a href="#lubw-weather-station-at-fzi" title="LUBW weather station at FZI" class="md-nav__link">
+    LUBW weather station at FZI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#connectors-to-external-services" title="Connectors to external services" class="md-nav__link">
-    Connectors to external services
+  <a href="#lora-based-weather-stations" title="LoRa-based weather stations" class="md-nav__link">
+    LoRa-based weather stations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-based-mobile-friendly-app" title="Web-based mobile-friendly app" class="md-nav__link">
+    Web-based mobile-friendly app
   </a>
   
 </li>
@@ -759,45 +776,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/data sources/datasets.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/data-sources/weather-stations.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="datasets-in-biggis">Datasets in BigGIS<a class="headerlink" href="#datasets-in-biggis" title="Permanent link">&para;</a></h1>
-<h2 id="data-in-bwcloud">Data in bwCloud<a class="headerlink" href="#data-in-bwcloud" title="Permanent link">&para;</a></h2>
-<p>Pre-cached / downloaded to bwCloud as a part of BigGIS</p>
+                <h1 id="weather-stations">Weather stations<a class="headerlink" href="#weather-stations" title="Permanent link">&para;</a></h1>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>Julian, Hannes, Jochen</p>
+</div>
+<h2 id="lubw-weather-station-at-fzi">LUBW weather station at FZI<a class="headerlink" href="#lubw-weather-station-at-fzi" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ATKIS land use data (multiple options possible - TODO:Matthias) TODO:how big</li>
-<li>shapefiles in a directory</li>
-<li>data in Accumulo/Exasolution</li>
-<li>New York taxi drives</li>
-<li>2GB/month -&gt; for years 2009-2015 potentially ~160GB of storage space</li>
-<li>multiple options possible - TODO:Matthias</li>
-<li>bunch of CSV files in a directories organized per year</li>
-<li>points stored in Accumulo</li>
-<li>points stored in Exasolution</li>
-<li>Large historical data sets (HDFS/Accumulo - TODO:Matthias):</li>
-<li>LUBW (REST API for pulling)</li>
-<li>DWD (REST API for pulling)</li>
-<li>Wunderground (TODO:UKON)</li>
+<li>the device should be mounted at FZI (January 2017)</li>
+<li>data should be available through some api (REST pull ? TODO:Hannes)</li>
 </ul>
-<h2 id="connectors-to-external-services">Connectors to external services<a class="headerlink" href="#connectors-to-external-services" title="Permanent link">&para;</a></h2>
-<p>The following connectors to external data sources should be available (for pulling data as a stream).</p>
+<h2 id="lora-based-weather-stations">LoRa-based weather stations<a class="headerlink" href="#lora-based-weather-stations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Pulling data:</li>
-<li>Envisat raster data</li>
-<li>Landsat raster data</li>
-<li>DWD weather stations</li>
-<li>LUBW weather stations</li>
-<li>
-<p>Wunderground weather stations</p>
-</li>
-<li>
-<p>Pushing data (REST API needs to be developed from our side):</p>
-</li>
-<li>Sensor data from LoRa weather stations</li>
-<li>VGI data -&gt; compare KA Feedback (TODO)</li>
-<li>TODO: hyperspectral images from drones (TODO)</li>
-<li>TODO: other sensor data from drones (TODO)</li>
+<li>Two LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)</li>
+<li>Data received by the LoRa gateways:</li>
+<li>should be handled in a stream-processing way (pipeline modeled using StreamPipes)</li>
+<li>should be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)</li>
+<li>should be sent to <a href="https://opensensemap.org/">https://opensensemap.org/</a> (TODO:Jochen)</li>
+<li>34 LoRa sensor units should be deployed (by Jochen Lutz)</li>
+<li>REST API for pushing developed using Play2 framework (REST-&gt;kafka)</li>
+<li>Outlier filtering node (kafka-&gt;flink-&gt;kafka)</li>
+<li>Data persisting node (kafka-&gt;flink-&gt;accumulo)</li>
+</ul>
+<h2 id="web-based-mobile-friendly-app">Web-based mobile-friendly app<a class="headerlink" href="#web-based-mobile-friendly-app" title="Permanent link">&para;</a></h2>
+<ul>
+<li>QR code contains stations id and URL that leads to public web</li>
+<li>the web page contains info about the station and the project</li>
+<li>admin can click and change station information (or register a new station)</li>
+<li>lat/lon is taken from the phone (HTML5 geolocation api)</li>
+<li>admin can add additional parameters (placement details)</li>
 </ul>
                 
                   
@@ -817,7 +827,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../contributing/" title="Contributing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../" title="Datasets in BigGIS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -826,19 +836,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Contributing
+                Datasets in BigGIS
               </span>
             </div>
           </a>
         
         
-          <a href="../weather-stations/" title="Weather stations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../demos/" title="About demos ..." class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Weather stations
+                About demos ...
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -858,9 +868,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="http://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -882,9 +892,9 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-8e4952e681.js"></script>
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
       
-      <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
         <script src="../../extra.js"></script>
       
