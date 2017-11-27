@@ -33,7 +33,12 @@ You can install the packages either locally as a user into `~/.local/` or system
     pip install --user mkdocs-material
 
 !!! note
-    Make sure you are using **mkdocs version 0.17.1+**
+    Make sure you are using **mkdocs version 0.17.2+**.
+    ```sh
+    # to upgrade use this instead
+    pip install -U --user mkdocs
+    pip install -U --user mkdocs-material
+    ```
 
 ## Recommended editor
 
