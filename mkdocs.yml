@@ -54,7 +54,7 @@ markdown_extensions:
 
 extra_javascript:
   - 'extra.js'
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:56:09 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 21:20:13 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/BigGIS_Overview.md
@@ -66,6 +66,7 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:56:09 CET 2017
         - Datasets in BigGIS: ./data sources/datasets.md
         - Weather stations: ./data sources/weather-stations.md
     - Demos:
+        - About demos ...: ./demos/index.md
         - EnviroCar (Smart City): ./demos/enviro-car.md
         - Gas Cloud Detection: ./demos/gas-detect.md
         - Gas Cloud Prediction: ./demos/gas-predict.md
@@ -74,7 +75,7 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 20:56:09 CET 2017
         - Invasive species: ./demos/invasive-spec.md
         - Landuse classification: ./demos/landuse.md
         - Optimal flight plan for drones: ./demos/optimize-drones.md
-        - Optimize-sensors: ./demos/optimize-sensors.md
+        - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
         - Stability of hotspots: ./demos/Stability_of_hotspots.md
         - Urban Heat Islands: ./demos/urban-heat-islands.md
     - Documentation Howto: ./docs-howto.md

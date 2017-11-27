@@ -1,7 +1,7 @@
 !!! note "Responsible person for this section"
     Katharina Glock
 
-## Placement of sensors under uncertainty
+# Placement of sensors under uncertainty
 
 !!! TODO
     - describe the idea
