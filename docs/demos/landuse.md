@@ -4,28 +4,29 @@
 # Landuse classification
 
 !!! TODO
-    - Translate to English
     - Describe the idea
     - Maybe add some geotrellis examples
-    - add link to the related github repository. 
+
+!!! note
+    Related repository is https://github.com/biggis-project/biggis-landuse
   
-## Klassifikation von Luftbildern nach Nutzungsklassen
+## Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
 
 ## Tools
-- Maschinelles lernen
+- Machine Learning
 - Training: Multiclass SVM
 - Geotrellis
 
-## Beispiel
-- Klassifikation von Luftbildern von Mai-Aug 2016
-- Kombination eines Stacks: Luftbilder + Satellitenbilder (IR, Auflösung 2m)
-- Training von Mutliclass SVM mit manuell klassifizierten Trainingsdaten (klassifizierte Bildausschnitte)
+## Example
+- Classification of Aerial Images May-Aug 2016
+- Layerstacking: Aerial Images + Satellite images (IR, Resolution 2m)
+- Training of a Multiclass SVM with manually selected training data (classified image tiles)
 
-## Ausblick
-- Hinzunahme von weiteren Layers, zB.
-- Geographische Höhe
-- Homogenität der Textur
-- Weitere Klassifikatoren
+## Further Steps
+- Adding additional Layers, e.g.
+- Terrain Height
+- Homogeneity of Texture
+- Using Other Classififiers
 
 ## Related Scenarios
 - [Environment](../scenarios/03_env.md)
