@@ -524,9 +524,63 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Hotspot analysis demo
+      </label>
+    
     <a href="./" title="Hotspot analysis demo" class="md-nav__link md-nav__link--active">
       Hotspot analysis demo
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-specification" title="Problem specification" class="md-nav__link">
+    Problem specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
+    Hotspot analysis using geotrellis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g-using-map-algebra-operations" title="G* using map algebra operations" class="md-nav__link">
+    G* using map algebra operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geotrellis-code" title="Geotrellis code" class="md-nav__link">
+    Geotrellis code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -697,6 +751,47 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-specification" title="Problem specification" class="md-nav__link">
+    Problem specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
+    Hotspot analysis using geotrellis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#g-using-map-algebra-operations" title="G* using map algebra operations" class="md-nav__link">
+    G* using map algebra operations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geotrellis-code" title="Geotrellis code" class="md-nav__link">
+    Geotrellis code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -719,6 +814,53 @@
 <li>Phillip Zehnder used the NY-Taxi data in stream pipes</li>
 <li>We can take some text from GISCUP and from our papers.</li>
 </ul>
+<h2 id="problem-specification">Problem specification<a class="headerlink" href="#problem-specification" title="Permanent link">&para;</a></h2>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>add link to GISCUP'16 website</p>
+</div>
+<h2 id="hotspot-analysis-using-geotrellis">Hotspot analysis using geotrellis<a class="headerlink" href="#hotspot-analysis-using-geotrellis" title="Permanent link">&para;</a></h2>
+<p>In this section we show a simplified version of the hotspot analysis.
+We use the geotrellis library to achieve the paralleization.
+Some assumptions are:</p>
+<ul>
+<li>we use 2-dimenational data (only the spatial part without time component)</li>
+<li>we store our data as a distributed raster (in geotrellis catalog)</li>
+<li>our hotspot analysis uses the standard G* with variable window</li>
+</ul>
+<p>First, we need to express the <span>\(G^*\)</span> formula in terms of the map algebra operations.</p>
+<h3 id="g-using-map-algebra-operations">G* using map algebra operations<a class="headerlink" href="#g-using-map-algebra-operations" title="Permanent link">&para;</a></h3>
+<p>Given a raster <span>\(R\)</span> (represented as a singleband raster layer in geotrellis catalog)
+and a square weight matrix <span>\(W\)</span> of size <span>\(n \times n\)</span> we can use the following formula:
+$$
+G*(R, W) =
+    \frac{R * W - GlobMeanTODO}
+    {GlobSdTODO}
+$$</p>
+<p>First, we need to obtain two global values from the whole <span>\(R\)</span>:
+- global mean <span>\(GlobMeanTODO\)</span>
+- global standard deviation <span>\(GlobSdTODO\)</span></p>
+<p>Then, we can apply a <strong>focal operation</strong> <span>\(R * W\)</span> - the convolution of raster <span>\(R\)</span> with the weight matrix <span>\(W\)</span>.
+After that, we apply a <strong>local operation</strong> on <span>\(R\)</span> using the global mean <span>\(GlobMeanTODO\)</span> and standard deviation
+<span>\(GlobSdTODO\)</span>. </p>
+<h3 id="geotrellis-code">Geotrellis code<a class="headerlink" href="#geotrellis-code" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1">// INPUT: layerId, circleKernelRadius</span>
+
+<span class="k">val</span> <span class="n">queryResult</span><span class="k">:</span> <span class="kt">RDD</span><span class="o">[(</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span><span class="o">)]</span> <span class="k">with</span> <span class="nc">Metadata</span><span class="o">[</span><span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]]</span> <span class="k">=</span>
+  <span class="n">layerReader</span><span class="o">.</span><span class="n">read</span><span class="o">[</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span>, <span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]](</span><span class="n">srcLayerId</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">focalKernel</span> <span class="k">=</span> <span class="nc">Kernel</span><span class="o">.</span><span class="n">circle</span><span class="o">(</span><span class="n">circleKernelRadius</span><span class="o">,</span> <span class="n">queryResult</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cellwidth</span><span class="o">,</span> <span class="n">circleKernelRadius</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">convolvedLayerRdd</span> <span class="k">=</span> <span class="n">queryResult</span><span class="o">.</span><span class="n">withContext</span> <span class="o">{</span>
+  <span class="n">rdd</span> <span class="k">=&gt;</span> <span class="n">rdd</span>
+    <span class="o">.</span><span class="n">bufferTiles</span><span class="o">(</span><span class="n">focalKernel</span><span class="o">.</span><span class="n">extent</span><span class="o">)</span>
+    <span class="o">.</span><span class="n">mapValues</span> <span class="o">{</span> <span class="n">tileWithContext</span> <span class="k">=&gt;</span>
+      <span class="n">tileWithContext</span><span class="o">.</span><span class="n">tile</span><span class="o">.</span><span class="n">focalSum</span><span class="o">(</span><span class="n">focalKernel</span><span class="o">,</span> <span class="nc">Some</span><span class="o">(</span><span class="n">tileWithContext</span><span class="o">.</span><span class="n">targetArea</span><span class="o">))</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">// TODO: local operation with global meand and stdev</span>
+</pre></div>
                 
                   
                 

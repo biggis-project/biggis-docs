@@ -292,13 +292,33 @@
         }, 
         {
             "location": "/demos/hotspots/", 
-            "text": "Responsible person for this section\n\n\nViliam Simko\n\n\n\n\nHotspot analysis demo\n\n\n\n\nPhillip Zehnder used the NY-Taxi data in stream pipes\n\n\nWe can take some text from GISCUP and from our papers.", 
+            "text": "Responsible person for this section\n\n\nViliam Simko\n\n\n\n\nHotspot analysis demo\n\n\n\n\nPhillip Zehnder used the NY-Taxi data in stream pipes\n\n\nWe can take some text from GISCUP and from our papers.\n\n\n\n\nProblem specification\n\n\n\n\nTodo\n\n\nadd link to GISCUP'16 website\n\n\n\n\nHotspot analysis using geotrellis\n\n\nIn this section we show a simplified version of the hotspot analysis.\nWe use the geotrellis library to achieve the paralleization.\nSome assumptions are:\n\n\n\n\nwe use 2-dimenational data (only the spatial part without time component)\n\n\nwe store our data as a distributed raster (in geotrellis catalog)\n\n\nour hotspot analysis uses the standard G* with variable window\n\n\n\n\nFirst, we need to express the \n\\(G^*\\)\n formula in terms of the map algebra operations.\n\n\nG* using map algebra operations\n\n\nGiven a raster \n\\(R\\)\n (represented as a singleband raster layer in geotrellis catalog)\nand a square weight matrix \n\\(W\\)\n of size \n\\(n \\times n\\)\n we can use the following formula:\n$$\nG*(R, W) =\n    \\frac{R * W - GlobMeanTODO}\n    {GlobSdTODO}\n$$\n\n\nFirst, we need to obtain two global values from the whole \n\\(R\\)\n:\n- global mean \n\\(GlobMeanTODO\\)\n\n- global standard deviation \n\\(GlobSdTODO\\)\n\n\nThen, we can apply a \nfocal operation\n \n\\(R * W\\)\n - the convolution of raster \n\\(R\\)\n with the weight matrix \n\\(W\\)\n.\nAfter that, we apply a \nlocal operation\n on \n\\(R\\)\n using the global mean \n\\(GlobMeanTODO\\)\n and standard deviation\n\n\\(GlobSdTODO\\)\n. \n\n\nGeotrellis code\n\n\n// INPUT: layerId, circleKernelRadius\n\n\n\nval\n \nqueryResult\n:\n \nRDD\n[(\nSpatialKey\n, \nTile\n)]\n \nwith\n \nMetadata\n[\nTileLayerMetadata\n[\nSpatialKey\n]]\n \n=\n\n  \nlayerReader\n.\nread\n[\nSpatialKey\n, \nTile\n, \nTileLayerMetadata\n[\nSpatialKey\n]](\nsrcLayerId\n)\n\n\n\nval\n \nfocalKernel\n \n=\n \nKernel\n.\ncircle\n(\ncircleKernelRadius\n,\n \nqueryResult\n.\nmetadata\n.\ncellwidth\n,\n \ncircleKernelRadius\n)\n\n\n\nval\n \nconvolvedLayerRdd\n \n=\n \nqueryResult\n.\nwithContext\n \n{\n\n  \nrdd\n \n=\n \nrdd\n\n    \n.\nbufferTiles\n(\nfocalKernel\n.\nextent\n)\n\n    \n.\nmapValues\n \n{\n \ntileWithContext\n \n=\n\n      \ntileWithContext\n.\ntile\n.\nfocalSum\n(\nfocalKernel\n,\n \nSome\n(\ntileWithContext\n.\ntargetArea\n))\n\n    \n}\n\n\n}\n\n\n\n// TODO: local operation with global meand and stdev", 
             "title": "Hotspot analysis demo"
         }, 
         {
             "location": "/demos/hotspots/#hotspot-analysis-demo", 
             "text": "Phillip Zehnder used the NY-Taxi data in stream pipes  We can take some text from GISCUP and from our papers.", 
             "title": "Hotspot analysis demo"
+        }, 
+        {
+            "location": "/demos/hotspots/#problem-specification", 
+            "text": "Todo  add link to GISCUP'16 website", 
+            "title": "Problem specification"
+        }, 
+        {
+            "location": "/demos/hotspots/#hotspot-analysis-using-geotrellis", 
+            "text": "In this section we show a simplified version of the hotspot analysis.\nWe use the geotrellis library to achieve the paralleization.\nSome assumptions are:   we use 2-dimenational data (only the spatial part without time component)  we store our data as a distributed raster (in geotrellis catalog)  our hotspot analysis uses the standard G* with variable window   First, we need to express the  \\(G^*\\)  formula in terms of the map algebra operations.", 
+            "title": "Hotspot analysis using geotrellis"
+        }, 
+        {
+            "location": "/demos/hotspots/#g-using-map-algebra-operations", 
+            "text": "Given a raster  \\(R\\)  (represented as a singleband raster layer in geotrellis catalog)\nand a square weight matrix  \\(W\\)  of size  \\(n \\times n\\)  we can use the following formula:\n$$\nG*(R, W) =\n    \\frac{R * W - GlobMeanTODO}\n    {GlobSdTODO}\n$$  First, we need to obtain two global values from the whole  \\(R\\) :\n- global mean  \\(GlobMeanTODO\\) \n- global standard deviation  \\(GlobSdTODO\\)  Then, we can apply a  focal operation   \\(R * W\\)  - the convolution of raster  \\(R\\)  with the weight matrix  \\(W\\) .\nAfter that, we apply a  local operation  on  \\(R\\)  using the global mean  \\(GlobMeanTODO\\)  and standard deviation \\(GlobSdTODO\\) .", 
+            "title": "G* using map algebra operations"
+        }, 
+        {
+            "location": "/demos/hotspots/#geotrellis-code", 
+            "text": "// INPUT: layerId, circleKernelRadius  val   queryResult :   RDD [( SpatialKey ,  Tile )]   with   Metadata [ TileLayerMetadata [ SpatialKey ]]   = \n   layerReader . read [ SpatialKey ,  Tile ,  TileLayerMetadata [ SpatialKey ]]( srcLayerId )  val   focalKernel   =   Kernel . circle ( circleKernelRadius ,   queryResult . metadata . cellwidth ,   circleKernelRadius )  val   convolvedLayerRdd   =   queryResult . withContext   { \n   rdd   =   rdd \n     . bufferTiles ( focalKernel . extent ) \n     . mapValues   {   tileWithContext   = \n       tileWithContext . tile . focalSum ( focalKernel ,   Some ( tileWithContext . targetArea )) \n     }  }  // TODO: local operation with global meand and stdev", 
+            "title": "Geotrellis code"
         }, 
         {
             "location": "/demos/invasive-spec/", 
@@ -337,33 +357,33 @@
         }, 
         {
             "location": "/demos/landuse/", 
-            "text": "Responsible person for this section\n\n\nAdrian Klink (EFTAS)\n\n\n\n\nLanduse classification\n\n\n\n\nTodo\n\n\n\n\nTranslate to English\n\n\nDescribe the idea\n\n\nMaybe add some geotrellis examples\n\n\nadd link to the related github repository. \n\n\n\n\n\n\nKlassifikation von Luftbildern nach Nutzungsklassen\n\n\nTools\n\n\n\n\nMaschinelles lernen\n\n\nTraining: Multiclass SVM\n\n\nGeotrellis\n\n\n\n\nBeispiel\n\n\n\n\nKlassifikation von Luftbildern von Mai-Aug 2016\n\n\nKombination eines Stacks: Luftbilder + Satellitenbilder (IR, Aufl\u00f6sung 2m)\n\n\nTraining von Mutliclass SVM mit manuell klassifizierten Trainingsdaten (klassifizierte Bildausschnitte)\n\n\n\n\nAusblick\n\n\n\n\nHinzunahme von weiteren Layers, zB.\n\n\nGeographische H\u00f6he\n\n\nHomogenit\u00e4t der Textur\n\n\nWeitere Klassifikatoren\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment\n\n\nSmart City", 
+            "text": "Responsible person for this section\n\n\nAdrian Klink (EFTAS)\n\n\n\n\nLanduse classification\n\n\n\n\nTodo\n\n\n\n\nDescribe the idea\n\n\nMaybe add some geotrellis examples\n\n\n\n\n\n\n\n\nNote\n\n\nRelated repository is \nhttps://github.com/biggis-project/biggis-landuse\n\n\n\n\nClassification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)\n\n\nTools\n\n\n\n\nMachine Learning\n\n\nTraining: Multiclass SVM\n\n\nGeotrellis\n\n\n\n\nExample\n\n\n\n\nClassification of Aerial Images May-Aug 2016\n\n\nLayerstacking: Aerial Images + Satellite images (IR, Resolution 2m)\n\n\nTraining of a Multiclass SVM with manually selected training data (classified image tiles)\n\n\n\n\nFurther Steps\n\n\n\n\nAdding additional Layers, e.g.\n\n\nTerrain Height\n\n\nHomogeneity of Texture\n\n\nUsing Other Classififiers\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment\n\n\nSmart City", 
             "title": "Landuse classification"
         }, 
         {
             "location": "/demos/landuse/#landuse-classification", 
-            "text": "Todo   Translate to English  Describe the idea  Maybe add some geotrellis examples  add link to the related github repository.", 
+            "text": "Todo   Describe the idea  Maybe add some geotrellis examples     Note  Related repository is  https://github.com/biggis-project/biggis-landuse", 
             "title": "Landuse classification"
         }, 
         {
-            "location": "/demos/landuse/#klassifikation-von-luftbildern-nach-nutzungsklassen", 
+            "location": "/demos/landuse/#classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate", 
             "text": "", 
-            "title": "Klassifikation von Luftbildern nach Nutzungsklassen"
+            "title": "Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)"
         }, 
         {
             "location": "/demos/landuse/#tools", 
-            "text": "Maschinelles lernen  Training: Multiclass SVM  Geotrellis", 
+            "text": "Machine Learning  Training: Multiclass SVM  Geotrellis", 
             "title": "Tools"
         }, 
         {
-            "location": "/demos/landuse/#beispiel", 
-            "text": "Klassifikation von Luftbildern von Mai-Aug 2016  Kombination eines Stacks: Luftbilder + Satellitenbilder (IR, Aufl\u00f6sung 2m)  Training von Mutliclass SVM mit manuell klassifizierten Trainingsdaten (klassifizierte Bildausschnitte)", 
-            "title": "Beispiel"
+            "location": "/demos/landuse/#example", 
+            "text": "Classification of Aerial Images May-Aug 2016  Layerstacking: Aerial Images + Satellite images (IR, Resolution 2m)  Training of a Multiclass SVM with manually selected training data (classified image tiles)", 
+            "title": "Example"
         }, 
         {
-            "location": "/demos/landuse/#ausblick", 
-            "text": "Hinzunahme von weiteren Layers, zB.  Geographische H\u00f6he  Homogenit\u00e4t der Textur  Weitere Klassifikatoren", 
-            "title": "Ausblick"
+            "location": "/demos/landuse/#further-steps", 
+            "text": "Adding additional Layers, e.g.  Terrain Height  Homogeneity of Texture  Using Other Classififiers", 
+            "title": "Further Steps"
         }, 
         {
             "location": "/demos/landuse/#related-scenarios", 
