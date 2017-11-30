@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +13,25 @@
         
     <url>
      <loc>/architecture/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/Docker_Containers/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/Infrastructure_on_bwCloud/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/StreamPipes/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -40,7 +40,7 @@
     
     <url>
      <loc>/contributing/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -49,13 +49,13 @@
         
     <url>
      <loc>/data-sources/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/weather-stations/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,73 +65,73 @@
         
     <url>
      <loc>/demos/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/enviro-car/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/gas-detect/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/gas-predict/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/heatstress/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/hotspots/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/invasive-spec/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/landuse/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/optimize-drones/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/optimize-sensors/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/Stability_of_hotspots/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/urban-heat-islands/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -140,7 +140,7 @@
     
     <url>
      <loc>/docs-howto/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -148,20 +148,30 @@
     
         
     <url>
+     <loc>/methods/</loc>
+     <lastmod>2017-11-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/scenarios/01_city/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/02_bos/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/03_env/</loc>
-     <lastmod>2017-11-29</lastmod>
+     <lastmod>2017-11-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

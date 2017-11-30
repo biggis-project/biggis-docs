@@ -52,18 +52,8 @@
         }, 
         {
             "location": "/architecture/StreamPipes/", 
-            "text": "Responsible person for this section\n\n\nMatthias Frank\n\n\n\n\nStreamPipes\n\n\nStreamPipes enables graphical modeling of distributed pipelines consisting of data streams,\nreal-time event processors and data sinks.\n\n\nThe official StreamPipes documentation can be found here:\n\n\n\n\nhttp://ipe-koi09.fzi.de/site/\n\n\n\n\nExample pipeline\n\n\n\n\nBigGIS extensions\n\n\nWithin the BigGIS project, we added several GIS-specific extensions to the StreamPipes platform.\n\n\n\n\nRaster processing using geotrellis.\n\n\n...", 
+            "text": "Responsible person for this section\n\n\nMatthias Frank\n\n\n\n\nBigGIS extensions\n\n\nWithin the BigGIS project, we added several GIS-specific extensions to the StreamPipes platform.\n\n\n\n\nRaster processing using geotrellis.\n\n\n...", 
             "title": "StreamPipes"
-        }, 
-        {
-            "location": "/architecture/StreamPipes/#streampipes", 
-            "text": "StreamPipes enables graphical modeling of distributed pipelines consisting of data streams,\nreal-time event processors and data sinks.  The official StreamPipes documentation can be found here:   http://ipe-koi09.fzi.de/site/", 
-            "title": "StreamPipes"
-        }, 
-        {
-            "location": "/architecture/StreamPipes/#example-pipeline", 
-            "text": "", 
-            "title": "Example pipeline"
         }, 
         {
             "location": "/architecture/StreamPipes/#biggis-extensions", 
@@ -524,6 +514,16 @@
             "location": "/docs-howto/#sequence-diagrams", 
             "text": "```sequence\nTitle: Example sequence diagram\nA- B: Sync call\nB-- A: Sync return\nA- C: Another sync call\nC- D: Async call\nD-- C: Async return\n```  Title: Example sequence diagram\nA- B: Sync call\nB-- A: Sync return\nA- C: Another sync call\nC- D: Async call\nD-- C: Async return", 
             "title": "Sequence diagrams"
+        }, 
+        {
+            "location": "/methods/", 
+            "text": "Methods\n\n\n\n\nhotspot analysis\n\n\nraster processing at scale", 
+            "title": "Methods"
+        }, 
+        {
+            "location": "/methods/#methods", 
+            "text": "hotspot analysis  raster processing at scale", 
+            "title": "Methods"
         }, 
         {
             "location": "/scenarios/01_city/", 
