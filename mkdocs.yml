@@ -55,7 +55,7 @@ markdown_extensions:
 extra_javascript:
   - 'extra.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 22:24:33 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Thu Nov 30 17:18:10 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/index.md
@@ -66,8 +66,6 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 22:24:33 CET 2017
     - Data sources:
         - Datasets in BigGIS: ./data-sources/index.md
         - Weather stations: ./data-sources/weather-stations.md
-    - Methods: 
-        - Hotspot Analyse: ./methods/hotspot.md
     - Demos:
         - About demos ...: ./demos/index.md
         - EnviroCar (Smart City): ./demos/enviro-car.md
@@ -82,6 +80,8 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 22:24:33 CET 2017
         - Stability of hotspots: ./demos/Stability_of_hotspots.md
         - Urban Heat Islands: ./demos/urban-heat-islands.md
     - Documentation Howto: ./docs-howto.md
+    - Methods:
+        - Methods: ./methods/index.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md
