@@ -92,24 +92,45 @@ Some assumptions are:
 
 First, we need to express the $G^*$ formula in terms of the map algebra operations.
 
-
-### Geotrellis code
+### Scala code snippets
 
 ```scala
-// INPUT: layerId, circleKernelRadius
+// typical type definition used by geotrellis
+type SpatialRDD = RDD[(SpatialKey, Tile)]
+                  with Metadata[TileLayerMetadata[SpatialKey]]
+  
+def getisord(rdd: SpatialRDD, weightMatrix: Kernel,
+             globMean:Double, globStdev:Double, numPixels:Int): SpatialRDD = {
 
-val queryResult: RDD[(SpatialKey, Tile)] with Metadata[TileLayerMetadata[SpatialKey]] =
+  val wcells = weightMatrix.tile.toArrayDouble
+  val sumW = wcells.sum
+  val sumW2 = wcells.map(x => x*x).sum
+  
+  val A = globMean * sumW
+  val B = globStdev * Math.sqrt((numPixels*sumW2 - sumW*sumW) / (numPixels - 1))
+
+  rdd.withContext {
+    _.bufferTiles(weightMatrix.extent)
+      .mapValues { tileWithCtx =>
+        tileWithCtx.tile
+          .focalSum(weightMatrix, Some(tileWithCtx.targetArea)) // focal op.
+          .mapDouble { x => (x - A) / B } // local op.
+      }
+  }
+}
+```
+
+Let's assume, we already have `layerReader`, `srcLayerId`, `kernelRadius`, `globMean`, `globStdev` and `numPixels`:
+
+```scala
+val queryResult: SpatialRDD =
   layerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](srcLayerId)
 
-val focalKernel = Kernel.circle(circleKernelRadius, queryResult.metadata.cellwidth, circleKernelRadius)
+// here, we use a circular kernel as a weight matrix
+val weightMatrix = Kernel.circle(kernelRadius,
+                                 queryResult.metadata.cellwidth,
+                                 kernelRadius)
 
-val convolvedLayerRdd = queryResult.withContext {
-  rdd => rdd
-    .bufferTiles(focalKernel.extent)
-    .mapValues { tileWithContext =>
-      tileWithContext.tile.focalSum(focalKernel, Some(tileWithContext.targetArea))
-    }
-}
-
-// TODO: local operation with global meand and stdev
+val outRdd = getisord(queryResult, weightMatrix, globMean, globStdev, numPixels)
 ```
+You can not further process `outRdd` or store it as a new layer.
