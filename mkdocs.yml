@@ -65,6 +65,8 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 20 15:33:54 CET 2017
     - Data sources:
         - Datasets in BigGIS: ./data sources/datasets.md
         - Weather stations: ./data sources/weather-stations.md
+    - Methods: 
+        - Hotspot Analyse: ./methods/hotspot.md
     - Demos:
         - EnviroCar: ./demos/EnviroCar.md
         - Gas Cloud Detection: ./demos/Gas_Cloud_Detection.md
