@@ -100,7 +100,7 @@ type SpatialRDD = RDD[(SpatialKey, Tile)]
                   with Metadata[TileLayerMetadata[SpatialKey]]
   
 def getisord(rdd: SpatialRDD, weightMatrix: Kernel,
-             globMean:Double, globStdev:Double, numPixels:Int): SpatialRDD = {
+             globMean:Double, globStdev:Double, numPixels:Long): SpatialRDD = {
 
   val wcells = weightMatrix.tile.toArrayDouble
   val sumW = wcells.sum
