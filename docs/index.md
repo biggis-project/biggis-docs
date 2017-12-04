@@ -22,6 +22,8 @@ The project is evaluated on three scenarios:
 Please visit the [project website](http://biggis-project.eu) for more
 information as well as some interactive demos.
 
+-----------------------------
+![BMBF logos](BMBF-logos.png)
 
 ## Why BigGIS?
 
