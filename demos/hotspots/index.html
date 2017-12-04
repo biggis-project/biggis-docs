@@ -200,6 +200,8 @@
         
       
         
+      
+        
   
   
     <li class="md-tabs__item">
@@ -388,6 +390,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../consortium/" title="Project Consortium" class="md-nav__link">
+      Project Consortium
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../../contributing/" title="Contributing" class="md-nav__link">
       Contributing
     </a>
@@ -401,13 +415,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Data sources
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Data sources
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -451,13 +465,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Demos
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         Demos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -701,13 +715,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Methods
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         Methods
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -737,13 +751,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-9">
       Scenarios
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-9">
         Scenarios
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -953,7 +967,7 @@ Some assumptions are:</p>
                   <span class="k">with</span> <span class="nc">Metadata</span><span class="o">[</span><span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]]</span>
 
 <span class="k">def</span> <span class="n">getisord</span><span class="o">(</span><span class="n">rdd</span><span class="k">:</span> <span class="kt">SpatialRDD</span><span class="o">,</span> <span class="n">weightMatrix</span><span class="k">:</span> <span class="kt">Kernel</span><span class="o">,</span>
-             <span class="n">globMean</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">globStdev</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">numPixels</span><span class="k">:</span><span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="o">{</span>
+             <span class="n">globMean</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">globStdev</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">numPixels</span><span class="k">:</span><span class="kt">Long</span><span class="o">)</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="o">{</span>
 
   <span class="k">val</span> <span class="n">wcells</span> <span class="k">=</span> <span class="n">weightMatrix</span><span class="o">.</span><span class="n">tile</span><span class="o">.</span><span class="n">toArrayDouble</span>
   <span class="k">val</span> <span class="n">sumW</span> <span class="k">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">sum</span>
