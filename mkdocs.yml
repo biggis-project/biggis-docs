@@ -15,16 +15,20 @@ repo_url: 'https://github.com/biggis-project/biggis-docs'
 
 
 # Copyright
-copyright: '<a href="https://www.fzi.de/footer/impressum/">Impressum: FZI Forschungszentrum Informatik am Karlsruher
-Institut für Technologie.</a>'
+copyright: '
+  <a href="https://www.fzi.de/footer/impressum/">
+    <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a>
+    <br/>
+  <b>FKZ: 01IS14012</b>
+'
 
 #copyright: 'Copyright &copy; 2017 - 2021 SeRoNet Project'
 
 # Documentation and theme
 theme:
   name: material
-  favicon: 'favicon.ico' # this icon appears in the browser's tab
-  logo: 'favicon.svg' # this icon appears in the top left corner on each page
+  favicon: favicon.ico # this icon appears in the browser's tab
+  logo: favicon.svg # this icon appears in the top left corner on each page
   palette:
     primary: 'dark blue'
     accent: 'blue'
