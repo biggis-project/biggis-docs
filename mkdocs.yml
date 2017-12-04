@@ -55,13 +55,14 @@ markdown_extensions:
 extra_javascript:
   - 'extra.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Thu Nov 30 17:18:10 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Mon Dec  4 15:02:01 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/index.md
         - Docker containers: ./architecture/Docker_Containers.md
         - BW Cloud: ./architecture/Infrastructure_on_bwCloud.md
         - StreamPipes: ./architecture/StreamPipes.md
+    - Project Consortium: ./consortium.md
     - Contributing: ./contributing.md
     - Data sources:
         - Datasets in BigGIS: ./data-sources/index.md
