@@ -15,9 +15,9 @@ pipeline.
 
 The project is evaluated on three scenarios:
 
- - [Smart city](scenarios/Smart%20City) (urban heat islands, particulate matter)
- - [Environmental management](scenarios/Environment) (health threatening animals and plants)
- - [Disaster control, civil protection](scenarios/Disaster%20Management) (air pollution, toxic chemicals)
+ - [Smart city](scenarios/01_city) (urban heat islands, particulate matter)
+ - [Environmental management](scenarios/03_env) (health threatening animals and plants)
+ - [Disaster control, civil protection](scenarios/02_bos) (air pollution, toxic chemicals)
 
 Please visit the [project website](http://biggis-project.eu) for more
 information as well as some interactive demos.
