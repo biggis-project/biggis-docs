@@ -80,6 +80,14 @@ window.addEventListener("load", () => {
   }
 })
 
+// replace mkdocs footer with our footer
+window.addEventListener("load", () => {
+  const footer = document.querySelector(".md-footer-copyright")
+  const myfooter =  document.querySelector(".md-footer-copyright__highlight")
+  footer.innerHTML = ''
+  footer.appendChild(myfooter)
+})
+
 //====================================================
 // workaround for mkdocs until release 0.17.2
 // in 0.17.2, these urls should be in mkdocs.yml
