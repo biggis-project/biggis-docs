@@ -577,20 +577,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standards-getis-ord" title="Standards Getis-Ord" class="md-nav__link">
-    Standards Getis-Ord
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getis-ord-on-rasters" title="Getis-ord on rasters" class="md-nav__link">
-    Getis-ord on rasters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
     Hotspot analysis using geotrellis
   </a>
@@ -739,6 +725,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/hotspot-analysis/" title="Hotspot analysis" class="md-nav__link">
+      Hotspot analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/soh/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -832,20 +842,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#standards-getis-ord" title="Standards Getis-Ord" class="md-nav__link">
-    Standards Getis-Ord
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getis-ord-on-rasters" title="Getis-ord on rasters" class="md-nav__link">
-    Getis-ord on rasters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
     Hotspot analysis using geotrellis
   </a>
@@ -887,69 +883,14 @@
 <ul>
 <li>We have a map, e.g. a map of temperatures or a map of taxi drop-offs.</li>
 <li>We want to find hotspots, i.e., areas on map that are <strong>significantly different from their surrounding area</strong>.</li>
-<li>We want to use Getis-Ord <span>\(G^*_i\)</span> statistic as the tool for finding hotspots.</li>
-<li>We want to parallelize the computation in our Spark cluster.</li>
+<li>We want to use Getis-Ord <span>\(G^*_i\)</span> statistic as the tool for finding hotspots<ul>
+<li>see section <a href="../../methods/hotspot-analysis/#standards-getis-ord">Standards Getis-ord</a></li>
 </ul>
-<h2 id="standards-getis-ord">Standards Getis-Ord<a class="headerlink" href="#standards-getis-ord" title="Permanent link">&para;</a></h2>
-<p>The standard definition of Getis-Ord <span>\(G^*_i\)</span> statistic assumes a study area with <span>\(n\)</span> points with measurements
-<span>\(X = [x_1, \ldots, x_n]\)</span>. Moreover, it assumes weights <span>\(w_{i,j}\)</span> to be defined between all pairs of points <span>\(i\)</span>
-and <span>\(j\)</span> (for all <span>\(i,j \in \{ 1, \ldots, n\}\)</span>). The formula to compute <span>\(G^*_i\)</span> at a given point <span>\(i\)</span> is then:</p>
-<span>\[
-    G^*_i = \frac{
-        \sum_{j=1}^{n}w_{i,j}x_j - \bar{X}\sum_{j=1}^{n}w_{i,j}
-    }{
-        S \sqrt{
-            \frac{
-              n \sum_{j=1}^{n}w_{i,j}^2 - (\sum_{j=1}^{n}w_{i,j})^2
-            }{n-1}
-        }
-    }
-\]</span><p>where:</p>
-<ul>
-<li><span>\(\bar{X}\)</span> is the mean of all measurements,</li>
-<li><span>\(S\)</span> is the standard deviation of all measurements.</li>
+</li>
+<li>We want to parallelize the computation in our Spark cluster.<ul>
+<li>see section <a href="../../methods/hotspot-analysis/#getis-ord-on-rasters">Rasterized Getis-ord</a></li>
 </ul>
-<p>As it is known, this statistic creates a z-score, which denotes the significance of an area in relation
-to its surrounding areas.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For <span>\(x \in X\)</span>, the <span>\(zscore(x) = \frac{x - mean(X)}{stdev(X)}\)</span></p>
-</div>
-<h2 id="getis-ord-on-rasters">Getis-ord on rasters<a class="headerlink" href="#getis-ord-on-rasters" title="Permanent link">&para;</a></h2>
-<p>In many situations, we want to compute <span>\(G^*_i\)</span> in a raster rather than in a point cloud.
-This way, the computation can be expressed using map algebra operations and nicely parallelized in frameworks 
-such as <a href="https://github.com/locationtech/geotrellis">Geotrellis</a>.</p>
-<p>The rasterized Getis-Ord formula looks as follows:</p>
-<span>\[
-G^*(R, W) =
-    \frac{
-        R{\stackrel{\mathtt{sum}}{\circ}}W
-        - M*\sum_{w \in W}{w}
-    }{
-        S \sqrt{
-          \frac{
-            N*\sum_{w \in W}{w^2} - (\sum_{w \in W}{w})^2
-          }{
-            N - 1
-          }
-        }
-    }
-\]</span><p>where:</p>
-<ul>
-<li><span>\(R\)</span> is the input raster.</li>
-<li><span>\(W\)</span> is a weight matrix of values between 0 and 1.
-  The matrix is square and has odd dimensions, e.g. <span>\(5 \times 5\)</span>, <span>\(31 \times 31\)</span> ...</li>
-<li><span>\(N\)</span> represents the number of all pixels in <span>\(R\)</span> (because there can be NA values)</li>
-<li><span>\(M\)</span> represents the global mean of <span>\(R\)</span>.</li>
-<li><span>\(S\)</span> represents the global standard deviation of all pixels in <span>\(R\)</span>.</li>
-</ul>
-<p>It can be seen that the formula can be nicely refactored into:</p>
-<ul>
-<li>One <strong>global operation</strong> that computes <span>\(N\)</span>, <span>\(M\)</span>, <span>\(S\)</span>. These values are usually available because they
-  were pre-computed when the raster layer has been ingested into the catalog.</li>
-<li>One <strong>focal operation</strong> <span>\(R{\stackrel{\mathtt{sum}}{\circ}}W\)</span> - the convolution of raster <span>\(R\)</span> with
-  the weight matrix <span>\(W\)</span>.</li>
-<li>One <strong>local operation</strong> that puts all components toghether for each pixel in <span>\(R\)</span>.</li>
+</li>
 </ul>
 <h2 id="hotspot-analysis-using-geotrellis">Hotspot analysis using geotrellis<a class="headerlink" href="#hotspot-analysis-using-geotrellis" title="Permanent link">&para;</a></h2>
 <p>In this section we show a simplified version of the hotspot analysis.
