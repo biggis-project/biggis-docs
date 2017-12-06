@@ -527,12 +527,12 @@
         }, 
         {
             "location": "/methods/", 
-            "text": "Methods\n\n\n\n\nTheoretical background that is used in demos and scenarios.\n\n\nEach method in a separate section (markdown file)\n\n\n\n\nRaster processing at scale\n\n\n\n\nscalable Getis-Ord G* on rasters\n\n\nlanduse classification", 
+            "text": "Methods\n\n\n\n\nTheoretical background that is used in demos and scenarios.\n\n\nEach method in a separate section (markdown file)\n\n\n\n\n\n\nTodo\n\n\nRaster processing at scale\n\n\n\n\nscalable Getis-Ord G* on rasters\n\n\nlanduse classification", 
             "title": "Methods"
         }, 
         {
             "location": "/methods/#methods", 
-            "text": "Theoretical background that is used in demos and scenarios.  Each method in a separate section (markdown file)", 
+            "text": "Theoretical background that is used in demos and scenarios.  Each method in a separate section (markdown file)    Todo", 
             "title": "Methods"
         }, 
         {
