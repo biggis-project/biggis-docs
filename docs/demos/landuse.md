@@ -17,6 +17,17 @@
 - Training: Multiclass SVM
 - Geotrellis
 
+### Scala code snippets
+
+```scala
+// reading from Hadoop Layer (HDFS)
+val rdd : RDD[(SpatialKey, MultibandTile)] with Metadata[TileLayerMetadata[SpatialKey]] =
+      biggis.landuse.api.readRddFromLayer(LayerId(layerName, zoom))
+      
+// writing to Hadoop Layer (HDFS)
+biggis.landuse.api.writeRddToLayer(rdd, LayerId(layerName, zoom))
+```
+
 ## Example
 - Classification of Aerial Images May-Aug 2016
 - Layerstacking: Aerial Images + Satellite images (IR, Resolution 2m)
