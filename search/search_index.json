@@ -1,14 +1,24 @@
 {
     "docs": [
         {
-            "location": "/architecture/Docker_Containers/", 
-            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nDocker containers\n\n\n\n\nall sources should be on github\n\n\nimages should be hosted on dockerhub\n\n\nlist of docker images that should be available:\n\n\nHDFS (should use all bwCloud resources available to BigGIS)\n\n\nKafka with Zookeeper (overview of queues needed)\n\n\nFlink\n\n\nSpark\n\n\nGeotrellis libraries (part of the Spark container?)\n\n\nAccumulo with Geomesa (or Geowave)\n\n\nStreamPipes\n\n\nExasolution\n\n\nExasolution should support Accumulo(Geomesa/Geowave) through virtual schema\n\n\nExasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)\n\n\n\n\n\n\nGeo-Server\n\n\nmit Plugin f\u00fcr Accumulo\n\n\nzur Transformation von Formaten\n\n\nauch als Datenquelle f\u00fcr Cadenza", 
-            "title": "Docker containers"
+            "location": "/", 
+            "text": "About BigGIS\n\n\nBigGIS is a new generation of GIS that supports decision making in multiple\nscenarios which require processing of large and heterogeneous data sets.\n\n\nThe novelty lies in an integrated analytical approach to spatio-temporal\ndata, that are unstructured and from unreliable sources. The system provides\npredictive, prescriptive and visual tool integrated in a common analytical\npipeline.\n\n\n\n\n\n\n\n\nThe project is evaluated on three scenarios:\n\n\n\n\nSmart city\n (urban heat islands, particulate matter)\n\n\nEnvironmental management\n (health threatening animals and plants)\n\n\nDisaster control, civil protection\n (air pollution, toxic chemicals)\n\n\n\n\nPlease visit the \nproject website\n for more\ninformation as well as some interactive demos.\n\n\n\n\n\n\nWhy BigGIS?\n\n\nCurrent GIS solution are mostly tackling big data related requirements in\nterms of data volume or data velocity. In the era of cloud computing,\nleveraging cloud-based resources is a widely adopted pattern. In addition,\nwith the advent of big data analytics, performing massively parallel\nanalytical tasks on large-scale data at rest or data in motion is as well\nbecoming a feasible approach shaping the design of today\u2019s GIS. Although\nscaling out enables GIS to tackle the aforementioned big data induced\nrequirements, there are still two major open issues. Firstly, dealing with\nvarying data types across multiple data sources (variety) lead to data and\nschema heterogeneity, e.g., to describe locations such as addresses, relative\nspatial relationships or different coordinates reference systems. Secondly,\nmodeling the inherent uncertainties in data (veracity), e.g., real-world\nnoise and erroneous values due to the nature of the data collecting process.\nBoth being crucial tasks in data management and analytics that directly\naffect the information retrieval and decision-making quality and moreover\nthe generated knowledge on human-side (value). By leveraging the the\ncontinuous refinement model, we present a holistic approach that explicitly\ndeals with all big data dimensions. By integrating the user in the\nprocess, computers can learn from the cognitive and perceptive skills of\nhuman analysis to create hidden connections between data and the problem\ndomain. This helps to decrease the noise and uncertainty and allows to\nbuild up trust in the analysis results on user side which will eventually\nlead to an increasing likelihood of relevant findings and generated\nknowledge.\n\n\nContact and Support\n\n\n\n\n\n\n\n\nRole\n\n\nName\n\n\nE-mail\n\n\n\n\n\n\n\n\n\n\nContact person\n\n\nProf. Dr. Thomas Setzer\n\n\n\n\n\n\n\n\nProject coordination\n\n\nDr. Viliam Simko", 
+            "title": "About BigGIS"
         }, 
         {
-            "location": "/architecture/Docker_Containers/#docker-containers", 
-            "text": "all sources should be on github  images should be hosted on dockerhub  list of docker images that should be available:  HDFS (should use all bwCloud resources available to BigGIS)  Kafka with Zookeeper (overview of queues needed)  Flink  Spark  Geotrellis libraries (part of the Spark container?)  Accumulo with Geomesa (or Geowave)  StreamPipes  Exasolution  Exasolution should support Accumulo(Geomesa/Geowave) through virtual schema  Exasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)    Geo-Server  mit Plugin f\u00fcr Accumulo  zur Transformation von Formaten  auch als Datenquelle f\u00fcr Cadenza", 
-            "title": "Docker containers"
+            "location": "/#about-biggis", 
+            "text": "BigGIS is a new generation of GIS that supports decision making in multiple\nscenarios which require processing of large and heterogeneous data sets.  The novelty lies in an integrated analytical approach to spatio-temporal\ndata, that are unstructured and from unreliable sources. The system provides\npredictive, prescriptive and visual tool integrated in a common analytical\npipeline.     The project is evaluated on three scenarios:   Smart city  (urban heat islands, particulate matter)  Environmental management  (health threatening animals and plants)  Disaster control, civil protection  (air pollution, toxic chemicals)   Please visit the  project website  for more\ninformation as well as some interactive demos.", 
+            "title": "About BigGIS"
+        }, 
+        {
+            "location": "/#why-biggis", 
+            "text": "Current GIS solution are mostly tackling big data related requirements in\nterms of data volume or data velocity. In the era of cloud computing,\nleveraging cloud-based resources is a widely adopted pattern. In addition,\nwith the advent of big data analytics, performing massively parallel\nanalytical tasks on large-scale data at rest or data in motion is as well\nbecoming a feasible approach shaping the design of today\u2019s GIS. Although\nscaling out enables GIS to tackle the aforementioned big data induced\nrequirements, there are still two major open issues. Firstly, dealing with\nvarying data types across multiple data sources (variety) lead to data and\nschema heterogeneity, e.g., to describe locations such as addresses, relative\nspatial relationships or different coordinates reference systems. Secondly,\nmodeling the inherent uncertainties in data (veracity), e.g., real-world\nnoise and erroneous values due to the nature of the data collecting process.\nBoth being crucial tasks in data management and analytics that directly\naffect the information retrieval and decision-making quality and moreover\nthe generated knowledge on human-side (value). By leveraging the the\ncontinuous refinement model, we present a holistic approach that explicitly\ndeals with all big data dimensions. By integrating the user in the\nprocess, computers can learn from the cognitive and perceptive skills of\nhuman analysis to create hidden connections between data and the problem\ndomain. This helps to decrease the noise and uncertainty and allows to\nbuild up trust in the analysis results on user side which will eventually\nlead to an increasing likelihood of relevant findings and generated\nknowledge.", 
+            "title": "Why BigGIS?"
+        }, 
+        {
+            "location": "/#contact-and-support", 
+            "text": "Role  Name  E-mail      Contact person  Prof. Dr. Thomas Setzer     Project coordination  Dr. Viliam Simko", 
+            "title": "Contact and Support"
         }, 
         {
             "location": "/architecture/", 
@@ -19,6 +29,16 @@
             "location": "/architecture/#biggis-architecture-overview", 
             "text": "Todo  This image is actually not the overview of BigGIS :-)", 
             "title": "BigGIS Architecture Overview"
+        }, 
+        {
+            "location": "/architecture/Docker_Containers/", 
+            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nDocker containers\n\n\n\n\nall sources should be on github\n\n\nimages should be hosted on dockerhub\n\n\nlist of docker images that should be available:\n\n\nHDFS (should use all bwCloud resources available to BigGIS)\n\n\nKafka with Zookeeper (overview of queues needed)\n\n\nFlink\n\n\nSpark\n\n\nGeotrellis libraries (part of the Spark container?)\n\n\nAccumulo with Geomesa (or Geowave)\n\n\nStreamPipes\n\n\nExasolution\n\n\nExasolution should support Accumulo(Geomesa/Geowave) through virtual schema\n\n\nExasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)\n\n\n\n\n\n\nGeo-Server\n\n\nmit Plugin f\u00fcr Accumulo\n\n\nzur Transformation von Formaten\n\n\nauch als Datenquelle f\u00fcr Cadenza", 
+            "title": "Docker containers"
+        }, 
+        {
+            "location": "/architecture/Docker_Containers/#docker-containers", 
+            "text": "all sources should be on github  images should be hosted on dockerhub  list of docker images that should be available:  HDFS (should use all bwCloud resources available to BigGIS)  Kafka with Zookeeper (overview of queues needed)  Flink  Spark  Geotrellis libraries (part of the Spark container?)  Accumulo with Geomesa (or Geowave)  StreamPipes  Exasolution  Exasolution should support Accumulo(Geomesa/Geowave) through virtual schema  Exasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)    Geo-Server  mit Plugin f\u00fcr Accumulo  zur Transformation von Formaten  auch als Datenquelle f\u00fcr Cadenza", 
+            "title": "Docker containers"
         }, 
         {
             "location": "/architecture/Infrastructure_on_bwCloud/", 
@@ -141,29 +161,14 @@
             "title": "Web-based mobile-friendly app"
         }, 
         {
-            "location": "/demos/hotspot_analysis/", 
-            "text": "Hotspot analysis (using G*)\n\n\nProblem definition\n\n\n\n\nWe have a map, in this case a map of land surface temperatures\n\n\nWe want to find hotspots, i.e., areas on map that are \nsignificantly different from their surrounding area\n.\n\n\nWe want to use Getis-Ord G* statistic as the tool for finding the hotspots\n\n\nsee section \nStandards Getis-ord\n\n\n\n\n\n\nWe want to parallelize the computation in our Spark cluster.\n\n\nsee section \nRasterized Getis-ord\n\n\n\n\n\n\n\n\n\n\nHotspot analysis using geotrellis\n\n\nIn this section we show a simplified version of the hotspot analysis.\nWe use the \nGeotrellis\n library to achieve the paralleization.\nSome assumptions are:\n\n\n\n\nwe use 2-dimenational data (only the spatial part without the time component)\n\n\nwe store our data as a distributed raster (in geotrellis catalog)\n\n\nour hotspot analysis uses the standard G* with variable window\n\n\n\n\nFirst, we need to express the G* formula in terms of the map algebra operations.\n\n\nScala code snippets\n\n\n// typical type definition used by geotrellis\n\n\ntype\n \nSpatialRDD\n \n=\n \nRDD\n[(\nSpatialKey\n, \nTile\n)]\n\n                  \nwith\n \nMetadata\n[\nTileLayerMetadata\n[\nSpatialKey\n]]\n\n\n\ndef\n \ngetisord\n(\nrdd\n:\n \nSpatialRDD\n,\n \nweightMatrix\n:\n \nKernel\n,\n\n             \nglobMean\n:\nDouble\n,\n \nglobStdev\n:\nDouble\n,\n \nnumPixels\n:\nLong\n)\n:\n \nSpatialRDD\n \n=\n \n{\n\n\n  \nval\n \nwcells\n \n=\n \nweightMatrix\n.\ntile\n.\ntoArrayDouble\n\n  \nval\n \nsumW\n \n=\n \nwcells\n.\nsum\n\n  \nval\n \nsumW2\n \n=\n \nwcells\n.\nmap\n(\nx\n \n=\n \nx\n*\nx\n).\nsum\n\n\n  \nval\n \nA\n \n=\n \nglobMean\n \n*\n \nsumW\n\n  \nval\n \nB\n \n=\n \nglobStdev\n \n*\n \nMath\n.\nsqrt\n((\nnumPixels\n*\nsumW2\n \n-\n \nsumW\n*\nsumW\n)\n \n/\n \n(\nnumPixels\n \n-\n \n1\n))\n\n\n  \nrdd\n.\nwithContext\n \n{\n\n    \n_\n.\nbufferTiles\n(\nweightMatrix\n.\nextent\n)\n\n      \n.\nmapValues\n \n{\n \ntileWithCtx\n \n=\n\n        \ntileWithCtx\n.\ntile\n\n          \n.\nfocalSum\n(\nweightMatrix\n,\n \nSome\n(\ntileWithCtx\n.\ntargetArea\n))\n \n// focal op.\n\n          \n.\nmapDouble\n \n{\n \nx\n \n=\n \n(\nx\n \n-\n \nA\n)\n \n/\n \nB\n \n}\n \n// local op.\n\n      \n}\n\n  \n}\n\n\n}\n\n\n\n\n\nLet's assume, we already have \nlayerReader\n, \nsrcLayerId\n, \nkernelRadius\n, \nglobMean\n, \nglobStdev\n and \nnumPixels\n:\n\n\nval\n \nqueryResult\n:\n \nSpatialRDD\n \n=\n\n  \nlayerReader\n.\nread\n[\nSpatialKey\n, \nTile\n, \nTileLayerMetadata\n[\nSpatialKey\n]](\nsrcLayerId\n)\n\n\n\n// here, we use a circular kernel as a weight matrix\n\n\nval\n \nweightMatrix\n \n=\n \nKernel\n.\ncircle\n(\nkernelRadius\n,\n\n                                 \nqueryResult\n.\nmetadata\n.\ncellwidth\n,\n\n                                 \nkernelRadius\n)\n\n\n\nval\n \noutRdd\n \n=\n \ngetisord\n(\nqueryResult\n,\n \nweightMatrix\n,\n \nglobMean\n,\n \nglobStdev\n,\n \nnumPixels\n)\n\n\n\nYou can not further process \noutRdd\n or store it as a new layer.", 
-            "title": "Hotspot analysis"
+            "location": "/demos/", 
+            "text": "About demos ...\n\n\n\n\nTodo\n\n\n\n\nadd some more text\n\n\n\n\n\n\nHere you can find all demos", 
+            "title": "About demos ..."
         }, 
         {
-            "location": "/demos/hotspot_analysis/#hotspot-analysis-using-g", 
-            "text": "", 
-            "title": "Hotspot analysis (using G*)"
-        }, 
-        {
-            "location": "/demos/hotspot_analysis/#problem-definition", 
-            "text": "We have a map, in this case a map of land surface temperatures  We want to find hotspots, i.e., areas on map that are  significantly different from their surrounding area .  We want to use Getis-Ord G* statistic as the tool for finding the hotspots  see section  Standards Getis-ord    We want to parallelize the computation in our Spark cluster.  see section  Rasterized Getis-ord", 
-            "title": "Problem definition"
-        }, 
-        {
-            "location": "/demos/hotspot_analysis/#hotspot-analysis-using-geotrellis", 
-            "text": "In this section we show a simplified version of the hotspot analysis.\nWe use the  Geotrellis  library to achieve the paralleization.\nSome assumptions are:   we use 2-dimenational data (only the spatial part without the time component)  we store our data as a distributed raster (in geotrellis catalog)  our hotspot analysis uses the standard G* with variable window   First, we need to express the G* formula in terms of the map algebra operations.", 
-            "title": "Hotspot analysis using geotrellis"
-        }, 
-        {
-            "location": "/demos/hotspot_analysis/#scala-code-snippets", 
-            "text": "// typical type definition used by geotrellis  type   SpatialRDD   =   RDD [( SpatialKey ,  Tile )] \n                   with   Metadata [ TileLayerMetadata [ SpatialKey ]]  def   getisord ( rdd :   SpatialRDD ,   weightMatrix :   Kernel , \n              globMean : Double ,   globStdev : Double ,   numPixels : Long ) :   SpatialRDD   =   { \n\n   val   wcells   =   weightMatrix . tile . toArrayDouble \n   val   sumW   =   wcells . sum \n   val   sumW2   =   wcells . map ( x   =   x * x ). sum \n\n   val   A   =   globMean   *   sumW \n   val   B   =   globStdev   *   Math . sqrt (( numPixels * sumW2   -   sumW * sumW )   /   ( numPixels   -   1 )) \n\n   rdd . withContext   { \n     _ . bufferTiles ( weightMatrix . extent ) \n       . mapValues   {   tileWithCtx   = \n         tileWithCtx . tile \n           . focalSum ( weightMatrix ,   Some ( tileWithCtx . targetArea ))   // focal op. \n           . mapDouble   {   x   =   ( x   -   A )   /   B   }   // local op. \n       } \n   }  }   Let's assume, we already have  layerReader ,  srcLayerId ,  kernelRadius ,  globMean ,  globStdev  and  numPixels :  val   queryResult :   SpatialRDD   = \n   layerReader . read [ SpatialKey ,  Tile ,  TileLayerMetadata [ SpatialKey ]]( srcLayerId )  // here, we use a circular kernel as a weight matrix  val   weightMatrix   =   Kernel . circle ( kernelRadius , \n                                  queryResult . metadata . cellwidth , \n                                  kernelRadius )  val   outRdd   =   getisord ( queryResult ,   weightMatrix ,   globMean ,   globStdev ,   numPixels )  \nYou can not further process  outRdd  or store it as a new layer.", 
-            "title": "Scala code snippets"
+            "location": "/demos/#about-demos", 
+            "text": "Todo   add some more text    Here you can find all demos", 
+            "title": "About demos ..."
         }, 
         {
             "location": "/demos/enviro-car/", 
@@ -296,14 +301,29 @@
             "title": "References"
         }, 
         {
-            "location": "/demos/", 
-            "text": "About demos ...\n\n\n\n\nTodo\n\n\n\n\nadd some more text\n\n\n\n\n\n\nHere you can find all demos", 
-            "title": "About demos ..."
+            "location": "/demos/hotspot_analysis/", 
+            "text": "Hotspot analysis (using G*)\n\n\nProblem definition\n\n\n\n\nWe have a map, in this case a map of land surface temperatures\n\n\nWe want to find hotspots, i.e., areas on map that are \nsignificantly different from their surrounding area\n.\n\n\nWe want to use Getis-Ord G* statistic as the tool for finding the hotspots\n\n\nsee section \nStandards Getis-ord\n\n\n\n\n\n\nWe want to parallelize the computation in our Spark cluster.\n\n\nsee section \nRasterized Getis-ord\n\n\n\n\n\n\n\n\n\n\nHotspot analysis using geotrellis\n\n\nIn this section we show a simplified version of the hotspot analysis.\nWe use the \nGeotrellis\n library to achieve the paralleization.\nSome assumptions are:\n\n\n\n\nwe use 2-dimenational data (only the spatial part without the time component)\n\n\nwe store our data as a distributed raster (in geotrellis catalog)\n\n\nour hotspot analysis uses the standard G* with variable window\n\n\n\n\nFirst, we need to express the G* formula in terms of the map algebra operations.\n\n\nScala code snippets\n\n\n// typical type definition used by geotrellis\n\n\ntype\n \nSpatialRDD\n \n=\n \nRDD\n[(\nSpatialKey\n, \nTile\n)]\n\n                  \nwith\n \nMetadata\n[\nTileLayerMetadata\n[\nSpatialKey\n]]\n\n\n\ndef\n \ngetisord\n(\nrdd\n:\n \nSpatialRDD\n,\n \nweightMatrix\n:\n \nKernel\n,\n\n             \nglobMean\n:\nDouble\n,\n \nglobStdev\n:\nDouble\n,\n \nnumPixels\n:\nLong\n)\n:\n \nSpatialRDD\n \n=\n \n{\n\n\n  \nval\n \nwcells\n \n=\n \nweightMatrix\n.\ntile\n.\ntoArrayDouble\n\n  \nval\n \nsumW\n \n=\n \nwcells\n.\nsum\n\n  \nval\n \nsumW2\n \n=\n \nwcells\n.\nmap\n(\nx\n \n=\n \nx\n*\nx\n).\nsum\n\n\n  \nval\n \nA\n \n=\n \nglobMean\n \n*\n \nsumW\n\n  \nval\n \nB\n \n=\n \nglobStdev\n \n*\n \nMath\n.\nsqrt\n((\nnumPixels\n*\nsumW2\n \n-\n \nsumW\n*\nsumW\n)\n \n/\n \n(\nnumPixels\n \n-\n \n1\n))\n\n\n  \nrdd\n.\nwithContext\n \n{\n\n    \n_\n.\nbufferTiles\n(\nweightMatrix\n.\nextent\n)\n\n      \n.\nmapValues\n \n{\n \ntileWithCtx\n \n=\n\n        \ntileWithCtx\n.\ntile\n\n          \n.\nfocalSum\n(\nweightMatrix\n,\n \nSome\n(\ntileWithCtx\n.\ntargetArea\n))\n \n// focal op.\n\n          \n.\nmapDouble\n \n{\n \nx\n \n=\n \n(\nx\n \n-\n \nA\n)\n \n/\n \nB\n \n}\n \n// local op.\n\n      \n}\n\n  \n}\n\n\n}\n\n\n\n\n\nLet's assume, we already have \nlayerReader\n, \nsrcLayerId\n, \nkernelRadius\n, \nglobMean\n, \nglobStdev\n and \nnumPixels\n:\n\n\nval\n \nqueryResult\n:\n \nSpatialRDD\n \n=\n\n  \nlayerReader\n.\nread\n[\nSpatialKey\n, \nTile\n, \nTileLayerMetadata\n[\nSpatialKey\n]](\nsrcLayerId\n)\n\n\n\n// here, we use a circular kernel as a weight matrix\n\n\nval\n \nweightMatrix\n \n=\n \nKernel\n.\ncircle\n(\nkernelRadius\n,\n\n                                 \nqueryResult\n.\nmetadata\n.\ncellwidth\n,\n\n                                 \nkernelRadius\n)\n\n\n\nval\n \noutRdd\n \n=\n \ngetisord\n(\nqueryResult\n,\n \nweightMatrix\n,\n \nglobMean\n,\n \nglobStdev\n,\n \nnumPixels\n)\n\n\n\nYou can not further process \noutRdd\n or store it as a new layer.", 
+            "title": "Hotspot analysis (using G*)"
         }, 
         {
-            "location": "/demos/#about-demos", 
-            "text": "Todo   add some more text    Here you can find all demos", 
-            "title": "About demos ..."
+            "location": "/demos/hotspot_analysis/#hotspot-analysis-using-g", 
+            "text": "", 
+            "title": "Hotspot analysis (using G*)"
+        }, 
+        {
+            "location": "/demos/hotspot_analysis/#problem-definition", 
+            "text": "We have a map, in this case a map of land surface temperatures  We want to find hotspots, i.e., areas on map that are  significantly different from their surrounding area .  We want to use Getis-Ord G* statistic as the tool for finding the hotspots  see section  Standards Getis-ord    We want to parallelize the computation in our Spark cluster.  see section  Rasterized Getis-ord", 
+            "title": "Problem definition"
+        }, 
+        {
+            "location": "/demos/hotspot_analysis/#hotspot-analysis-using-geotrellis", 
+            "text": "In this section we show a simplified version of the hotspot analysis.\nWe use the  Geotrellis  library to achieve the paralleization.\nSome assumptions are:   we use 2-dimenational data (only the spatial part without the time component)  we store our data as a distributed raster (in geotrellis catalog)  our hotspot analysis uses the standard G* with variable window   First, we need to express the G* formula in terms of the map algebra operations.", 
+            "title": "Hotspot analysis using geotrellis"
+        }, 
+        {
+            "location": "/demos/hotspot_analysis/#scala-code-snippets", 
+            "text": "// typical type definition used by geotrellis  type   SpatialRDD   =   RDD [( SpatialKey ,  Tile )] \n                   with   Metadata [ TileLayerMetadata [ SpatialKey ]]  def   getisord ( rdd :   SpatialRDD ,   weightMatrix :   Kernel , \n              globMean : Double ,   globStdev : Double ,   numPixels : Long ) :   SpatialRDD   =   { \n\n   val   wcells   =   weightMatrix . tile . toArrayDouble \n   val   sumW   =   wcells . sum \n   val   sumW2   =   wcells . map ( x   =   x * x ). sum \n\n   val   A   =   globMean   *   sumW \n   val   B   =   globStdev   *   Math . sqrt (( numPixels * sumW2   -   sumW * sumW )   /   ( numPixels   -   1 )) \n\n   rdd . withContext   { \n     _ . bufferTiles ( weightMatrix . extent ) \n       . mapValues   {   tileWithCtx   = \n         tileWithCtx . tile \n           . focalSum ( weightMatrix ,   Some ( tileWithCtx . targetArea ))   // focal op. \n           . mapDouble   {   x   =   ( x   -   A )   /   B   }   // local op. \n       } \n   }  }   Let's assume, we already have  layerReader ,  srcLayerId ,  kernelRadius ,  globMean ,  globStdev  and  numPixels :  val   queryResult :   SpatialRDD   = \n   layerReader . read [ SpatialKey ,  Tile ,  TileLayerMetadata [ SpatialKey ]]( srcLayerId )  // here, we use a circular kernel as a weight matrix  val   weightMatrix   =   Kernel . circle ( kernelRadius , \n                                  queryResult . metadata . cellwidth , \n                                  kernelRadius )  val   outRdd   =   getisord ( queryResult ,   weightMatrix ,   globMean ,   globStdev ,   numPixels )  \nYou can not further process  outRdd  or store it as a new layer.", 
+            "title": "Scala code snippets"
         }, 
         {
             "location": "/demos/invasive-spec/", 
@@ -511,24 +531,19 @@
             "title": "Sequence diagrams"
         }, 
         {
-            "location": "/", 
-            "text": "About BigGIS\n\n\nBigGIS is a new generation of GIS that supports decision making in multiple\nscenarios which require processing of large and heterogeneous data sets.\n\n\nThe novelty lies in an integrated analytical approach to spatio-temporal\ndata, that are unstructured and from unreliable sources. The system provides\npredictive, prescriptive and visual tool integrated in a common analytical\npipeline.\n\n\n\n\n\n\n\n\nThe project is evaluated on three scenarios:\n\n\n\n\nSmart city\n (urban heat islands, particulate matter)\n\n\nEnvironmental management\n (health threatening animals and plants)\n\n\nDisaster control, civil protection\n (air pollution, toxic chemicals)\n\n\n\n\nPlease visit the \nproject website\n for more\ninformation as well as some interactive demos.\n\n\n\n\n\n\nWhy BigGIS?\n\n\nCurrent GIS solution are mostly tackling big data related requirements in\nterms of data volume or data velocity. In the era of cloud computing,\nleveraging cloud-based resources is a widely adopted pattern. In addition,\nwith the advent of big data analytics, performing massively parallel\nanalytical tasks on large-scale data at rest or data in motion is as well\nbecoming a feasible approach shaping the design of today\u2019s GIS. Although\nscaling out enables GIS to tackle the aforementioned big data induced\nrequirements, there are still two major open issues. Firstly, dealing with\nvarying data types across multiple data sources (variety) lead to data and\nschema heterogeneity, e.g., to describe locations such as addresses, relative\nspatial relationships or different coordinates reference systems. Secondly,\nmodeling the inherent uncertainties in data (veracity), e.g., real-world\nnoise and erroneous values due to the nature of the data collecting process.\nBoth being crucial tasks in data management and analytics that directly\naffect the information retrieval and decision-making quality and moreover\nthe generated knowledge on human-side (value). By leveraging the the\ncontinuous refinement model, we present a holistic approach that explicitly\ndeals with all big data dimensions. By integrating the user in the\nprocess, computers can learn from the cognitive and perceptive skills of\nhuman analysis to create hidden connections between data and the problem\ndomain. This helps to decrease the noise and uncertainty and allows to\nbuild up trust in the analysis results on user side which will eventually\nlead to an increasing likelihood of relevant findings and generated\nknowledge.\n\n\nContact and Support\n\n\n\n\n\n\n\n\nRole\n\n\nName\n\n\nE-mail\n\n\n\n\n\n\n\n\n\n\nContact person\n\n\nProf. Dr. Thomas Setzer\n\n\n\n\n\n\n\n\nProject coordination\n\n\nDr. Viliam Simko", 
-            "title": "About BigGIS"
+            "location": "/methods/", 
+            "text": "Methods\n\n\nThis section contains a \nlist of methods\n that serve as a \ntheoretical background\n\nfor the other sections inside the documentation, especially for the \nDemos\n.\n\n\nSome methods depend on each other which is reflected in their ordering.\n\n\n\n\nNote\n\n\nYou can use the \nNext\n and \nPrevious\n buttons on the bottom of each page to navigate.\n\n\n\n\nMethods not yet included into the list\n\n\n\n\nlanduse classification\n\n\n...\n\n\n...", 
+            "title": "Methods"
         }, 
         {
-            "location": "/#about-biggis", 
-            "text": "BigGIS is a new generation of GIS that supports decision making in multiple\nscenarios which require processing of large and heterogeneous data sets.  The novelty lies in an integrated analytical approach to spatio-temporal\ndata, that are unstructured and from unreliable sources. The system provides\npredictive, prescriptive and visual tool integrated in a common analytical\npipeline.     The project is evaluated on three scenarios:   Smart city  (urban heat islands, particulate matter)  Environmental management  (health threatening animals and plants)  Disaster control, civil protection  (air pollution, toxic chemicals)   Please visit the  project website  for more\ninformation as well as some interactive demos.", 
-            "title": "About BigGIS"
+            "location": "/methods/#methods", 
+            "text": "This section contains a  list of methods  that serve as a  theoretical background \nfor the other sections inside the documentation, especially for the  Demos .  Some methods depend on each other which is reflected in their ordering.   Note  You can use the  Next  and  Previous  buttons on the bottom of each page to navigate.", 
+            "title": "Methods"
         }, 
         {
-            "location": "/#why-biggis", 
-            "text": "Current GIS solution are mostly tackling big data related requirements in\nterms of data volume or data velocity. In the era of cloud computing,\nleveraging cloud-based resources is a widely adopted pattern. In addition,\nwith the advent of big data analytics, performing massively parallel\nanalytical tasks on large-scale data at rest or data in motion is as well\nbecoming a feasible approach shaping the design of today\u2019s GIS. Although\nscaling out enables GIS to tackle the aforementioned big data induced\nrequirements, there are still two major open issues. Firstly, dealing with\nvarying data types across multiple data sources (variety) lead to data and\nschema heterogeneity, e.g., to describe locations such as addresses, relative\nspatial relationships or different coordinates reference systems. Secondly,\nmodeling the inherent uncertainties in data (veracity), e.g., real-world\nnoise and erroneous values due to the nature of the data collecting process.\nBoth being crucial tasks in data management and analytics that directly\naffect the information retrieval and decision-making quality and moreover\nthe generated knowledge on human-side (value). By leveraging the the\ncontinuous refinement model, we present a holistic approach that explicitly\ndeals with all big data dimensions. By integrating the user in the\nprocess, computers can learn from the cognitive and perceptive skills of\nhuman analysis to create hidden connections between data and the problem\ndomain. This helps to decrease the noise and uncertainty and allows to\nbuild up trust in the analysis results on user side which will eventually\nlead to an increasing likelihood of relevant findings and generated\nknowledge.", 
-            "title": "Why BigGIS?"
-        }, 
-        {
-            "location": "/#contact-and-support", 
-            "text": "Role  Name  E-mail      Contact person  Prof. Dr. Thomas Setzer     Project coordination  Dr. Viliam Simko", 
-            "title": "Contact and Support"
+            "location": "/methods/#methods-not-yet-included-into-the-list", 
+            "text": "landuse classification  ...  ...", 
+            "title": "Methods not yet included into the list"
         }, 
         {
             "location": "/methods/focal_getis_ord/", 
@@ -569,21 +584,6 @@
             "location": "/methods/getis_ord_raster/#getis-ord-g-on-rasters", 
             "text": "The  Standard Getis-ord  is defined on individual points (vector data).\nIn many situations, we want to compute  \\(G^*_i\\)  in a raster rather than in a point cloud.\nThis way, the computation can be expressed using map algebra operations and nicely parallelized in frameworks \nsuch as  Geotrellis .  The rasterized Getis-Ord formula looks as follows:  \\[\nG^*(R, W, N, M, S) =\n    \\frac{\n        R{\\stackrel{\\mathtt{sum}}{\\circ}}W\n        - M*\\sum_{w \\in W}{w}\n    }{\n        S \\sqrt{\n          \\frac{\n            N*\\sum_{w \\in W}{w^2} - (\\sum_{w \\in W}{w})^2\n          }{\n            N - 1\n          }\n        }\n    }\n\\] where:   \\(R\\)  is the input raster.  \\(W\\)  is a weight matrix of values between 0 and 1.\n  The matrix is square and has odd dimensions, e.g.  \\(5 \\times 5\\) ,  \\(31 \\times 31\\)  ...  \\(N\\)  represents the number of all pixels in  \\(R\\)  (because there can be NA values)  \\(M\\)  represents the global mean of  \\(R\\) .  \\(S\\)  represents the global standard deviation of all pixels in  \\(R\\) .   It can be seen that the formula can be nicely refactored into:   One  global operation  that computes  \\(N\\) ,  \\(M\\) ,  \\(S\\) . These values are usually available because they\n  were pre-computed when the raster layer has been ingested into the catalog.  One  focal operation   \\(R{\\stackrel{\\mathtt{sum}}{\\circ}}W\\)  - the convolution of raster  \\(R\\)  with\n  the weight matrix  \\(W\\) .  One  local operation  that puts all components toghether for each pixel in  \\(R\\) .", 
             "title": "Getis-ord G* on rasters"
-        }, 
-        {
-            "location": "/methods/", 
-            "text": "Methods\n\n\nThis section contains a \nlist of methods\n that serve as a \ntheoretical background\n\nfor the other sections inside the documentation, especially for the \nDemos\n.\n\n\nSome methods depend on each other which is reflected in their ordering.\n\n\n\n\nNote\n\n\nYou can use the \nNext\n and \nPrevious\n buttons on the bottom of each page to navigate.\n\n\n\n\nMethods not yet included into the list\n\n\n\n\nlanduse classification\n\n\n...\n\n\n...", 
-            "title": "Methods"
-        }, 
-        {
-            "location": "/methods/#methods", 
-            "text": "This section contains a  list of methods  that serve as a  theoretical background \nfor the other sections inside the documentation, especially for the  Demos .  Some methods depend on each other which is reflected in their ordering.   Note  You can use the  Next  and  Previous  buttons on the bottom of each page to navigate.", 
-            "title": "Methods"
-        }, 
-        {
-            "location": "/methods/#methods-not-yet-included-into-the-list", 
-            "text": "landuse classification  ...  ...", 
-            "title": "Methods not yet included into the list"
         }, 
         {
             "location": "/methods/soh/", 

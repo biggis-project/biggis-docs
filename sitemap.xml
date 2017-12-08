@@ -2,15 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-12-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
         
     <url>
-     <loc>/architecture/Docker_Containers/</loc>
+     <loc>/architecture/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/architecture/</loc>
+     <loc>/architecture/Docker_Containers/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -64,7 +72,7 @@
     
         
     <url>
-     <loc>/demos/hotspot_analysis/</loc>
+     <loc>/demos/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -94,7 +102,7 @@
     </url>
         
     <url>
-     <loc>/demos/</loc>
+     <loc>/demos/hotspot_analysis/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -146,14 +154,12 @@
     
 
     
+        
     <url>
-     <loc>/</loc>
+     <loc>/methods/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
         
     <url>
      <loc>/methods/focal_getis_ord/</loc>
@@ -175,12 +181,6 @@
         
     <url>
      <loc>/methods/getis_ord_raster/</loc>
-     <lastmod>2017-12-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/</loc>
      <lastmod>2017-12-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
