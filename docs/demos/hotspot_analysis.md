@@ -1,24 +1,25 @@
-# Hotspot analysis
+# Hotspot analysis (using G*)
 
 [Responsible person]: "Viliam Simko"
-[Geotrellis]: https://github.com/locationtech/geotrellis
 
 ## Problem definition
 
-- We have a map, e.g. a map of temperatures or a map of taxi drop-offs.
+- We have a map, in this case a map of land surface temperatures
 - We want to find hotspots, i.e., areas on map that are **significantly different from their surrounding area**.
-- We want to use Getis-Ord G* statistic as the tool for finding hotspots
+- We want to use Getis-Ord G* statistic as the tool for finding the hotspots
     - see section [Standards Getis-ord](../methods/getis_ord.md)
 - We want to parallelize the computation in our Spark cluster.
     - see section [Rasterized Getis-ord](../methods/getis_ord_raster.md)
 
+![Example LST and Getis-ord](hotspot_analysis/getis-ord-example.svg)
+
 ## Hotspot analysis using geotrellis
 
 In this section we show a simplified version of the hotspot analysis.
-We use the [Geotrellis] library to achieve the paralleization.
+We use the [Geotrellis](https://github.com/locationtech/geotrellis) library to achieve the paralleization.
 Some assumptions are:
 
-- we use 2-dimenational data (only the spatial part without time component)
+- we use 2-dimenational data (only the spatial part without the time component)
 - we store our data as a distributed raster (in geotrellis catalog)
 - our hotspot analysis uses the standard G* with variable window
 
