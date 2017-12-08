@@ -7,7 +7,7 @@
 
 - We have a map, e.g. a map of temperatures or a map of taxi drop-offs.
 - We want to find hotspots, i.e., areas on map that are **significantly different from their surrounding area**.
-- We want to use Getis-Ord $G^*_i$ statistic as the tool for finding hotspots
+- We want to use Getis-Ord G* statistic as the tool for finding hotspots
     - see section [Standards Getis-ord](../methods/getis_ord.md)
 - We want to parallelize the computation in our Spark cluster.
     - see section [Rasterized Getis-ord](../methods/getis_ord_raster.md)
@@ -22,7 +22,7 @@ Some assumptions are:
 - we store our data as a distributed raster (in geotrellis catalog)
 - our hotspot analysis uses the standard G* with variable window
 
-First, we need to express the $G^*$ formula in terms of the map algebra operations.
+First, we need to express the G* formula in terms of the map algebra operations.
 
 ### Scala code snippets
 

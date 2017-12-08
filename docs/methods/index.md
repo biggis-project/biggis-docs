@@ -1,9 +1,15 @@
 # Methods
 
-- Theoretical background that is used in demos and scenarios.
-- Each method in a separate section (markdown file)
+This section contains a **list of methods** that serve as a **theoretical background**
+for the other sections inside the documentation, especially for the [Demos](../demos).
 
-!!! todo
-    ## Raster processing at scale
-    - [](../demos/hotspot_analysis.md)
-    - landuse classification
+Some methods depend on each other which is reflected in their ordering.
+
+!!! note
+    You can use the **Next** and **Previous** buttons on the bottom of each page to navigate.
+
+## Methods not yet included into the list
+
+- landuse classification
+- ...
+- ...
