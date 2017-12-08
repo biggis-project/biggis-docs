@@ -1,0 +1,22 @@
+{
+  "description": "BigGIS documentation using mkdocs. We use this package.json only for convenience. We could have also used Makefile instead.",
+  "author": "Viliam Simko (viliam.simko@gmail.com)",
+  "contributors": [
+    "Alexander Gröschel",
+    "Patrick Wiener ",
+    "Adrian Klink",
+    "Julian Bruns",
+    "Matthias Frank",
+    "Marc Gassenschmidt"
+  ],
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "serve": "./fix-mkdocs-pages.sh; mkdocs serve",
+    "browse": "browse http://localhost:8000",
+    "build": "./fix-mkdocs-pages.sh; mkdocs build",
+    "fixpages": "./fix-mkdocs-pages.sh",
+    "deploy": "mkdocs gh-deploy",
+    "clean": "rm -r site/"
+  }
+}
