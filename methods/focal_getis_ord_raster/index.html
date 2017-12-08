@@ -36,7 +36,7 @@
     
     
       
-        <title>Hotspot analysis - BigGIS Documentation</title>
+        <title>Foal Getis-ord on rasters - BigGIS Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
                 BigGIS Documentation
               </span>
               <span class="md-header-nav__topic">
-                Hotspot analysis
+                Foal Getis-ord on rasters
               </span>
             
           
@@ -541,8 +541,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../demos/hotspots/" title="Hotspot analysis demo" class="md-nav__link">
-      Hotspot analysis demo
+    <a href="../../demos/hotspot_analysis/" title="Hotspot analysis" class="md-nav__link">
+      Hotspot analysis
     </a>
   </li>
 
@@ -673,6 +673,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../focal_getis_ord/" title="Focal Getis-ord" class="md-nav__link">
+      Focal Getis-ord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -683,44 +695,34 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Hotspot analysis
-      </label>
-    
-    <a href="./" title="Hotspot analysis" class="md-nav__link md-nav__link--active">
-      Hotspot analysis
+    <a href="./" title="Foal Getis-ord on rasters" class="md-nav__link md-nav__link--active">
+      Foal Getis-ord on rasters
     </a>
     
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#standards-getis-ord" title="Standards Getis-Ord" class="md-nav__link">
-    Standards Getis-Ord
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getis-ord-on-rasters" title="Getis-ord on rasters" class="md-nav__link">
-    Getis-ord on rasters
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis_ord/" title="Standards Getis-Ord G*" class="md-nav__link">
+      Standards Getis-Ord G*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis_ord_raster/" title="Getis-ord G* on rasters" class="md-nav__link">
+      Getis-ord G* on rasters
+    </a>
   </li>
 
         
@@ -818,27 +820,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#standards-getis-ord" title="Standards Getis-Ord" class="md-nav__link">
-    Standards Getis-Ord
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getis-ord-on-rasters" title="Getis-ord on rasters" class="md-nav__link">
-    Getis-ord on rasters
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -849,48 +830,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/methods/hotspot-analysis.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/methods/focal_getis_ord_raster.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="hotspot-analysis">Hotspot analysis<a class="headerlink" href="#hotspot-analysis" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Intro text</p>
-</div>
-<p>Related demos:
-- <a href="../../demos/hotspots/">scalable Getis-Ord G* on rasters</a></p>
-<h2 id="standards-getis-ord">Standards Getis-Ord<a class="headerlink" href="#standards-getis-ord" title="Permanent link">&para;</a></h2>
-<p>The standard definition of Getis-Ord <span>\(G^*_i\)</span> statistic assumes a study area with <span>\(n\)</span> points with measurements
-<span>\(X = [x_1, \ldots, x_n]\)</span>. Moreover, it assumes weights <span>\(w_{i,j}\)</span> to be defined between all pairs of points <span>\(i\)</span>
-and <span>\(j\)</span> (for all <span>\(i,j \in \{ 1, \ldots, n\}\)</span>). The formula to compute <span>\(G^*_i\)</span> at a given point <span>\(i\)</span> is then:</p>
+                <h1 id="foal-getis-ord-on-rasters">Foal Getis-ord on rasters<a class="headerlink" href="#foal-getis-ord-on-rasters" title="Permanent link">&para;</a></h1>
+<p>The rasterized Focal Getis-Ord formula looks as follows:</p>
 <span>\[
-    G^*_i = \frac{
-        \sum_{j=1}^{n}w_{i,j}x_j - \bar{X}\sum_{j=1}^{n}w_{i,j}
-    }{
-        S \sqrt{
-            \frac{
-              n \sum_{j=1}^{n}w_{i,j}^2 - (\sum_{j=1}^{n}w_{i,j})^2
-            }{n-1}
-        }
-    }
-\]</span><p>where:</p>
-<ul>
-<li><span>\(\bar{X}\)</span> is the mean of all measurements,</li>
-<li><span>\(S\)</span> is the standard deviation of all measurements.</li>
-</ul>
-<p>As it is known, this statistic creates a z-score, which denotes the significance of an area in relation
-to its surrounding areas.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For <span>\(x \in X\)</span>, the <span>\(zscore(x) = \frac{x - mean(X)}{stdev(X)}\)</span></p>
-</div>
-<h2 id="getis-ord-on-rasters">Getis-ord on rasters<a class="headerlink" href="#getis-ord-on-rasters" title="Permanent link">&para;</a></h2>
-<p>In many situations, we want to compute <span>\(G^*_i\)</span> in a raster rather than in a point cloud.
-This way, the computation can be expressed using map algebra operations and nicely parallelized in frameworks 
-such as [Geotrellis].</p>
-<p>The rasterized Getis-Ord formula looks as follows:</p>
-<span>\[
-G^*(R, W) =
+FocalG^*(R, W, N, M, S) =
     \frac{
         R{\stackrel{\mathtt{sum}}{\circ}}W
         - M*\sum_{w \in W}{w}
@@ -908,17 +854,13 @@ G^*(R, W) =
 <li><span>\(R\)</span> is the input raster.</li>
 <li><span>\(W\)</span> is a weight matrix of values between 0 and 1.
   The matrix is square and has odd dimensions, e.g. <span>\(5 \times 5\)</span>, <span>\(31 \times 31\)</span> ...</li>
-<li><span>\(N\)</span> represents the number of all pixels in <span>\(R\)</span> (because there can be NA values)</li>
-<li><span>\(M\)</span> represents the global mean of <span>\(R\)</span>.</li>
-<li><span>\(S\)</span> represents the global standard deviation of all pixels in <span>\(R\)</span>.</li>
+<li><span>\(N\)</span> represents the focal count of pixels TODO (there can be NA values)</li>
+<li><span>\(M\)</span> represents the focal mean TODO.</li>
+<li><span>\(S\)</span> represents the focal standard deviation TODO.</li>
 </ul>
 <p>It can be seen that the formula can be nicely refactored into:</p>
 <ul>
-<li>One <strong>global operation</strong> that computes <span>\(N\)</span>, <span>\(M\)</span>, <span>\(S\)</span>. These values are usually available because they
-  were pre-computed when the raster layer has been ingested into the catalog.</li>
-<li>One <strong>focal operation</strong> <span>\(R{\stackrel{\mathtt{sum}}{\circ}}W\)</span> - the convolution of raster <span>\(R\)</span> with
-  the weight matrix <span>\(W\)</span>.</li>
-<li>One <strong>local operation</strong> that puts all components toghether for each pixel in <span>\(R\)</span>.</li>
+<li>TODO</li>
 </ul>
                 
                   
@@ -938,7 +880,7 @@ G^*(R, W) =
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../" title="Methods" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../focal_getis_ord/" title="Focal Getis-ord" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -947,19 +889,19 @@ G^*(R, W) =
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Methods
+                Focal Getis-ord
               </span>
             </div>
           </a>
         
         
-          <a href="../soh/" title="Stability of hotspots" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../getis_ord/" title="Standards Getis-Ord G*" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Stability of hotspots
+                Standards Getis-Ord G*
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1008,6 +950,16 @@ G^*(R, W) =
       <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
       
         <script src="../../extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
       
     
     

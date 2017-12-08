@@ -67,43 +67,23 @@ const uml = (converter, className, settings) => {
 }
 
 // inject sequence diagram into the page
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (typeof Diagram !== "undefined") {
     uml(Diagram, "uml-sequence-diagram", {theme: "simple"})
   }
 })
 
 // inject flowchart into the page
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (typeof flowchart !== "undefined") {
     uml(flowchart, "uml-flowchart")
   }
 })
 
 // replace mkdocs footer with our footer
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".md-footer-copyright")
   const myfooter =  document.querySelector(".md-footer-copyright__highlight")
   footer.innerHTML = ''
   footer.appendChild(myfooter)
 })
-
-//====================================================
-// workaround for mkdocs until release 0.17.2
-// in 0.17.2, these urls should be in mkdocs.yml
-//====================================================
-const urls = [
-  'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML',
-  'https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js',
-]
-
-const bodyEl = document.querySelector('body')
-for(url of urls) {
-  const script = document.createElement('script')
-  script.src = url
-  bodyEl.appendChild(script)
-}
-//====================================================

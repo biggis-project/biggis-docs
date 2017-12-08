@@ -36,7 +36,7 @@
     
     
       
-        <title>Placement of sensors under uncertainty - BigGIS Documentation</title>
+        <title>Hotspot analysis - BigGIS Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
                 BigGIS Documentation
               </span>
               <span class="md-header-nav__topic">
-                Placement of sensors under uncertainty
+                Hotspot analysis
               </span>
             
           
@@ -541,11 +541,67 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../hotspot_analysis/" title="Hotspot analysis" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Hotspot analysis
+      </label>
+    
+    <a href="./" title="Hotspot analysis" class="md-nav__link md-nav__link--active">
       Hotspot analysis
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-definition" title="Problem definition" class="md-nav__link">
+    Problem definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
+    Hotspot analysis using geotrellis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scala-code-snippets" title="Scala code snippets" class="md-nav__link">
+    Scala code snippets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -589,20 +645,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Placement of sensors under uncertainty" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../optimize-sensors/" title="Placement of sensors under uncertainty" class="md-nav__link">
       Placement of sensors under uncertainty
     </a>
-    
   </li>
 
         
@@ -820,6 +867,40 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-definition" title="Problem definition" class="md-nav__link">
+    Problem definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotspot-analysis-using-geotrellis" title="Hotspot analysis using geotrellis" class="md-nav__link">
+    Hotspot analysis using geotrellis
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scala-code-snippets" title="Scala code snippets" class="md-nav__link">
+    Scala code snippets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -830,24 +911,71 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/demos/optimize-sensors.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/demos/hotspot_analysis.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Katharina Glock</p>
-</div>
-<h1 id="placement-of-sensors-under-uncertainty">Placement of sensors under uncertainty<a class="headerlink" href="#placement-of-sensors-under-uncertainty" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
+                <h1 id="hotspot-analysis">Hotspot analysis<a class="headerlink" href="#hotspot-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="problem-definition">Problem definition<a class="headerlink" href="#problem-definition" title="Permanent link">&para;</a></h2>
 <ul>
-<li>describe the idea</li>
-<li>add some images</li>
-<li>add some links to related papers</li>
-<li>add links to related github repos</li>
-<li>add links to related scenarios</li>
+<li>We have a map, e.g. a map of temperatures or a map of taxi drop-offs.</li>
+<li>We want to find hotspots, i.e., areas on map that are <strong>significantly different from their surrounding area</strong>.</li>
+<li>We want to use Getis-Ord G* statistic as the tool for finding hotspots<ul>
+<li>see section <a href="../../methods/getis_ord/">Standards Getis-ord</a></li>
 </ul>
-</div>
+</li>
+<li>We want to parallelize the computation in our Spark cluster.<ul>
+<li>see section <a href="../../methods/getis_ord_raster/">Rasterized Getis-ord</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="hotspot-analysis-using-geotrellis">Hotspot analysis using geotrellis<a class="headerlink" href="#hotspot-analysis-using-geotrellis" title="Permanent link">&para;</a></h2>
+<p>In this section we show a simplified version of the hotspot analysis.
+We use the <a href="https://github.com/locationtech/geotrellis">Geotrellis</a> library to achieve the paralleization.
+Some assumptions are:</p>
+<ul>
+<li>we use 2-dimenational data (only the spatial part without time component)</li>
+<li>we store our data as a distributed raster (in geotrellis catalog)</li>
+<li>our hotspot analysis uses the standard G* with variable window</li>
+</ul>
+<p>First, we need to express the G* formula in terms of the map algebra operations.</p>
+<h3 id="scala-code-snippets">Scala code snippets<a class="headerlink" href="#scala-code-snippets" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1">// typical type definition used by geotrellis</span>
+<span class="k">type</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span><span class="o">)]</span>
+                  <span class="k">with</span> <span class="nc">Metadata</span><span class="o">[</span><span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]]</span>
+
+<span class="k">def</span> <span class="n">getisord</span><span class="o">(</span><span class="n">rdd</span><span class="k">:</span> <span class="kt">SpatialRDD</span><span class="o">,</span> <span class="n">weightMatrix</span><span class="k">:</span> <span class="kt">Kernel</span><span class="o">,</span>
+             <span class="n">globMean</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">globStdev</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">numPixels</span><span class="k">:</span><span class="kt">Long</span><span class="o">)</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="o">{</span>
+
+  <span class="k">val</span> <span class="n">wcells</span> <span class="k">=</span> <span class="n">weightMatrix</span><span class="o">.</span><span class="n">tile</span><span class="o">.</span><span class="n">toArrayDouble</span>
+  <span class="k">val</span> <span class="n">sumW</span> <span class="k">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">sum</span>
+  <span class="k">val</span> <span class="n">sumW2</span> <span class="k">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">).</span><span class="n">sum</span>
+
+  <span class="k">val</span> <span class="n">A</span> <span class="k">=</span> <span class="n">globMean</span> <span class="o">*</span> <span class="n">sumW</span>
+  <span class="k">val</span> <span class="n">B</span> <span class="k">=</span> <span class="n">globStdev</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="o">((</span><span class="n">numPixels</span><span class="o">*</span><span class="n">sumW2</span> <span class="o">-</span> <span class="n">sumW</span><span class="o">*</span><span class="n">sumW</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">numPixels</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span>
+
+  <span class="n">rdd</span><span class="o">.</span><span class="n">withContext</span> <span class="o">{</span>
+    <span class="k">_</span><span class="o">.</span><span class="n">bufferTiles</span><span class="o">(</span><span class="n">weightMatrix</span><span class="o">.</span><span class="n">extent</span><span class="o">)</span>
+      <span class="o">.</span><span class="n">mapValues</span> <span class="o">{</span> <span class="n">tileWithCtx</span> <span class="k">=&gt;</span>
+        <span class="n">tileWithCtx</span><span class="o">.</span><span class="n">tile</span>
+          <span class="o">.</span><span class="n">focalSum</span><span class="o">(</span><span class="n">weightMatrix</span><span class="o">,</span> <span class="nc">Some</span><span class="o">(</span><span class="n">tileWithCtx</span><span class="o">.</span><span class="n">targetArea</span><span class="o">))</span> <span class="c1">// focal op.</span>
+          <span class="o">.</span><span class="n">mapDouble</span> <span class="o">{</span> <span class="n">x</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">A</span><span class="o">)</span> <span class="o">/</span> <span class="n">B</span> <span class="o">}</span> <span class="c1">// local op.</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Let's assume, we already have <code>layerReader</code>, <code>srcLayerId</code>, <code>kernelRadius</code>, <code>globMean</code>, <code>globStdev</code> and <code>numPixels</code>:</p>
+<p><div class="codehilite"><pre><span></span><span class="k">val</span> <span class="n">queryResult</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span>
+  <span class="n">layerReader</span><span class="o">.</span><span class="n">read</span><span class="o">[</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span>, <span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]](</span><span class="n">srcLayerId</span><span class="o">)</span>
+
+<span class="c1">// here, we use a circular kernel as a weight matrix</span>
+<span class="k">val</span> <span class="n">weightMatrix</span> <span class="k">=</span> <span class="nc">Kernel</span><span class="o">.</span><span class="n">circle</span><span class="o">(</span><span class="n">kernelRadius</span><span class="o">,</span>
+                                 <span class="n">queryResult</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cellwidth</span><span class="o">,</span>
+                                 <span class="n">kernelRadius</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">outRdd</span> <span class="k">=</span> <span class="n">getisord</span><span class="o">(</span><span class="n">queryResult</span><span class="o">,</span> <span class="n">weightMatrix</span><span class="o">,</span> <span class="n">globMean</span><span class="o">,</span> <span class="n">globStdev</span><span class="o">,</span> <span class="n">numPixels</span><span class="o">)</span>
+</pre></div>
+You can not further process <code>outRdd</code> or store it as a new layer.</p>
                 
                   
                 
@@ -866,7 +994,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../optimize-drones/" title="Optimal flight plan for drones" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../heatstress/" title="Heatstress Routing App" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -875,19 +1003,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Optimal flight plan for drones
+                Heatstress Routing App
               </span>
             </div>
           </a>
         
         
-          <a href="../Stability_of_hotspots/" title="Stability of hotspots" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../invasive-spec/" title="Invasive species" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Stability of hotspots
+                Invasive species
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
