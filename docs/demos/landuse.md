@@ -20,9 +20,10 @@
 ### Scala code snippets
 
 ```scala
+type SpatialMultibandRDD = RDD[(SpatialKey, MultibandTile)] with Metadata[TileLayerMetadata[SpatialKey]]
+
 // reading from Hadoop Layer (HDFS)
-val rdd : RDD[(SpatialKey, MultibandTile)] with Metadata[TileLayerMetadata[SpatialKey]] =
-      biggis.landuse.api.readRddFromLayer(LayerId(layerName, zoom))
+val rdd : SpatialMultibandRDD = biggis.landuse.api.readRddFromLayer(LayerId(layerName, zoom))
       
 // writing to Hadoop Layer (HDFS)
 biggis.landuse.api.writeRddToLayer(rdd, LayerId(layerName, zoom))
