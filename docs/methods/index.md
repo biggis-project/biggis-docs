@@ -1,9 +1,9 @@
 # Methods
 
-## Hotspot analysis
-- [scalable Getis-Ord G* on rasters](../demos/hotspots.md)
-- [stability of hotspots](../demos/Stability_of_hotspots.md)
+- Theoretical background that is used in demos and scenarios.
+- Each method in a separate section (markdown file)
 
-## Raster processing at scale
-- [scalable Getis-Ord G* on rasters](../demos/hotspots.md)
-- landuse classification
+!!! todo
+    ## Raster processing at scale
+    - [](../demos/hotspot_analysis.md)
+    - landuse classification

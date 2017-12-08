@@ -59,7 +59,7 @@ markdown_extensions:
 extra_javascript:
   - 'extra.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Mon Dec  4 15:02:01 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec  8 13:45:52 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/index.md
@@ -77,7 +77,7 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Dec  4 15:02:01 CET 2017
         - Gas Cloud Detection: ./demos/gas-detect.md
         - Gas Cloud Prediction: ./demos/gas-predict.md
         - Heatstress Routing App: ./demos/heatstress.md
-        - Hotspot analysis demo: ./demos/hotspots.md
+        - Hotspot analysis demo: ./demos/hotspot_analysis.md
         - Invasive species: ./demos/invasive-spec.md
         - Landuse classification: ./demos/landuse.md
         - Optimal flight plan for drones: ./demos/optimize-drones.md
@@ -87,6 +87,11 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Mon Dec  4 15:02:01 CET 2017
     - Documentation Howto: ./docs-howto.md
     - Methods:
         - Methods: ./methods/index.md
+        - Focal Getis-ord: ./methods/focal_getis_ord.md
+        - Foal Getis-ord on rasters: ./methods/focal_getis_ord_raster.md
+        - Standards Getis-Ord G*: ./methods/getis_ord.md
+        - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
+        - Stability of hotspots: ./methods/soh.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md
