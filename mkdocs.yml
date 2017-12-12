@@ -97,6 +97,7 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec  8 20:11:16 CET 2017
         - Standards Getis-Ord G*: ./methods/getis_ord.md
         - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
         - Stability of hotspots: ./methods/soh.md
+        - Exasol Analytics Database: ./methods/exasol.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md
