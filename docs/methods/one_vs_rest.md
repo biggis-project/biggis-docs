@@ -1,10 +1,10 @@
 # One vs. Rest
 
 !!! note
-  (One vs. All = OvA)
+    (One vs. All = OvA)
 
 !!! note 
-  https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest
+    https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest
   
 !!! todo
-  Adrian Klink: Add description, formula, references
+    Adrian Klink: Add description, formula, references
