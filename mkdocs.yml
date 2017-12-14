@@ -64,7 +64,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec  8 20:11:16 CET 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Do 14. Dez 13:56:25 STD 2017
     - About BigGIS: ./index.md
     - Architecture:
         - BigGIS Architecture Overview: ./architecture/index.md
@@ -96,8 +96,9 @@ pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec  8 20:11:16 CET 2017
         - Foal Getis-ord on rasters: ./methods/focal_getis_ord_raster.md
         - Standards Getis-Ord G*: ./methods/getis_ord.md
         - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
+        - One vs. Rest: ./methods/one_vs_rest.md
         - Stability of hotspots: ./methods/soh.md
-        - Exasol Analytics Database: ./methods/exasol.md
+        - Support Vector Machine: ./methods/support_vector_machine.md
     - Scenarios:
         - Smart City: ./scenarios/01_city.md
         - Disaster Management: ./scenarios/02_bos.md
