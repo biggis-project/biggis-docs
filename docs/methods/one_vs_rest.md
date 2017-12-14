@@ -1,4 +1,7 @@
-# One vs. Rest / One vs. All
+# One vs. Rest
+
+!!! note
+  (One vs. All = OvA)
 
 !!! note 
   https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest
