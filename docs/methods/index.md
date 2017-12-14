@@ -10,6 +10,6 @@ Some methods depend on each other which is reflected in their ordering.
 
 ## Methods not yet included into the list
 
-- landuse classification
+- landuse classification -> add new Support Vector Machines, One versus All
 - ...
 - ...
