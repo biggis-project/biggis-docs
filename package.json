@@ -12,11 +12,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "serve": "./fix-mkdocs-pages.sh; mkdocs serve",
+    "serve": "mkdocs serve",
     "browse": "browse http://localhost:8000",
-    "build": "./fix-mkdocs-pages.sh; mkdocs build",
+    "build": "mkdocs build",
     "fixpages": "./fix-mkdocs-pages.sh",
     "deploy": "mkdocs gh-deploy",
-    "clean": "rm -r site/"
+    "clean": "rimraf site/"
   }
 }
