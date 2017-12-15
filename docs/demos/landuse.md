@@ -1,11 +1,6 @@
-!!! note "Responsible person for this section"
-    Adrian Klink (EFTAS)
-
 # Landuse classification
 
-!!! TODO
-    - Describe the idea
-    - Maybe add some geotrellis examples
+[Responsible person]: "Adrian Klink"
 
 !!! note
     Related repository is https://github.com/biggis-project/biggis-landuse
@@ -21,7 +16,15 @@
     - see section [Support Vector Machines](../methods/support_vector_machine.md)
 - We want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.
     - see section [One vs. Rest](../methods/one_vs_rest.md)
-- We want to parallelize the computation in our Spark cluster using Geotrellis for data loading and export.
+- We want to parallelize the computation in our Spark cluster using [Geotrellis](https://geotrellis.io/) for data loading and export.
+
+!!! note "Responsible person for this section"
+    Adrian Klink (EFTAS)
+
+!!! TODO
+    - Describe the idea
+    - Maybe add some geotrellis examples
+
 
 ## Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
 

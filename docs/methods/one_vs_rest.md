@@ -1,12 +1,12 @@
 # One vs. Rest
 
-!!! note
-    (One vs. All = OvA)
-
-#### One-vs.-rest
+The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers (such as [Support Vector Machines](../methods/support_vector_machine.md) ) for classifying multiple (more than two) Classes.
 
 !!! note 
-    https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest
+    - https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest
+    - https://spark.apache.org/docs/latest/ml-classification-regression.html#one-vs-rest-classifier-aka-one-vs-all
+
+#### One-vs.-rest
 
 ##### Inputs:
 
@@ -32,4 +32,4 @@ $$\hat{y} = \underset{k \in \{1 \ldots K\}}{\arg\!\max}\; f_k(x)$$
 
 
 !!! todo
-    Adrian Klink: Add description, formula, references
+    Adrian Klink: Add references, optimize description
