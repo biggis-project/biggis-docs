@@ -36,7 +36,7 @@
     
     
       
-        <title>BigGIS Architecture Overview - BigGIS Documentation</title>
+        <title>Overview - BigGIS Documentation</title>
       
     
     
@@ -98,7 +98,7 @@
                 BigGIS Documentation
               </span>
               <span class="md-header-nav__topic">
-                BigGIS Architecture Overview
+                Overview
               </span>
             
           
@@ -347,9 +347,71 @@
       
     
     
-    <a href="./" title="BigGIS Architecture Overview" class="md-nav__link md-nav__link--active">
-      BigGIS Architecture Overview
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Overview
+      </label>
+    
+    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+      Overview
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelling" title="Modelling" class="md-nav__link">
+    Modelling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics" title="Analytics" class="md-nav__link">
+    Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-connectors" title="Middleware &amp; Connectors" class="md-nav__link">
+    Middleware &amp; Connectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-backends" title="Storage Backends" class="md-nav__link">
+    Storage Backends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-management" title="Container Management" class="md-nav__link">
+    Container Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure" title="Infrastructure" class="md-nav__link">
+    Infrastructure
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -360,8 +422,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Docker_Containers/" title="Docker containers" class="md-nav__link">
-      Docker containers
+    <a href="Docker_Containers/" title="Components" class="md-nav__link">
+      Components
     </a>
   </li>
 
@@ -372,8 +434,8 @@
 
 
   <li class="md-nav__item">
-    <a href="Infrastructure_on_bwCloud/" title="BW Cloud" class="md-nav__link">
-      BW Cloud
+    <a href="Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
+      bwCloud
     </a>
   </li>
 
@@ -732,8 +794,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../methods/one_vs_rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../methods/soh/" title="Stability of hotspots" class="md-nav__link">
       Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../methods/support_vector_machine/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
     </a>
   </li>
 
@@ -820,6 +906,55 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modelling" title="Modelling" class="md-nav__link">
+    Modelling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics" title="Analytics" class="md-nav__link">
+    Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#middleware-connectors" title="Middleware &amp; Connectors" class="md-nav__link">
+    Middleware &amp; Connectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-backends" title="Storage Backends" class="md-nav__link">
+    Storage Backends
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-management" title="Container Management" class="md-nav__link">
+    Container Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure" title="Infrastructure" class="md-nav__link">
+    Infrastructure
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -833,12 +968,41 @@
                   <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/architecture/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="biggis-architecture-overview">BigGIS Architecture Overview<a class="headerlink" href="#biggis-architecture-overview" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>This image is actually not the overview of BigGIS :-)
-<img alt="BigGIS Architecture" src="./index/biggis-vision.svg" /></p>
+                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related repository is <a href="https://github.com/biggis-project/biggis-infrastructure">https://github.com/biggis-project/biggis-infrastructure</a></p>
 </div>
+<p><img alt="BigGIS Architecture" src="./index/biggis-architecture.png" /></p>
+<p>The BigGIS architecture, as depicted in the picture above, consists of several layers that are briefly discussed in the following.</p>
+<h2 id="modelling">Modelling<a class="headerlink" href="#modelling" title="Permanent link">&para;</a></h2>
+<p><a href="StreamPipes/">StreamPipes</a>
+tbd.</p>
+<h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h2>
+<p>Analytics and processing</p>
+<ul>
+<li><a href="https://flink.apache.org/">Apache Flink</a></li>
+<li><a href="https://spark.apache.org/">Apache Spark</a> featuring <a href="https://geotrellis.io/">GeoTrellis</a></li>
+<li>Other Languages and Notebooks: R, Java, ...
+tbd.</li>
+</ul>
+<h2 id="middleware-connectors">Middleware &amp; Connectors<a class="headerlink" href="#middleware-connectors" title="Permanent link">&para;</a></h2>
+<p>Data and control flow, connectors are nodes in StreamPipes that enable the user to load various data sources in Apache Kafka or to<br />
+tbd.</p>
+<h2 id="storage-backends">Storage Backends<a class="headerlink" href="#storage-backends" title="Permanent link">&para;</a></h2>
+<p>Internally, BigGIS uses a variety of different storage backends for designated purposes.</p>
+<ul>
+<li><a href="http://hadoop.apache.org/">HDFS</a> for GeoTrellis catalog</li>
+<li><a href="https://www.exasol.com/de/">Exasol</a> for xx</li>
+<li><a href="http://couchdb.apache.org/">CouchDB</a> for StreamPipes user and pipeline configurations</li>
+<li><a href="http://rdf4j.org/">Sesame</a> for semantic framework of StreamPipes
+tbd.</li>
+</ul>
+<h2 id="container-management">Container Management<a class="headerlink" href="#container-management" title="Permanent link">&para;</a></h2>
+<p>Running these containers in a distributed manner requires a wide variety of technologies, that must be integrated and managed throughout their lifecycle. To easily deploy our containers, our infrastructure is designed to run on <a href="http://rancher.com/">Rancher</a> as our container management platform. 
+tbd.</p>
+<h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
+<p>BigGIS infrastructure leverages <a href="https://www.bw-cloud.org/">bwCloud</a> Infrastructure-as-a-Service (IaaS) offer powered by Openstack.</p>
                 
                   
                 
@@ -872,13 +1036,13 @@
           </a>
         
         
-          <a href="Docker_Containers/" title="Docker containers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="Docker_Containers/" title="Components" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker containers
+                Components
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

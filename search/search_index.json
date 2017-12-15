@@ -22,33 +22,63 @@
         }, 
         {
             "location": "/architecture/", 
-            "text": "BigGIS Architecture Overview\n\n\n\n\nTodo\n\n\nThis image is actually not the overview of BigGIS :-)", 
-            "title": "BigGIS Architecture Overview"
+            "text": "Overview\n\n\n\n\nNote\n\n\nRelated repository is \nhttps://github.com/biggis-project/biggis-infrastructure\n\n\n\n\n\n\nThe BigGIS architecture, as depicted in the picture above, consists of several layers that are briefly discussed in the following.\n\n\nModelling\n\n\nStreamPipes\n\ntbd.\n\n\nAnalytics\n\n\nAnalytics and processing\n\n\n\n\nApache Flink\n\n\nApache Spark\n featuring \nGeoTrellis\n\n\nOther Languages and Notebooks: R, Java, ...\ntbd.\n\n\n\n\nMiddleware \n Connectors\n\n\nData and control flow, connectors are nodes in StreamPipes that enable the user to load various data sources in Apache Kafka or to\n\ntbd.\n\n\nStorage Backends\n\n\nInternally, BigGIS uses a variety of different storage backends for designated purposes.\n\n\n\n\nHDFS\n for GeoTrellis catalog\n\n\nExasol\n for xx\n\n\nCouchDB\n for StreamPipes user and pipeline configurations\n\n\nSesame\n for semantic framework of StreamPipes\ntbd.\n\n\n\n\nContainer Management\n\n\nRunning these containers in a distributed manner requires a wide variety of technologies, that must be integrated and managed throughout their lifecycle. To easily deploy our containers, our infrastructure is designed to run on \nRancher\n as our container management platform. \ntbd.\n\n\nInfrastructure\n\n\nBigGIS infrastructure leverages \nbwCloud\n Infrastructure-as-a-Service (IaaS) offer powered by Openstack.", 
+            "title": "Overview"
         }, 
         {
-            "location": "/architecture/#biggis-architecture-overview", 
-            "text": "Todo  This image is actually not the overview of BigGIS :-)", 
-            "title": "BigGIS Architecture Overview"
+            "location": "/architecture/#overview", 
+            "text": "Note  Related repository is  https://github.com/biggis-project/biggis-infrastructure    The BigGIS architecture, as depicted in the picture above, consists of several layers that are briefly discussed in the following.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/architecture/#modelling", 
+            "text": "StreamPipes \ntbd.", 
+            "title": "Modelling"
+        }, 
+        {
+            "location": "/architecture/#analytics", 
+            "text": "Analytics and processing   Apache Flink  Apache Spark  featuring  GeoTrellis  Other Languages and Notebooks: R, Java, ...\ntbd.", 
+            "title": "Analytics"
+        }, 
+        {
+            "location": "/architecture/#middleware-connectors", 
+            "text": "Data and control flow, connectors are nodes in StreamPipes that enable the user to load various data sources in Apache Kafka or to \ntbd.", 
+            "title": "Middleware &amp; Connectors"
+        }, 
+        {
+            "location": "/architecture/#storage-backends", 
+            "text": "Internally, BigGIS uses a variety of different storage backends for designated purposes.   HDFS  for GeoTrellis catalog  Exasol  for xx  CouchDB  for StreamPipes user and pipeline configurations  Sesame  for semantic framework of StreamPipes\ntbd.", 
+            "title": "Storage Backends"
+        }, 
+        {
+            "location": "/architecture/#container-management", 
+            "text": "Running these containers in a distributed manner requires a wide variety of technologies, that must be integrated and managed throughout their lifecycle. To easily deploy our containers, our infrastructure is designed to run on  Rancher  as our container management platform. \ntbd.", 
+            "title": "Container Management"
+        }, 
+        {
+            "location": "/architecture/#infrastructure", 
+            "text": "BigGIS infrastructure leverages  bwCloud  Infrastructure-as-a-Service (IaaS) offer powered by Openstack.", 
+            "title": "Infrastructure"
         }, 
         {
             "location": "/architecture/Docker_Containers/", 
-            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nDocker containers\n\n\n\n\nall sources should be on github\n\n\nimages should be hosted on dockerhub\n\n\nlist of docker images that should be available:\n\n\nHDFS (should use all bwCloud resources available to BigGIS)\n\n\nKafka with Zookeeper (overview of queues needed)\n\n\nFlink\n\n\nSpark\n\n\nGeotrellis libraries (part of the Spark container?)\n\n\nAccumulo with Geomesa (or Geowave)\n\n\nStreamPipes\n\n\nExasolution\n\n\nExasolution should support Accumulo(Geomesa/Geowave) through virtual schema\n\n\nExasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)\n\n\n\n\n\n\nGeo-Server\n\n\nmit Plugin f\u00fcr Accumulo\n\n\nzur Transformation von Formaten\n\n\nauch als Datenquelle f\u00fcr Cadenza", 
-            "title": "Docker containers"
+            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nComponents\n\n\ntbd. some infos about the structure and hierarchical composition of our Docker images.\n\n\n\n\nall sources should be on github\n\n\nimages should be hosted on dockerhub\n\n\nlist of docker images that should be available:\n\n\nHDFS (should use all bwCloud resources available to BigGIS)\n\n\nKafka with Zookeeper (overview of queues needed)\n\n\nFlink\n\n\nSpark\n\n\nGeotrellis libraries (part of the Spark container?)\n\n\nAccumulo with Geomesa (or Geowave)\n\n\nStreamPipes\n\n\nExasolution\n\n\nExasolution should support Accumulo(Geomesa/Geowave) through virtual schema\n\n\nExasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)\n\n\n\n\n\n\nGeo-Server\n\n\nmit Plugin f\u00fcr Accumulo\n\n\nzur Transformation von Formaten\n\n\nauch als Datenquelle f\u00fcr Cadenza", 
+            "title": "Components"
         }, 
         {
-            "location": "/architecture/Docker_Containers/#docker-containers", 
-            "text": "all sources should be on github  images should be hosted on dockerhub  list of docker images that should be available:  HDFS (should use all bwCloud resources available to BigGIS)  Kafka with Zookeeper (overview of queues needed)  Flink  Spark  Geotrellis libraries (part of the Spark container?)  Accumulo with Geomesa (or Geowave)  StreamPipes  Exasolution  Exasolution should support Accumulo(Geomesa/Geowave) through virtual schema  Exasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)    Geo-Server  mit Plugin f\u00fcr Accumulo  zur Transformation von Formaten  auch als Datenquelle f\u00fcr Cadenza", 
-            "title": "Docker containers"
+            "location": "/architecture/Docker_Containers/#components", 
+            "text": "tbd. some infos about the structure and hierarchical composition of our Docker images.   all sources should be on github  images should be hosted on dockerhub  list of docker images that should be available:  HDFS (should use all bwCloud resources available to BigGIS)  Kafka with Zookeeper (overview of queues needed)  Flink  Spark  Geotrellis libraries (part of the Spark container?)  Accumulo with Geomesa (or Geowave)  StreamPipes  Exasolution  Exasolution should support Accumulo(Geomesa/Geowave) through virtual schema  Exasolution should support indexing using 2D, 3D, 4D space filling curves (lat,lon,time,elevation)    Geo-Server  mit Plugin f\u00fcr Accumulo  zur Transformation von Formaten  auch als Datenquelle f\u00fcr Cadenza", 
+            "title": "Components"
         }, 
         {
             "location": "/architecture/Infrastructure_on_bwCloud/", 
-            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nBW Cloud\n\n\n\n\nbwCloud VMs should be available, latest status here: bwCloud Status\n\n\nWeb-based admin. interface - dashboard - based on Ambari", 
-            "title": "BW Cloud"
+            "text": "Responsible person for this section\n\n\nPatrick Wiener\n\n\n\n\nbwCloud\n\n\n\n\nbwCloud\n VMs should be available, latest status here: bwCloud Status\n\n\nWeb-based admin. interface - dashboard - based on Ambari", 
+            "title": "bwCloud"
         }, 
         {
-            "location": "/architecture/Infrastructure_on_bwCloud/#bw-cloud", 
-            "text": "bwCloud VMs should be available, latest status here: bwCloud Status  Web-based admin. interface - dashboard - based on Ambari", 
-            "title": "BW Cloud"
+            "location": "/architecture/Infrastructure_on_bwCloud/#bwcloud", 
+            "text": "bwCloud  VMs should be available, latest status here: bwCloud Status  Web-based admin. interface - dashboard - based on Ambari", 
+            "title": "bwCloud"
         }, 
         {
             "location": "/architecture/StreamPipes/", 
@@ -137,7 +167,7 @@
         }, 
         {
             "location": "/data-sources/weather-stations/", 
-            "text": "Weather stations\n\n\n\n\nTodo\n\n\nJulian, Hannes, Jochen\n\n\n\n\nLUBW weather station at FZI\n\n\n\n\nthe device should be mounted at FZI (January 2017)\n\n\ndata should be available through some api (REST pull ? TODO:Hannes)\n\n\n\n\nLoRa-based weather stations\n\n\n\n\nTwo LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)\n\n\nData received by the LoRa gateways:\n\n\nshould be handled in a stream-processing way (pipeline modeled using StreamPipes)\n\n\nshould be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)\n\n\nshould be sent to \nhttps://opensensemap.org/\n (TODO:Jochen)\n\n\n34 LoRa sensor units should be deployed (by Jochen Lutz)\n\n\nREST API for pushing developed using Play2 framework (REST-\nkafka)\n\n\nOutlier filtering node (kafka-\nflink-\nkafka)\n\n\nData persisting node (kafka-\nflink-\naccumulo)\n\n\n\n\nWeb-based mobile-friendly app\n\n\n\n\nQR code contains stations id and URL that leads to public web\n\n\nthe web page contains info about the station and the project\n\n\nadmin can click and change station information (or register a new station)\n\n\nlat/lon is taken from the phone (HTML5 geolocation api)\n\n\nadmin can add additional parameters (placement details)", 
+            "text": "Weather stations\n\n\n\n\nTodo\n\n\nJulian, Hannes, Jochen\n\n\n\n\nLUBW weather station at FZI\n\n\n\n\nthe device was mounted at FZI in January 2017 for measuring air pressure, temperature, wind speed, precipitation (was bedeuten die Parameter \"strg_1\" und \"rlf_1\").\n\n\nmeasurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz \n  -measurement devices will be dismounted at April 2018\n\n\n\n\nLoRa-based weather stations\n\n\n\n\nTwo LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)\n\n\nData received by the LoRa gateways:\n\n\nshould be handled in a stream-processing way (pipeline modeled using StreamPipes)\n\n\nshould be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)\n\n\nshould be sent to \nhttps://opensensemap.org/\n (TODO:Jochen)\n\n\n34 LoRa sensor units should be deployed (by Jochen Lutz)\n\n\nREST API for pushing developed using Play2 framework (REST-\nkafka)\n\n\nOutlier filtering node (kafka-\nflink-\nkafka)\n\n\nData persisting node (kafka-\nflink-\naccumulo)\n\n\n\n\nWeb-based mobile-friendly app\n\n\n\n\nQR code contains stations id and URL that leads to public web\n\n\nthe web page contains info about the station and the project\n\n\nadmin can click and change station information (or register a new station)\n\n\nlat/lon is taken from the phone (HTML5 geolocation api)\n\n\nadmin can add additional parameters (placement details)", 
             "title": "Weather stations"
         }, 
         {
@@ -147,7 +177,7 @@
         }, 
         {
             "location": "/data-sources/weather-stations/#lubw-weather-station-at-fzi", 
-            "text": "the device should be mounted at FZI (January 2017)  data should be available through some api (REST pull ? TODO:Hannes)", 
+            "text": "the device was mounted at FZI in January 2017 for measuring air pressure, temperature, wind speed, precipitation (was bedeuten die Parameter \"strg_1\" und \"rlf_1\").  measurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz \n  -measurement devices will be dismounted at April 2018", 
             "title": "LUBW weather station at FZI"
         }, 
         {
@@ -172,13 +202,33 @@
         }, 
         {
             "location": "/demos/enviro-car/", 
-            "text": "Responsible person for this section\n\n\nManuel Stein\n\n\n\n\nEnviroCar (Smart City)\n\n\nVisualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in Fahrzeugen\n\n\nRelated Scenarios\n\n\n\n\nSmart City\n\n\nEnvironment", 
+            "text": "Responsible person for this section\n\n\nManuel Stein\n\n\n\n\nEnviroCar (Smart City)\n\n\nVisualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in Fahrzeugen\n\n\nMotivation\n\n\nShort section about available data\n\n\nVisual Analysis of Traffic Data\n\n\n\n\nHighdimensional\n\n\nspatial \n\n\ntemporal\n\n\nspatio temporal \n\n\n\n\nVisual Interactive Logging and Provenance\n\n\n\n\nAbstraction\n\n\nVisualization and Interaction\n\n\n\n\nRelated Scenarios\n\n\n\n\nSmart City\n\n\nEnvironment", 
             "title": "EnviroCar (Smart City)"
         }, 
         {
             "location": "/demos/enviro-car/#envirocar-smart-city", 
             "text": "Visualisierung von Verkehrs- und Umweltdaten basierend auf mobilen Sensoren in Fahrzeugen", 
             "title": "EnviroCar (Smart City)"
+        }, 
+        {
+            "location": "/demos/enviro-car/#motivation", 
+            "text": "", 
+            "title": "Motivation"
+        }, 
+        {
+            "location": "/demos/enviro-car/#short-section-about-available-data", 
+            "text": "", 
+            "title": "Short section about available data"
+        }, 
+        {
+            "location": "/demos/enviro-car/#visual-analysis-of-traffic-data", 
+            "text": "Highdimensional  spatial   temporal  spatio temporal", 
+            "title": "Visual Analysis of Traffic Data"
+        }, 
+        {
+            "location": "/demos/enviro-car/#visual-interactive-logging-and-provenance", 
+            "text": "Abstraction  Visualization and Interaction", 
+            "title": "Visual Interactive Logging and Provenance"
         }, 
         {
             "location": "/demos/enviro-car/#related-scenarios", 
@@ -327,7 +377,7 @@
         }, 
         {
             "location": "/demos/invasive-spec/", 
-            "text": "Responsible person for this section\n\n\n\n\nHannes M\u00fcller (LUBW)\n\n\nJohannes Kutterer (Disy)\n\n\nDaniel Seebacher (Uni Konstanz)\n\n\n\n\n\n\nInvasive species\n\n\nDrosophila Suzuki\n\n\n\n\n\u00dcberwachung des invasiven Sch\u00e4dlings Kirschessigfliege (KEF)\n\n\nDatenerhebung durch Weinbauinstitut\n\n\nProblem:\n Datenerhebung teilweise unsystematisch\n\n\n\n\nHypothesenentwicklung\n\n\nHypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse\n(v.a. abh\u00e4ngig von Umgebungstemperatur und Vegetation)\n\n\nEntwicklung einer Vektordatenpipeline in BigGIS\n\n\n\n\nDatenquelle \nwww.vitimeteo.de\n\n\nDatensammlung (kafka)\n\n\nProzessierung (flink)\n\n\nVisualisierung (Uni-Konstanz)\n\n\n\n\nResults\n\n\n\n\nH\u00e4ufiges Auftreten der KEF\n\n\nN\u00e4he zu Wald -\n Refugium f\u00fcr Kirschessigfliege zum \u00dcberleben bei widrigen Wetterbedingungen\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment", 
+            "text": "Responsible person for this section\n\n\n\n\nHannes M\u00fcller (LUBW)\n\n\nJohannes Kutterer (Disy)\n\n\nDaniel Seebacher (Uni Konstanz)\n\n\n\n\n\n\nInvasive species\n\n\nDrosophila Suzuki\n\n\n\n\n\u00dcberwachung des invasiven Sch\u00e4dlings Kirschessigfliege (KEF)\n\n\nDatenerhebung durch Weinbauinstitut\n\n\nProblem:\n Datenerhebung teilweise unsystematisch\n\n\n\n\nHypothesenentwicklung\n\n\nHypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse\n(v.a. abh\u00e4ngig von Umgebungstemperatur und Vegetation)\n\n\nEntwicklung einer Vektordatenpipeline in BigGIS\n\n\n\n\nDatenquelle \nwww.vitimeteo.de\n\n\nDatensammlung (kafka)\n\n\nProzessierung (flink)\n\n\nVisualisierung (Uni-Konstanz)\n\n\n\n\nDrosophigator Prototype for the Visual Analysis of Spatio-Temporal Event Predictions\n\n\n\n\nInvestigating the Spread Dynamics of invasive species\n\n\nVDS and now journal extension\n\n\nEnsemble-Based Classification of Infested Areas\n\n\nVisual Analysis \n\n\nDemonstration and Evaluation at the 6\nth\n workshop of the working group D Suzukii in Bad Kreuznach\n\n\n\n\nResults\n\n\n\n\nH\u00e4ufiges Auftreten der KEF\n\n\nN\u00e4he zu Wald -\n Refugium f\u00fcr Kirschessigfliege zum \u00dcberleben bei widrigen Wetterbedingungen\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment", 
             "title": "Invasive species"
         }, 
         {
@@ -351,6 +401,11 @@
             "title": "Entwicklung einer Vektordatenpipeline in BigGIS"
         }, 
         {
+            "location": "/demos/invasive-spec/#drosophigator-prototype-for-the-visual-analysis-of-spatio-temporal-event-predictions", 
+            "text": "Investigating the Spread Dynamics of invasive species  VDS and now journal extension  Ensemble-Based Classification of Infested Areas  Visual Analysis   Demonstration and Evaluation at the 6 th  workshop of the working group D Suzukii in Bad Kreuznach", 
+            "title": "Drosophigator Prototype for the Visual Analysis of Spatio-Temporal Event Predictions"
+        }, 
+        {
             "location": "/demos/invasive-spec/#results", 
             "text": "H\u00e4ufiges Auftreten der KEF  N\u00e4he zu Wald -  Refugium f\u00fcr Kirschessigfliege zum \u00dcberleben bei widrigen Wetterbedingungen", 
             "title": "Results"
@@ -362,13 +417,18 @@
         }, 
         {
             "location": "/demos/landuse/", 
-            "text": "Responsible person for this section\n\n\nAdrian Klink (EFTAS)\n\n\n\n\nLanduse classification\n\n\n\n\nTodo\n\n\n\n\nDescribe the idea\n\n\nMaybe add some geotrellis examples\n\n\n\n\n\n\n\n\nNote\n\n\nRelated repository is \nhttps://github.com/biggis-project/biggis-landuse\n\n\n\n\nClassification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)\n\n\nTools\n\n\n\n\nMachine Learning\n\n\nTraining: Multiclass SVM\n\n\nGeotrellis\n\n\n\n\nScala code snippets\n\n\ntype\n \nSpatialMultibandRDD\n \n=\n \nRDD\n[(\nSpatialKey\n, \nMultibandTile\n)]\n \nwith\n \nMetadata\n[\nTileLayerMetadata\n[\nSpatialKey\n]]\n\n\n\n// reading from Hadoop Layer (HDFS)\n\n\nval\n \nrdd\n \n:\n \nSpatialMultibandRDD\n \n=\n \nbiggis\n.\nlanduse\n.\napi\n.\nreadRddFromLayer\n(\nLayerId\n(\nlayerName\n,\n \nzoom\n))\n\n\n\n// writing to Hadoop Layer (HDFS)\n\n\nbiggis\n.\nlanduse\n.\napi\n.\nwriteRddToLayer\n(\nrdd\n,\n \nLayerId\n(\nlayerName\n,\n \nzoom\n))\n\n\n\n\n\nExample\n\n\n\n\nClassification of Aerial Images May-Aug 2016\n\n\nLayerstacking: Aerial Images + Satellite images (IR, Resolution 2m)\n\n\nTraining of a Multiclass SVM with manually selected training data (classified image tiles)\n\n\n\n\nFurther Steps\n\n\n\n\nAdding additional Layers, e.g.\n\n\nTerrain Height\n\n\nHomogeneity of Texture\n\n\nUsing Other Classififiers\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment\n\n\nSmart City", 
+            "text": "Landuse classification\n\n\n\n\nNote\n\n\nRelated repository is \nhttps://github.com/biggis-project/biggis-landuse\n\n\n\n\nProblem definition\n\n\n\n\nWe have the following datasets:\n\n\nAn existing Landuse vector dataset\n\n\nOrthorectified Aerial images (Digital Ortho Photos = DOP) \n\n\nSatellite images (SAT), e.g. Sentinel2 10m\n\n\n\n\n\n\nWe want to select / extract landcover classes from landuse classes.\n\n\nWe want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.\n\n\nsee section \nSupport Vector Machines\n\n\n\n\n\n\nWe want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.\n\n\nsee section \nOne vs. Rest\n\n\n\n\n\n\nWe want to parallelize the computation in our Spark cluster using \nGeotrellis\n for data loading and export.\n\n\n\n\n\n\nResponsible person for this section\n\n\nAdrian Klink (EFTAS)\n\n\n\n\n\n\nTodo\n\n\n\n\nDescribe the idea\n\n\nMaybe add some geotrellis examples\n\n\n\n\n\n\nClassification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)\n\n\nTools\n\n\n\n\nMachine Learning\n\n\nTraining: Multiclass SVM\n\n\nGeotrellis\n\n\n\n\nScala code snippets\n\n\ntype\n \nSpatialMultibandRDD\n \n=\n \nRDD\n[(\nSpatialKey\n, \nMultibandTile\n)]\n \nwith\n \nMetadata\n[\nTileLayerMetadata\n[\nSpatialKey\n]]\n\n\n\n// reading from Hadoop Layer (HDFS)\n\n\nval\n \nrdd\n \n:\n \nSpatialMultibandRDD\n \n=\n \nbiggis\n.\nlanduse\n.\napi\n.\nreadRddFromLayer\n(\nLayerId\n(\nlayerName\n,\n \nzoom\n))\n\n\n\n// writing to Hadoop Layer (HDFS)\n\n\nbiggis\n.\nlanduse\n.\napi\n.\nwriteRddToLayer\n(\nrdd\n,\n \nLayerId\n(\nlayerName\n,\n \nzoom\n))\n\n\n\n\n\nExample\n\n\n\n\nClassification of Aerial Images May-Aug 2016\n\n\nLayerstacking: Aerial Images + Satellite images (IR, Resolution 2m)\n\n\nTraining of a Multiclass SVM with manually selected training data (classified image tiles)\n\n\n\n\nFurther Steps\n\n\n\n\nAdding additional Layers, e.g.\n\n\nTerrain Height\n\n\nHomogeneity of Texture\n\n\nUsing Other Classififiers\n\n\n\n\nRelated Scenarios\n\n\n\n\nEnvironment\n\n\nSmart City", 
             "title": "Landuse classification"
         }, 
         {
             "location": "/demos/landuse/#landuse-classification", 
-            "text": "Todo   Describe the idea  Maybe add some geotrellis examples     Note  Related repository is  https://github.com/biggis-project/biggis-landuse", 
+            "text": "Note  Related repository is  https://github.com/biggis-project/biggis-landuse", 
             "title": "Landuse classification"
+        }, 
+        {
+            "location": "/demos/landuse/#problem-definition", 
+            "text": "We have the following datasets:  An existing Landuse vector dataset  Orthorectified Aerial images (Digital Ortho Photos = DOP)   Satellite images (SAT), e.g. Sentinel2 10m    We want to select / extract landcover classes from landuse classes.  We want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.  see section  Support Vector Machines    We want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.  see section  One vs. Rest    We want to parallelize the computation in our Spark cluster using  Geotrellis  for data loading and export.    Responsible person for this section  Adrian Klink (EFTAS)    Todo   Describe the idea  Maybe add some geotrellis examples", 
+            "title": "Problem definition"
         }, 
         {
             "location": "/demos/landuse/#classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate", 
@@ -532,7 +592,7 @@
         }, 
         {
             "location": "/methods/", 
-            "text": "Methods\n\n\nThis section contains a \nlist of methods\n that serve as a \ntheoretical background\n\nfor the other sections inside the documentation, especially for the \nDemos\n.\n\n\nSome methods depend on each other which is reflected in their ordering.\n\n\n\n\nNote\n\n\nYou can use the \nNext\n and \nPrevious\n buttons on the bottom of each page to navigate.\n\n\n\n\nMethods not yet included into the list\n\n\n\n\nlanduse classification\n\n\n...\n\n\n...", 
+            "text": "Methods\n\n\nThis section contains a \nlist of methods\n that serve as a \ntheoretical background\n\nfor the other sections inside the documentation, especially for the \nDemos\n.\n\n\nSome methods depend on each other which is reflected in their ordering.\n\n\n\n\nNote\n\n\nYou can use the \nNext\n and \nPrevious\n buttons on the bottom of each page to navigate.\n\n\n\n\nMethods not yet included into the list\n\n\n\n\nlanduse classification -\n add new Support Vector Machines, One versus All\n\n\n...\n\n\n...", 
             "title": "Methods"
         }, 
         {
@@ -542,7 +602,7 @@
         }, 
         {
             "location": "/methods/#methods-not-yet-included-into-the-list", 
-            "text": "landuse classification  ...  ...", 
+            "text": "landuse classification -  add new Support Vector Machines, One versus All  ...  ...", 
             "title": "Methods not yet included into the list"
         }, 
         {
@@ -586,6 +646,36 @@
             "title": "Getis-ord G* on rasters"
         }, 
         {
+            "location": "/methods/one_vs_rest/", 
+            "text": "One vs. Rest\n\n\nThe One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers (such as \nSupport Vector Machines\n ) for classifying multiple (more than two) Classes.\n\n\n\n\nNote\n\n\n\n\nhttps://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest\n\n\nhttps://spark.apache.org/docs/latest/ml-classification-regression.html#one-vs-rest-classifier-aka-one-vs-all\n\n\n\n\n\n\nOne-vs.-rest\n\n\nInputs:\n\n\n    L, a learner (training algorithm for binary classifiers)\n    samples X\n    labels y where yi \u2208 {1, \u2026 K} is the label for the sample Xi\n\n\n\n\n\nOutput:\n\n\n    a list of classifiers fk for k \u2208 {1, \u2026, K}\n\n\n\n\n\nProcedure:\n\n\n    For each k in {1, \u2026, K}\n        Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise\n        Apply L to X, z to obtain fk\n\n\n\n\n\nMaking decisions means applying all classifiers to an unseen sample and\npredicting the label for which the corresponding classifier reports the\nhighest confidence score:\n\n\n\\[\\hat{y} = \\underset{k \\in \\{1 \\ldots K\\}}{\\arg\\!\\max}\\; f_k(x)\\]\n\n\nTodo\n\n\nAdrian Klink: Add references, optimize description", 
+            "title": "One vs. Rest"
+        }, 
+        {
+            "location": "/methods/one_vs_rest/#one-vs-rest", 
+            "text": "The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers (such as  Support Vector Machines  ) for classifying multiple (more than two) Classes.   Note   https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest  https://spark.apache.org/docs/latest/ml-classification-regression.html#one-vs-rest-classifier-aka-one-vs-all", 
+            "title": "One vs. Rest"
+        }, 
+        {
+            "location": "/methods/one_vs_rest/#one-vs-rest_1", 
+            "text": "", 
+            "title": "One-vs.-rest"
+        }, 
+        {
+            "location": "/methods/one_vs_rest/#inputs", 
+            "text": "L, a learner (training algorithm for binary classifiers)\n    samples X\n    labels y where yi \u2208 {1, \u2026 K} is the label for the sample Xi", 
+            "title": "Inputs:"
+        }, 
+        {
+            "location": "/methods/one_vs_rest/#output", 
+            "text": "a list of classifiers fk for k \u2208 {1, \u2026, K}", 
+            "title": "Output:"
+        }, 
+        {
+            "location": "/methods/one_vs_rest/#procedure", 
+            "text": "For each k in {1, \u2026, K}\n        Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise\n        Apply L to X, z to obtain fk  Making decisions means applying all classifiers to an unseen sample and\npredicting the label for which the corresponding classifier reports the\nhighest confidence score:  \\[\\hat{y} = \\underset{k \\in \\{1 \\ldots K\\}}{\\arg\\!\\max}\\; f_k(x)\\]  Todo  Adrian Klink: Add references, optimize description", 
+            "title": "Procedure:"
+        }, 
+        {
             "location": "/methods/soh/", 
             "text": "Stability of hotspots\n\n\n\n\nTodo\n\n\nIntro text\n\n\n\n\nRelated demos:\n- \nstability of hotspots", 
             "title": "Stability of hotspots"
@@ -594,6 +684,31 @@
             "location": "/methods/soh/#stability-of-hotspots", 
             "text": "Todo  Intro text   Related demos:\n-  stability of hotspots", 
             "title": "Stability of hotspots"
+        }, 
+        {
+            "location": "/methods/support_vector_machine/", 
+            "text": "Support Vector Machine\n\n\nA Support Vector Machine (SVM) is a supervised learning model (machine learning) which can be used to classify image data. \nFor Parallelization we use a Linear SVM from \nApache Spark\n. Since we have more than two classes the One versus All (or \nOne vs. Rest\n ) Strategy is used.\n\n\n\n\nNote\n\n\n\n\nhttps://en.wikipedia.org/wiki/Support_vector_machine\n\n\nhttps://spark.apache.org/docs/latest/ml-classification-regression.html#linear-support-vector-machine\n\n\n\n\n\n\nLinear SVM\n\n\nWe are given a training dataset of \n\\(n\\)\n points of the form\n\n\n:   \n\\((\\vec{x}_1, y_1),\\, \\ldots ,\\, (\\vec{x}_n, y_n)\\)\n\n\nwhere the \n\\(y_i\\)\n are either 1 or \u22121, each indicating the class to which\nthe point \n\\(\\vec{x}_i\\)\n belongs. Each \n\\(\\vec{x}_i\\)\n is a \n\\(p\\)\n-dimensional\n\nreal\n vector. We want to find the\n\"maximum-margin hyperplane\" that divides the group of points\n\n\\(\\vec{x}_i\\)\n for which \n\\(y_i=1\\)\n from the group of points for which\n\n\\(y_i=-1\\)\n, which is defined so that the distance between the hyperplane\nand the nearest point \n\\(\\vec{x}_i\\)\n from either group is maximized.\n\n\nAny \nhyperplane\n can be written as the set of\npoints \n\\(\\vec{x}\\)\n satisfying\n\n\n:   \n\\(\\vec{w}\\cdot\\vec{x} - b=0,\\,\\)\n \n\n\nwhere \n\\({\\vec{w}}\\)\n is the (not necessarily normalized) \nnormal\nvector\n to the hyperplane. This is much\nlike \nHesse normal form\n, except that\n\n\\({\\vec{w}}\\)\n is not necessarily a unit vector. The parameter\n\n\\(\\tfrac{b}{\\|\\vec{w}\\|}\\)\n determines the offset of the hyperplane from\nthe origin along the normal vector \n\\({\\vec{w}}\\)\n.\n\n\n\n\nHard-margin\n\n\nIf the training data are \nlinearly\nseparable\n, we can select two parallel\nhyperplanes that separate the two classes of data, so that the distance\nbetween them is as large as possible. The region bounded by these two\nhyperplanes is called the \\\"margin\\\", and the maximum-margin hyperplane\nis the hyperplane that lies halfway between them. These hyperplanes can\nbe described by the equations\n\n\n:   \n\\(\\vec{w}\\cdot\\vec{x} - b=1\\,\\)\n\n\nand\n\n\n:   \n\\(\\vec{w}\\cdot\\vec{x} - b=-1.\\,\\)\n\n\nGeometrically, the distance between these two hyperplanes is\n\n\\(\\tfrac{2}{\\|\\vec{w}\\|}\\)\n, so to maximize the distance between the planes\nwe want to minimize \n\\(\\|\\vec{w}\\|\\)\n. As we also have to prevent data\npoints from falling into the margin, we add the following constraint:\nfor each \n\\(i\\)\n either\n\n\n:   \n\\(\\vec{w}\\cdot\\vec{x}_i - b \\ge 1,\\)\n if \n\\(y_i = 1\\)\n\n\nor\n\n\n:   \n\\(\\vec{w}\\cdot\\vec{x}_i - b \\le -1,\\)\n if \n\\(y_i = -1.\\)\n\n\nThese constraints state that each data point must lie on the correct\nside of the margin.\n\n\nThis can be rewritten as:\n\n\n:   \n\\(y_i(\\vec{w}\\cdot\\vec{x}_i - b) \\ge 1, \\quad \\text{ for all } 1 \\le i \\le n.\\qquad\\qquad(1)\\)\n\n\nWe can put this together to get the optimization problem:\n\n\n:   \\\"Minimize \n\\(\\|\\vec{w}\\|\\)\n subject to\n    \n\\(y_i(\\vec{w}\\cdot\\vec{x}_i - b) \\ge 1,\\)\n for \n\\(i = 1,\\,\\ldots,\\,n\\)\n\\\"\n\n\nThe \n\\(\\vec w\\)\n and \n\\(b\\)\n that solve this problem determine our classifier,\n\n\\(\\vec{x} \\mapsto \\sgn(\\vec{w} \\cdot \\vec{x} - b)\\)\n.\n\n\nAn easy-to-see but important consequence of this geometric description\nis that the max-margin hyperplane is completely determined by those\n\n\\(\\vec{x}_i\\)\n which lie nearest to it. These \n\\(\\vec{x}_i\\)\n are called\n\nsupport vectors.\n\n\nSoft-margin\n\n\nTo extend SVM to cases in which the data are not linearly separable, we\nintroduce the \nhinge loss\n function,\n\n\n:   \n\\(\\max\\left(0, 1-y_i(\\vec{w}\\cdot\\vec{x}_i + b)\\right).\\)\n\n\nThis function is zero if the constraint in (1) is satisfied, in other\nwords, if \n\\(\\vec{x}_i\\)\n lies on the correct side of the margin. For data\non the wrong side of the margin, the function\\'s value is proportional\nto the distance from the margin.\n\n\nWe then wish to minimize\n\n\n:   \n\\(\\left[\\frac 1 n \\sum_{i=1}^n \\max\\left(0, 1 - y_i(\\vec{w}\\cdot \\vec{x}_i + b)\\right) \\right] + \\lambda\\lVert \\vec{w} \\rVert^2,\\)\n\n\nwhere the parameter \n\\(\\lambda\\)\n determines the tradeoff between increasing\nthe margin-size and ensuring that the \n\\(\\vec{x}_i\\)\n lie on the correct\nside of the margin. Thus, for sufficiently small values of \n\\(\\lambda\\)\n,\nthe soft-margin SVM will behave identically to the hard-margin SVM if\nthe input data are linearly classifiable, but will still learn if a\nclassification rule is viable or not.\n\n\n\n\nTodo\n\n\nAdrian Klink: Add references, optimize description", 
+            "title": "Support Vector Machine"
+        }, 
+        {
+            "location": "/methods/support_vector_machine/#support-vector-machine", 
+            "text": "A Support Vector Machine (SVM) is a supervised learning model (machine learning) which can be used to classify image data. \nFor Parallelization we use a Linear SVM from  Apache Spark . Since we have more than two classes the One versus All (or  One vs. Rest  ) Strategy is used.   Note   https://en.wikipedia.org/wiki/Support_vector_machine  https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-support-vector-machine", 
+            "title": "Support Vector Machine"
+        }, 
+        {
+            "location": "/methods/support_vector_machine/#linear-svm", 
+            "text": "We are given a training dataset of  \\(n\\)  points of the form  :    \\((\\vec{x}_1, y_1),\\, \\ldots ,\\, (\\vec{x}_n, y_n)\\)  where the  \\(y_i\\)  are either 1 or \u22121, each indicating the class to which\nthe point  \\(\\vec{x}_i\\)  belongs. Each  \\(\\vec{x}_i\\)  is a  \\(p\\) -dimensional real  vector. We want to find the\n\"maximum-margin hyperplane\" that divides the group of points \\(\\vec{x}_i\\)  for which  \\(y_i=1\\)  from the group of points for which \\(y_i=-1\\) , which is defined so that the distance between the hyperplane\nand the nearest point  \\(\\vec{x}_i\\)  from either group is maximized.  Any  hyperplane  can be written as the set of\npoints  \\(\\vec{x}\\)  satisfying  :    \\(\\vec{w}\\cdot\\vec{x} - b=0,\\,\\)    where  \\({\\vec{w}}\\)  is the (not necessarily normalized)  normal\nvector  to the hyperplane. This is much\nlike  Hesse normal form , except that \\({\\vec{w}}\\)  is not necessarily a unit vector. The parameter \\(\\tfrac{b}{\\|\\vec{w}\\|}\\)  determines the offset of the hyperplane from\nthe origin along the normal vector  \\({\\vec{w}}\\) .", 
+            "title": "Linear SVM"
+        }, 
+        {
+            "location": "/methods/support_vector_machine/#hard-margin", 
+            "text": "If the training data are  linearly\nseparable , we can select two parallel\nhyperplanes that separate the two classes of data, so that the distance\nbetween them is as large as possible. The region bounded by these two\nhyperplanes is called the \\\"margin\\\", and the maximum-margin hyperplane\nis the hyperplane that lies halfway between them. These hyperplanes can\nbe described by the equations  :    \\(\\vec{w}\\cdot\\vec{x} - b=1\\,\\)  and  :    \\(\\vec{w}\\cdot\\vec{x} - b=-1.\\,\\)  Geometrically, the distance between these two hyperplanes is \\(\\tfrac{2}{\\|\\vec{w}\\|}\\) , so to maximize the distance between the planes\nwe want to minimize  \\(\\|\\vec{w}\\|\\) . As we also have to prevent data\npoints from falling into the margin, we add the following constraint:\nfor each  \\(i\\)  either  :    \\(\\vec{w}\\cdot\\vec{x}_i - b \\ge 1,\\)  if  \\(y_i = 1\\)  or  :    \\(\\vec{w}\\cdot\\vec{x}_i - b \\le -1,\\)  if  \\(y_i = -1.\\)  These constraints state that each data point must lie on the correct\nside of the margin.  This can be rewritten as:  :    \\(y_i(\\vec{w}\\cdot\\vec{x}_i - b) \\ge 1, \\quad \\text{ for all } 1 \\le i \\le n.\\qquad\\qquad(1)\\)  We can put this together to get the optimization problem:  :   \\\"Minimize  \\(\\|\\vec{w}\\|\\)  subject to\n     \\(y_i(\\vec{w}\\cdot\\vec{x}_i - b) \\ge 1,\\)  for  \\(i = 1,\\,\\ldots,\\,n\\) \\\"  The  \\(\\vec w\\)  and  \\(b\\)  that solve this problem determine our classifier, \\(\\vec{x} \\mapsto \\sgn(\\vec{w} \\cdot \\vec{x} - b)\\) .  An easy-to-see but important consequence of this geometric description\nis that the max-margin hyperplane is completely determined by those \\(\\vec{x}_i\\)  which lie nearest to it. These  \\(\\vec{x}_i\\)  are called support vectors.", 
+            "title": "Hard-margin"
+        }, 
+        {
+            "location": "/methods/support_vector_machine/#soft-margin", 
+            "text": "To extend SVM to cases in which the data are not linearly separable, we\nintroduce the  hinge loss  function,  :    \\(\\max\\left(0, 1-y_i(\\vec{w}\\cdot\\vec{x}_i + b)\\right).\\)  This function is zero if the constraint in (1) is satisfied, in other\nwords, if  \\(\\vec{x}_i\\)  lies on the correct side of the margin. For data\non the wrong side of the margin, the function\\'s value is proportional\nto the distance from the margin.  We then wish to minimize  :    \\(\\left[\\frac 1 n \\sum_{i=1}^n \\max\\left(0, 1 - y_i(\\vec{w}\\cdot \\vec{x}_i + b)\\right) \\right] + \\lambda\\lVert \\vec{w} \\rVert^2,\\)  where the parameter  \\(\\lambda\\)  determines the tradeoff between increasing\nthe margin-size and ensuring that the  \\(\\vec{x}_i\\)  lie on the correct\nside of the margin. Thus, for sufficiently small values of  \\(\\lambda\\) ,\nthe soft-margin SVM will behave identically to the hard-margin SVM if\nthe input data are linearly classifiable, but will still learn if a\nclassification rule is viable or not.   Todo  Adrian Klink: Add references, optimize description", 
+            "title": "Soft-margin"
         }, 
         {
             "location": "/scenarios/01_city/", 
@@ -607,7 +722,7 @@
         }, 
         {
             "location": "/scenarios/02_bos/", 
-            "text": "Responsible person for this section\n\n\nAlexander Groeschel\n\n\n\n\nDisaster Management\n\n\n\n\nGoals\n\n\n\n\nOptimal support of the command and control team\n\n\nInformation is needed quickly (real time)\n\n\nRequirements / challenges:\n\n\nFast\n\n\nHow can data be delivered to the consumers through slow connection lines?\n\n\nDecision makers often without IT background", 
+            "text": "Responsible person for this section\n\n\nAlexander Groeschel, Bodo Bernsdorf\n\n\n\n\nDisaster Management\n\n\n\n\nGoals\n\n\n\n\nOptimal support of the command and control team\n\n\nInformation is needed quickly (real time)\n\n\nRequirements / challenges:\n\n\nFast\n\n\nHow can data be delivered to the consumers through slow connection lines?\n\n\nDecision makers often without IT background", 
             "title": "Disaster Management"
         }, 
         {

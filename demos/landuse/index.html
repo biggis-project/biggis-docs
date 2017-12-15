@@ -337,8 +337,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../architecture/" title="BigGIS Architecture Overview" class="md-nav__link">
-      BigGIS Architecture Overview
+    <a href="../../architecture/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -349,8 +349,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../architecture/Docker_Containers/" title="Docker containers" class="md-nav__link">
-      Docker containers
+    <a href="../../architecture/Docker_Containers/" title="Components" class="md-nav__link">
+      Components
     </a>
   </li>
 
@@ -361,8 +361,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../architecture/Infrastructure_on_bwCloud/" title="BW Cloud" class="md-nav__link">
-      BW Cloud
+    <a href="../../architecture/Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
+      bwCloud
     </a>
   </li>
 
@@ -594,6 +594,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#problem-definition" title="Problem definition" class="md-nav__link">
+    Problem definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate" title="Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)" class="md-nav__link">
     Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
   </a>
@@ -800,8 +807,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../methods/one_vs_rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../methods/soh/" title="Stability of hotspots" class="md-nav__link">
       Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/support_vector_machine/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
     </a>
   </li>
 
@@ -892,6 +923,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#problem-definition" title="Problem definition" class="md-nav__link">
+    Problem definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate" title="Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)" class="md-nav__link">
     Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
   </a>
@@ -956,21 +994,40 @@
                   <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/demos/landuse.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <div class="admonition note">
+                <h1 id="landuse-classification">Landuse classification<a class="headerlink" href="#landuse-classification" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related repository is <a href="https://github.com/biggis-project/biggis-landuse">https://github.com/biggis-project/biggis-landuse</a></p>
+</div>
+<h2 id="problem-definition">Problem definition<a class="headerlink" href="#problem-definition" title="Permanent link">&para;</a></h2>
+<ul>
+<li>We have the following datasets:<ul>
+<li>An existing Landuse vector dataset</li>
+<li>Orthorectified Aerial images (Digital Ortho Photos = DOP) </li>
+<li>Satellite images (SAT), e.g. Sentinel2 10m</li>
+</ul>
+</li>
+<li>We want to select / extract landcover classes from landuse classes.</li>
+<li>We want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.<ul>
+<li>see section <a href="../../methods/support_vector_machine/">Support Vector Machines</a></li>
+</ul>
+</li>
+<li>We want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.<ul>
+<li>see section <a href="../../methods/one_vs_rest/">One vs. Rest</a></li>
+</ul>
+</li>
+<li>We want to parallelize the computation in our Spark cluster using <a href="https://geotrellis.io/">Geotrellis</a> for data loading and export.</li>
+</ul>
+<div class="admonition note">
 <p class="admonition-title">Responsible person for this section</p>
 <p>Adrian Klink (EFTAS)</p>
 </div>
-<h1 id="landuse-classification">Landuse classification<a class="headerlink" href="#landuse-classification" title="Permanent link">&para;</a></h1>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <ul>
 <li>Describe the idea</li>
 <li>Maybe add some geotrellis examples</li>
 </ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Related repository is <a href="https://github.com/biggis-project/biggis-landuse">https://github.com/biggis-project/biggis-landuse</a></p>
 </div>
 <h2 id="classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate">Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)<a class="headerlink" href="#classification-of-aerial-images-according-to-land-use-classes-using-land-cover-classes-as-intermediate" title="Permanent link">&para;</a></h2>
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h2>
