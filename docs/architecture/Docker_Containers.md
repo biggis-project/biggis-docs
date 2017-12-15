@@ -1,7 +1,9 @@
 !!! note "Responsible person for this section"
     Patrick Wiener
 
-# Docker containers
+# Components
+
+tbd. some infos about the structure and hierarchical composition of our Docker images.
 
 - all sources should be on github
 - images should be hosted on dockerhub
