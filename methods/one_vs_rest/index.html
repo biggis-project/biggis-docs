@@ -758,22 +758,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inputs" title="Inputs:" class="md-nav__link">
-    Inputs:
+  <a href="#inputs" title="Inputs" class="md-nav__link">
+    Inputs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#output" title="Output:" class="md-nav__link">
-    Output:
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#procedure" title="Procedure:" class="md-nav__link">
-    Procedure:
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
   </a>
   
 </li>
@@ -910,22 +910,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inputs" title="Inputs:" class="md-nav__link">
-    Inputs:
+  <a href="#inputs" title="Inputs" class="md-nav__link">
+    Inputs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#output" title="Output:" class="md-nav__link">
-    Output:
+  <a href="#output" title="Output" class="md-nav__link">
+    Output
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#procedure" title="Procedure:" class="md-nav__link">
-    Procedure:
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
   </a>
   
 </li>
@@ -953,7 +953,9 @@
                 
                 
                 <h1 id="one-vs-rest">One vs. Rest<a class="headerlink" href="#one-vs-rest" title="Permanent link">&para;</a></h1>
-<p>The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers (such as <a href="../support_vector_machine/">Support Vector Machines</a> ) for classifying multiple (more than two) Classes.</p>
+<p>The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers
+(such as <a href="../support_vector_machine/">Support Vector Machines</a> ) for classifying multiple
+(more than two) Classes.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -962,29 +964,28 @@
 </ul>
 </div>
 <h4 id="one-vs-rest_1">One-vs.-rest<a class="headerlink" href="#one-vs-rest_1" title="Permanent link">&para;</a></h4>
-<h5 id="inputs">Inputs:<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>    L, a learner (training algorithm for binary classifiers)
-    samples X
-    labels y where yi ∈ {1, … K} is the label for the sample Xi
+<h5 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>L, a learner (training algorithm for binary classifiers)
+samples X
+labels y where yi ∈ {1, … K} is the label for the sample Xi
 </pre></div>
 
-
-<h5 id="output">Output:<a class="headerlink" href="#output" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>    a list of classifiers fk for k ∈ {1, …, K}
+<h5 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>a list of classifiers fk for k ∈ {1, …, K}
 </pre></div>
 
-
-<h5 id="procedure">Procedure:<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>    For each k in {1, …, K}
-        Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise
-        Apply L to X, z to obtain fk
+<h5 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h5>
+<div class="codehilite"><pre><span></span>For each k in {1, …, K}
+    Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise
+    Apply L to X, z to obtain fk
 </pre></div>
-
 
 <p>Making decisions means applying all classifiers to an unseen sample and
 predicting the label for which the corresponding classifier reports the
 highest confidence score:</p>
-<span>\[\hat{y} = \underset{k \in \{1 \ldots K\}}{\arg\!\max}\; f_k(x)\]</span><div class="admonition todo">
+<span>\[
+\hat{y} = \underset{k \in \{1 \ldots K\}}{\text{argmax}}\; f_k(x)
+\]</span><div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <p>Adrian Klink: Add references, optimize description</p>
 </div>

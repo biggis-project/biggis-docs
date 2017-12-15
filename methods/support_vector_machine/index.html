@@ -940,7 +940,8 @@
                 
                 <h1 id="support-vector-machine">Support Vector Machine<a class="headerlink" href="#support-vector-machine" title="Permanent link">&para;</a></h1>
 <p>A Support Vector Machine (SVM) is a supervised learning model (machine learning) which can be used to classify image data. 
-For Parallelization we use a Linear SVM from <a href="https://spark.apache.org">Apache Spark</a>. Since we have more than two classes the One versus All (or <a href="../one_vs_rest/">One vs. Rest</a> ) Strategy is used.</p>
+For Parallelization we use a Linear SVM from <a href="https://spark.apache.org">Apache Spark</a>.
+Since we have more than two classes the One versus All (or <a href="../one_vs_rest/">One vs. Rest</a> ) Strategy is used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -950,8 +951,9 @@ For Parallelization we use a Linear SVM from <a href="https://spark.apache.org">
 </div>
 <h2 id="linear-svm">Linear SVM<a class="headerlink" href="#linear-svm" title="Permanent link">&para;</a></h2>
 <p>We are given a training dataset of <span>\(n\)</span> points of the form</p>
-<p>:   <span>\((\vec{x}_1, y_1),\, \ldots ,\, (\vec{x}_n, y_n)\)</span></p>
-<p>where the <span>\(y_i\)</span> are either 1 or −1, each indicating the class to which
+<span>\[
+  (\vec{x}_1, y_1),\, \ldots ,\, (\vec{x}_n, y_n)
+\]</span><p>where the <span>\(y_i\)</span> are either 1 or −1, each indicating the class to which
 the point <span>\(\vec{x}_i\)</span> belongs. Each <span>\(\vec{x}_i\)</span> is a <span>\(p\)</span>-dimensional
 <a href="https://en.wikipedia.org/wiki/Real_number">real</a> vector. We want to find the
 "maximum-margin hyperplane" that divides the group of points
@@ -960,17 +962,20 @@ the point <span>\(\vec{x}_i\)</span> belongs. Each <span>\(\vec{x}_i\)</span> is
 and the nearest point <span>\(\vec{x}_i\)</span> from either group is maximized.</p>
 <p>Any <a href="https://en.wikipedia.org/wiki/Hyperplane">hyperplane</a> can be written as the set of
 points <span>\(\vec{x}\)</span> satisfying</p>
-<p>:   <span>\(\vec{w}\cdot\vec{x} - b=0,\,\)</span> </p>
-<p>where <span>\({\vec{w}}\)</span> is the (not necessarily normalized) <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">normal
+<span>\[
+  \vec{w}\cdot\vec{x} - b=0
+\]</span><p>where <span>\({\vec{w}}\)</span> is the (not necessarily normalized) <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">normal
 vector</a> to the hyperplane. This is much
 like <a href="https://en.wikipedia.org/wiki/Hesse_normal_form">Hesse normal form</a>, except that
 <span>\({\vec{w}}\)</span> is not necessarily a unit vector. The parameter
 <span>\(\tfrac{b}{\|\vec{w}\|}\)</span> determines the offset of the hyperplane from
 the origin along the normal vector <span>\({\vec{w}}\)</span>.</p>
-<p><img alt="Maximum-margin hyperplane and
-    margins for an SVM trained with samples from two classes. Samples on
-    the margin are called the support
-    vectors." src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png" title="fig:Maximum-margin hyperplane and margins for an SVM trained with samples from two classes. Samples on the margin are called the support vectors." /></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Svm_max_sep_hyperplane_with_margin.png/220px-Svm_max_sep_hyperplane_with_margin.png" /></p>
+<blockquote>
+<p><strong>Figure:</strong>
+Maximum-margin hyperplane and margins for an SVM trained with samples from two classes.
+Samples on the margin are called the support vectors.</p>
+</blockquote>
 <h3 id="hard-margin">Hard-margin<a class="headerlink" href="#hard-margin" title="Permanent link">&para;</a></h3>
 <p>If the training data are <a href="https://en.wikipedia.org/wiki/Linearly_separable">linearly
 separable</a>, we can select two parallel
@@ -978,42 +983,56 @@ hyperplanes that separate the two classes of data, so that the distance
 between them is as large as possible. The region bounded by these two
 hyperplanes is called the \"margin\", and the maximum-margin hyperplane
 is the hyperplane that lies halfway between them. These hyperplanes can
-be described by the equations</p>
-<p>:   <span>\(\vec{w}\cdot\vec{x} - b=1\,\)</span></p>
+be described by the equations
+$$
+  \vec{w}\cdot\vec{x} - b=1
+$$</p>
 <p>and</p>
-<p>:   <span>\(\vec{w}\cdot\vec{x} - b=-1.\,\)</span></p>
-<p>Geometrically, the distance between these two hyperplanes is
+<span>\[
+  \vec{w}\cdot\vec{x} - b=-1
+\]</span><p>Geometrically, the distance between these two hyperplanes is
 <span>\(\tfrac{2}{\|\vec{w}\|}\)</span>, so to maximize the distance between the planes
 we want to minimize <span>\(\|\vec{w}\|\)</span>. As we also have to prevent data
 points from falling into the margin, we add the following constraint:
 for each <span>\(i\)</span> either</p>
-<p>:   <span>\(\vec{w}\cdot\vec{x}_i - b \ge 1,\)</span> if <span>\(y_i = 1\)</span></p>
-<p>or</p>
-<p>:   <span>\(\vec{w}\cdot\vec{x}_i - b \le -1,\)</span> if <span>\(y_i = -1.\)</span></p>
-<p>These constraints state that each data point must lie on the correct
+<span>\[
+  \vec{w}\cdot\vec{x}_i - b \ge 1, \text{if}\; y_i = 1
+\]</span><p>or</p>
+<span>\[
+  \vec{w}\cdot\vec{x}_i - b \le -1,\text{if}\; y_i = -1
+\]</span><p>These constraints state that each data point must lie on the correct
 side of the margin.</p>
 <p>This can be rewritten as:</p>
-<p>:   <span>\(y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1, \quad \text{ for all } 1 \le i \le n.\qquad\qquad(1)\)</span></p>
-<p>We can put this together to get the optimization problem:</p>
-<p>:   \"Minimize <span>\(\|\vec{w}\|\)</span> subject to
-    <span>\(y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1,\)</span> for <span>\(i = 1,\,\ldots,\,n\)</span>\"</p>
+<span>\[
+  y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1, \quad \text{ for all } 1 \le i \le n.\qquad\qquad(1)
+\]</span><p>We can put this together to get the optimization problem:</p>
+<blockquote>
+<p>Minimize <span>\(\|\vec{w}\|\)</span> subject to
+<span>\(y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1,\)</span> for <span>\(i = 1, \ldots, n\)</span></p>
+</blockquote>
 <p>The <span>\(\vec w\)</span> and <span>\(b\)</span> that solve this problem determine our classifier,
-<span>\(\vec{x} \mapsto \sgn(\vec{w} \cdot \vec{x} - b)\)</span>.</p>
+$$
+  \vec{x} \mapsto sgn(\vec{w} \cdot \vec{x} - b)
+$$</p>
 <p>An easy-to-see but important consequence of this geometric description
 is that the max-margin hyperplane is completely determined by those
 <span>\(\vec{x}_i\)</span> which lie nearest to it. These <span>\(\vec{x}_i\)</span> are called
 <em>support vectors.</em></p>
 <h3 id="soft-margin">Soft-margin<a class="headerlink" href="#soft-margin" title="Permanent link">&para;</a></h3>
 <p>To extend SVM to cases in which the data are not linearly separable, we
-introduce the <em>hinge loss</em> function,</p>
-<p>:   <span>\(\max\left(0, 1-y_i(\vec{w}\cdot\vec{x}_i + b)\right).\)</span></p>
-<p>This function is zero if the constraint in (1) is satisfied, in other
+introduce the <em>hinge loss</em> function:</p>
+<span>\[
+  \max\left(0, 1-y_i(\vec{w}\cdot\vec{x}_i + b)\right)
+\]</span><p>This function is zero if the constraint in (1) is satisfied, in other
 words, if <span>\(\vec{x}_i\)</span> lies on the correct side of the margin. For data
 on the wrong side of the margin, the function\'s value is proportional
 to the distance from the margin.</p>
 <p>We then wish to minimize</p>
-<p>:   <span>\(\left[\frac 1 n \sum_{i=1}^n \max\left(0, 1 - y_i(\vec{w}\cdot \vec{x}_i + b)\right) \right] + \lambda\lVert \vec{w} \rVert^2,\)</span></p>
-<p>where the parameter <span>\(\lambda\)</span> determines the tradeoff between increasing
+<span>\[
+  \left[
+    \frac 1 n \sum_{i=1}^n \max\left(0, 1 - y_i(\vec{w}\cdot \vec{x}_i + b)\right)
+  \right] + \lambda\lVert \vec{w} \rVert^2,
+\]</span><p>where the parameter <span>\(\lambda\)</span> determines the tradeoff between increasing
 the margin-size and ensuring that the <span>\(\vec{x}_i\)</span> lie on the correct
 side of the margin. Thus, for sufficiently small values of <span>\(\lambda\)</span>,
 the soft-margin SVM will behave identically to the hard-margin SVM if
