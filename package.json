@@ -16,6 +16,7 @@
     "browse": "browse http://localhost:8000",
     "build": "mkdocs build",
     "fixpages": "./fix-mkdocs-pages.sh",
+    "git-cred": "git config credential.helper store",
     "deploy": "mkdocs gh-deploy",
     "clean": "rimraf site/"
   }
