@@ -5,8 +5,9 @@
 
 ## LUBW weather station at FZI
 
-  - the device should be mounted at FZI (January 2017)
-  - data should be available through some api (REST pull ? TODO:Hannes)
+  - the device was mounted at FZI in January 2017 for measuring air pressure, temperature, wind speed, precipitation (was bedeuten die Parameter "strg_1" und "rlf_1").
+  - measurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz 
+  -measurement devices will be dismounted at April 2018
 
 ## LoRa-based weather stations
 - Two LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)
