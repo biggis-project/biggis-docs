@@ -21,6 +21,14 @@ Hypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse
 - Prozessierung (flink)
 - Visualisierung (Uni-Konstanz)
 
+## Drosophigator Prototype for the Visual Analysis of Spatio-Temporal Event Predictions
+
+- Investigating the Spread Dynamics of invasive species
+- VDS and now journal extension
+- Ensemble-Based Classification of Infested Areas
+- Visual Analysis 
+- Demonstration and Evaluation at the 6th workshop of the working group D Suzukii in Bad Kreuznach
+
 ## Results
 - Häufiges Auftreten der KEF
   - Nähe zu Wald -> Refugium für Kirschessigfliege zum Überleben bei widrigen Wetterbedingungen
