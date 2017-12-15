@@ -58,9 +58,9 @@ extra_javascript:
 pages: # Generated using ./fix-mkdocs-pages.sh on Mon Nov 27 22:24:33 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
-        - BigGIS Architecture Overview: ./architecture/index.md
-        - Docker containers: ./architecture/Docker_Containers.md
-        - BW Cloud: ./architecture/Infrastructure_on_bwCloud.md
+        - Overview: ./architecture/index.md
+        - Components: ./architecture/Docker_Containers.md
+        - bwCloud: ./architecture/Infrastructure_on_bwCloud.md
         - StreamPipes: ./architecture/StreamPipes.md
     - Contributing: ./contributing.md
     - Data sources:
