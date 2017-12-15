@@ -11,7 +11,7 @@
 - We want to parallelize the computation in our Spark cluster.
     - see section [Rasterized Getis-ord](../methods/getis_ord_raster.md)
 
-![Example LST and Getis-ord](hotspot_analysis/getis-ord-example.svg)
+[![Example LST and Getis-ord](hotspot_analysis/getis-ord-example.svg)](hotspot_analysis/getis-ord-example.svg)
 
 ## Hotspot analysis using geotrellis
 

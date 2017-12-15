@@ -64,7 +64,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Do 14. Dez 13:56:25 STD 2017
+pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec 15 15:03:19 CET 2017
     - About BigGIS: ./index.md
     - Architecture:
         - Overview: ./architecture/index.md
