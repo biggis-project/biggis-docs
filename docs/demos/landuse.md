@@ -9,7 +9,20 @@
 
 !!! note
     Related repository is https://github.com/biggis-project/biggis-landuse
-  
+
+## Problem definition
+
+- We have the following datasets:
+    - An existing Landuse vector dataset
+    - Orthorectified Aerial images (Digital Ortho Photos = DOP) 
+    - Satellite images (SAT), e.g. Sentinel2 10m
+- We want to select / extract landcover classes from landuse classes.
+- We want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.
+    - see section [Support Vector Machines](../methods/support_vector_machine.md)
+- We want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.
+    - see section [One vs. Rest](../methods/one_vs_rest.md)
+- We want to parallelize the computation in our Spark cluster using Geotrellis for data loading and export.
+
 ## Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
 
 ## Tools
