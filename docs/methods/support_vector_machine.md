@@ -89,8 +89,9 @@ $$
 
 We can put this together to get the optimization problem:
 
-> Minimize $\|\vec{w}\|$ subject to
-> $y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1,$ for $i = 1, \ldots, n$
+$$
+  \text{Minimize } \|\vec{w}\| \text{ subject to } y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1, \text{ for } i = 1, \ldots, n
+$$
 
 The $\vec w$ and $b$ that solve this problem determine our classifier,
 $$
