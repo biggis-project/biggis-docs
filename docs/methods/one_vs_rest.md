@@ -19,10 +19,17 @@ The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary
 * $\text{ a list of classifiers } f_k \text{ for } k \in {1,\ldots,K}$
 
 ##### Procedure
- $\text{ For each } k \text{ in } {1,\ldots,K}$
-
-* $\text{ Construct a new label vector } \vec{z} \\ \text{ where } z_i = 1 \text{ if } y_i = k \\ \text{ and } z_i = 0 \text{ otherwise }$
-* $\text{ Apply } L \text{ to } \vec{X}, \vec{z} \text{ to obtain } f_k$
+$$
+\begin{align}
+\text{ For each } k \text{ in } {1,\ldots,K} \\
+&\text{ Construct a new label vector } \vec{z} \text{ where }
+\begin{cases}
+z_i = 1, & \text{ if } y_i = k \\
+z_i = 0, & \text{ otherwise }
+\end{cases}\\
+&\text{ Apply } L \text{ to } \vec{X}, \vec{z} \text{ to obtain } f_k \\
+\end{align}\\
+$$
 
 Making decisions means applying all classifiers to an unseen sample and
 predicting the label for which the corresponding classifier reports the
