@@ -11,23 +11,18 @@ The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary
 #### One-vs.-rest
 
 ##### Inputs
-```
-L, a learner (training algorithm for binary classifiers)
-samples X
-labels y where yi ∈ {1, … K} is the label for the sample Xi
-```
+* $L \text{ , a learner (training algorithm for binary classifiers) }$
+* $\text{ samples } \vec{X}$
+* $\text{ labels } \vec{y} \\ \text{ where } y_i \in {1,\ldots,K} \text{ is the label for the sample } X_i$
 
 ##### Output
-```
-a list of classifiers fk for k ∈ {1, …, K}
-```
+* $\text{ a list of classifiers } f_k \text{ for } k \in {1,\ldots,K}$
 
 ##### Procedure
-```
-For each k in {1, …, K}
-    Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise
-    Apply L to X, z to obtain fk
-```
+ $\text{ For each } k \text{ in } {1,\ldots,K}$
+
+* $\text{ Construct a new label vector } \vec{z} \\ \text{ where } z_i = 1 \text{ if } y_i = k \\ \text{ and } z_i = 0 \text{ otherwise }$
+* $\text{ Apply } L \text{ to } \vec{X}, \vec{z} \text{ to obtain } f_k$
 
 Making decisions means applying all classifiers to an unseen sample and
 predicting the label for which the corresponding classifier reports the
