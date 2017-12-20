@@ -3,14 +3,8 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
 
-
 function firstObjectKey(obj) {
   return Object.keys(obj)[0]
-}
-
-function firstObjectEntry(obj) {
-  const firstKey = firstObjectKey(obj)
-  return obj[firstKey]
 }
 
 function dfs(node) {
@@ -19,12 +13,12 @@ function dfs(node) {
   }
 
   if (node instanceof Object) {
-    const entry = firstObjectEntry(node)
     const key = firstObjectKey(node)
+    const entry = node[key]
 
     if (entry instanceof Array) {
       if (entry.length === 1) {
-        return entry[0] // transform
+        return entry[0] // the actual transformation happens here
       } else {
         node[key] = dfs(entry) // go deeper
       }
