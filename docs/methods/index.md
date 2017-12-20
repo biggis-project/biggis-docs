@@ -1,4 +1,4 @@
-# Methods
+# About this section
 
 This section contains a **list of methods** that serve as a **theoretical background**
 for the other sections inside the documentation, especially for the [Demos](../demos).
