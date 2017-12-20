@@ -481,12 +481,12 @@
             "title": "Placement of sensors under uncertainty"
         }, 
         {
-            "location": "/demos/Stability_of_hotspots/", 
+            "location": "/demos/stability_of_hotspots/", 
             "text": "Responsible person for this section\n\n\nMarc Gassenschmidt\n\n\n\n\nStability of hotspots\n\n\n\n\nTodo\n\n\n\n\ncomparison of different metrics (soh, jaccard, ...)\n\n\ncomparison of different methods (gstar, focalgstar, ...)", 
             "title": "Stability of hotspots"
         }, 
         {
-            "location": "/demos/Stability_of_hotspots/#stability-of-hotspots", 
+            "location": "/demos/stability_of_hotspots/#stability-of-hotspots", 
             "text": "Todo   comparison of different metrics (soh, jaccard, ...)  comparison of different methods (gstar, focalgstar, ...)", 
             "title": "Stability of hotspots"
         }, 
