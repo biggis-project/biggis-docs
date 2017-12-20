@@ -19,5 +19,8 @@
     "git-cred": "git config credential.helper store",
     "deploy": "mkdocs gh-deploy",
     "clean": "rimraf site/"
+  },
+  "dependencies": {
+    "js-yaml": "^3.10.0"
   }
 }

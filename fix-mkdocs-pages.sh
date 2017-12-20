@@ -114,5 +114,5 @@ sed -i -e '/^pages:/,/^[a-z_]*:/{/^[a-z_]*:/b;d;}' "$MKDOCSYML"
 sed -i -e '/^pages:/d' "$MKDOCSYML"
 
 # add new "pages:" section at the end
-get_new_pages_config >> "$MKDOCSYML"
+get_new_pages_config | ./optimize-pages-tree.js >> "$MKDOCSYML"
 echo done.
