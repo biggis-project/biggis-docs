@@ -64,42 +64,43 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
 
-pages: # Generated using ./fix-mkdocs-pages.sh on Fri Dec 15 15:03:19 CET 2017
-    - About BigGIS: ./index.md
-    - Architecture:
-        - Overview: ./architecture/index.md
-        - Components: ./architecture/Docker_Containers.md
-        - bwCloud: ./architecture/Infrastructure_on_bwCloud.md
-        - StreamPipes: ./architecture/StreamPipes.md
-    - Project Consortium: ./consortium.md
-    - Contributing: ./contributing.md
-    - Data sources:
-        - Datasets in BigGIS: ./data-sources/index.md
-        - Weather stations: ./data-sources/weather-stations.md
-    - Demos:
-        - About demos ...: ./demos/index.md
-        - EnviroCar (Smart City): ./demos/enviro-car.md
-        - Gas Cloud Detection: ./demos/gas-detect.md
-        - Gas Cloud Prediction: ./demos/gas-predict.md
-        - Heatstress Routing App: ./demos/heatstress.md
-        - Hotspot analysis (using G*): ./demos/hotspot_analysis.md
-        - Invasive species: ./demos/invasive-spec.md
-        - Landuse classification: ./demos/landuse.md
-        - Optimal flight plan for drones: ./demos/optimize-drones.md
-        - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
-        - Stability of hotspots: ./demos/Stability_of_hotspots.md
-        - Urban Heat Islands: ./demos/urban-heat-islands.md
-    - Documentation Howto: ./docs-howto.md
-    - Methods:
-        - Methods: ./methods/index.md
-        - Focal Getis-ord: ./methods/focal_getis_ord.md
-        - Foal Getis-ord on rasters: ./methods/focal_getis_ord_raster.md
-        - Standards Getis-Ord G*: ./methods/getis_ord.md
-        - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
-        - One vs. Rest: ./methods/one_vs_rest.md
-        - Stability of hotspots: ./methods/soh.md
-        - Support Vector Machine: ./methods/support_vector_machine.md
-    - Scenarios:
-        - Smart City: ./scenarios/01_city.md
-        - Disaster Management: ./scenarios/02_bos.md
-        - Environment: ./scenarios/03_env.md
+pages:
+  - About BigGIS: ./index.md
+  - Architecture:
+      - Overview: ./architecture/index.md
+      - Components: ./architecture/Docker_Containers.md
+      - Platform bwCloud: ./architecture/Platform_bwCloud/index.md
+      - StreamPipes: ./architecture/StreamPipes.md
+  - Project Consortium: ./consortium.md
+  - Contributing: ./contributing.md
+  - Data sources:
+      - Datasets in BigGIS: ./data-sources/index.md
+      - Weather stations: ./data-sources/weather-stations.md
+  - Demos:
+      - About demos ...: ./demos/index.md
+      - EnviroCar (Smart City): ./demos/enviro-car.md
+      - Gas Cloud Detection: ./demos/gas-detect.md
+      - Gas Cloud Prediction: ./demos/gas-predict.md
+      - Heatstress Routing App: ./demos/heatstress.md
+      - Hotspot analysis (using G*): ./demos/hotspot_analysis.md
+      - Invasive species: ./demos/invasive-spec.md
+      - Landuse classification: ./demos/landuse.md
+      - Optimal flight plan for drones: ./demos/optimize-drones.md
+      - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
+      - Stability of hotspots: ./demos/Stability_of_hotspots.md
+      - Urban Heat Islands: ./demos/urban-heat-islands.md
+  - Documentation Howto: ./docs-howto.md
+  - Methods:
+      - About this section: ./methods/index.md
+      - Focal Getis-ord: ./methods/focal_getis_ord.md
+      - Foal Getis-ord on rasters: ./methods/focal_getis_ord_raster.md
+      - Standards Getis-Ord G*: ./methods/getis_ord.md
+      - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
+      - One vs. Rest: ./methods/one_vs_rest.md
+      - Stability of hotspots: ./methods/soh.md
+      - Support Vector Machine: ./methods/support_vector_machine.md
+  - Scenarios:
+      - Smart City: ./scenarios/01_city.md
+      - Disaster Management: ./scenarios/02_bos.md
+      - Environment: ./scenarios/03_env.md
+
