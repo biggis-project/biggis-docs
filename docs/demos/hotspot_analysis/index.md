@@ -7,11 +7,11 @@
 - We have a map, in this case a map of land surface temperatures
 - We want to find hotspots, i.e., areas on map that are **significantly different from their surrounding area**.
 - We want to use Getis-Ord G* statistic as the tool for finding the hotspots
-    - see section [Standards Getis-ord](../methods/getis_ord.md)
+    - see section [Standards Getis-ord](../../methods/getis_ord.md)
 - We want to parallelize the computation in our Spark cluster.
-    - see section [Rasterized Getis-ord](../methods/getis_ord_raster.md)
+    - see section [Rasterized Getis-ord](../../methods/getis_ord_raster.md)
 
-[![Example LST and Getis-ord](hotspot_analysis/getis-ord-example.svg)](hotspot_analysis/getis-ord-example.svg)
+[![Example LST and Getis-ord](getis-ord-example.svg)](getis-ord-example.svg)
 
 ## Hotspot analysis using geotrellis
 

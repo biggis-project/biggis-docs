@@ -4,5 +4,5 @@
     Intro text
 
 Related demos:
-- [stability of hotspots](../demos/Stability_of_hotspots.md)
+- [stability of hotspots](../demos/stability_of_hotspots/)
 

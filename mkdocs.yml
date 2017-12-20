@@ -82,12 +82,12 @@ pages:
       - Gas Cloud Detection: ./demos/gas-detect.md
       - Gas Cloud Prediction: ./demos/gas-predict.md
       - Heatstress Routing App: ./demos/heatstress.md
-      - Hotspot analysis (using G*): ./demos/hotspot_analysis.md
+      - Hotspot analysis (using G*): ./demos/hotspot_analysis/index.md
       - Invasive species: ./demos/invasive-spec.md
       - Landuse classification: ./demos/landuse.md
       - Optimal flight plan for drones: ./demos/optimize-drones.md
       - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
-      - Stability of hotspots: ./demos/Stability_of_hotspots.md
+      - Stability of hotspots: ./demos/stability_of_hotspots/index.md
       - Urban Heat Islands: ./demos/urban-heat-islands.md
   - Documentation Howto: ./docs-howto.md
   - Methods:
