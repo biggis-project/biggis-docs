@@ -360,10 +360,34 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Platform bwCloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Platform bwCloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../architecture/Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
-      bwCloud
+    <a href="../../architecture/Platform_bwCloud/" title="Platform bwCloud" class="md-nav__link">
+      Platform bwCloud
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -663,8 +687,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Methods" class="md-nav__link">
-      Methods
+    <a href="../" title="About this section" class="md-nav__link">
+      About this section
     </a>
   </li>
 
@@ -1006,11 +1030,9 @@ side of the margin.</p>
 <span>\[
   y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1, \quad \text{ for all } 1 \le i \le n.\qquad\qquad(1)
 \]</span><p>We can put this together to get the optimization problem:</p>
-<blockquote>
-<p>Minimize <span>\(\|\vec{w}\|\)</span> subject to
-<span>\(y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1,\)</span> for <span>\(i = 1, \ldots, n\)</span></p>
-</blockquote>
-<p>The <span>\(\vec w\)</span> and <span>\(b\)</span> that solve this problem determine our classifier,
+<span>\[
+  \text{Minimize } \|\vec{w}\| \text{ subject to } y_i(\vec{w}\cdot\vec{x}_i - b) \ge 1, \text{ for } i = 1, \ldots, n
+\]</span><p>The <span>\(\vec w\)</span> and <span>\(b\)</span> that solve this problem determine our classifier,
 $$
   \vec{x} \mapsto sgn(\vec{w} \cdot \vec{x} - b)
 $$</p>

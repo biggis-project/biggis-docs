@@ -360,10 +360,34 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Platform bwCloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Platform bwCloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../architecture/Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
-      bwCloud
+    <a href="../../architecture/Platform_bwCloud/" title="Platform bwCloud" class="md-nav__link">
+      Platform bwCloud
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -481,8 +505,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lora-based-weather-stations" title="LoRa-based weather stations" class="md-nav__link">
-    LoRa-based weather stations
+  <a href="#sensebox-based-weather-stations" title="SenseBox-based weather stations" class="md-nav__link">
+    SenseBox-based weather stations
   </a>
   
 </li>
@@ -713,8 +737,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../methods/" title="Methods" class="md-nav__link">
-      Methods
+    <a href="../../methods/" title="About this section" class="md-nav__link">
+      About this section
     </a>
   </li>
 
@@ -896,8 +920,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lora-based-weather-stations" title="LoRa-based weather stations" class="md-nav__link">
-    LoRa-based weather stations
+  <a href="#sensebox-based-weather-stations" title="SenseBox-based weather stations" class="md-nav__link">
+    SenseBox-based weather stations
   </a>
   
 </li>
@@ -937,25 +961,61 @@
 <li>measurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz 
   -measurement devices will be dismounted at April 2018</li>
 </ul>
-<h2 id="lora-based-weather-stations">LoRa-based weather stations<a class="headerlink" href="#lora-based-weather-stations" title="Permanent link">&para;</a></h2>
+<h2 id="sensebox-based-weather-stations">SenseBox-based weather stations<a class="headerlink" href="#sensebox-based-weather-stations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>support two different modes of data transmission: WLAN and LoRa</p>
+<ul>
+<li>LoRa is preferred for longer range and easier deployment (no site-specific configuration)</li>
+</ul>
+</li>
+<li>
+<p>LoRa gateways</p>
 <ul>
 <li>Two LoRa gateways should be deployed, one at FZI, the other at LUBW-KA (TODO:clarify)</li>
-<li>Data received by the LoRa gateways:</li>
-<li>should be handled in a stream-processing way (pipeline modeled using StreamPipes)</li>
-<li>should be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)</li>
+<li>Gateways are a <a href="https://www.kickstarter.com/projects/419277966/the-things-network">Kickstarter project</a>,
+    and have not yet been delivered as of 2017-12-15. <a href="https://www.kickstarter.com/projects/419277966/the-things-network/posts/2036596">Last status</a>
+    on Kickstarter is that the gateways are ready to ship (2017-11-06)</li>
+<li>Julian handles Kickstarter and deployment</li>
+</ul>
+</li>
+<li>
+<p>Data handling</p>
+<ul>
+<li>a common Kafka queue for events from both transports</li>
+<li>one Kafka message per transmitted event, containing all measurements (temperature, humidity, air pressure, internal temperature, light, UV radiation)</li>
+<li>transport specific adapters for <a href="https://github.com/biggis-project/sensebox-station/tree/master/SenseBoxSimpleRestServer">WLAN</a>
+    and <a href="https://github.com/biggis-project/sensebox-station/tree/master/CodekunstMQTTAdapter">LoRa</a></li>
+<li>should be handled in a stream-processing way (pipeline modeled using StreamPipes)<ul>
+<li>Data source and metadata enrichment exist as <a href="../../architecture/StreamPipes/">StreamPipes components</a></li>
+</ul>
+</li>
+<li>should be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)<ul>
+<li>a <a href="https://github.com/biggis-project/sensebox-station/tree/master/FlinkDbSink">Flink job</a>
+    that persists the events from the Kafka queue into MySQL or PostgreSQL exists,
+    could be extended to support other JDBC databases</li>
+</ul>
+</li>
 <li>should be sent to <a href="https://opensensemap.org/">https://opensensemap.org/</a> (TODO:Jochen)</li>
-<li>34 LoRa sensor units should be deployed (by Jochen Lutz)</li>
-<li>REST API for pushing developed using Play2 framework (REST-&gt;kafka)</li>
 <li>Outlier filtering node (kafka-&gt;flink-&gt;kafka)</li>
-<li>Data persisting node (kafka-&gt;flink-&gt;accumulo)</li>
+</ul>
+</li>
+<li>
+<p>Deployment</p>
+<ul>
+<li>34 LoRa sensor units should be deployed, Julian handles locations, external organizations etc.</li>
+</ul>
+</li>
 </ul>
 <h2 id="web-based-mobile-friendly-app">Web-based mobile-friendly app<a class="headerlink" href="#web-based-mobile-friendly-app" title="Permanent link">&para;</a></h2>
 <ul>
-<li>QR code contains stations id and URL that leads to public web</li>
+<li>QR code contains stations id and URL that leads to public web<ul>
 <li>the web page contains info about the station and the project</li>
 <li>admin can click and change station information (or register a new station)</li>
 <li>lat/lon is taken from the phone (HTML5 geolocation api)</li>
 <li>admin can add additional parameters (placement details)</li>
+</ul>
+</li>
 </ul>
                 
                   

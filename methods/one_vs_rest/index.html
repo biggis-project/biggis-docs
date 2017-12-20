@@ -360,10 +360,34 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Platform bwCloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Platform bwCloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../architecture/Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
-      bwCloud
+    <a href="../../architecture/Platform_bwCloud/" title="Platform bwCloud" class="md-nav__link">
+      Platform bwCloud
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -663,8 +687,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Methods" class="md-nav__link">
-      Methods
+    <a href="../" title="About this section" class="md-nav__link">
+      About this section
     </a>
   </li>
 
@@ -965,22 +989,27 @@
 </div>
 <h4 id="one-vs-rest_1">One-vs.-rest<a class="headerlink" href="#one-vs-rest_1" title="Permanent link">&para;</a></h4>
 <h5 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>L, a learner (training algorithm for binary classifiers)
-samples X
-labels y where yi ∈ {1, … K} is the label for the sample Xi
-</pre></div>
-
+<ul>
+<li><span>\(L \text{ , a learner (training algorithm for binary classifiers) }\)</span></li>
+<li><span>\(\text{ samples } \vec{X}\)</span></li>
+<li><span>\(\text{ labels } \vec{y} \\ \text{ where } y_i \in {1,\ldots,K} \text{ is the label for the sample } X_i\)</span></li>
+</ul>
 <h5 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>a list of classifiers fk for k ∈ {1, …, K}
-</pre></div>
-
+<ul>
+<li><span>\(\text{ a list of classifiers } f_k \text{ for } k \in {1,\ldots,K}\)</span></li>
+</ul>
 <h5 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>For each k in {1, …, K}
-    Construct a new label vector z where zi = 1 if yi = k and zi = 0 otherwise
-    Apply L to X, z to obtain fk
-</pre></div>
-
-<p>Making decisions means applying all classifiers to an unseen sample and
+<p><span>\(\text{ For each } k \text{ in } {1,\ldots,K}\)</span></p>
+<span>\[
+\begin{align}
+&amp;\text{ Construct a new label vector } \vec{z} \text{ where }
+\begin{cases}
+z_i = 1, &amp; \text{ if } y_i = k \\
+z_i = 0, &amp; \text{ otherwise }
+\end{cases}\\
+&amp;\text{ Apply } L \text{ to } \vec{X}, \vec{z} \text{ to obtain } f_k \\
+\end{align}\\
+\]</span><p>Making decisions means applying all classifiers to an unseen sample and
 predicting the label for which the corresponding classifier reports the
 highest confidence score:</p>
 <span>\[

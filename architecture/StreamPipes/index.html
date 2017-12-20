@@ -362,10 +362,34 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Platform bwCloud
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Platform bwCloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../Infrastructure_on_bwCloud/" title="bwCloud" class="md-nav__link">
-      bwCloud
+    <a href="../Platform_bwCloud/" title="Platform bwCloud" class="md-nav__link">
+      Platform bwCloud
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -695,8 +719,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../methods/" title="Methods" class="md-nav__link">
-      Methods
+    <a href="../../methods/" title="About this section" class="md-nav__link">
+      About this section
     </a>
   </li>
 
@@ -901,8 +925,34 @@
 <h2 id="biggis-extensions">BigGIS extensions<a class="headerlink" href="#biggis-extensions" title="Permanent link">&para;</a></h2>
 <p>Within the BigGIS project, we added several GIS-specific extensions to the StreamPipes platform.</p>
 <ul>
-<li>Raster processing using geotrellis.</li>
-<li>...</li>
+<li>
+<p>Climate data</p>
+<ul>
+<li>
+<p><a href="https://github.com/biggis-project/biggisstreampipes-senseboxadapter">SenseBoxAdapter</a></p>
+<p>provides the semantic description for the externally created SenseBox data stream
+for the integration into StreamPipes</p>
+</li>
+<li>
+<p><a href="https://github.com/biggis-project/biggisstreampipes-senseboxmetadataenricher">SenseboxMetadataEnricher</a></p>
+<p>enriches each message in the SenseBox measurements data stream with meta-data (location, OpenSenseMap-Id)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Raster processing using geotrellis.</p>
+<ul>
+<li>
+<p><a href="https://github.com/biggis-project/biggisstreampipes-rasterdataendlesssource">RasterDataEndlessSource</a></p>
+<p>generates an endless Kafka stream of rasterdata messages to easily test and debug
+other rasterdata processing components</p>
+</li>
+<li>
+<p><a href="https://github.com/biggis-project/biggisstreampipes-rasterdataadapter">RasterDataAdapter</a></p>
+<p>provides the semantic description for the RasterDataEndlessSource</p>
+</li>
+</ul>
+</li>
 </ul>
                 
                   
@@ -922,7 +972,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Infrastructure_on_bwCloud/" title="bwCloud" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Platform_bwCloud/" title="Platform bwCloud" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -931,7 +981,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                bwCloud
+                Platform bwCloud
               </span>
             </div>
           </a>
