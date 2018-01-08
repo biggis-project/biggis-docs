@@ -581,18 +581,12 @@
     Hotspot analysis using geotrellis
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scala-code-snippets" title="Scala code snippets" class="md-nav__link">
-    Scala code snippets
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#scala-code" title="Scala code" class="md-nav__link">
+    Scala code
+  </a>
   
 </li>
       
@@ -906,18 +900,12 @@
     Hotspot analysis using geotrellis
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scala-code-snippets" title="Scala code snippets" class="md-nav__link">
-    Scala code snippets
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#scala-code" title="Scala code" class="md-nav__link">
+    Scala code
+  </a>
   
 </li>
       
@@ -955,15 +943,17 @@
 <p><a href="./getis-ord-example.svg"><img alt="Example LST and Getis-ord" src="./getis-ord-example.svg" /></a></p>
 <h2 id="hotspot-analysis-using-geotrellis">Hotspot analysis using geotrellis<a class="headerlink" href="#hotspot-analysis-using-geotrellis" title="Permanent link">&para;</a></h2>
 <p>In this section we show a simplified version of the hotspot analysis.
-We use the <a href="https://github.com/locationtech/geotrellis">Geotrellis</a> library to achieve the paralleization.
+We use the <a href="https://github.com/locationtech/geotrellis">Geotrellis</a> library to achieve the parallelization.
 Some assumptions are:</p>
 <ul>
 <li>we use 2-dimenational data (only the spatial part without the time component)</li>
-<li>we store our data as a distributed raster (in geotrellis catalog)</li>
+<li>we store our data as a layer of tiles in geotrellis catalog (distributed raster)</li>
 <li>our hotspot analysis uses the standard G* with variable window</li>
 </ul>
 <p>First, we need to express the G* formula in terms of the map algebra operations.</p>
-<h3 id="scala-code-snippets">Scala code snippets<a class="headerlink" href="#scala-code-snippets" title="Permanent link">&para;</a></h3>
+<h2 id="scala-code">Scala code<a class="headerlink" href="#scala-code" title="Permanent link">&para;</a></h2>
+<p>Full source code can be found in our github repository: 
+<a href="https://github.com/biggis-project/biggis-landuse/blob/master/src/main/scala/biggis/landuse/spark/examples/SpatialGetisOrd.scala">biggis-project/biggis-landuse</a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// typical type definition used by geotrellis</span>
 <span class="k">type</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="nc">RDD</span><span class="o">[(</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span><span class="o">)]</span>
                   <span class="k">with</span> <span class="nc">Metadata</span><span class="o">[</span><span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]]</span>
@@ -971,12 +961,13 @@ Some assumptions are:</p>
 <span class="k">def</span> <span class="n">getisord</span><span class="o">(</span><span class="n">rdd</span><span class="k">:</span> <span class="kt">SpatialRDD</span><span class="o">,</span> <span class="n">weightMatrix</span><span class="k">:</span> <span class="kt">Kernel</span><span class="o">,</span>
              <span class="n">globMean</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">globStdev</span><span class="k">:</span><span class="kt">Double</span><span class="o">,</span> <span class="n">numPixels</span><span class="k">:</span><span class="kt">Long</span><span class="o">)</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span> <span class="o">{</span>
 
-  <span class="k">val</span> <span class="n">wcells</span> <span class="k">=</span> <span class="n">weightMatrix</span><span class="o">.</span><span class="n">tile</span><span class="o">.</span><span class="n">toArrayDouble</span>
-  <span class="k">val</span> <span class="n">sumW</span> <span class="k">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">sum</span>
-  <span class="k">val</span> <span class="n">sumW2</span> <span class="k">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">).</span><span class="n">sum</span>
+  <span class="k">val</span> <span class="n">wcells</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">Double</span><span class="o">]</span> <span class="k">=</span> <span class="n">weightMatrix</span><span class="o">.</span><span class="n">tile</span><span class="o">.</span><span class="n">toArrayDouble</span>
+  <span class="k">val</span> <span class="n">sumW</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">sum</span>
+  <span class="k">val</span> <span class="n">sumW2</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">wcells</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="o">).</span><span class="n">sum</span>
 
-  <span class="k">val</span> <span class="n">A</span> <span class="k">=</span> <span class="n">globMean</span> <span class="o">*</span> <span class="n">sumW</span>
-  <span class="k">val</span> <span class="n">B</span> <span class="k">=</span> <span class="n">globStdev</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="o">((</span><span class="n">numPixels</span><span class="o">*</span><span class="n">sumW2</span> <span class="o">-</span> <span class="n">sumW</span><span class="o">*</span><span class="n">sumW</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">numPixels</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span>
+  <span class="c1">// variables used in the getis-ord formula</span>
+  <span class="k">val</span> <span class="n">A</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">globalMean</span> <span class="o">*</span> <span class="n">sumW</span>
+  <span class="k">val</span> <span class="n">B</span><span class="k">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="n">globalStdev</span> <span class="o">*</span> <span class="nc">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="o">((</span><span class="n">numPixels</span> <span class="o">*</span> <span class="n">sumW2</span> <span class="o">-</span> <span class="n">sumW</span> <span class="o">*</span> <span class="n">sumW</span><span class="o">)</span> <span class="o">/</span> <span class="o">(</span><span class="n">numPixels</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span>
 
   <span class="n">rdd</span><span class="o">.</span><span class="n">withContext</span> <span class="o">{</span>
     <span class="k">_</span><span class="o">.</span><span class="n">bufferTiles</span><span class="o">(</span><span class="n">weightMatrix</span><span class="o">.</span><span class="n">extent</span><span class="o">)</span>
@@ -989,18 +980,34 @@ Some assumptions are:</p>
 <span class="o">}</span>
 </pre></div>
 
-<p>Let's assume, we already have <code>layerReader</code>, <code>srcLayerId</code>, <code>kernelRadius</code>, <code>globMean</code>, <code>globStdev</code> and <code>numPixels</code>:</p>
-<p><div class="codehilite"><pre><span></span><span class="k">val</span> <span class="n">queryResult</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span>
-  <span class="n">layerReader</span><span class="o">.</span><span class="n">read</span><span class="o">[</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span>, <span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]](</span><span class="n">srcLayerId</span><span class="o">)</span>
+<p>Let's assume, we already have the following variables:</p>
+<ul>
+<li><code>layerReader</code>: helper class to query tiles from geotrellis catalog/layer,</li>
+<li><code>layerId</code>: ID of the raster layer used as input raster,</li>
+<li><code>kernelRadius</code>: size of the weight matrix (how many pixels)</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// RDD (distributed dataset from Apache Spark) representing all tiles in the layer </span>
+<span class="k">val</span> <span class="n">queryResult</span><span class="k">:</span> <span class="kt">SpatialRDD</span> <span class="o">=</span>
+  <span class="n">layerReader</span><span class="o">.</span><span class="n">read</span><span class="o">[</span><span class="kt">SpatialKey</span>, <span class="kt">Tile</span>, <span class="kt">TileLayerMetadata</span><span class="o">[</span><span class="kt">SpatialKey</span><span class="o">]](</span><span class="n">layerId</span><span class="o">)</span>
 
 <span class="c1">// here, we use a circular kernel as a weight matrix</span>
 <span class="k">val</span> <span class="n">weightMatrix</span> <span class="k">=</span> <span class="nc">Kernel</span><span class="o">.</span><span class="n">circle</span><span class="o">(</span><span class="n">kernelRadius</span><span class="o">,</span>
                                  <span class="n">queryResult</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">cellwidth</span><span class="o">,</span>
                                  <span class="n">kernelRadius</span><span class="o">)</span>
 
+<span class="c1">// use precomputed histogram metadata (stored in zoom level 0 inside the layer)</span>
+<span class="k">val</span> <span class="n">stats</span> <span class="k">=</span> <span class="n">queryResult</span><span class="o">.</span><span class="n">histogram</span><span class="o">.</span><span class="n">statistics</span>
+<span class="n">require</span><span class="o">(</span><span class="n">stats</span><span class="o">.</span><span class="n">nonEmpty</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="nc">Statistics</span><span class="o">(</span><span class="k">_</span><span class="o">,</span> <span class="n">globMean</span><span class="o">,</span> <span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">,</span> <span class="n">globStdev</span><span class="o">,</span> <span class="k">_</span><span class="o">,</span> <span class="k">_</span><span class="o">)</span> <span class="k">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">get</span>
+<span class="k">val</span> <span class="n">numPixels</span> <span class="k">=</span> <span class="n">queryResult</span><span class="o">.</span><span class="n">histogram</span><span class="o">.</span><span class="n">totalCount</span>
+
+<span class="c1">// apply the parallelized getis ord</span>
 <span class="k">val</span> <span class="n">outRdd</span> <span class="k">=</span> <span class="n">getisord</span><span class="o">(</span><span class="n">queryResult</span><span class="o">,</span> <span class="n">weightMatrix</span><span class="o">,</span> <span class="n">globMean</span><span class="o">,</span> <span class="n">globStdev</span><span class="o">,</span> <span class="n">numPixels</span><span class="o">)</span>
 </pre></div>
-You can not further process <code>outRdd</code> or store it as a new layer.</p>
+
+<p>The result <code>outRdd</code> is an RDD (distributed dataset from Apache Spark) that can be further processed
+or stored as a new layer in geotrellis catalog.</p>
                 
                   
                 
