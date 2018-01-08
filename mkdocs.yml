@@ -79,6 +79,8 @@ pages:
   - Demos:
       - About demos ...: ./demos/index.md
       - EnviroCar (Smart City): ./demos/enviro-car.md
+      - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
+#          - Gas Cloud Detection: ./demos/opticalRemoteSensing/gas-detect.md
       - Gas Cloud Detection: ./demos/gas-detect.md
       - Gas Cloud Prediction: ./demos/gas-predict.md
       - Heatstress Routing App: ./demos/heatstress.md
@@ -99,6 +101,7 @@ pages:
       - One vs. Rest: ./methods/one_vs_rest.md
       - Stability of hotspots: ./methods/soh.md
       - Support Vector Machine: ./methods/support_vector_machine.md
+      - Triangular Chlorophyll Index: ./methods/spectralAnalysisTCI.md
   - Scenarios:
       - Smart City: ./scenarios/01_city.md
       - Disaster Management: ./scenarios/02_bos.md
