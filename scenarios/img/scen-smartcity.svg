@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="47.365715mm"
+   height="47.365715mm"
+   viewBox="0 0 167.83127 167.83127"
+   id="svg3363"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="scen-smartcity.svg">
+  <defs
+     id="defs3365" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="104.77022"
+     inkscape:cy="71.21839"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="3"
+     fit-margin-left="3"
+     fit-margin-right="3"
+     fit-margin-bottom="3"
+     inkscape:window-width="1920"
+     inkscape:window-height="1149"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3368">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-58.941513,-334.16084)">
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4138"
+       cx="142.85715"
+       cy="418.07648"
+       r="69.285713" />
+    <path
+       style="fill:#d80027"
+       inkscape:connector-curvature="0"
+       d="m 150.39652,394.5658 0,-13.67876 -6.83938,-6.83938 -6.83938,6.83938 0,4.55959 -13.67876,0 0,31.91711 41.03628,0 0,-22.79794 -13.67876,0 z m -18.23835,18.23835 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 0,-9.11917 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 0,-9.11918 -4.55959,0 0,-4.55958 4.55959,0 0,4.55958 z m 13.67876,18.23835 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 0,-9.11917 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 0,-9.11918 -4.55959,0 0,-4.55958 4.55959,0 0,4.55958 z m 0,-9.11917 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 13.67876,27.35752 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z m 0,-9.11917 -4.55959,0 0,-4.55959 4.55959,0 0,4.55959 z"
+       id="path4179" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#d40000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 165.38186,374.88572 c -6.16054,-6.07534 -14.32946,-9.35403 -22.9804,-9.23467 -17.50665,0.24309 -31.69304,14.69068 -31.62403,32.20585 0.0211,5.0955 1.20039,9.96416 3.50796,14.47086 3.88229,7.58176 5.93419,16.31816 5.93419,25.26473 l 0,10.18352 c 0,9.02377 6.90458,16.46391 15.7078,17.3188 0.77621,3.1039 3.58789,5.41027 6.92878,5.41027 3.34092,0 6.15256,-2.30613 6.92881,-5.41001 8.80421,-0.85395 15.70973,-8.29432 15.70973,-17.31906 l 0,-10.35591 c 0,-8.64078 2.10177,-17.41616 6.07801,-25.37682 2.23227,-4.46917 3.36438,-9.28553 3.36438,-14.31542 0,-8.65336 -3.39345,-16.76535 -9.55523,-22.84214 z m -3.51888,68.50271 0,3.63171 -38.01168,0 0,-3.63171 z m -24.24079,18.15848 c -3.58548,0 -6.85398,-1.37835 -9.30684,-3.63172 l 29.08383,0 c -2.45286,2.25337 -5.72139,3.63172 -9.30683,3.63172 z m -12.13278,-7.26338 c -0.60651,-1.12609 -1.05972,-2.3461 -1.33401,-3.63171 l 37.40304,0 c -0.2743,1.28561 -0.72755,2.50562 -1.33407,3.63171 z m 17.36675,12.58985 c -1.27059,0 -2.38237,-0.68084 -2.9988,-1.6948 l 5.99762,0 c -0.61642,1.01374 -1.7282,1.6948 -2.99882,1.6948 z m 25.46763,-56.45299 c -4.22681,8.46208 -6.46101,17.79846 -6.46101,26.99971 l 0,2.33662 -38.01198,-4.8e-4 0,-2.16424 c 0,-9.5194 -2.18994,-18.82816 -6.33318,-26.9198 -2.04516,-3.9939 -3.09106,-8.31054 -3.10876,-12.83006 -0.061,-15.53203 12.51895,-28.34416 28.04301,-28.55964 7.68124,-0.10473 14.91704,2.80173 20.37985,8.18922 5.46422,5.38871 8.47344,12.58262 8.47344,20.25614 2.2e-4,4.46141 -1.00283,8.73181 -2.98137,12.69253 z"
+       id="path4259"
+       sodipodi:nodetypes="ccccsscscssssccccccsccsscccccsccscsccscccccc" />
+  </g>
+</svg>

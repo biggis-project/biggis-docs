@@ -1,0 +1,1633 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Central documentation of the BigGIS project">
+      
+      
+      
+        <meta name="author" content="BigGIS Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.0">
+    
+    
+      
+        <title>Heatstress Routing App - BigGIS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.5d3fffba.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.fbd935c7.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="dark-blue" data-md-color-accent="blue">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="BigGIS Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="../../favicon.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                BigGIS Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Heatstress Routing App
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/biggis-project/biggis-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About BigGIS" class="md-tabs__link">
+        About BigGIS
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../architecture/" title="Architecture" class="md-tabs__link">
+          Architecture
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-sources/" title="Data sources" class="md-tabs__link">
+          Data sources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="Demos" class="md-tabs__link md-tabs__link--active">
+          Demos
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../methods/" title="Methods" class="md-tabs__link">
+          Methods
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../scenarios/01_city/" title="Scenarios" class="md-tabs__link">
+          Scenarios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../favicon.svg" width="24" height="24">
+      
+    </span>
+    BigGIS Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/biggis-project/biggis-docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About BigGIS" class="md-nav__link">
+      About BigGIS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/Docker_Containers/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/Platform_bwCloud/" title="Platform bwCloud" class="md-nav__link">
+      Platform bwCloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/StreamPipes/" title="StreamPipes" class="md-nav__link">
+      StreamPipes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../consortium/" title="Project Consortium" class="md-nav__link">
+      Project Consortium
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Data sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Data sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/" title="Datasets in BigGIS" class="md-nav__link">
+      Datasets in BigGIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/weather-stations/" title="Weather stations" class="md-nav__link">
+      Weather stations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Demos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Demos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="About demos ..." class="md-nav__link">
+      About demos ...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
+      EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gas-detect/" title="Gas Cloud Detection" class="md-nav__link">
+      Gas Cloud Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gas-predict/" title="Gas Cloud Prediction" class="md-nav__link">
+      Gas Cloud Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Heatstress Routing App
+      </label>
+    
+    <a href="./" title="Heatstress Routing App" class="md-nav__link md-nav__link--active">
+      Heatstress Routing App
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-information" title="Server information" class="md-nav__link">
+    Server information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" title="Routing" class="md-nav__link">
+    Routing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-time" title="Optimal time" class="md-nav__link">
+    Optimal time
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-messages" title="Error messages" class="md-nav__link">
+    Error messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hotspot_analysis/" title="Hotspot analysis (using G*)" class="md-nav__link">
+      Hotspot analysis (using G*)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../invasive-spec/" title="Invasive species" class="md-nav__link">
+      Invasive species
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../landuse/" title="Landuse classification" class="md-nav__link">
+      Landuse classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optimize-drones/" title="Optimal flight plan for drones" class="md-nav__link">
+      Optimal flight plan for drones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optimize-sensors/" title="Placement of sensors under uncertainty" class="md-nav__link">
+      Placement of sensors under uncertainty
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stability_of_hotspots/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../docs-howto/" title="Documentation Howto" class="md-nav__link">
+      Documentation Howto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Methods
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Methods
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/" title="About this section" class="md-nav__link">
+      About this section
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/focal_getis_ord/" title="Focal Getis-ord" class="md-nav__link">
+      Focal Getis-ord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/focal_getis_ord_raster/" title="Foal Getis-ord on rasters" class="md-nav__link">
+      Foal Getis-ord on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/getis_ord/" title="Standards Getis-Ord G*" class="md-nav__link">
+      Standards Getis-Ord G*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/getis_ord_raster/" title="Getis-ord G* on rasters" class="md-nav__link">
+      Getis-ord G* on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/one_vs_rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/soh/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../methods/support_vector_machine/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Scenarios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Scenarios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/01_city/" title="Smart City" class="md-nav__link">
+      Smart City
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/02_bos/" title="Disaster Management" class="md-nav__link">
+      Disaster Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/03_env/" title="Environment" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-information" title="Server information" class="md-nav__link">
+    Server information
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing" title="Routing" class="md-nav__link">
+    Routing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_1" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_1" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimal-time" title="Optimal time" class="md-nav__link">
+    Optimal time
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters_2" title="Parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#returns_2" title="Returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-messages" title="Error messages" class="md-nav__link">
+    Error messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/biggis-project/biggis-docs/edit/master/docs/demos/heatstress.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <div class="admonition note">
+<p class="admonition-title">Responsible person for this section</p>
+<p>Julian Bruns</p>
+</div>
+<h1 id="heatstress-routing-app">Heatstress Routing App<a class="headerlink" href="#heatstress-routing-app" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Related repository is <a href="https://github.com/biggis-project/path-optimizer">https://github.com/biggis-project/path-optimizer</a></p>
+</div>
+<p>Related Scenarios: <a href="../../scenarios/01_city/">Smart City</a></p>
+<p>The back-end exposes a simple REST-API, that can be used for routing or to find
+the optimal point in time. The API can be accessed on <code>http://localhost:8080/heatstressrouting/api/v1</code>.
+JSON is supported as the only output format.</p>
+<p>The following sections describe the API in detail.</p>
+<h2 id="server-information">Server information<a class="headerlink" href="#server-information" title="Permanent link">&para;</a></h2>
+<p><strong>URL:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/info</code></p>
+<p>Returns some information about the running service, e.g. the supported area and time range</p>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<p>The <code>/info</code> site takes no parameters.</p>
+<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
+<p>Returns some information about the running service (see sample response below):</p>
+<ul>
+<li><code>bbox</code>: the bounding box of the area supported by the service as an array of <code>[min_lat, min_lng, max_lat, max_lng]</code>.</li>
+<li><code>time_range</code>: the time range supported by the service, given as time stamps of the form <code>2014-08-23T00:00</code>.</li>
+<li><code>place_types</code>: a list of place types supported by the optimal time api</li>
+</ul>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>Sample Request:
+<div class="codehilite"><pre><span></span>http://localhost:8080/heatstressrouting/api/v1/info
+</pre></div></p>
+<p>Sample Response:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;heat stress routing&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;0.0.1-SNAPSHOT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;build_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-09-27T07:50:42Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bbox&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="mf">48.99</span><span class="p">,</span>
+    <span class="mf">8.385</span><span class="p">,</span>
+    <span class="mf">49.025</span><span class="p">,</span>
+    <span class="mf">8.435</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;time_range&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-08-23T00:00&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-02-23T23:00&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;place_types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;bakery&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;taxi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;post_office&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ice_cream&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dentist&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;post_box&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;supermarket&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;toilets&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;bank&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cafe&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;police&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;doctors&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pharmacy&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;drinking_water&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;atm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;clinic&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;kiosk&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hospital&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chemist&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fast_food&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permanent link">&para;</a></h2>
+<p><strong>URL:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/routing</code></p>
+<p>Computes the optimal route (regarding heat stress) between a start and a destination at a given time.</p>
+<h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
+<p>The <code>/routing</code> api supports the following parameter (some are optional):</p>
+<ul>
+<li><code>start</code>: the start point as pair of a latitude value and longitude value (in that order)
+  seperated by a comma, e.g. <code>start=49.0118083,8.4251357</code>.</li>
+<li><code>destination</code>: the destination as pair of a latitude value and longitude value (in that order)
+  separated by a comma, e.g. <code>destination=49.0126868,8.4065707</code>. </li>
+<li><code>time</code>: the date and time the optimal route should be searched for; a time stamp of the form
+  <code>YYYY-MM-DDTHH:MM:SS</code>, e.g. <code>time=2015-08-31T10:00:00</code>. The value must be in the time range
+  returned by <code>/info</code> (see <a href="#server-information">above</a>).</li>
+<li><code>weighting</code> (optional): the weightings to be used; a comma seperated list of the supported
+  weightings (<code>shortest</code>, <code>heatindex</code> and <code>temperature</code>), e.g. <code>weighting=shortest,heatindex,temperature</code>;
+  the default is <code>weighting=shortest,heatindex</code>; the results for the <code>shortest</code> weighting are always
+  returned, even if the value is omited in the weighings list.</li>
+</ul>
+<h3 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h3>
+<p>The path and some other information for each of the weightings:</p>
+<ul>
+<li><code>status</code>: the status of the request; <code>OK</code> is everthing is okay, <code>BAD_REQUEST</code> if a invalid request was send or <code>INTERNAL_SERVER_ERROR</code> if an internal error occoured.</li>
+<li><code>status_code</code>: the HTTP status code returned.</li>
+<li><code>results</code>: the results for each weighting:<ul>
+<li><code>weighting</code>: the weighting used for that result (see parameter <code>weighting</code> above).</li>
+<li><code>start</code>: the coordinates of the start point as array of <code>[lat, lng]</code>.</li>
+<li><code>destination</code>: the coordinates of the destination as array of <code>[lat, lng]</code>.</li>
+<li><code>distance</code>: the length of the route in meter.</li>
+<li><code>duration</code>: the walking time in milli seconds.</li>
+<li><code>route_weights</code>: the route weights of the selected weightings for the route.</li>
+<li><code>path</code>: the geometry of the path found; an array of points, were each point is an array of [lat, lng]`.</li>
+</ul>
+</li>
+</ul>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<p>Sample Request:
+<div class="codehilite"><pre><span></span>http://localhost:8080/heatstressrouting/api/v1/routing?start=49.0118083,8.4251357&amp;destination=49.0126868,8.4065707&amp;time=2015-08-31T10:00:00&amp;weighting=shortest,heatindex,temperature
+</pre></div></p>
+<p>Sample Response:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;shortest&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;weighting&quot;</span><span class="p">:</span> <span class="s2">&quot;shortest&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0118083</span><span class="p">,</span>
+        <span class="mf">8.4251357</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0126868</span><span class="p">,</span>
+        <span class="mf">8.4065707</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mf">1698.2989202985977</span><span class="p">,</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1222740</span><span class="p">,</span>
+      <span class="nt">&quot;route_weights&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">50903.955833052285</span><span class="p">,</span>
+        <span class="nt">&quot;heatindex&quot;</span><span class="p">:</span> <span class="mf">50892.20496302502</span><span class="p">,</span>
+        <span class="nt">&quot;shortest&quot;</span><span class="p">:</span> <span class="mf">1698.2989202985977</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.01225359765262</span><span class="p">,</span>
+          <span class="mf">8.425994591995952</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.01272775130067</span><span class="p">,</span>
+          <span class="mf">8.406514897340614</span>
+        <span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;heatindex&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;weighting&quot;</span><span class="p">:</span> <span class="s2">&quot;heatindex&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0118083</span><span class="p">,</span>
+        <span class="mf">8.4251357</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0126868</span><span class="p">,</span>
+        <span class="mf">8.4065707</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mf">1901.8839202985973</span><span class="p">,</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1369323</span><span class="p">,</span>
+      <span class="nt">&quot;route_weights&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">51868.74807902536</span><span class="p">,</span>
+        <span class="nt">&quot;heatindex&quot;</span><span class="p">:</span> <span class="mf">51098.277424417196</span><span class="p">,</span>
+        <span class="nt">&quot;shortest&quot;</span><span class="p">:</span> <span class="mf">1901.8839202985978</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.01225359765262</span><span class="p">,</span>
+          <span class="mf">8.425994591995952</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.01272775130067</span><span class="p">,</span>
+          <span class="mf">8.406514897340614</span>
+        <span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;temperature&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;weighting&quot;</span><span class="p">:</span> <span class="s2">&quot;temperature&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0118083</span><span class="p">,</span>
+        <span class="mf">8.4251357</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;destination&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0126868</span><span class="p">,</span>
+        <span class="mf">8.4065707</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mf">1901.8839202985973</span><span class="p">,</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1369323</span><span class="p">,</span>
+      <span class="nt">&quot;route_weights&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">51868.74807902536</span><span class="p">,</span>
+        <span class="nt">&quot;heatindex&quot;</span><span class="p">:</span> <span class="mf">51098.277424417196</span><span class="p">,</span>
+        <span class="nt">&quot;shortest&quot;</span><span class="p">:</span> <span class="mf">1901.8839202985978</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.01225359765262</span><span class="p">,</span>
+          <span class="mf">8.425994591995952</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.01272775130067</span><span class="p">,</span>
+          <span class="mf">8.406514897340614</span>
+        <span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="optimal-time">Optimal time<a class="headerlink" href="#optimal-time" title="Permanent link">&para;</a></h2>
+<p><strong>URL:</strong> <code>http://localhost:8080/heatstressrouting/api/v1/optimaltime</code></p>
+<p>Performce a nearby search for a given start point and computes for every place that fulfills
+a specified criterion an optimal point in time, i.e. the time with the minimal heat stress.</p>
+<h3 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h3>
+<p>The <code>/optimaltime</code> api supports the following parameter (some are optional):</p>
+<ul>
+<li><code>start</code>: the start point as pair of a latitude value and longitude value (in that order) seperated by a comma, e.g. <code>start=49.0118083,8.4251357</code>. </li>
+<li><code>time</code>: the date and time the optimal route should be searched for; a time stamp of the form <code>YYYY-MM-DDTHH:MM:SS</code>, e.g. <code>time=2015-08-31T10:00:00</code>. The value must be in the time range returned by <code>/info</code> (see <a href="#server-information">above</a>).</li>
+<li><code>place_type</code>: the place type to search for; a comma seperated list of supported place types, e.g. <code>place_type=supermarket,chemist</code>; a complete list of supported place list can be queried using the <code>info</code> api (see <a href="#server-information">above</a>). Currently the following place tyes are supported: <code>bakery</code>, <code>taxi</code>, <code>post_office</code>, <code>ice_cream</code>, <code>dentist</code>, <code>post_box</code>, <code>supermarket</code>, <code>toilets</code>, <code>bank</code>, <code>cafe</code>, <code>police</code>, <code>doctors</code>, <code>pharmacy</code>, <code>drinking_water</code>, <code>atm</code>, <code>clinic</code>, <code>kiosk</code>, <code>hospital</code>, <code>chemist</code>, <code>fast_food</code>. The place types are mapped to the corresponding <a href="http://wiki.openstreetmap.org/wiki/Key:shop"><code>shop</code></a> respectively <a href="http://wiki.openstreetmap.org/wiki/Key:amenity"><code>amenity</code></a> tags.</li>
+<li><code>max_results</code> (optional): the maximum number of results to consider for the nearby search (an positive integer), e.g. <code>max_results=10</code>; the default value is 5.</li>
+<li><code>max_distance</code> (optional): the maximum direct distance (as the crow flies) between the start point and the place in meter, e.g. <code>max_distance=500.0</code>; the default value is 1000.0 meter.</li>
+<li><code>time_buffer</code> (optional): the minimum time needed at the place (in minutes), i.e. the optimal time is chossen so that the place is opened for a least <code>time_buffer</code> when the user arrives, e.g. <code>time_buffer=30</code>; the default value is 15 miniutes.</li>
+<li><code>earliest_time</code> (optional): the earliest desired time, either a time stamp, e.g. <code>earliest_time=2015-08-31T09:00</code> or the string <code>null</code> (case is ignored); the default value is <code>null</code>. If both <code>earliest_time</code> and <code>latest_time</code> are specified, <code>earliest_time</code> must be before <code>latest_time</code>.</li>
+<li><code>latest_time</code> (optional): the latest desired time, either a time stamp, e.g. <code>latest_time=2015-08-31T17:00</code> or the string <code>null</code> (case is ignored); the default value is <code>null</code>. If both <code>earliest_time</code> and <code>latest_time</code> are specified, <code>earliest_time</code> must be before <code>latest_time</code>; <code>latest_time</code> must be after <code>time</code>.</li>
+</ul>
+<h3 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h3>
+<p>The optimal point in time for each place found in the specified radius ranked by the optimal-value:</p>
+<ul>
+<li><code>status</code>: the status of the request; <code>OK</code> if everthing is okay, <code>NO_REULTS</code> if not results were found, <code>BAD_REQUEST</code> if a invalid request was send to the server or <code>INTERNAL_SERVER_ERROR</code> if an internal server error occoured.</li>
+<li><code>status_code</code>: the HTTP status code returned.</li>
+<li>
+<p><code>results</code>: the result for each place found during the nearby search:</p>
+<ul>
+<li><code>rank</code>: the rank of the place according to the optimal value (were 1 is the best rank).</li>
+<li><code>name</code>: the name of the place.</li>
+<li><code>osm_id</code>: the <a href="http://wiki.openstreetmap.org/wiki/Node">OpenStreetMap Node ID</a> of the place.</li>
+<li><code>location</code>: the coordinates of the places as an array of <code>[lat, lng]</code>.</li>
+<li><code>opening_hours</code>: the opening hours of the place; the format specification can be found <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours/specification">here</a>.</li>
+<li><code>optimal_time</code>: the optimal point in time found for that place, e.g. <code>2015-08-31T20:00</code></li>
+<li><code>optimal_value</code>: the optimal value found for the place; the value considering the heat stress acording to steadman's heatindex <a href="http://dx.doi.org/10.1175/1520-0450(1979)018%3C0861:taospi%3E2.0.co;2">(Steadmean, 1979)</a> as well as the distance between the start and the place.</li>
+<li><code>distance</code>: the length of the optimal path (see <a href="#routing">Routing</a> above) from the start to the place in meter.</li>
+<li><code>duration</code>: the time needed to walk from the start to the place (in milli seconds).</li>
+<li><code>path_optimal</code>: the geometry of the optimal path (see <a href="#routing">Routing</a> above).</li>
+<li><code>distance_shortest</code>: the length of the shortest path between the start and the place (in meter).</li>
+<li><code>duration_shortest</code>: the time needed to walk the shortest path between the start and the place (in milli seconds).</li>
+<li><code>path_optimal</code>: the geometry of the shortest path (see <a href="#routing">Routing</a> above).</li>
+</ul>
+</li>
+</ul>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<p>Sample Request:
+<div class="codehilite"><pre><span></span>http://localhost:8080/heatstressrouting/api/v1/optimaltime?start=49.0118083,8.4251357&amp;time=2015-08-31T10:00:00&amp;place_type=supermarket&amp;max_distance=1000&amp;max_results=5&amp;time_buffer=15&amp;earliest_time=2015-08-31T09:00:00&amp;latest_time=2015-08-31T20:00:00
+</pre></div></p>
+<p>Sample Response:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Rewe City&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;osm_id&quot;</span><span class="p">:</span> <span class="mi">897615202</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.0096613</span><span class="p">,</span>
+        <span class="mf">8.4237272</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;opening_hours&quot;</span><span class="p">:</span> <span class="s2">&quot;Mo-Sa 07:00-22:00; Su,PH off&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;optimal_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-08-31T20:00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;optimal_value&quot;</span><span class="p">:</span> <span class="mf">12515.36230258099</span><span class="p">,</span>
+      <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mf">539.1839746027457</span><span class="p">,</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">388207</span><span class="p">,</span>
+      <span class="nt">&quot;path_optimal&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.011967867880344</span><span class="p">,</span>
+          <span class="mf">8.425196821060705</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.00954480942009</span><span class="p">,</span>
+          <span class="mf">8.423681942364334</span>
+        <span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;distance_shortest&quot;</span><span class="p">:</span> <span class="mf">468.99728441805115</span><span class="p">,</span>
+      <span class="nt">&quot;duration_shortest&quot;</span><span class="p">:</span> <span class="mi">337669</span><span class="p">,</span>
+      <span class="nt">&quot;path_shortest&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.011967867880344</span><span class="p">,</span>
+          <span class="mf">8.425196821060705</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.00954480942009</span><span class="p">,</span>
+          <span class="mf">8.423681942364334</span>
+        <span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Oststadt Super-Bio-Markt&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;osm_id&quot;</span><span class="p">:</span> <span class="mi">931682116</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">49.009433</span><span class="p">,</span>
+        <span class="mf">8.4234214</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;opening_hours&quot;</span><span class="p">:</span> <span class="s2">&quot;Mo-Fr 09:00-13:00,14:00-18:30; Sa 09:00-13:00&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;optimal_time&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-08-31T18:09:19.199&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;optimal_value&quot;</span><span class="p">:</span> <span class="mf">14318.962937267655</span><span class="p">,</span>
+      <span class="nt">&quot;distance&quot;</span><span class="p">:</span> <span class="mf">473.346750294328</span><span class="p">,</span>
+      <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">340801</span><span class="p">,</span>
+      <span class="nt">&quot;path_optimal&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.011967867880344</span><span class="p">,</span>
+          <span class="mf">8.425196821060705</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.00944708743373</span><span class="p">,</span>
+          <span class="mf">8.4235711322383</span>
+        <span class="p">]</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;distance_shortest&quot;</span><span class="p">:</span> <span class="mf">473.346750294328</span><span class="p">,</span>
+      <span class="nt">&quot;duration_shortest&quot;</span><span class="p">:</span> <span class="mi">340801</span><span class="p">,</span>
+      <span class="nt">&quot;path_shortest&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+          <span class="mf">49.01190564077309</span><span class="p">,</span>
+          <span class="mf">8.4250437301107</span>
+        <span class="p">],</span>
+        <span class="p">[</span>
+          <span class="mf">49.011967867880344</span><span class="p">,</span>
+          <span class="mf">8.425196821060705</span>
+        <span class="p">],</span>
+        <span class="err">//</span> <span class="err">points</span> <span class="err">omitted</span> <span class="err">...</span>
+        <span class="p">[</span>
+          <span class="mf">49.00944708743373</span><span class="p">,</span>
+          <span class="mf">8.4235711322383</span>
+        <span class="p">]</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="error-messages">Error messages<a class="headerlink" href="#error-messages" title="Permanent link">&para;</a></h2>
+<p>If an error occurs, e.g. because a bade request were send to the server or an internal server errors occurs, the server is sending a JSON response with the following content:</p>
+<ul>
+<li><code>status</code>: the status of the request; <code>OK</code> if everthing is okay, <code>NO_REULTS</code> if not results were found, <code>BAD_REQUEST</code> if a invalid request was send to the server or <code>INTERNAL_SERVER_ERROR</code> if an internal server error occoured.</li>
+<li><code>status_code</code>: the HTTP status code returned.</li>
+<li><code>messages</code>: an array of human readable error messages.</li>
+</ul>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<p>Example Request:
+<div class="codehilite"><pre><span></span>http://localhost:8080/heatstressrouting/api/v1/optimaltime?start=Schloss,%20Karlsruhe&amp;time=2015-08-31T10:00:00&amp;place_type=supermarket
+</pre></div></p>
+<p>Example Response:
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;BAD_REQUEST&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;status_code&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+  <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;start (Schloss, Karlsruhe) could not be parsed: failed to parse coordinate; &#39;start&#39; must be a pair of latitude and longitude seperated by a comma (&#39;,&#39;), e.g. &#39;49.0118083,8.4251357&#39;)&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="admonition cite">
+<p class="admonition-title">Reference</p>
+<p>Steadman, R. G. <strong>The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.</strong>
+Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018&lt;0861:TAOSPI&gt;2.0.CO;2</p>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../gas-predict/" title="Gas Cloud Prediction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Gas Cloud Prediction
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../hotspot_analysis/" title="Hotspot analysis (using G*)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Hotspot analysis (using G*)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> 
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://biggis-project.eu" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/biggis-project" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
