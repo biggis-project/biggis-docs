@@ -15,7 +15,12 @@ Pre-cached / downloaded to bwCloud as a part of BigGIS
 - Large historical data sets (HDFS/Accumulo - TODO:Matthias):
   - LUBW (REST API for pulling)
   - DWD (REST API for pulling)
-  - Wunderground (TODO:UKON)
+  - Volunteered Meteorological Information (Wunderground) (TODO:UKON)
+  - Air Pollution Data (Umweltbundesamt) 
+  - Drosophila Suzukii Observations (Vitimeteo)
+  - Satellite Land-Surface-Temperature (MODIS Satellite)
+  - Traffic Incidents (Bing Traffic API)
+  - Volunteered Geographic Information (enviroCar)
 
 ## Connectors to external services
 The following connectors to external data sources should be available (for pulling data as a stream).
