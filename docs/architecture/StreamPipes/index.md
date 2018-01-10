@@ -1,3 +1,5 @@
+# StreamPipes
+
 !!! note "Responsible person for this section"
     Matthias Frank
 

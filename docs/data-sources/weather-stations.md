@@ -29,7 +29,7 @@
     - transport specific adapters for [WLAN](https://github.com/biggis-project/sensebox-station/tree/master/SenseBoxSimpleRestServer)
         and [LoRa](https://github.com/biggis-project/sensebox-station/tree/master/CodekunstMQTTAdapter)
     - should be handled in a stream-processing way (pipeline modeled using StreamPipes)
-        - Data source and metadata enrichment exist as [StreamPipes components](../architecture/StreamPipes.md)
+        - Data source and metadata enrichment exist as [StreamPipes components](../architecture/StreamPipes)
     - should be stored within BigGIS database i.e. Accumulo/Exasolution (sensor,lat,lon,ts)
         - a [Flink job](https://github.com/biggis-project/sensebox-station/tree/master/FlinkDbSink)
             that persists the events from the Kafka queue into MySQL or PostgreSQL exists,

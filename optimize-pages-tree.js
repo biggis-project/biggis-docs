@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// TODO: this is currently just a helper script included from `fix-mkdocs-pages.sh`
+
 const fs = require('fs')
 const yaml = require('js-yaml')
 
