@@ -26,6 +26,7 @@ The BigGIS project intended to be more flexible than a SIGIS 2 mounted in a car.
 
 Using this sensor “smoke clouds” from a mixture of “Disco fog” and chlorophyll (see below) were recorded. Each pixel in the image contains the spectral information of the reflected light spread over 125 bands ranging from a minimum wavelength of 450nm to a maximum of 950nm.
 
+### Triangular Chlorophyll Index
 In a first Analysis the propagating chlorophyll cloud was identified in the recorded image via the calculation of the [Triangular Chlorophyll Index (TCI)](../../methods/spectralAnalysisTCI.md ) for each pixel in the spatially referenced image.
 
 The result is shown in the picture below:
@@ -54,6 +55,140 @@ see the grass strip and the tree in addition to the gas cloud over the
 asphalt.
 
 !!! TODO
-    - Picture 3: eingefärbte Elemente besser erklären
+    - Picture 3: eingefärbte Elemente detailierter erklären.
 
 ![Composition](bos_img/Composition.JPG)
+
+### Logistic Regression Classification of Cloud Reflectance
+
+A second experiment set was dedicated to a more general evaluation of cloud constituents. Here, the identification of constituents via logistic regression classification bases on the whole spectral range of the Cubert 185 UHD Firefly, in contrary to the previous example where the identification based on only three wavelengths.
+
+As a proof of concept, multispectral images of clouds produced by a fog generator fueled with two different fog fluids and solutions of each fog fluid mixed with defined proportions of chlorophyll (TODO: fog fluids genauer spezifizieren und chlorophyll-lösung) were recorded.
+
+In the experimental setup the Cubert 185 UHD Firefly was positioned facing a white wall in 1.2 m distance as constant background. The fog generator was placed between camera and wall in such a way, that the ejected cloud passed the camera in roughly 0.6 m distance while filling the whole recorded image plane. Immediately before each measurement set the incident intensity (white-balance intensity) in front of the camera was recorded by capturing the reflectance of a spectralon coated sheet at a distance of 0.6 m. By dividing the recorded reflected cloud intensities by the white-balance intensity the cloud reflectance was determined.
+
+ <!-- evtl. hier noch untersuchte Lösungskonzentrationen aufführen (nur in Paperversion) -->
+
+The reflectance spectra of evaporated mixtures of fog fluid with chlorophyll not in all cases show the typical chlorophyll absorption minimum. Consequently, chlorophyll is not uniformly evaporated with the given setup but ejected in irregular chlorophyll bursts instead. Therefore, a TCI pre-evaluation was carried through on each pixel of all recordings of clouds of evaporated chlorophyll mixtures, in order to label positive chlorophyll spectra as training and test data for the logistic regression. After spectra inspection of several samples a threshold of TCI = 0.05 was chosen above which the spectra was labeled chlorophyll-containing. Spectra of evaporated chlorophyll mixtures with TCI < 0.05 were not regarded in the further analysis.
+The spectra of clouds of evaporated pure fog fluids provided the negative chlorophyll data. The table below shows the count of spectra for the different cloud categories that was used for training for the logistic regression classifiers in the next subsections.
+
+|                | Fog Fluid 1  | Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| No Chlorophyll |         5000 |        7500 |
+| Chlorophyll    |         3926 |       68541 |
+
+The test data set comprised the following sample sizes:
+
+|                | Fog Fluid 1  | Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| No Chlorophyll |         2500 |        2500 |
+| Chlorophyll    |         2500 |       2463 |
+
+
+Based on this data different logistic regression classifiers were trained.
+
+#### Chlorophyll vs. Non-Chlorophyll
+
+!!! TODO
+    Bilder von Reflektanz-Spektren einfügen.
+
+First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The training accuracy was found to be
+$$
+Acc_{train} = \frac{true Positives + true Negatives}{Positives + Negatives} = 1.
+$$
+
+The out-of-sample test showed also very reliable results:
+
+Test samples with fog fluid 1:
+
+|                | Classified No-Chloro.  | Classified Chloro. |
+|: ------------  |:------------:|:-----------:|
+| Sample No-Chloro. |         2500 |        0 |
+| Sample Chloro. |         0 |       2500 |
+
+$$
+Acc_{test} = 1
+$$
+
+Test samples with fog fluid 2:
+
+|                | Classified No-Chloro.  | Classified Chloro. |
+|: ------------  |:------------:|:-----------:|
+| Sample No-Chloro. |         2500 |        0 |
+| Sample Chloro. |         0 |       2463 |
+
+$$
+Acc_{test} = 1
+$$
+
+The high accuracy is basis on the very clear feature of the chlorophyll absorption dip in the spectrum
+
+#### Pure Fog Fluid 1 vs. Fog Fluid 2
+
+While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the difference in the reflectance between the two fog fluids is not so obvious.
+Therefore, a logistic regression classifier was trained for the distinction of clouds of the two pure fog fluids. The training accuracy for this classifier was found to be:
+$$
+Acc_{train} = 1
+$$
+
+The out of sample performance is as follows:
+
+|                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| Sample Fog Fluid 1 |         2452 |        48 |
+| Sample Fog Fluid 2 |         1 |       2499 |
+
+$$
+Acc_{test} = 0.99
+$$
+
+Despite the lack of prominent characteristic features in the reflectance spectra the accuracy of the classifier is yet rather high.
+That changes when the classifier is tested on reflectance data of mixtures of the different fog fluids with chlorophyll, as shown in the table below:
+
+|                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| Sample Fog Fluid 1 |         0 |        2500 |
+| Sample Fog Fluid 2 |         0 |       2463 |
+
+$$
+Acc_{test} = 0.49
+$$
+
+Obviously this classifier is not robust against the mixture of features of another substance in the cloud.
+
+#### Fog Fluid 1 vs. Fog Fluid 2 (with and without Chlorophyll)
+
+To overcome the weakness of the previous classifier another classifier for the distinction between different fog fluids was trained including the reflectance spectra of mixtures with chlorophyll. Here, the training accuracy was found to be:
+$$
+Acc_{train} = 1
+$$
+
+The out of sample performance for clouds of pure fog fluids is shown in the table below:
+
+|                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| Sample Fog Fluid 1 |         2500 |        0 |
+| Sample Fog Fluid 2 |         0 |       2500 |
+
+$$
+Acc_{test} = 1
+$$
+
+Interestingly, the performance on the test data of pure fog fluids is even slightly better when trained with data samples including mixtures with chlorophyll. This might be explained with overfitting in the case of training only with data of pure fog fluids (TODO diskutieren).
+
+The out-of-sample performance for mixtures of the different fog fluids with chlorophyll is shown in the table below:
+
+|                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+|: ------------  |:------------:|:-----------:|
+| Sample Fog Fluid 1 |         2014 |        486 |
+| Sample Fog Fluid 2 |         11 |       2452 |
+
+$$
+Acc_{test} = 0.90
+$$
+
+The performance is rather convincing even though the spectra of the fog fluids are overlayed with the characteristic chlorophyll spectrum.
+
+#### Conclusion
+
+It was shown that logistic regression can be used to identify constituents of clouds on basis of the reflectance spectra in the range of visible light with the here presented system, especially when strong characteristic features are present as in the case of chlorophyll. Besides that, even the identification of constituents with weaker characteristic features can be carried through as in the case for the distinction between the two fog fluids. For the latter case, the above findings suggest that the classifier for the constituent of interest should be carried through with data also regarding a variety of probable accompanying cloud constituents. Otherwise, the overlay of the different spectra might diminish the classifiers performance.
