@@ -79,18 +79,20 @@ pages:
   - Demos:
       - About demos: ./demos/index.md
       - EnviroCar (Smart City): ./demos/enviro-car.md
-      - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
-#          - Gas Cloud Detection: ./demos/opticalRemoteSensing/gas-detect.md
       - Gas Cloud Detection: ./demos/gas-detect.md
       - Gas Cloud Prediction: ./demos/gas-predict.md
       - Heatstress Routing App: ./demos/heatstress.md
       - Hotspot analysis (using G*): ./demos/hotspot_analysis/index.md
       - Invasive species: ./demos/invasive-spec.md
       - Landuse classification: ./demos/landuse.md
+      - OpticalRemoteSensing:
+          - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
+          - Gas-detect: ./demos/opticalRemoteSensing/gas-detect.md
       - Optimal flight plan for drones: ./demos/optimize-drones.md
       - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
       - Stability of hotspots: ./demos/stability_of_hotspots/index.md
       - Urban Heat Islands: ./demos/urban-heat-islands.md
+      - Visual Analysis of Spatio-Temporal Event Predictions: ./demos/visual-analysis-of-uhi.md
   - Documentation Howto: ./docs-howto.md
   - Methods:
       - About Method: ./methods/index.md
@@ -100,8 +102,8 @@ pages:
       - Getis-ord G* on rasters: ./methods/getis_ord_raster.md
       - One vs. Rest: ./methods/one_vs_rest.md
       - Stability of hotspots: ./methods/soh.md
+      - Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing: ./methods/spectralAnalysisTCI.md
       - Support Vector Machine: ./methods/support_vector_machine.md
-      - Triangular Chlorophyll Index: ./methods/spectralAnalysisTCI.md
   - Scenarios:
       - Smart City: ./scenarios/01_city.md
       - Disaster Management: ./scenarios/02_bos.md

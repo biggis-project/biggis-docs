@@ -1,4 +1,6 @@
-# Visual Analysis of Spatio-Temporal Event Predictions: Investigating Causes for Urban Heat Islands 
+# Visual Analysis of Spatio-Temporal Event Predictions
+
+Investigating Causes for Urban Heat Islands
 
 ## Motivation
 
