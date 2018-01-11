@@ -3,6 +3,9 @@ site_name: 'BigGIS Documentation'
 site_description: 'Central documentation of the BigGIS project'
 site_author: 'BigGIS Team'
 
+# tracking code and hostname
+google_analytics: ['UA-112317697-1', 'biggis-project.eu']
+
 # You can set the 'site_url' parameter explicitly, otherwise it points to the documentation root
 #site_url: 'http://biggis-project.eu/biggis-docs'
 
