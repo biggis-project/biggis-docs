@@ -3,6 +3,13 @@
 !!! note "Responsible person for this section"
     Matthias Frank
 
+
+![StreamPipes Logo](https://www.streampipes.org/images/streampipes-logo-left.png)
+
+- [Official Documentation](https://docs.streampipes.org/user_guide/features/)
+- [Features Overview](https://www.streampipes.org/en/features)
+
+
 ## BigGIS extensions
  
 Within the BigGIS project, we added several GIS-specific extensions to the StreamPipes platform.

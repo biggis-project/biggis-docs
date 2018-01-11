@@ -1,5 +1,5 @@
 {
-  "description": "BigGIS documentation using mkdocs. We use this package.json only for convenience. We could have also used Makefile instead.",
+  "description": "BigGIS documentation using mkdocs. This is not a javascript project! We use this `package.json` only for convenience. We could have also used Makefile instead.",
   "author": "Viliam Simko (viliam.simko@gmail.com)",
   "contributors": [
     "Alexander Gröschel",
