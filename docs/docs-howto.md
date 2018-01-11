@@ -170,11 +170,27 @@ See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
     ![Image "alt" description](path/to/image.svg)
 
 
-![Sample image](scenarios/img/scen-disaster.svg)
+![Sample image](scenarios/img/scen-smartcity.svg)
 
 !!! note
     When editing a file `path/to/ABC.md`, store all related images in folder `path/to/ABC`.
     This way, different topics are better encapsulated.
+
+### Figures with caption (sort of)
+
+With the following hack, you can create a nice looking caption rendered under a figure.
+
+    ![](path/to/image.svg)
+    > **Figure:**
+    > Here comes some multi-line caption.
+    > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+![](scenarios/img/scen-disaster.svg)
+> **Figure:**
+> Here comes some multi-line caption.
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+> Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
+
 
 ### Tables
 
