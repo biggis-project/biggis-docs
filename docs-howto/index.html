@@ -786,6 +786,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#figures-with-caption-sort-of" title="Figures with caption (sort of)" class="md-nav__link">
+    Figures with caption (sort of)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tables" title="Tables" class="md-nav__link">
     Tables
   </a>
@@ -1118,6 +1125,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#figures-with-caption-sort-of" title="Figures with caption (sort of)" class="md-nav__link">
+    Figures with caption (sort of)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#tables" title="Tables" class="md-nav__link">
     Tables
   </a>
@@ -1334,12 +1348,28 @@ See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and
 </pre></div>
 
 
-<p><img alt="Sample image" src="../scenarios/img/scen-disaster.svg" /></p>
+<p><img alt="Sample image" src="../scenarios/img/scen-smartcity.svg" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When editing a file <code>path/to/ABC.md</code>, store all related images in folder <code>path/to/ABC</code>.
 This way, different topics are better encapsulated.</p>
 </div>
+<h3 id="figures-with-caption-sort-of">Figures with caption (sort of)<a class="headerlink" href="#figures-with-caption-sort-of" title="Permanent link">&para;</a></h3>
+<p>With the following hack, you can create a nice looking caption rendered under a figure.</p>
+<div class="codehilite"><pre><span></span>![](path/to/image.svg)
+&gt; **Figure:**
+&gt; Here comes some multi-line caption.
+&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</pre></div>
+
+
+<p><img alt="" src="../scenarios/img/scen-disaster.svg" /></p>
+<blockquote>
+<p><strong>Figure:</strong>
+Here comes some multi-line caption.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.</p>
+</blockquote>
 <h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
 <p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#tables">http://www.mkdocs.org/user-guide/writing-your-docs/#tables</a></p>
 <div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
@@ -1526,6 +1556,8 @@ D--&gt;&gt;C: Async return</code></pre>
       
     
     
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-112317697-1","biggis-project.eu"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>
