@@ -88,9 +88,7 @@ pages:
       - Hotspot analysis (using G*): ./demos/hotspot_analysis/index.md
       - Invasive species: ./demos/invasive-spec.md
       - Landuse classification: ./demos/landuse.md
-      - OpticalRemoteSensing:
-          - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
-          - Gas-detect: ./demos/opticalRemoteSensing/gas-detect.md
+      - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
       - Optimal flight plan for drones: ./demos/optimize-drones.md
       - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
       - Stability of hotspots: ./demos/stability_of_hotspots/index.md
