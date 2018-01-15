@@ -580,27 +580,6 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9" checked>
-    
-    <label class="md-nav__link" for="nav-6-9">
-      OpticalRemoteSensing
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-9">
-        OpticalRemoteSensing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
@@ -700,23 +679,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="gas-detect/" title="Gas-detect" class="md-nav__link">
-      Gas-detect
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1199,15 +1161,13 @@ The spectra of clouds of evaporated pure fog fluids provided the negative chloro
 </table>
 <p>Based on this data different logistic regression classifiers were trained.</p>
 <h4 id="chlorophyll-vs-non-chlorophyll">Chlorophyll vs. Non-Chlorophyll<a class="headerlink" href="#chlorophyll-vs-non-chlorophyll" title="Permanent link">&para;</a></h4>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Bilder von Reflektanz-Spektren einfügen.</p>
-</div>
-<p>First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The training accuracy was found to be
+<p><img alt="pureFogVsChloro" src="./bos_img/FogVsChloro.png" /></p>
+<p>First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The figure above displays typical spectra for a cloud aof pure fog fluid and a cloud containing chlorophyll. In the latter case, the reflectance minimum due to the absorption maximum of chlorophyll can clearly be seen in the curve around channel 45. This also is the region where the variable importance (i.e. value of the t–statistic for each model parameter (= channel)) peaks and marks the most significant channels of the classifier.</p>
+<p>The training accuracy was found to be
 $$
 Acc_{train} = \frac{true Positives + true Negatives}{Positives + Negatives} = 1.
 $$</p>
-<p>The out-of-sample test showed also very reliable results:</p>
+<p>The out-of-sample test also showed very reliable results:</p>
 <p>Test samples with fog fluid 1:</p>
 <table>
 <thead>
@@ -1232,7 +1192,12 @@ $$</p>
 </table>
 <span>\[
 Acc_{test} = 1
-\]</span><p>Test samples with fog fluid 2:</p>
+\]</span><p>$$
+Precision_{test} = 1
+Recall_{test} = 1
+F1_{test} = 1
+$$
+Test samples with fog fluid 2:</p>
 <table>
 <thead>
 <tr>
@@ -1256,9 +1221,10 @@ Acc_{test} = 1
 </table>
 <span>\[
 Acc_{test} = 1
-\]</span><p>The high accuracy is basis on the very clear feature of the chlorophyll absorption dip in the spectrum</p>
+\]</span><p>The high accuracy bases on the very clear feature of the chlorophyll absorption dip in the spectrum.</p>
 <h4 id="pure-fog-fluid-1-vs-fog-fluid-2">Pure Fog Fluid 1 vs. Fog Fluid 2<a class="headerlink" href="#pure-fog-fluid-1-vs-fog-fluid-2" title="Permanent link">&para;</a></h4>
-<p>While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the difference in the reflectance between the two fog fluids is not so obvious.
+<p><img alt="pureFog1VspurFog2" src="./bos_img/FogFlu1vsFogFlu2.png" /></p>
+<p>While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the reflectance spectra of the two pure fog fluids show a similar relative pattern, while the absolute reflectance level of the fog fluid 1 seems to be elevated compared to fog fluid 2 (see figure above).
 Therefore, a logistic regression classifier was trained for the distinction of clouds of the two pure fog fluids. The training accuracy for this classifier was found to be:
 $$
 Acc_{train} = 1
@@ -1287,7 +1253,9 @@ $$</p>
 </table>
 <span>\[
 Acc_{test} = 0.99
-\]</span><p>Despite the lack of prominent characteristic features in the reflectance spectra the accuracy of the classifier is yet rather high.
+\]</span><span>\[
+F1_{test} = 0.99
+\]</span><p>Despite the lack of prominent characteristic features in the reflectance spectra the accuracy and the F1 score of the classifier is yet rather high.
 That changes when the classifier is tested on reflectance data of mixtures of the different fog fluids with chlorophyll, as shown in the table below:</p>
 <table>
 <thead>
@@ -1312,6 +1280,8 @@ That changes when the classifier is tested on reflectance data of mixtures of th
 </table>
 <span>\[
 Acc_{test} = 0.49
+\]</span><span>\[
+F1_{test} = 0.66
 \]</span><p>Obviously this classifier is not robust against the mixture of features of another substance in the cloud.</p>
 <h4 id="fog-fluid-1-vs-fog-fluid-2-with-and-without-chlorophyll">Fog Fluid 1 vs. Fog Fluid 2 (with and without Chlorophyll)<a class="headerlink" href="#fog-fluid-1-vs-fog-fluid-2-with-and-without-chlorophyll" title="Permanent link">&para;</a></h4>
 <p>To overcome the weakness of the previous classifier another classifier for the distinction between different fog fluids was trained including the reflectance spectra of mixtures with chlorophyll. Here, the training accuracy was found to be:
@@ -1342,6 +1312,8 @@ $$</p>
 </table>
 <span>\[
 Acc_{test} = 1
+\]</span><span>\[
+F1_{test} = 1
 \]</span><p>Interestingly, the performance on the test data of pure fog fluids is even slightly better when trained with data samples including mixtures with chlorophyll. This might be explained with overfitting in the case of training only with data of pure fog fluids (TODO diskutieren).</p>
 <p>The out-of-sample performance for mixtures of the different fog fluids with chlorophyll is shown in the table below:</p>
 <table>
@@ -1367,6 +1339,8 @@ Acc_{test} = 1
 </table>
 <span>\[
 Acc_{test} = 0.90
+\]</span><span>\[
+F1_{test} = 0.90
 \]</span><p>The performance is rather convincing even though the spectra of the fog fluids are overlayed with the characteristic chlorophyll spectrum.</p>
 <h4 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h4>
 <p>It was shown that logistic regression can be used to identify constituents of clouds on basis of the reflectance spectra in the range of visible light with the here presented system, especially when strong characteristic features are present as in the case of chlorophyll. Besides that, even the identification of constituents with weaker characteristic features can be carried through as in the case for the distinction between the two fog fluids. For the latter case, the above findings suggest that the classifier for the constituent of interest should be carried through with data also regarding a variety of probable accompanying cloud constituents. Otherwise, the overlay of the different spectra might diminish the classifiers performance.</p>
@@ -1403,13 +1377,13 @@ Acc_{test} = 0.90
           </a>
         
         
-          <a href="gas-detect/" title="Gas-detect" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../optimize-drones/" title="Optimal flight plan for drones" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Gas-detect
+                Optimal flight plan for drones
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
