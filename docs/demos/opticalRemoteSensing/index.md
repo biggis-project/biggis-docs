@@ -89,15 +89,16 @@ Based on this data different logistic regression classifiers were trained.
 
 #### Chlorophyll vs. Non-Chlorophyll
 
-!!! TODO
-    Bilder von Reflektanz-Spektren einfügen.
+![pureFogVsChloro](bos_img/FogVsChloro.png)
 
-First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The training accuracy was found to be
+First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The figure above displays typical spectra for a cloud aof pure fog fluid and a cloud containing chlorophyll. In the latter case, the reflectance minimum due to the absorption maximum of chlorophyll can clearly be seen in the curve around channel 45. This also is the region where the variable importance (i.e. value of the t–statistic for each model parameter (= channel)) peaks and marks the most significant channels of the classifier.
+
+The training accuracy was found to be
 $$
 Acc_{train} = \frac{true Positives + true Negatives}{Positives + Negatives} = 1.
 $$
 
-The out-of-sample test showed also very reliable results:
+The out-of-sample test also showed very reliable results:
 
 Test samples with fog fluid 1:
 
@@ -110,6 +111,11 @@ $$
 Acc_{test} = 1
 $$
 
+$$
+Precision_{test} = 1
+Recall_{test} = 1
+F1_{test} = 1
+$$
 Test samples with fog fluid 2:
 
 |                | Classified No-Chloro.  | Classified Chloro. |
@@ -121,11 +127,12 @@ $$
 Acc_{test} = 1
 $$
 
-The high accuracy is basis on the very clear feature of the chlorophyll absorption dip in the spectrum
+The high accuracy bases on the very clear feature of the chlorophyll absorption dip in the spectrum.
 
 #### Pure Fog Fluid 1 vs. Fog Fluid 2
+![pureFog1VspurFog2](bos_img/FogFlu1vsFogFlu2.png)
 
-While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the difference in the reflectance between the two fog fluids is not so obvious.
+While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the reflectance spectra of the two pure fog fluids show a similar relative pattern, while the absolute reflectance level of the fog fluid 1 seems to be elevated compared to fog fluid 2 (see figure above).
 Therefore, a logistic regression classifier was trained for the distinction of clouds of the two pure fog fluids. The training accuracy for this classifier was found to be:
 $$
 Acc_{train} = 1
@@ -142,7 +149,11 @@ $$
 Acc_{test} = 0.99
 $$
 
-Despite the lack of prominent characteristic features in the reflectance spectra the accuracy of the classifier is yet rather high.
+$$
+F1_{test} = 0.99
+$$
+
+Despite the lack of prominent characteristic features in the reflectance spectra the accuracy and the F1 score of the classifier is yet rather high.
 That changes when the classifier is tested on reflectance data of mixtures of the different fog fluids with chlorophyll, as shown in the table below:
 
 |                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
@@ -152,6 +163,10 @@ That changes when the classifier is tested on reflectance data of mixtures of th
 
 $$
 Acc_{test} = 0.49
+$$
+
+$$
+F1_{test} = 0.66
 $$
 
 Obviously this classifier is not robust against the mixture of features of another substance in the cloud.
@@ -174,6 +189,10 @@ $$
 Acc_{test} = 1
 $$
 
+$$
+F1_{test} = 1
+$$
+
 Interestingly, the performance on the test data of pure fog fluids is even slightly better when trained with data samples including mixtures with chlorophyll. This might be explained with overfitting in the case of training only with data of pure fog fluids (TODO diskutieren).
 
 The out-of-sample performance for mixtures of the different fog fluids with chlorophyll is shown in the table below:
@@ -186,6 +205,11 @@ The out-of-sample performance for mixtures of the different fog fluids with chlo
 $$
 Acc_{test} = 0.90
 $$
+
+$$
+F1_{test} = 0.90
+$$
+
 
 The performance is rather convincing even though the spectra of the fog fluids are overlayed with the characteristic chlorophyll spectrum.
 
