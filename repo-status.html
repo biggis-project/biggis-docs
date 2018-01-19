@@ -1,0 +1,49 @@
+<style>
+  .archived td {
+    background-color: lightpink;
+  }
+
+  sup {
+    font-size: xx-small;
+  }
+</style>
+
+<div id="vueapp">
+  <div v-if="Array.isArray(items)" class="animated fadeInRightShort go">
+    <table>
+      <tr>
+        <th>Repository</th>
+        <th>Description</th>
+      </tr>
+      <tr v-for="item in items.filter(x => !x.private)"
+          :class="{archived: item.archived}">
+        <td><a :href="item.html_url">{{item.name}}</a></td>
+        <td>
+          {{item.description}}<br/>
+          <a :href="item.html_url + '/issues'">Issues: {{item.open_issues}}</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div v-else>Loading list ...</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/vue-async-computed@3.3.0"></script>
+<script src="../lib.js"></script>
+<script>
+  Vue.use(AsyncComputed)
+  const vueapp = new Vue({
+    el: '#vueapp',
+    data: {
+      items_url: 'https://api.github.com/orgs/biggis-project/repos',
+    },
+    asyncComputed: {
+      async items() {
+        const json = await fetch(this.items_url).then(_ => _.json())
+        const sorted = json.sort((a, b) => a.name.localeCompare(b.name))
+        return sorted
+      }
+    }
+  })
+</script>

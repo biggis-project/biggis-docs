@@ -960,10 +960,12 @@ th a * { float:right; color: white }
       </tr>
     </table>
   </div>
-  <div v-else>Loading list ...</div>
+  <div v-else>{{items}}</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script src="../lib.js"></script>
 
@@ -971,13 +973,17 @@ th a * { float:right; color: white }
 const vueapp = new Vue({
   el: '#vueapp',
   data: {
-    items: null,
+    items: 'Loading list ...',
     items_url: 'https://api.github.com/orgs/biggis-project/repos',
   },
   methods: {
     async loadItems() {
-      const json = await fetch(this.items_url).then(response => response.json())
-      this.items = json.sort(sortByDate)
+      try {
+        const json = await axios(this.items_url).then(_ => _.json())
+        this.items = json.sort(sortByDate)
+      } catch(e) {
+        this.items = e.response.data.message
+      }
     }
   }
 })

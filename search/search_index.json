@@ -97,12 +97,12 @@
         }, 
         {
             "location": "/biggis-github-repos/", 
-            "text": "List of Github Repositories\n\n\n\nth a * { float:right; color: white }\n\n\n\n\n\n  \n\n    \n\n      \nName\nDescription\n\n      \n\n        \n{{item.name}}\n\n        \n{{item.description}}\n\n      \n\n    \n\n  \n\n  \nLoading list ...\n\n\n\n\n\n\n\n\n\n\n\n\nconst vueapp = new Vue({\n  el: '#vueapp',\n  data: {\n    items: null,\n    items_url: 'https://api.github.com/orgs/biggis-project/repos',\n  },\n  methods: {\n    async loadItems() {\n      const json = await fetch(this.items_url).then(response => response.json())\n      this.items = json.sort(sortByDate)\n    }\n  }\n})\nvueapp.loadItems() // async load", 
+            "text": "List of Github Repositories\n\n\n\nth a * { float:right; color: white }\n\n\n\n\n\n  \n\n    \n\n      \nName\nDescription\n\n      \n\n        \n{{item.name}}\n\n        \n{{item.description}}\n\n      \n\n    \n\n  \n\n  \n{{items}}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nconst vueapp = new Vue({\n  el: '#vueapp',\n  data: {\n    items: 'Loading list ...',\n    items_url: 'https://api.github.com/orgs/biggis-project/repos',\n  },\n  methods: {\n    async loadItems() {\n      try {\n        const json = await axios(this.items_url).then(_ => _.json())\n        this.items = json.sort(sortByDate)\n      } catch(e) {\n        this.items = e.response.data.message\n      }\n    }\n  }\n})\nvueapp.loadItems() // async load", 
             "title": "List of Github Repositories"
         }, 
         {
             "location": "/biggis-github-repos/#list-of-github-repositories", 
-            "text": "th a * { float:right; color: white }  \n   \n     \n       Name Description \n       \n         {{item.name}} \n         {{item.description}} \n       \n     \n   \n   Loading list ...     \nconst vueapp = new Vue({\n  el: '#vueapp',\n  data: {\n    items: null,\n    items_url: 'https://api.github.com/orgs/biggis-project/repos',\n  },\n  methods: {\n    async loadItems() {\n      const json = await fetch(this.items_url).then(response => response.json())\n      this.items = json.sort(sortByDate)\n    }\n  }\n})\nvueapp.loadItems() // async load", 
+            "text": "th a * { float:right; color: white }  \n   \n     \n       Name Description \n       \n         {{item.name}} \n         {{item.description}} \n       \n     \n   \n   {{items}}      \nconst vueapp = new Vue({\n  el: '#vueapp',\n  data: {\n    items: 'Loading list ...',\n    items_url: 'https://api.github.com/orgs/biggis-project/repos',\n  },\n  methods: {\n    async loadItems() {\n      try {\n        const json = await axios(this.items_url).then(_ => _.json())\n        this.items = json.sort(sortByDate)\n      } catch(e) {\n        this.items = e.response.data.message\n      }\n    }\n  }\n})\nvueapp.loadItems() // async load", 
             "title": "List of Github Repositories"
         }, 
         {
