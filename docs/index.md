@@ -28,7 +28,7 @@ pipeline.
 </style>
 
 The project is evaluated on three scenarios:
-<div id="scenlist">
+<div id="scenlist" class="animated fadeInDownShort go">
   [![sma][img-sma] Smart City][link-sma]
   : urban heat islands, particulate matter
   <br/>

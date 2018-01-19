@@ -1,5 +1,5 @@
 # Project information
-site_name: 'BigGIS Documentation'
+site_name: 'BigGIS - Scalable GIS for Predictive and Prescriptive Analytics'
 site_description: 'Central documentation of the BigGIS project'
 site_author: 'BigGIS Team'
 
@@ -71,14 +71,20 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js'
 
+extra_css:
+  - 'animations.css'
+
 pages:
   - About BigGIS: ./index.md
-  - List of Papers: ./about/biggis-papers.md
   - Architecture:
       - Overview: ./architecture/index.md
       - Components: ./architecture/Docker_Containers.md
       - Platform bwCloud: ./architecture/Platform_bwCloud/index.md
       - StreamPipes: ./architecture/StreamPipes/index.md
+  - List of Github Repositories: ./biggis-github-repos.md
+  - List of Papers: ./biggis-papers.md
+  - List of Presentations: ./biggis-presentations.md
+  - List of Press Releases: ./biggis-press.md
   - Project Consortium: ./consortium.md
   - Contributing: ./contributing.md
   - Data sources:
