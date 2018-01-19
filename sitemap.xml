@@ -10,14 +10,6 @@
     
 
     
-    <url>
-     <loc>/about/biggis-papers/</loc>
-     <lastmod>2018-01-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
         
     <url>
      <loc>/architecture/</loc>
@@ -43,6 +35,38 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>/biggis-github-repos/</loc>
+     <lastmod>2018-01-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/biggis-papers/</loc>
+     <lastmod>2018-01-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/biggis-presentations/</loc>
+     <lastmod>2018-01-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/biggis-press/</loc>
+     <lastmod>2018-01-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
     
