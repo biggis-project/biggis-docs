@@ -1,6 +1,6 @@
 # List of Papers
 
-<div id="vueapp">
+<div id="vueapp" style="display:none">
   <v-app>
     <v-toolbar dense dark color="blue darken-2">
       <v-toolbar-side-icon disabled></v-toolbar-side-icon>
@@ -92,5 +92,6 @@ const vueapp = new Vue({
   }
 });
 vueapp.loadItems() // async load
+vueapp.$el.style.display = 'block' // hack because html shows before vue init
 </script>
 </div>
