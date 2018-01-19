@@ -8,19 +8,37 @@ data, that are unstructured and from unreliable sources. The system provides
 predictive, prescriptive and visual tool integrated in a common analytical
 pipeline.
 
-![](scenarios/img/scen-smartcity.svg)
-![](scenarios/img/scen-environment.svg)
-![](scenarios/img/scen-disaster.svg)
-
-
 The project is evaluated on three scenarios:
 
- - [Smart city](scenarios/01_city) (urban heat islands, particulate matter)
- - [Environmental management](scenarios/03_env) (health threatening animals and plants)
- - [Disaster control, civil protection](scenarios/02_bos) (air pollution, toxic chemicals)
+[img-sma]: scenarios/img/scen-smartcity.svg
+[img-env]: scenarios/img/scen-environment.svg
+[img-dis]: scenarios/img/scen-disaster.svg
 
-Please visit the [project website](http://biggis-project.eu) for more
-information as well as some interactive demos.
+[link-sma]: scenarios/01_city "Smart City"
+[link-env]: scenarios/03_env "Environmental Management"
+[link-dis]: scenarios/02_bos "Disaster Control and Civil Protection"
+
+|  **Smart City** | **Environmental Management** | **Disaster Control** |
+|:---------------:|:----------------------------:|:--------------------:|
+| [![][img-sma]][link-sma] | [![][img-env]][link-env]   | [![][img-dis]][link-dis]
+
+<style>
+  #scenlist img {
+    height:32px;
+    vertical-align:middle
+  }
+</style>
+
+<span id="scenlist">
+  [![sma][img-sma] Smart City][link-sma]
+  : urban heat islands, particulate matter
+  <br/>
+  [![][img-env] Environmental management][link-env]
+  : health threatening animals and plants
+  <br/>
+  [![][img-dis] Disaster control, civil protection][link-dis]
+  : air pollution, toxic chemicals
+</span>
 
 -----------------------------
 ![BMBF logos](BMBF-logos.png)
