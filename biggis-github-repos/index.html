@@ -979,8 +979,8 @@ const vueapp = new Vue({
   methods: {
     async loadItems() {
       try {
-        const json = await axios(this.items_url).then(_ => _.json())
-        this.items = json.sort(sortByDate)
+        const resp = await axios(this.items_url)
+        this.items = resp.data.sort(sortByDate)
       } catch(e) {
         this.items = e.response.data.message
       }
