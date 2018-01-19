@@ -14,7 +14,7 @@ repo_name: 'GitHub'
 repo_url: 'https://github.com/biggis-project'
 
 # You can disable edit icon for pages by setting edit_uri:"", otherwise it points to github
-#edit_uri: ""
+edit_uri: ""
 
 
 # Copyright

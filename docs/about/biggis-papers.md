@@ -1,12 +1,16 @@
 # List of Papers
 
 <div id="vueapp">
-  <a :href="papers_edit_url">Edit</a>
   <table>
     <tr>
       <th>Date</th>
       <th>Author(s)</th>
-      <th colspan="2">Title / Link</th>
+      <th colspan="2">
+        Title / Link
+        <a style="float:right" :href="papers_edit_url" title="Edit source JSON">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </th>
     </tr>
     <tr v-for="paper in papers">
       <td>{{paper.date}}</td>
