@@ -32,6 +32,7 @@ theme:
   name: material
   favicon: favicon.ico # this icon appears in the browser's tab
   logo: favicon.svg # this icon appears in the top left corner on each page
+  custom_dir: theme
   palette:
     primary: 'dark blue'
     accent: 'blue'
@@ -39,6 +40,7 @@ theme:
       tabs: true
 
 extra:
+  # disqus: 'biggis-docs'
   social: # see http://fontawesome.io/icons/ for allowed 'type' values
       - type: 'globe'
         link: 'http://biggis-project.eu'
@@ -47,11 +49,14 @@ extra:
 
 # Extensions
 markdown_extensions:
+  - pyembed.markdown:           # https://pyembed.github.io/usage/markdown/
   - footnotes:                  # https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
   - admonition:                 # https://squidfunk.github.io/mkdocs-material/extensions/admonition/
+  - meta:                       # https://squidfunk.github.io/mkdocs-material/extensions/metadata/
   - pymdownx.arithmatex:        # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax
   - pymdownx.smartsymbols:      # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#smartsymbols
   - pymdownx.superfences:       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+  - pymdownx.details:           # https://facelessuser.github.io/pymdown-extensions/extensions/details/
   - pymdownx.magiclink:         # https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
       repo_url_shortener: true
   - codehilite:                 # https://squidfunk.github.io/mkdocs-material/extensions/codehilite/
