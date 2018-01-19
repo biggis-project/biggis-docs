@@ -718,82 +718,6 @@
     Formatting examples
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sectioning" title="Sectioning" class="md-nav__link">
-    Sectioning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#footnotes" title="Footnotes" class="md-nav__link">
-    Footnotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#citations-notes" title="Citations, Notes" class="md-nav__link">
-    Citations, Notes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#images-and-figures" title="Images and Figures" class="md-nav__link">
-    Images and Figures
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#figures-with-caption-sort-of" title="Figures with caption (sort of)" class="md-nav__link">
-    Figures with caption (sort of)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tables" title="Tables" class="md-nav__link">
-    Tables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formulas" title="Formulas" class="md-nav__link">
-    Formulas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-code" title="Source Code" class="md-nav__link">
-    Source Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smart-symbols" title="Smart Symbols" class="md-nav__link">
-    Smart Symbols
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sequence-diagrams" title="Sequence diagrams" class="md-nav__link">
-    Sequence diagrams
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -1057,82 +981,6 @@
     Formatting examples
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sectioning" title="Sectioning" class="md-nav__link">
-    Sectioning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#footnotes" title="Footnotes" class="md-nav__link">
-    Footnotes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#citations-notes" title="Citations, Notes" class="md-nav__link">
-    Citations, Notes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#images-and-figures" title="Images and Figures" class="md-nav__link">
-    Images and Figures
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#figures-with-caption-sort-of" title="Figures with caption (sort of)" class="md-nav__link">
-    Figures with caption (sort of)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tables" title="Tables" class="md-nav__link">
-    Tables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formulas" title="Formulas" class="md-nav__link">
-    Formulas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source-code" title="Source Code" class="md-nav__link">
-    Source Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#smart-symbols" title="Smart Symbols" class="md-nav__link">
-    Smart Symbols
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sequence-diagrams" title="Sequence diagrams" class="md-nav__link">
-    Sequence diagrams
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
       
@@ -1167,22 +1015,32 @@ available as a static website: <a href="https://biggis-project.github.io/biggis-
 Using pip, you need to install the following packages:</p>
 <ul>
 <li><strong>mkdocs</strong> : Provides the executable command <code>mkdocs</code>.</li>
-<li><strong>mkdocs-material</strong> : A material design theme, see also <a href="http://squidfunk.github.io/mkdocs-material/">this page</a>.</li>
+<li><strong>mkdocs-material</strong> : A material design theme. See also <a href="http://squidfunk.github.io/mkdocs-material/">this page</a>.</li>
+<li><strong>pyembed-markdown</strong> : A markdown extension that allows for embedding Youtube videos in documents.
+                         See also <a href="https://pyembed.github.io/usage/markdown/">this page</a>.</li>
 </ul>
-<p>You can install the packages either locally as a user into <code>~/.local/</code> or system-wide
-(when omitting the <code>--user</code> parameter).</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install --user mkdocs
+<div class="admonition help">
+<p class="admonition-title">How to install as a user (recommended)</p>
+<p>You can install the packages locally as a user into <code>~/.local/</code>
+<div class="codehilite"><pre><span></span>pip install --user mkdocs
 pip install --user mkdocs-material
+pip install --user pyembed-markdown
+</pre></div></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">How to install system-wide as root (not recommended)</p>
+<div class="codehilite"><pre><span></span>pip install mkdocs
+pip install mkdocs-material
+pip install pyembed-markdown
 </pre></div>
-</td></tr></table>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</div>
+<div class="admonition help">
+<p class="admonition-title">How to upgrade (as a user)</p>
 <p>Make sure you are using <strong>mkdocs version 0.17.2+</strong>.
-<div class="codehilite"><pre><span></span><span class="c1"># to upgrade use this instead</span>
-pip install -U --user mkdocs
+<div class="codehilite"><pre><span></span>pip install -U --user mkdocs
 pip install -U --user mkdocs-material
+pip install -U --user pyembed-markdown
 </pre></div></p>
 </div>
 <h2 id="recommended-editor">Recommended editor<a class="headerlink" href="#recommended-editor" title="Permanent link">&para;</a></h2>
@@ -1195,7 +1053,7 @@ with the <strong>Markdown Support plugin</strong> (both are free) which gives yo
 <li>refactoring, which is handy when renaming markdown files which are liked from other files</li>
 <li>fancy search</li>
 <li>outline of the document structure</li>
-<li>automated simplified preview (which is not that important due to the mkdocs hotreload)</li>
+<li>automated simplified preview (which is not that important due to the mkdocs hot-reload)</li>
 </ul>
 <h2 id="how-to-edit">How to edit<a class="headerlink" href="#how-to-edit" title="Permanent link">&para;</a></h2>
 <p>Before editing the documentation, start the live-reloading docs server
@@ -1226,8 +1084,8 @@ a small shell script that updates the <code>pages</code> section automatically. 
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
 <p>Using the command <code>mkdocs gh-deploy</code> we can generate a static <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>
 and deploy it automatically as a github page (served from <code>gh-pages</code> branch).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <p>The newly deployed version appears after few seconds.</p>
 </div>
 <div class="admonition warning">
@@ -1250,160 +1108,95 @@ docs/
 <li><strong>Level 2</strong> : pages (markdown files) that appear in the left side bar.</li>
 <li><strong>Level 3</strong> : headings (H1, H2, ...) that appear in the table of contents on the right</li>
 </ul>
-<div class="admonition node">
-<p class="admonition-title">Node</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Do not use spaces in file names. Replace them with underscores <code>_</code>.
 This allows for easier refactoring because spaces are transformed to <code>%20</code> in markdown.</p>
 </div>
 <h2 id="formatting-examples">Formatting examples<a class="headerlink" href="#formatting-examples" title="Permanent link">&para;</a></h2>
-<h3 id="sectioning">Sectioning<a class="headerlink" href="#sectioning" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span># Chapter
+<details class="summary"><summary>Sectioning, Headings and Table of Contents</summary><div class="codehilite"><pre><span></span># Chapter
 
 ## Section
 
 ### Subsection
 </pre></div>
 
-
-<h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h3>
-<p>See also <a href="https://squidfunk.github.io/mkdocs-material/extensions/footnotes/">https://squidfunk.github.io/mkdocs-material/extensions/footnotes/</a></p>
-<div class="codehilite"><pre><span></span>Some text with a footnote[^1]
+</details><details class="summary"><summary>Footnotes</summary><div class="codehilite"><pre><span></span>Some text with a footnote[^1]
 
 [^1]: Text of the footnote
 </pre></div>
 
-
-<h3 id="citations-notes">Citations, Notes<a class="headerlink" href="#citations-notes" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>!!! cite
+<p>See also <a href="https://squidfunk.github.io/mkdocs-material/extensions/footnotes/">https://squidfunk.github.io/mkdocs-material/extensions/footnotes/</a></p></details><details class="summary"><summary>Citations, Notes and Admonition</summary><div class="codehilite"><pre><span></span>!!! cite
     Here comes the citation including authors, title, year, doi, url ...
 </pre></div>
 
-
-<div class="admonition cite">
-<p class="admonition-title">Cite</p>
-<p>Here comes the citation including authors, title, year, doi, url ...</p>
-</div>
-<hr />
-<div class="codehilite"><pre><span></span>!!! note
+<div class="admonition cite"><p class="admonition-title">Cite</p><p>Here comes the citation including authors, title, year, doi, url ...</p></div><hr /><div class="codehilite"><pre><span></span>!!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 </pre></div>
 
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+<div class="admonition note"><p class="admonition-title">Note</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.</p>
-</div>
-<hr />
-<p>For more options see <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">https://squidfunk.github.io/mkdocs-material/extensions/admonition/</a></p>
-<h3 id="images-and-figures">Images and Figures<a class="headerlink" href="#images-and-figures" title="Permanent link">&para;</a></h3>
-<p>You can include images into the documentation in the following format:</p>
-<ul>
-<li><strong>SVG</strong> (scalable vectors).</li>
-<li><strong>JPG</strong> (photos)</li>
-<li><strong>PNG</strong> (raster graphics)</li>
-</ul>
-<p>In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.
-See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media">http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media</a></p>
-<div class="codehilite"><pre><span></span>![Image &quot;alt&quot; description](path/to/image.svg)
+massa, nec semper lorem quam in massa.</p></div><hr /><p>For more options see <a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">https://squidfunk.github.io/mkdocs-material/extensions/admonition/</a></p></details><details class="summary"><summary>Collapsible blocks</summary><div class="codehilite"><pre><span></span>??? &quot;Phasellus posuere in sem ut cursus&quot;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 </pre></div>
 
+<details><summary>Phasellus posuere in sem ut cursus</summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p></details><p>For more information see <a href="https://facelessuser.github.io/pymdown-extensions/extensions/details/">https://facelessuser.github.io/pymdown-extensions/extensions/details/</a></p></details><details class="summary"><summary>Images</summary><p>You can include images into the documentation in the following format:</p><ul><li><strong>SVG</strong> (scalable vectors).</li><li><strong>JPG</strong> (photos)</li><li><strong>PNG</strong> (raster graphics)</li></ul><p>In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.</p><div class="codehilite"><pre><span></span>![Image &quot;alt&quot; description](path/to/image.svg)
+</pre></div>
 
-<p><img alt="Sample image" src="../scenarios/img/scen-smartcity.svg" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When editing a file <code>path/to/ABC.md</code>, store all related images in folder <code>path/to/ABC</code>.
-This way, different topics are better encapsulated.</p>
-</div>
-<h3 id="figures-with-caption-sort-of">Figures with caption (sort of)<a class="headerlink" href="#figures-with-caption-sort-of" title="Permanent link">&para;</a></h3>
-<p>With the following hack, you can create a nice looking caption rendered under a figure.</p>
-<div class="codehilite"><pre><span></span>![](path/to/image.svg)
+<p><img alt="Sample image" src="../scenarios/img/scen-smartcity.svg" /></p><p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media">http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media</a></p><div class="admonition note"><p class="admonition-title">Note</p><p>When editing a file e.g. <code>path/to/ABC.md</code>, store all related images in the same folder
+folder (<code>path/to/ABC</code>). This way, different topics are better encapsulated.</p></div></details><details class="summary"><summary>Figures with caption (sort of)</summary><p>With the following hack, you can create a nice looking caption rendered under a figure.</p><div class="codehilite"><pre><span></span>![](path/to/image.svg)
 &gt; **Figure:**
 &gt; Here comes some multi-line caption.
 &gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </pre></div>
 
-
-<p><img alt="" src="../scenarios/img/scen-disaster.svg" /></p>
-<blockquote>
-<p><strong>Figure:</strong>
+<p><img alt="" src="../scenarios/img/scen-disaster.svg" /></p><blockquote><p><strong>Figure:</strong>
 Here comes some multi-line caption.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.</p>
-</blockquote>
-<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
-<p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#tables">http://www.mkdocs.org/user-guide/writing-your-docs/#tables</a></p>
-<div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
+Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.</p></blockquote></details><details class="summary"><summary>Tables</summary><div class="codehilite"><pre><span></span>First Header | Second Header | Third Header
 ------------ | ------------- | ------------
 Content Cell | Content Cell  | Content Cell
 Content Cell | Content Cell  | Content Cell
 </pre></div>
 
+<table><thead><tr><th>First Header</th><th>Second Header</th><th>Third Header</th></tr></thead><tbody><tr><td>Content Cell</td><td>Content Cell</td><td>Content Cell</td></tr><tr><td>Content Cell</td><td>Content Cell</td><td>Content Cell</td></tr></tbody></table><p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#tables">http://www.mkdocs.org/user-guide/writing-your-docs/#tables</a></p></details><details class="summary"><summary>Tables with alignment</summary><div class="codehilite"><pre><span></span>Left         | Center        | Right
+---          |:--            |--:
+Content Cell | Content Cell  | Content Cell
+Content Cell | Content Cell  | Content Cell
+</pre></div>
 
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-<th>Third Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-<tr>
-<td>Content Cell</td>
-<td>Content Cell</td>
-<td>Content Cell</td>
-</tr>
-</tbody>
-</table>
-<h3 id="formulas">Formulas<a class="headerlink" href="#formulas" title="Permanent link">&para;</a></h3>
-<p>Formula are generated using <a href="https://www.mathjax.org/">MathJax</a>, which is similar to LaTeX.
-See also this <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">quick reference</a>.</p>
-<div class="codehilite"><pre><span></span>$$
+<table><thead><tr><th>Left</th><th align="left">Center</th><th align="right">Right</th></tr></thead><tbody><tr><td>Content Cell</td><td align="left">Content Cell</td><td align="right">Content Cell</td></tr><tr><td>Content Cell</td><td align="left">Content Cell</td><td align="right">Content Cell</td></tr></tbody></table><p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#tables">http://www.mkdocs.org/user-guide/writing-your-docs/#tables</a></p></details><details class="summary"><summary>Mathematical Formulas</summary><p>Formula are generated using <a href="https://www.mathjax.org/">MathJax</a>, which is similar to LaTeX.
+See also this <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">quick reference</a>.</p><div class="codehilite"><pre><span></span>$$
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
 $$
 </pre></div>
 
-
 <span>\[
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
-\]</span><h3 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h3>
-<p>Code can be displayed inline like this:</p>
-<div class="codehilite"><pre><span></span>`print 1+{variable}`
+\]</span></details><details class="summary"><summary>Source Code with Code Highlighting</summary><p>Code can be displayed inline like this:</p><div class="codehilite"><pre><span></span>`print 1+{variable}`
 </pre></div>
 
-
-<p>Or it can be displayed in a code block with optional syntax highlighting if the language is specified.</p>
-<div class="codehilite"><pre><span></span>```python
+<p>Or it can be displayed in a code block with optional syntax highlighting if the language is specified.</p><div class="codehilite"><pre><span></span>```python
 def my_function():
     &quot;just a test&quot;
     print 8/2 
 ```
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">my_function</span><span class="p">():</span>
     <span class="s2">&quot;just a test&quot;</span>
     <span class="k">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span> 
 </pre></div>
-
-<h3 id="smart-symbols">Smart Symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">&para;</a></h3>
-<p>See also <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/">https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/</a></p>
-<div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
+</details><details class="summary"><summary>Smart Symbols</summary><div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
 </pre></div>
 
-
-<p>Some smart symbols: &rarr;,  &larr;, 1<sup>st</sup>, 2<sup>nd</sup>, &frac14;</p>
-<h3 id="sequence-diagrams">Sequence diagrams<a class="headerlink" href="#sequence-diagrams" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>```sequence
+<p>Some smart symbols: &rarr;,  &larr;, 1<sup>st</sup>, 2<sup>nd</sup>, &frac14;</p><p>See also <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/">https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/</a></p></details><details class="summary"><summary>Sequence diagrams</summary><div class="codehilite"><pre><span></span>```sequence
 Title: Example sequence diagram
 A-&gt;B: Sync call
 B--&gt;A: Sync return
@@ -1412,13 +1205,26 @@ C-&gt;&gt;D: Async call
 D--&gt;&gt;C: Async return
 ```
 </pre></div>
-
 <pre class="uml-sequence-diagram"><code>Title: Example sequence diagram
 A-&gt;B: Sync call
 B--&gt;A: Sync return
 A-&gt;C: Another sync call
 C-&gt;&gt;D: Async call
 D--&gt;&gt;C: Async return</code></pre>
+</details><details class="summary"><summary>Embedded Youtube Videos</summary><div class="codehilite"><pre><span></span>[!embed](https://www.youtube.com/watch?v=QQKVzZpXTpQ)
+</pre></div>
+
+<iframe width="480" height="270" src="https://www.youtube.com/embed/QQKVzZpXTpQ?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p>For more information see <a href="https://pyembed.github.io/usage/markdown/">https://pyembed.github.io/usage/markdown/</a></p></details><details class="summary"><summary>HTML (please only in special cases)</summary><p>In special cases, you can also use raw HTML in your document.</p><div class="codehilite"><pre><span></span> &lt;style&gt;.special img {height:32px; vertical-align:middle}&lt;/style&gt;
+ &lt;div class=&quot;special&quot;&gt;
+   [![](scenarios/img/scen-smartcity.svg) Smart City](scenarios/01_city)
+ &lt;/div&gt;
+</pre></div>
+
+<p><style>.special img {height:32px; vertical-align:middle}</style>
+ <div class="special">
+   <a href="../scenarios/01_city"><img alt="" src="../scenarios/img/scen-smartcity.svg" /> Smart City</a>
+ </div></p></details>
                 
                   
                 
