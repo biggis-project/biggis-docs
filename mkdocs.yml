@@ -30,6 +30,7 @@ copyright: '
 # Documentation and theme
 theme:
   name: material
+  custom_dir: 'custom_theme'
   favicon: favicon.ico # this icon appears in the browser's tab
   logo: favicon.svg # this icon appears in the top left corner on each page
   palette:
