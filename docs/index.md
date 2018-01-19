@@ -8,7 +8,9 @@ data, that are unstructured and from unreliable sources. The system provides
 predictive, prescriptive and visual tool integrated in a common analytical
 pipeline.
 
-The project is evaluated on three scenarios:
+|  **Smart City** | **Environmental Management** | **Disaster Control** |
+|:---------------:|:----------------------------:|:--------------------:|
+| [![][img-sma]][link-sma] | [![][img-env]][link-env]   | [![][img-dis]][link-dis]
 
 [img-sma]: scenarios/img/scen-smartcity.svg
 [img-env]: scenarios/img/scen-environment.svg
@@ -18,10 +20,6 @@ The project is evaluated on three scenarios:
 [link-env]: scenarios/03_env "Environmental Management"
 [link-dis]: scenarios/02_bos "Disaster Control and Civil Protection"
 
-|  **Smart City** | **Environmental Management** | **Disaster Control** |
-|:---------------:|:----------------------------:|:--------------------:|
-| [![][img-sma]][link-sma] | [![][img-env]][link-env]   | [![][img-dis]][link-dis]
-
 <style>
   #scenlist img {
     height:32px;
@@ -29,7 +27,8 @@ The project is evaluated on three scenarios:
   }
 </style>
 
-<span id="scenlist">
+The project is evaluated on three scenarios:
+<div id="scenlist">
   [![sma][img-sma] Smart City][link-sma]
   : urban heat islands, particulate matter
   <br/>
@@ -38,7 +37,7 @@ The project is evaluated on three scenarios:
   <br/>
   [![][img-dis] Disaster control, civil protection][link-dis]
   : air pollution, toxic chemicals
-</span>
+</div>
 
 -----------------------------
 ![BMBF logos](BMBF-logos.png)

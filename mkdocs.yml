@@ -32,7 +32,6 @@ theme:
   name: material
   favicon: favicon.ico # this icon appears in the browser's tab
   logo: favicon.svg # this icon appears in the top left corner on each page
-  custom_dir: theme
   palette:
     primary: 'dark blue'
     accent: 'blue'
@@ -42,10 +41,10 @@ theme:
 extra:
   # disqus: 'biggis-docs'
   social: # see http://fontawesome.io/icons/ for allowed 'type' values
-      - type: 'globe'
-        link: 'http://biggis-project.eu'
-      - type: 'github'
-        link: 'https://github.com/biggis-project'
+    - type: 'globe'
+      link: 'http://biggis-project.eu'
+    - type: 'github'
+      link: 'https://github.com/biggis-project'
 
 # Extensions
 markdown_extensions:
