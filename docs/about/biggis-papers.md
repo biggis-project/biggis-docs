@@ -1,4 +1,5 @@
 # List of Papers
+
 <div id="vueapp">
   <a :href="papers_edit_url">Edit</a>
   <table>
@@ -11,7 +12,7 @@
       <td>{{paper.date}}</td>
       <td>
         <span v-for="(author,author_idx) in paper.authors">
-          {{author}}<span v-if="author_idx < paper.authors.length">,</span>
+          {{author}}<span v-if="author_idx < paper.authors.length-1">,</span>
         </span>
       </td>
       <td>
@@ -31,6 +32,7 @@
     </tr>
   </table>
 <div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="../lib.js"></script>
 <script>
@@ -43,7 +45,7 @@ const vueapp = new Vue({
   },
   methods: {
     async loadPapers() {
-      const json = await fetch(this.papers_url).then(response => response.json())
+      const json = await fetch(this.papers_url).then(response=>response.json())
       this.papers = json.sort(sortByDate)
     }
   }
