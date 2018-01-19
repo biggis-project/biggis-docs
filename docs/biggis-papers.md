@@ -4,7 +4,7 @@
   <v-app>
     <v-toolbar dense dark color="blue darken-2">
       <v-toolbar-side-icon disabled></v-toolbar-side-icon>
-      <span>{{ toolbarStatus }}</span>
+      <span v-text="toolbarStatus"></span>
       <v-spacer></v-spacer>
       <v-btn icon :href="items_edit_url">
         <v-icon>edit</v-icon>
@@ -17,11 +17,8 @@
             <v-card-title primary-title class="title">
               {{ item.title }}
             </v-card-title>
-            <v-card-text class="teal--text">
-              Authors:
-              <span v-for="(author,author_idx) in item.authors">
-                {{author}}<span v-if="author_idx < item.authors.length-1">, </span>
-              </span>
+            <v-card-text class="teal--text comma-list">
+              <span v-for="(author, author_idx) in ensureArray(item.authors)">{{author}}</span>
             </v-card-text>
             <v-card-text class="grey--text">
               {{ item.note }}
@@ -54,6 +51,9 @@
 <style>
 th a * { float:right; color: white }
 html { font-size: 62.5%; } /* mkdocs vs vuetify fix */
+.comma-list > span:not(:last-child):after {
+  content: ", ";
+}
 </style>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
@@ -78,6 +78,9 @@ const vueapp = new Vue({
     async loadItems() {
       const json = await fetch(this.items_url).then(function(resp) { return resp.json()} );
       this.items = json.sort(sortByDate);
+    },
+    ensureArray(x) {
+      return Array.isArray(x) ? x : [x]
     },
     eventData(item) {
       return [
