@@ -970,7 +970,8 @@
               {{ item.note }}
             </v-card-text>
             <v-card-actions>
-              <v-chip outline color="grey">{{ item.created_at }}</v-chip>
+              <v-chip disabled outline color="grey">{{ item.created_at }}</v-chip>
+              <v-chip v-if="item.archived" disabled color="red" text-color="white">archived</v-chip>
               <v-spacer></v-spacer>
               <v-btn dark :href="item.html_url">
                 Open
@@ -1089,7 +1090,7 @@ vueapp.$el.style.display = 'block' // hack because html shows before vue init
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> 
+             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> - BigGIS website maintained by <b><a href="https://github.com/vsimko">Viliam Simko</a></b> 
           </div>
         
         powered by
