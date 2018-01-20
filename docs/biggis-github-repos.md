@@ -24,7 +24,8 @@
               {{ item.note }}
             </v-card-text>
             <v-card-actions>
-              <v-chip outline color="grey">{{ item.created_at }}</v-chip>
+              <v-chip disabled outline color="grey">{{ item.created_at }}</v-chip>
+              <v-chip v-if="item.archived" disabled color="red" text-color="white">archived</v-chip>
               <v-spacer></v-spacer>
               <v-btn dark :href="item.html_url">
                 Open

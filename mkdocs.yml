@@ -22,7 +22,8 @@ copyright: '
   <a href="https://www.fzi.de/footer/impressum/">
     <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a>
     <br/>
-  <b>FKZ: 01IS14012</b>
+    <b>FKZ: 01IS14012</b>
+    - BigGIS website maintained by <b><a href="https://github.com/vsimko">Viliam Simko</a></b>
 '
 
 #copyright: 'Copyright &copy; 2017 - 2021 SeRoNet Project'
