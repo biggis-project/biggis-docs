@@ -1,6 +1,3 @@
-!!! note "Responsible person for this section"
-    Manuel Stein
-
 # EnviroCar (Smart City)
 
 The human desire for mobility is an observable global trend. To visit a place of choice fast, cheaply and safely nowadays has become a basic need to mankind. This increasing demand for mobility is reflected by the worldwide CO2 emissions where motorized individual transport is contributing an essential portion to the global CO2 emissions such that it was the second largest sector in 2014. The health effects caused by the world's increasing traffic are, additionally, not only restricted to the emitted pollutants and emission gases but also to factors such as noise pollution. In a recent study, for example, about 40 \% of the population in EU countries is exposed to road traffic noise at levels exceeding 55 db(A). 
