@@ -15,10 +15,17 @@ The used dataset contains approximately around 1.7 million data points. Each dat
 
 ## Visual Analysis of Traffic Data
 
-- Highdimensional
-- spatial 
-- temporal
-- spatio temporal 
+Picture 1: Visualization using a clock metaphor, displaying the temporal development of the average CO2 emissions.
+
+![Clock View](enviro-car-figures/clockview.png)
+
+Picture 2: Exact course of all trip trajectories in the german city of Mönchengladbach between 0 am and 6 am (left). Magnification of the selected region highlighted by the red rectangle (right).
+
+![Clock View](enviro-car-figures/trajectories.png)
+
+Picture 3: (a) Dot Map of a frequently traveled intersection. (b) Dense pixel display visualization of the same intersection. The data points are colored and sorted based after their CO2 emissions. (c) Data points sorted based on their speed. (d) Data points sorted based on their engine speed..
+
+![Clock View](enviro-car-figures/dotmaps.png)
 
 ## Visual Interactive Logging and Provenance
 
