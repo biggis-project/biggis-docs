@@ -23,21 +23,31 @@ First of all, you need **python** and **pip** to be installed.
 Using pip, you need to install the following packages:
 
 - **mkdocs** : Provides the executable command `mkdocs`.
-- **mkdocs-material** : A material design theme, see also [this page](http://squidfunk.github.io/mkdocs-material/).
+- **mkdocs-material** : A material design theme. See also [this page](http://squidfunk.github.io/mkdocs-material/).
+- **pyembed-markdown** : A markdown extension that allows for embedding Youtube videos in documents.
+                         See also [this page](https://pyembed.github.io/usage/markdown/).
 
-You can install the packages either locally as a user into `~/.local/` or system-wide
-(when omitting the `--user` parameter).
-
-    #!sh
+!!! help "How to install as a user (recommended)"
+    You can install the packages locally as a user into `~/.local/`
+    ```sh
     pip install --user mkdocs
     pip install --user mkdocs-material
+    pip install --user pyembed-markdown
+    ```
 
-!!! note
+!!! warning "How to install system-wide as root (not recommended)"
+    ```sh
+    pip install mkdocs
+    pip install mkdocs-material
+    pip install pyembed-markdown
+    ```
+
+!!! help "How to upgrade (as a user)"
     Make sure you are using **mkdocs version 0.17.2+**.
     ```sh
-    # to upgrade use this instead
     pip install -U --user mkdocs
     pip install -U --user mkdocs-material
+    pip install -U --user pyembed-markdown
     ```
 
 ## Recommended editor
@@ -51,7 +61,7 @@ with the **Markdown Support plugin** (both are free) which gives you:
 - refactoring, which is handy when renaming markdown files which are liked from other files
 - fancy search
 - outline of the document structure
-- automated simplified preview (which is not that important due to the mkdocs hotreload)
+- automated simplified preview (which is not that important due to the mkdocs hot-reload)
 
 ## How to edit
 
@@ -88,7 +98,7 @@ You can now edit the markdown documents with the `docs/` directory.
 Using the command `mkdocs gh-deploy` we can generate a static [Docs Website]
 and deploy it automatically as a github page (served from `gh-pages` branch).
 
-!!! note
+!!! info
     The newly deployed version appears after few seconds.
 
 !!! warning
@@ -110,148 +120,214 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
   - **Level 2** : pages (markdown files) that appear in the left side bar.
   - **Level 3** : headings (H1, H2, ...) that appear in the table of contents on the right
 
-!!! node
+!!! warning
     Do not use spaces in file names. Replace them with underscores `_`.
     This allows for easier refactoring because spaces are transformed to `%20` in markdown.
 
 ## Formatting examples
 
-### Sectioning
+??? summary "Sectioning, Headings and Table of Contents"
 
-    # Chapter
+        # Chapter
+        
+        ## Section
+        
+        ### Subsection
+
+??? summary "Footnotes"
+
+        Some text with a footnote[^1]
+        
+        [^1]: Text of the footnote
+
+    See also https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
+
+??? summary "Citations, Notes and Admonition"
+
+        !!! cite
+            Here comes the citation including authors, title, year, doi, url ...
     
-    ## Section
-    
-    ### Subsection
-
-### Footnotes
-
-See also https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
-
-    Some text with a footnote[^1]
-    
-    [^1]: Text of the footnote
-
-### Citations, Notes
-
     !!! cite
         Here comes the citation including authors, title, year, doi, url ...
 
-!!! cite
-    Here comes the citation including authors, title, year, doi, url ...
-
----
-
+    ---
+    
+        !!! note
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+            nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+            massa, nec semper lorem quam in massa.
+    
     !!! note
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
         nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
         massa, nec semper lorem quam in massa.
+        
+    ---
+    For more options see https://squidfunk.github.io/mkdocs-material/extensions/admonition/
 
-!!! note
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+??? summary "Collapsible blocks"
 
----  
-For more options see https://squidfunk.github.io/mkdocs-material/extensions/admonition/
-
-### Images and Figures
-
-You can include images into the documentation in the following format:
-
-  - **SVG** (scalable vectors).
-  - **JPG** (photos)
-  - **PNG** (raster graphics)
-
-In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.
-See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
+        ??? "Phasellus posuere in sem ut cursus"
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+            nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+            massa, nec semper lorem quam in massa.
+    
+    ??? "Phasellus posuere in sem ut cursus"
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+        nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+        massa, nec semper lorem quam in massa.
+    
+    For more information see https://facelessuser.github.io/pymdown-extensions/extensions/details/
 
 
-    ![Image "alt" description](path/to/image.svg)
+??? summary "Images"
+
+    You can include images into the documentation in the following format:
+    
+      - **SVG** (scalable vectors).
+      - **JPG** (photos)
+      - **PNG** (raster graphics)
+    
+    In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.
+    
+        ![Image "alt" description](path/to/image.svg)
+    
+    
+    ![Sample image](scenarios/img/scen-smartcity.svg)
+    
+    See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
+    
+    !!! note
+        When editing a file e.g. `path/to/ABC.md`, store all related images in the same folder
+        folder (`path/to/ABC`). This way, different topics are better encapsulated.
+
+??? summary "Figures with caption (sort of)"
+
+    With the following hack, you can create a nice looking caption rendered under a figure.
+    
+        ![](path/to/image.svg)
+        > **Figure:**
+        > Here comes some multi-line caption.
+        > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    
+    ![](scenarios/img/scen-disaster.svg)
+    > **Figure:**
+    > Here comes some multi-line caption.
+    > Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+    > Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
 
 
-![Sample image](scenarios/img/scen-disaster.svg)
+??? summary "Tables"
 
-!!! note
-    When editing a file `path/to/ABC.md`, store all related images in folder `path/to/ABC`.
-    This way, different topics are better encapsulated.
-
-### Tables
-
-See also http://www.mkdocs.org/user-guide/writing-your-docs/#tables
-
+        First Header | Second Header | Third Header
+        ------------ | ------------- | ------------
+        Content Cell | Content Cell  | Content Cell
+        Content Cell | Content Cell  | Content Cell
+    
     First Header | Second Header | Third Header
     ------------ | ------------- | ------------
     Content Cell | Content Cell  | Content Cell
     Content Cell | Content Cell  | Content Cell
+    
+    See also http://www.mkdocs.org/user-guide/writing-your-docs/#tables
 
-First Header | Second Header | Third Header
------------- | ------------- | ------------
-Content Cell | Content Cell  | Content Cell
-Content Cell | Content Cell  | Content Cell
+??? summary "Tables with alignment"
 
+        Left         | Center        | Right
+        ---          |:--            |--:
+        Content Cell | Content Cell  | Content Cell
+        Content Cell | Content Cell  | Content Cell
+    
+    Left         | Center        | Right
+    ---          |:--            |--:
+    Content Cell | Content Cell  | Content Cell
+    Content Cell | Content Cell  | Content Cell
 
-### Formulas
+    See also http://www.mkdocs.org/user-guide/writing-your-docs/#tables
 
-Formula are generated using [MathJax](https://www.mathjax.org/), which is similar to LaTeX.
-See also this [quick reference][MathJaxRef].
+??? summary "Mathematical Formulas"
 
-[MathJaxRef]: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
-
+    Formula are generated using [MathJax](https://www.mathjax.org/), which is similar to LaTeX.
+    See also this [quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+    
+        $$
+        \frac{n!}{k!(n-k)!} = \binom{n}{k}
+        $$
+    
     $$
     \frac{n!}{k!(n-k)!} = \binom{n}{k}
     $$
 
-$$
-\frac{n!}{k!(n-k)!} = \binom{n}{k}
-$$
 
+??? summary "Source Code with Code Highlighting"
 
-### Source Code
-
-Code can be displayed inline like this:
-
-    `print 1+{variable}`
-
-Or it can be displayed in a code block with optional syntax highlighting if the language is specified.
-
+    Code can be displayed inline like this:
+    
+        `print 1+{variable}`
+    
+    Or it can be displayed in a code block with optional syntax highlighting if the language is specified.
+    
+        ```python
+        def my_function():
+            "just a test"
+            print 8/2 
+        ```
+    
     ```python
     def my_function():
         "just a test"
         print 8/2 
     ```
 
-```python
-def my_function():
-    "just a test"
-    print 8/2 
-```
-
-### Smart Symbols
-See also https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
-
+??? summary "Smart Symbols"
+    
+        Some smart symbols: -->,  <--, 1st, 2nd, 1/4
+        
     Some smart symbols: -->,  <--, 1st, 2nd, 1/4
     
-Some smart symbols: -->,  <--, 1st, 2nd, 1/4
+    See also https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
 
-### Sequence diagrams
 
-~~~.markdown
-```sequence
-Title: Example sequence diagram
-A->B: Sync call
-B-->A: Sync return
-A->C: Another sync call
-C->>D: Async call
-D-->>C: Async return
-```
-~~~
+??? summary "Sequence diagrams"
 
-```sequence
-Title: Example sequence diagram
-A->B: Sync call
-B-->A: Sync return
-A->C: Another sync call
-C->>D: Async call
-D-->>C: Async return
-```
+    ~~~.markdown
+    ```sequence
+    Title: Example sequence diagram
+    A->B: Sync call
+    B-->A: Sync return
+    A->C: Another sync call
+    C->>D: Async call
+    D-->>C: Async return
+    ```
+    ~~~
+    
+    ```sequence
+    Title: Example sequence diagram
+    A->B: Sync call
+    B-->A: Sync return
+    A->C: Another sync call
+    C->>D: Async call
+    D-->>C: Async return
+    ```
+
+??? summary "Embedded Youtube Videos"
+        [!embed](https://www.youtube.com/watch?v=QQKVzZpXTpQ)
+    [!embed](https://www.youtube.com/watch?v=QQKVzZpXTpQ)
+    
+    For more information see https://pyembed.github.io/usage/markdown/
+
+
+
+??? summary "HTML (please only in special cases)"
+
+    In special cases, you can also use raw HTML in your document.
+    
+         <style>.special img {height:32px; vertical-align:middle}</style>
+         <div class="special">
+           [![](scenarios/img/scen-smartcity.svg) Smart City](scenarios/01_city)
+         </div>
+
+     <style>.special img {height:32px; vertical-align:middle}</style>
+     <div class="special">
+       [![](scenarios/img/scen-smartcity.svg) Smart City](scenarios/01_city)
+     </div>

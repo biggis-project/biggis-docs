@@ -19,8 +19,8 @@
 
 MKDOCSYML=$(realpath "$1")
 [ -f "$MKDOCSYML" ] || {
-    echo "Error: mkdocs.yml file not specified"
-    exit 1
+    echo "Warning: Using default mkdocs.yml file because the parameter was not explicitly specified" > /dev/stderr
+    MKDOCSYML='mkdocs.yml'
 }
 
 # Note:
@@ -29,7 +29,7 @@ MKDOCSYML=$(realpath "$1")
 get_new_pages_config() {
 
     # These are all temporary files used in the transformation
-    # You can debug them by running `$ DEBUG=1 ./fix-mkdocs-pages.sh mkdocs.yml`
+    # You can debug them by running `$ DEBUG=1 ./fix-mkdocs-pages.sh`
     TMP=`mktemp /tmp/mkdocs.tmp.XXXXX`
     TREE="$TMP"_tree
     H1MAP="$TMP"_h1
@@ -114,5 +114,5 @@ sed -i -e '/^pages:/,/^[a-z_]*:/{/^[a-z_]*:/b;d;}' "$MKDOCSYML"
 sed -i -e '/^pages:/d' "$MKDOCSYML"
 
 # add new "pages:" section at the end
-get_new_pages_config >> "$MKDOCSYML"
-echo done
+get_new_pages_config | ./optimize-pages-tree.js >> "$MKDOCSYML"
+echo done.

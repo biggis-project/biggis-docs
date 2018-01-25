@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+<div id="app">
+  <v-app dark>
+    <v-content>
+      <v-container fluid fill-height>
+        <v-layout justify-center align-center>
+          <v-container>
+            <v-layout column align-center>
+              <v-flex display-4>
+                Error 404
+              </v-flex>
+              <v-flex>
+                The page you were looking for does not exit
+              </v-flex>
+              <v-flex ma-5>
+                <v-tooltip right>
+                  <v-btn fab dark large color="purple darken-1" slot="activator" href="http://biggis-project.eu/biggis-docs">
+                    <v-icon dark>home</v-icon>
+                  </v-btn>
+                  <span>Go to our Homepage</span>
+                </v-tooltip>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script>
+  new Vue({el: '#app'})
+</script>
+</body>
+</html>

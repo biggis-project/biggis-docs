@@ -1,7 +1,10 @@
 !!! note "Responsible person for this section"
     Patrick Wiener
 
-# bwCloud
+# Platform bwCloud
+
+![](bwcloud_logo.svg)
+
 Within the scope of BigGIS, we build our platform on top of the [bwCloud](https://www.bw-cloud.org/) offering. The Baden-Württemberg Cloud (bwCloud) 
 provides virtual machines (servers) for members of science- and research institutions in Baden-Württemberg (e.g. students and 
 staff-members) powered by OpenStack's cloud software much like Amazon’s EC2. Building on the openstack-platform the infrastructure is currently operated by four sites 
@@ -23,3 +26,5 @@ Docker registry for sensitive images, OpenVPN server to connect to the virtual p
 
 
 ## Container-based Rancher Setup
+description tbd.
+![](bwcloud_infrastructure.png)

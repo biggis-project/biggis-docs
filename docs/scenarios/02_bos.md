@@ -1,5 +1,5 @@
 !!! note "Responsible person for this section"
-    Alexander Groeschel
+    Alexander Groeschel, Bodo Bernsdorf
 
 # Disaster Management
 

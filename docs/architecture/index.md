@@ -7,7 +7,7 @@
 The BigGIS architecture, as depicted in the picture above, consists of several layers that are briefly discussed in the following.
 
 ## Modelling
-[StreamPipes](StreamPipes.md)
+[StreamPipes](StreamPipes)
 tbd.
 
 ## Analytics
