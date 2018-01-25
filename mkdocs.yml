@@ -95,6 +95,7 @@ pages:
   - Demos:
       - About demos: ./demos/index.md
       - EnviroCar (Smart City): ./demos/enviro-car.md
+      - Firefighting: ./demos/firefighting.md
       - Gas Cloud Detection: ./demos/gas-detect.md
       - Gas Cloud Prediction: ./demos/gas-predict.md
       - Heatstress Routing App: ./demos/heatstress.md
@@ -105,6 +106,7 @@ pages:
       - Optimal flight plan for drones: ./demos/optimize-drones.md
       - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
       - Stability of hotspots: ./demos/stability_of_hotspots/index.md
+      - Traffic Incidents: ./demos/traffic-incidents.md
       - Urban Heat Islands: ./demos/urban-heat-islands.md
       - Visual Analysis of Spatio-Temporal Event Predictions: ./demos/visual-analysis-of-uhi.md
   - Documentation Howto: ./docs-howto.md
