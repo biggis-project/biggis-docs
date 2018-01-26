@@ -6,7 +6,7 @@ The visual analysis of traffic incidents is of high interest in the BOS-scenario
 
 ## Visual Analysis of Traffic Incidents 
 
-Our visual analysis allows to gain overview as well as detailed representation of the underlaying data. At first glance, a calendar visualization of traffic incidents (Figure 1) allows to get an impression about the temporal distribution of the incidents. Figure 1, for example, allows the user to easily detect a repeating pattern in in July 2016 where each monday for three weeks in a row was  strongly noticeable. 
+Our visual analysis allows to gain overview as well as detailed representations of the underlaying data. At first glance, a calendar visualization of traffic incidents (Figure 1) allows to get an impression about the temporal distribution of the incidents. Figure 1, for example, allows the user to easily detect a repeating pattern in July 2016 where each monday for three weeks in a row was  strongly noticeable. 
 
 Figure 1: Calendar visualization of traffic incidents.
 
