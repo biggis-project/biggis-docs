@@ -1,7 +1,7 @@
 # MODIS
 
 ## Overview
-The Land Surface Temperature (LST) and Emissivity daily data are retrieved at 1km pixels by the generalized split-window algorithm and at 6km grids by the day/night algorithm. In the split-window algorithm, emissivities in bands 31 and 32 are estimated from land cover types, atmospheric column water vapor and lower boundary air surface temperature are separated into tractable sub-ranges for optimal retrieval. In the day/night algorithm, daytime and nighttime LSTs and surface emissivities are retrieved from pairs of day and night MODIS observations in seven TIR bands. The product is comprised of LSTs, quality assessment, observation time, view angles, and emissivities.
+The Land Surface Temperature (LST) and Emissivity daily data are retrieved at 1km pixels by the generalized split-window algorithm and at 6km grids by the day/night algorithm. In the split-window algorithm, emissivities in bands 31 and 32 are estimated from land cover types, atmospheric column water vapor and lower boundary air surface temperature are separated into tractable sub-ranges for optimal retrieval. In the day/night algorithm, daytime and nighttime LSTs and surface emissivities are retrieved from pairs of day and night MODIS observations in seven TIR bands. The product is comprised of LSTs, quality assessment, observation time, view angles, and emissivities. [1]
 
 ## Details
 
@@ -12,3 +12,6 @@ LST Data is available since 2002 in full capability and since 1999 with reduced 
 Figure 1: Example distribution of available MODIS LST data in Germany. 
 
 ![MODIS Data Availability](modis-figures/modis_availability.png)
+
+
+[1] https://modis.gsfc.nasa.gov/data/dataprod/mod11.php Last Accessed on 26.01.2018.
