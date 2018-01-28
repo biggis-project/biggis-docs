@@ -92,10 +92,10 @@ pages:
   - Contributing: ./contributing.md
   - Data sources:
       - Datasets in BigGIS: ./data_sources/index.md
-      - MODIS Dataset: ./data_sources/MODIS/index.md
+      - MODIS Dataset: ./data_sources/modis/index.md
       - Traffic Incidents: ./data_sources/traffic-incidents.md
       - Weather stations: ./data_sources/weather-stations.md
-      - Wunderground Dataset: ./data_sources/Wunderground/index.md
+      - Wunderground Dataset: ./data_sources/wunderground/index.md
   - Demos:
       - About demos: ./demos/index.md
       - EnviroCar (Smart City): ./demos/enviro_car/index.md
@@ -122,7 +122,7 @@ pages:
       - Getis ord G* on rasters: ./methods/getis_ord_raster.md
       - One vs. Rest: ./methods/one_vs_rest.md
       - Stability of hotspots: ./methods/soh.md
-      - Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing: ./methods/spectralAnalysisTCI.md
+      - Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing: ./methods/spectral_analysis_tci.md
       - Support Vector Machine: ./methods/support_vector_machine.md
   - Scenarios:
       - Smart City: ./scenarios/01_city.md

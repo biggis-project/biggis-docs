@@ -58,7 +58,7 @@ from a minimum wavelength of 450nm to a maximum of 950nm.
 
 ### Triangular Chlorophyll Index
 
-In a first Analysis the propagating chlorophyll cloud was identified in the recorded image via the calculation of the [Triangular Chlorophyll Index (TCI)](../../methods/spectralAnalysisTCI.md ) for each pixel in the spatially referenced image.
+In a first Analysis the propagating chlorophyll cloud was identified in the recorded image via the calculation of the [Triangular Chlorophyll Index (TCI)](../../methods/spectral_analysis_tci.md ) for each pixel in the spatially referenced image.
 
 The result is shown in the picture below:
 Row one in Picture 2 is showing the chlorophyll cloud propagating from west
