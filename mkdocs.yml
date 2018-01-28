@@ -56,6 +56,7 @@ markdown_extensions:
   - meta:                       # https://squidfunk.github.io/mkdocs-material/extensions/metadata/
   - pymdownx.arithmatex:        # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#arithmatex-mathjax
   - pymdownx.smartsymbols:      # https://squidfunk.github.io/mkdocs-material/extensions/pymdown/#smartsymbols
+      copyright: false
   - pymdownx.superfences:       # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
   - pymdownx.details:           # https://facelessuser.github.io/pymdown-extensions/extensions/details/
   - pymdownx.magiclink:         # https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/
@@ -97,7 +98,7 @@ pages:
       - Wunderground Dataset: ./data_sources/Wunderground/index.md
   - Demos:
       - About demos: ./demos/index.md
-      - EnviroCar (Smart City): ./demos/enviro-car.md
+      - EnviroCar (Smart City): ./demos/enviro_car/index.md
       - Firefighting: ./demos/firefighting.md
       - Gas Cloud Detection: ./demos/gas-detect.md
       - Gas Cloud Prediction: ./demos/gas-predict.md
@@ -105,7 +106,7 @@ pages:
       - Hotspot analysis (using G*): ./demos/hotspot_analysis/index.md
       - Invasive species: ./demos/invasive-spec.md
       - Landuse classification: ./demos/landuse.md
-      - Optical Remote Sensing: ./demos/opticalRemoteSensing/index.md
+      - Optical Remote Sensing: ./demos/optical_remote_sensing/index.md
       - Optimal flight plan for drones: ./demos/optimize-drones.md
       - Placement of sensors under uncertainty: ./demos/optimize-sensors.md
       - Stability of hotspots: ./demos/stability_of_hotspots/index.md
