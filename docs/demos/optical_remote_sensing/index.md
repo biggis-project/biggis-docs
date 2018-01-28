@@ -31,7 +31,7 @@ methane (row three in Picture 1).
 
 !!! note ""
     **Picture 1:** Gas cloud detection using thermal imageries
-    ![Gas cloud detection](bos_img/Gas_cloud_detection.JPG)
+    ![Gas cloud detection](Gas_cloud_detection.JPG)
  
 ## Spectral Analysis of Gas Clouds
 
@@ -77,8 +77,7 @@ chlorophyll of the cloud.
 !!! TODO
     Wie ist die obige Erklärung zu verstehen? Geht es hier darum die Bereiche mit zeitlich konstant hohem
     TCI-Wert (= nicht die Chlorophyll-Wolke) auszuschließen?
-
-    ![Chemical cloud detection](bos_img/Chemical_cloud_detection.JPG)
+    ![Chemical cloud detection](Chemical_cloud_detection.JPG)
 
 
 Picture 3 now shows the composition of the referenced and analyzed
@@ -88,8 +87,7 @@ asphalt.
 
 !!! TODO
     - Picture 3: eingefärbte Elemente detailierter erklären.
-
-    ![Composition](bos_img/Composition.JPG)
+    ![Composition](Composition.JPG)
 
 ### Logistic Regression Classification of Cloud Reflectance
 
@@ -139,7 +137,7 @@ Based on this data different logistic regression classifiers were trained.
 
 #### Chlorophyll vs. Non-Chlorophyll
 
-![pureFogVsChloro](bos_img/FogVsChloro.png)
+![pureFogVsChloro](FogVsChloro.png)
 
 First a logistic regression classifier was trained to distinguish between spectra of clouds containing
 chlorophyll and pure fog fluid, irrespective of the type of the fog fluid. The figure above displays
@@ -150,7 +148,7 @@ for each model parameter (= channel)) peaks and marks the most significant chann
 
 The training accuracy was found to be
 $$
-  Acc_{train} = \frac{true Positives + true Negatives}{Positives + Negatives} = 1.
+Acc_{train} = \frac{true Positives + true Negatives}{Positives + Negatives} = 1.
 $$
 
 The out-of-sample test also showed very reliable results:
@@ -187,7 +185,7 @@ The high accuracy bases on the very clear feature of the chlorophyll absorption 
 
 #### Pure Fog Fluid 1 vs. Fog Fluid 2
 
-![pureFog1VspurFog2](bos_img/FogFlu1vsFogFlu2.png)
+![pureFog1VspurFog2](FogFlu1vsFogFlu2.png)
 
 While the spectra of chlorophyll containing clouds show a clear distinction feature against the non-chlorophyll containing spectra, the reflectance spectra of the two pure fog fluids show a similar relative pattern, while the absolute reflectance level of the fog fluid 1 seems to be elevated compared to fog fluid 2 (see figure above).
 Therefore, a logistic regression classifier was trained for the distinction of clouds of the two pure fog fluids. The training accuracy for this classifier was found to be:
@@ -195,12 +193,12 @@ $$
 Acc_{train} = 1
 $$
 
-The out of sample performance is as follows:
+!!! note "Out-of-sample performance"
 
-|                | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
-|: ------------  |:------------:|:-----------:|
-| Sample Fog Fluid 1 |         2452 |        48 |
-| Sample Fog Fluid 2 |         1 |       2499 |
+    |                    | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+    |: ------------------|:-----------------------:|:----------------------:|
+    | Sample Fog Fluid 1 |                    2452 |                     48 |
+    | Sample Fog Fluid 2 |                       1 |                   2499 |
 
 $$
 Acc_{test} = 0.99
