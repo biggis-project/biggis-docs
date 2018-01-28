@@ -94,7 +94,7 @@
     </url>
         
     <url>
-     <loc>/data_sources/MODIS/</loc>
+     <loc>/data_sources/modis/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -112,7 +112,7 @@
     </url>
         
     <url>
-     <loc>/data_sources/Wunderground/</loc>
+     <loc>/data_sources/wunderground/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -272,7 +272,7 @@
     </url>
         
     <url>
-     <loc>/methods/spectralAnalysisTCI/</loc>
+     <loc>/methods/spectral_analysis_tci/</loc>
      <lastmod>2018-01-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
