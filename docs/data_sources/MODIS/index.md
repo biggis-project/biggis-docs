@@ -7,8 +7,10 @@ split-window algorithm and at 6km grids by the day/night algorithm. In the split
 in bands 31 and 32 are estimated from land cover types, atmospheric column water vapor and lower boundary air
 surface temperature are separated into tractable sub-ranges for optimal retrieval. In the day/night algorithm,
 daytime and nighttime LSTs and surface emissivities are retrieved from pairs of day and night MODIS observations
-in seven TIR bands. The product is comprised of LSTs, quality assessment, observation time, view angles,
-and emissivities. [^1]
+in seven TIR bands. The product[^MOD11] is comprised of LSTs, quality assessment, observation time, view angles,
+and emissivities.
+
+[^MOD11]: https://modis.gsfc.nasa.gov/data/dataprod/mod11.php "Last Accessed on 26.01.2018."
 
 ## Details
 
@@ -25,9 +27,6 @@ until 2002). For the BigGIS Project, we from the University of Konstanz, made th
 partners. For this we created a crawler to collect the published Tile Data, preprocessed the published HDF4 data
 and made the MODIS data available in our database since 2016.
 
-
-![MODIS Data Availability](modis_availability.png)
-> **Figure 1:**
-> Example distribution of available MODIS LST data in Germany.
-
-[^1]: https://modis.gsfc.nasa.gov/data/dataprod/mod11.php "Last Accessed on 26.01.2018."
+!!! note ""
+    **Figure 1:** Example distribution of available MODIS LST data in Germany.
+    ![MODIS Data Availability](modis_availability.png)
