@@ -124,4 +124,3 @@ pages:
       - Smart City: ./scenarios/01_city.md
       - Disaster Management: ./scenarios/02_bos.md
       - Environment: ./scenarios/03_env.md
-
