@@ -47,7 +47,7 @@ get_new_pages_config() {
         # at this point, there will be many subdirs duplicates
         sed -e 's/^\(\.\/.*\)\/\([^\/]*\.md\)/\1\n\1\/\2/' |
         # Section names need to be cleaned up
-        sed -r '/\.md$/! {s/[-_]+/ /g}' > "$TREE"
+        sed -r '/\.md$/! {s/[-]+/_/g}' > "$TREE"
 
     # extract H1 heading from files
     grep -e '^#[^#].*' -m 1 --include='*.md' -r ./ > "$H1MAP"
@@ -86,6 +86,8 @@ get_new_pages_config() {
     cat "$NAMEMAP" |
         # Keeping only the filename from the whole path
         sed 's/^\..*\/\([^\/]*\)$/\1:/' |
+        # replace '_' and '-' with spaces before reaching ':'
+        sed ':loop; /[-_].*:/s/\([[:alnum:]]*\)[-_]/\1 /; t loop' |
         # First letter to uppercase
         sed 's/^./\U&/'  > "$NAMEMAP_NORM"
 
@@ -115,4 +117,5 @@ sed -i -e '/^pages:/d' "$MKDOCSYML"
 
 # add new "pages:" section at the end
 get_new_pages_config | ./optimize-pages-tree.js >> "$MKDOCSYML"
+#get_new_pages_config >> "$MKDOCSYML"
 echo done.
