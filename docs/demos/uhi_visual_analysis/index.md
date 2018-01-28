@@ -14,7 +14,7 @@ We incorporoated data sets for Germany, however, focused on the analysis of regi
 
 Picture 1: WU Station distribution in and around Karlsruhe.
 
-![Stations Karlsruhe](visual-analysis-of-uhi-figures/wu_stations_karlsruhe.png)
+![Stations Karlsruhe](wu_stations_karlsruhe.png)
 
 ## Visual Analysis of Urban Heat Islands
 
@@ -22,12 +22,12 @@ Our system allows the prediction of Urban Heat Islands with Machine Learning. Fu
 
 Picture 2: Similarity search for urban heat islands, starting from Karlsruhe. 
 
-![Similarity Search](visual-analysis-of-uhi-figures/urbanheatislandssimilaritysearch330.png)
+![Similarity Search](urbanheatislandssimilaritysearch330.png)
 
 Picture 3: Identified urban heat islands with high similarity for a station in Karlsruhe. The identified similar weather station is positioned in Duisburg. The user is enabled to further explore the dataset by brushing and linking. 
 
-![Similarity Search](visual-analysis-of-uhi-figures/urbanheatislandsidentifiedsimilar.png)
+![Similarity Search](urbanheatislandsidentifiedsimilar.png)
 
 
 ## Related Scenarios
-- [Smart City](../scenarios/01_city.md)
+- [Smart City](../../scenarios/01_city.md)

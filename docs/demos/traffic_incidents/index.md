@@ -10,26 +10,26 @@ Our visual analysis allows to gain overview as well as detailed representations 
 
 Figure 1: Calendar visualization of traffic incidents.
 
-![Calendar Visualization](traffic-incidents-figures/calendar.png)
+![Calendar Visualization](calendar.png)
 
 Additionally, we enable domain experts to inspect the categorical distribution of gathered traffic incidents. Domain experts can interactively decide for timespans of interest (e.g., only taking incidents into account which occur at night (Figure 2) or at afternoon (Figure 3)). 
 
 Figure 2: Categorical distribution of gathered traffic incidents occuring at night.
 
-![Barchart Night](traffic-incidents-figures/barchart1.png)
+![Barchart Night](barchart1.png)
 
 Figure 3: Categorical distribution of gathered traffic incidents occuring at afternoon.
 
-![Barchart Afternoon](traffic-incidents-figures/barchart2_12_to_18.png)
+![Barchart Afternoon](barchart2_12_to_18.png)
 
 Ultimately, it is of high importance to provide adequate spatial visaulizations in order to allow domain experts to explore the data. We provide a more detailed animated heat map visualization on the map (see the video) as well as more abstract graph representation. The graph has been developed in order to detect patterns at larger scale. The graph is built hierarchically. On the top level, a spatial clustering is used to detect areas of interest. Afterwards, we split the clusters in the graph visualization based on their incident type by using color. On the next level, we indicate the severity by using saturation. 
 
 Figure 4: Several kinds of visual overviews to effectively aggregate the available data.
 
-![Graph and Heatmap View](traffic-incidents-figures/GraphView_detail.PNG)
+![Graph and Heatmap View](GraphView_detail.PNG)
 
 ## Video 
 
 A video demonstrating some of the capabilities of the analysis of traffic incidents can be found by clicking below or [here](http://files.dbvis.de/stein/Traffic_Incidents.mp4). 
 
-[![Visual Traffic Incident Analysis Demonstration](traffic-incidents-figures/video_thumb.png)](http://files.dbvis.de/stein/Traffic_Incidents.mp4)
+[![Visual Traffic Incident Analysis Demonstration](video_thumb.png)](http://files.dbvis.de/stein/Traffic_Incidents.mp4)
