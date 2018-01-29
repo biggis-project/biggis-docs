@@ -136,9 +136,9 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
 
 ??? summary "Footnotes"
 
-        Some text with a footnote[^1]
+        Some text with a footnote[^LABEL]
         
-        [^1]: Text of the footnote
+        [^LABEL]: Text of the footnote
 
     See also https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
 
