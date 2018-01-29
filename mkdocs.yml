@@ -81,7 +81,7 @@ pages:
   - Architecture:
       - Overview: ./architecture/index.md
       - Components: ./architecture/Docker_Containers.md
-      - Platform bwCloud: ./architecture/Platform_bwCloud/index.md
+      - bwCloud: ./architecture/Platform_bwCloud/index.md
       - StreamPipes: ./architecture/StreamPipes/index.md
   - List of Github Repositories: ./biggis-github-repos.md
   - List of Papers: ./biggis-papers.md

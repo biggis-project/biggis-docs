@@ -33,10 +33,19 @@ tbd.
 
 ## Container Management
 Running these containers in a distributed manner requires a wide variety of technologies, that must be integrated and managed throughout their lifecycle. To easily deploy our containers, our infrastructure is designed to run on [Rancher](http://rancher.com/) as our container management platform. 
-tbd.
+Rancher enables organizations to run and manage Docker
+and Kubernetes in production, providing four major components, that are:
+
+1. Infrastructure Orchestration
+2. Container Orchestration and Scheduling
+3. Application Catalog
+4. Authentication
+
+That way, it is fairly easy to set up a distributed Rancher cluster in a couple of minutes (see the official [documentation](http://rancher.com/docs/rancher/v1.6/en/) 
+for more information). 
 
 ## Infrastructure
-BigGIS infrastructure leverages [bwCloud](https://www.bw-cloud.org/) Infrastructure-as-a-Service (IaaS) offer powered by Openstack.
+BigGIS infrastructure leverages [bwCloud](https://www.bw-cloud.org/) Infrastructure-as-a-Service (IaaS) offer powered by Openstack. See the section [bwCloud](Platform_bwCloud/index.md) for additional information about the infrastructure setup.
 
 
 
