@@ -36,7 +36,7 @@
     
     
       
-        <title>Platform bwCloud - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+        <title>bwCloud - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
       
     
     
@@ -100,7 +100,7 @@
                 BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
               </span>
               <span class="md-header-nav__topic">
-                Platform bwCloud
+                bwCloud
               </span>
             
           
@@ -382,11 +382,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Platform bwCloud
+        bwCloud
       </label>
     
-    <a href="./" title="Platform bwCloud" class="md-nav__link md-nav__link--active">
-      Platform bwCloud
+    <a href="./" title="bwCloud" class="md-nav__link md-nav__link--active">
+      bwCloud
     </a>
     
       
@@ -402,13 +402,6 @@
         <li class="md-nav__item">
   <a href="#infrastructure" title="Infrastructure" class="md-nav__link">
     Infrastructure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#container-based-rancher-setup" title="Container-based Rancher Setup" class="md-nav__link">
-    Container-based Rancher Setup
   </a>
   
 </li>
@@ -1042,13 +1035,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#container-based-rancher-setup" title="Container-based Rancher Setup" class="md-nav__link">
-    Container-based Rancher Setup
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -1068,11 +1054,11 @@
 <p class="admonition-title">Responsible person for this section</p>
 <p>Patrick Wiener</p>
 </div>
-<h1 id="platform-bwcloud">Platform bwCloud<a class="headerlink" href="#platform-bwcloud" title="Permanent link">&para;</a></h1>
+<h1 id="bwcloud">bwCloud<a class="headerlink" href="#bwcloud" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="./bwcloud_logo.svg" /></p>
 <p>Within the scope of BigGIS, we build our platform on top of the <a href="https://www.bw-cloud.org/">bwCloud</a> offering. The Baden-Württemberg Cloud (bwCloud) 
 provides virtual machines (servers) for members of science- and research institutions in Baden-Württemberg (e.g. students and 
-staff-members) powered by OpenStack's cloud software much like Amazon’s EC2. Building on the openstack-platform the infrastructure is currently operated by four sites 
+staff-members) much like Amazon’s EC2. Building on the openstack-platform the infrastructure is currently operated by four sites 
 in Baden-Württemberg: the Universities of Mannheim, Karlsruhe, Ulm and Freiburg.</p>
 <h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
 <p>Currently, we run a total of <strong>nine</strong> Virtual Machines (VM), serving different kinds of purposes, that are providing (1) 
@@ -1121,14 +1107,18 @@ Docker registry for sensitive images, OpenVPN server to connect to the virtual p
 <tr>
 <td>Usage</td>
 <td align="center">Rancher Dev/Testing</td>
-<td align="center">Rancher Cluster (6 VM), Docker Registry</td>
+<td align="center">Rancher Server, Rancher Cluster (5 VM), Docker Registry</td>
 <td align="center">OpenVPN</td>
 </tr>
 </tbody>
 </table>
-<h2 id="container-based-rancher-setup">Container-based Rancher Setup<a class="headerlink" href="#container-based-rancher-setup" title="Permanent link">&para;</a></h2>
-<p>description tbd.
-<img alt="" src="./bwcloud_infrastructure.png" /></p>
+<p>Rancher is deployed as a set of Docker containers. Running Rancher involves launching at least two containers. One container as the management <strong>server</strong> and another container on a node as an <strong>agent</strong>.</p>
+<p><img alt="" src="./bwcloud_infrastructure.png" /></p>
+<blockquote>
+<p><strong>Figure:</strong>
+Container-based Rancher Setup in bwCloud.</p>
+</blockquote>
+<p>Whilte the server runs on a single VM, we set up a single node agent for development and testing environment as well as a five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the dev/testing as well as the cluster environment make use of a the network file system (NFS) in order to overcome the problem of strictly coupeling a service to a node. While this is only mandatory in the cluster environment, it makes sense to setup the dev/testing environment as an exact clone to have the same workflows within Rancher.</p>
                 
                   
                 
