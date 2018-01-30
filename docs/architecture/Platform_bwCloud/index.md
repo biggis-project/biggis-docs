@@ -26,8 +26,8 @@ Docker registry for sensitive images, OpenVPN server to connect to the virtual p
 
 Rancher is deployed as a set of Docker containers. Running Rancher involves launching at least two containers. One container as the management **server** and another container on a node as an **agent**.
 
-Whilte the server runs on a single VM, we set up a single node agent for development and testing environment as well as a five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the dev/testing as well as the cluster environment make use of a the network file system (NFS) in order to overcome the problem of strictly coupeling a service to a node. While this is only mandatory in the cluster environment, it makes sense to setup the dev/testing environment as an exact clone to have the same workflows within Rancher.
-
 ![](bwcloud_infrastructure.png)
 > **Figure:**
 > Container-based Rancher Setup in bwCloud.
+
+Whilte the server runs on a single VM, we set up a single node agent for development and testing environment as well as a five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the dev/testing as well as the cluster environment make use of a the network file system (NFS) in order to overcome the problem of strictly coupeling a service to a node. While this is only mandatory in the cluster environment, it makes sense to setup the dev/testing environment as an exact clone to have the same workflows within Rancher.
