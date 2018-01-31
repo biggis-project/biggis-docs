@@ -82,7 +82,7 @@ pages:
   - Architecture:
       - Overview: ./architecture/index.md
       - Components: ./architecture/Docker_Containers.md
-      - bwCloud: ./architecture/Platform_bwCloud/index.md
+      - BwCloud: ./architecture/Platform_bwCloud/index.md
       - StreamPipes: ./architecture/StreamPipes/index.md
   - List of Github Repositories: ./biggis-github-repos.md
   - List of Papers: ./biggis-papers.md
@@ -92,10 +92,25 @@ pages:
   - Contributing: ./contributing.md
   - Data sources:
       - Datasets in BigGIS: ./data_sources/index.md
-      - MODIS Dataset: ./data_sources/modis/index.md
-      - Traffic Incidents: ./data_sources/traffic-incidents.md
+      - Atmosphere:
+          - DWD (Meteorological Data): ./data_sources/atmosphere/dwd/index.md
+          - LUBW Stations: ./data_sources/atmosphere/lubw/index.md
+          - Wunderground Dataset: ./data_sources/atmosphere/wunderground/index.md
+      - Biosphere:
+          - Drosophila Suzukii Observations (Vitimeteo): ./data_sources/biosphere/vitimeteo/index.md
+      - Ground surface related:
+          - Airbord High Resolution Land Cover: ./data_sources/ground_surface_related/highres_landcover/index.md
+          - Lightweight Camera Systems: ./data_sources/ground_surface_related/lightweight_cams/index.md
+          - NASA Elevation Profile: ./data_sources/ground_surface_related/nasa_elevation/index.md
+          - MODIS Dataset: ./data_sources/ground_surface_related/nasa_modis/index.md
+          - Sentinel 2: ./data_sources/ground_surface_related/sentinel2/index.md
+          - Umweltbundesamt Air Pollution: ./data_sources/ground_surface_related/uba_airpollution/index.md
+      - Socio economic:
+          - Envirocar Dataset: ./data_sources/socio_economic/envirocar/index.md
+          - Land use data: ./data_sources/socio_economic/landuse/index.md
+          - New York Taxi Drives: ./data_sources/socio_economic/newyork_taxi/index.md
+          - Traffic Incidents: ./data_sources/socio_economic/traffic_incidents/index.md
       - Weather stations: ./data_sources/weather-stations.md
-      - Wunderground Dataset: ./data_sources/wunderground/index.md
   - Demos:
       - About demos: ./demos/index.md
       - EnviroCar (Smart City): ./demos/enviro_car/index.md

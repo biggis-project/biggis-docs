@@ -14,9 +14,9 @@ insights about future conditions to elicit the effect of various variables on th
 ## Used Data Sources
 A variety of data source is used for our visual analysis of urban heat islands such as
 
-  - Wunderground
-  - ATKIS/ALKIS
-  - DWD
+  - [Wunderground](../../data_sources/atmosphere/wunderground)
+  - [ATKIS/ALKIS](../../data_sources/socio_economic/landuse)
+  - [DWD](../../data_sources/atmosphere/dwd)
   - ...
 
 We incorporoated data sets for Germany, however, focused on the analysis of regions around Karlsruhe. 

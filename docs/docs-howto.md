@@ -201,21 +201,23 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
         When editing a file e.g. `path/to/ABC.md`, store all related images in the same folder
         folder (`path/to/ABC`). This way, different topics are better encapsulated.
 
-??? summary "Figures with caption (sort of)"
+??? summary "Figures with caption (on top)"
 
     With the following hack, you can create a nice looking caption rendered under a figure.
     
-        ![](path/to/image.svg)
-        > **Figure:**
-        > Here comes some multi-line caption.
-        > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    
-    ![](scenarios/img/scen-disaster.svg)
-    > **Figure:**
-    > Here comes some multi-line caption.
-    > Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-    > Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
+        !!! note ""
+            **Figure:** Here comes some multi-line caption.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
+            
+            ![](path/to/image.svg)
 
+    !!! note ""
+        **Figure:** Here comes some multi-line caption.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
+        
+        ![](scenarios/img/scen-disaster.svg)
 
 ??? summary "Tables"
 
