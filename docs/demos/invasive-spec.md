@@ -75,8 +75,9 @@ We want to highlight how visualization can help domain experts to gain insights 
 **Figure 4:** Overview glyph-visualization of all vineyards in Baden-Wuerttemberg. The development over the time-segments shows that the severity of infestation and the certainty of our prediction increases in late summer and stays high until the end of the year. This corroborates the hypothesis of the JKI.
     ![Trips per sensor](invasive-species/more_kef_in_late_summer_new.PNG)
 
+
 **Figure 5:** Comparison of the vineyards contained in two neighboring cells. The upper cell (purple) exhibits an earlier infestation by D. suzukii that the lower cell (brown). The parallel coordinates plot shows, that the vineyards in the upper cell have around 10% more surrounding woodland (*Wald*) than those in the lower cell. This finding strongly supports the hypothesis of Pelton et al.
-    ![Trips per sensor](invasive-species/less_kef_in_winter_new2.PNG.PNG)
+    ![Trips per sensor](invasive-species/less_kef_in_winter_new2.PNG)
 
 ## Evaluation
 
