@@ -20,13 +20,11 @@ One invasive species which called attention in the last years is the Drosophila 
 
 Unlike other Drosophila, it infests non-rotting and healthy fruits and is therefore of concern to fruit growers, such as vintners. The main commercial inpact are on summer fruit including cherries, blueberries, grapes, nectarines, pears, plums, pluots, peaches, raspberries, and strawberries. In the United States the yield loss estimates widely vary and reached 80% loss in some areas and crops [^1].
 
-For the control of pests it is necessary to combine different information sources in real time.The BIGGIS project adresses this challenge by:
+For the control of pests it is necessary to combine and analyze different information sources in real time.The BIGGIS project adresses this challenge by covering the following aspects:
 
-1 Collecting data from several sources like the current distribution of the fly, wether conditions, elavation, landuse etc.
-
-2 Data analysis of risk areas
-
-3 Interactive visualisation of risk areas and infestion likelyhood
+  1. Collecting data from several sources like the current distribution of the fly, wether conditions, elavation, landuse etc.
+  2. Data analysis of risk areas
+  3. Interactive visualisation of risk areas and infestion likelyhood
 
 [^1]:
     Mark P. Bolda; Rachael E. Goodhue & Frank G. Zalom (2009). Spotted Wing Drosophila: Potential Economic Impact of Newly Established Pest ([PDF](http://giannini.ucop.edu/media/are-update/files/articles/v13n3_2.pdf)). Giannini Foundation of Agricultural Economics, University of California.
