@@ -15,8 +15,8 @@ investigate this data.
 
 ## Used Data Sources
 
-  - ATKIS/ALKIS
-  - Vitimeteo
+  - ATKIS/ALKIS landuse data
+  - Counts of trapped Drosophila suzukii published on VitiMeteo 
   - ASTER Elevation Map
 
 ## Data Description
@@ -35,6 +35,10 @@ irregularly sampled, which makes the use of standard time series analysis techni
 Consequently, an interactive visual analysis should enable researchers to interactively analyze this complex data
 source.
 
+## Hypothesis
+
+Populations of Drosophila suzukii depend on food and shelter in the winter months. The animals also need certain levels of shadow and humidty during the summer months to prevent dehydration. Forests and bushes close to the vineyards may therefore support the survival of Drosophila suzukii by balancing extreme temperatures and providing diverse sources of food during winter time.
+   
 ## Prediction of Infested Areas
 
 We enriched the data provided by VitiMeteo, by adding information about the environmental surroundings of each station.
@@ -56,10 +60,6 @@ SMOTE picks pairs of nearest neighbors in the minority class and creates artific
 point on the line between the nearest neighbors until the data is balanced. Thus, allowing us to employ default machine
 learning algorithms.
 
-
-## Hypothesenentwicklung
-Hypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse
-(v.a. abhängig von Umgebungstemperatur und Vegetation)
 
 ## Development of the Vector Data Pipeline in BigGIS
 If you are working with geo data you are faced with two different kinds of data types: vector and raster data. Both have
