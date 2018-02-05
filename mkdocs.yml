@@ -119,7 +119,7 @@ pages:
       - Gas Cloud Prediction: ./demos/gas-predict.md
       - Heatstress Routing App: ./demos/heatstress.md
       - Hotspot analysis (using G*): ./demos/hotspot_analysis/index.md
-      - Invasive species: ./demos/invasive-spec.md
+      - Invasive species: ./demos/invasive-species/index.md
       - Landuse classification: ./demos/landuse.md
       - Optical Remote Sensing: ./demos/optical_remote_sensing/index.md
       - Optimal flight plan for drones: ./demos/optimize-drones.md
