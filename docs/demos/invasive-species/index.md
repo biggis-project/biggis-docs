@@ -74,7 +74,7 @@ The vector data pipeline performs the following steps:
   2. [Process the data](#2-processing-of-the-kef-data)
   3. [Visualize the data](#3-visualization)
 
-![Vector Data Pipeline](../../scenarios/img/KEFPipeline-1.png)
+![Vector Data Pipeline](../../scenarios/img/kef_pipeline_1.png)
 * Schematic visualisation of the Vector Data Pipeline for the D. suzukii data from [www.vitimeteo.de](http://www.vitimeteo.de)*
 
 ### 1. Collection of KEF data from www.vitimeteo.de
@@ -101,7 +101,6 @@ visual information seeking mantra of Ben Shneiderman: "Overview first, zoom and 
 
 !!! note ""
     **Figure 2:** Glyph-visualization of temporal-spatial event predictions as proposed by Seebacher et al.
-    
     ![Trips per sensor](visualization.png)
 
 We build a geographic information system, using a map as the basis for interaction and spatio-temporal analysis. We
@@ -125,7 +124,6 @@ aggregation and various details-on-demand data visualizations.
 !!! note ""
     **Figure 3:** Overview of the Drosophigator application which enables experts to perform a visual analysis of
     spatio-temporal event predictions.
-    
     ![Trips per sensor](drosophigator_new.png)
 
 ## Use Cases
@@ -139,8 +137,7 @@ of environmental factors by Pelton et al.
     **Figure 4:** Overview glyph-visualization of all vineyards in Baden-Wuerttemberg. The development over the
     time-segments shows that the severity of infestation and the certainty of our prediction increases in late summer and
     stays high until the end of the year. This corroborates the hypothesis of the JKI.
-    
-    ![Trips per sensor](more_kef_in_late_summer_new.PNG)
+    ![Trips per sensor](more_kef_in_late_summer_new.png)
 
 
 !!! note ""
@@ -148,8 +145,7 @@ of environmental factors by Pelton et al.
     earlier infestation by D. suzukii that the lower cell (brown). The parallel coordinates plot shows, that the
     vineyards in the upper cell have around 10% more surrounding woodland (*Wald*) than those in the lower cell. This
     finding strongly supports the hypothesis of Pelton et al.
-    
-    ![Trips per sensor](less_kef_in_winter_new2.PNG)
+    ![Trips per sensor](less_kef_in_winter_new2.png)
 
 ## Evaluation
 
@@ -166,7 +162,6 @@ design decisions.
     **Figure 7:** Evaluation of system feedback of all participants (n=37). Shown are the responses of the participants on
     questions regarding the visualization design (*V1, V2, V3*), the interaction design (*I1, I2*) and the analysis
     capabilities (*A1, A2, A3, A4*) of our system Drosophigator.
-    
     ![Trips per sensor](evaluation_all.png)
 
 The results of our evaluation make it clear that there is a strong need for intuitive and interactive systems, which

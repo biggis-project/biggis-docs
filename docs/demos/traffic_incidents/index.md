@@ -26,7 +26,7 @@ Ultimately, it is of high importance to provide adequate spatial visaulizations 
 
 Figure 4: Several kinds of visual overviews to effectively aggregate the available data.
 
-![Graph and Heatmap View](GraphView_detail.PNG)
+![Graph and Heatmap View](graph_view_detail.png)
 
 ## Video 
 
