@@ -937,15 +937,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prediction-of-infested-areas" title="Prediction of Infested Areas" class="md-nav__link">
-    Prediction of Infested Areas
+  <a href="#hypothesis" title="Hypothesis" class="md-nav__link">
+    Hypothesis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hypothesenentwicklung" title="Hypothesenentwicklung" class="md-nav__link">
-    Hypothesenentwicklung
+  <a href="#prediction-of-infested-areas" title="Prediction of Infested Areas" class="md-nav__link">
+    Prediction of Infested Areas
   </a>
   
 </li>
@@ -1361,15 +1361,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prediction-of-infested-areas" title="Prediction of Infested Areas" class="md-nav__link">
-    Prediction of Infested Areas
+  <a href="#hypothesis" title="Hypothesis" class="md-nav__link">
+    Hypothesis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hypothesenentwicklung" title="Hypothesenentwicklung" class="md-nav__link">
-    Hypothesenentwicklung
+  <a href="#prediction-of-infested-areas" title="Prediction of Infested Areas" class="md-nav__link">
+    Prediction of Infested Areas
   </a>
   
 </li>
@@ -1461,8 +1461,8 @@ occurrence of D. suzukii have been collected in recent years. However, there is 
 investigate this data.</p>
 <h2 id="used-data-sources">Used Data Sources<a class="headerlink" href="#used-data-sources" title="Permanent link">&para;</a></h2>
 <ul>
-<li>ATKIS/ALKIS</li>
-<li>Vitimeteo</li>
+<li>ATKIS/ALKIS landuse data</li>
+<li>Counts of trapped Drosophila suzukii published on VitiMeteo </li>
 <li>ASTER Elevation Map</li>
 </ul>
 <h2 id="data-description">Data Description<a class="headerlink" href="#data-description" title="Permanent link">&para;</a></h2>
@@ -1479,6 +1479,8 @@ others report multiple observations over a time period of up to 1641 days. The o
 irregularly sampled, which makes the use of standard time series analysis techniques challenging, if not impossible.
 Consequently, an interactive visual analysis should enable researchers to interactively analyze this complex data
 source.</p>
+<h2 id="hypothesis">Hypothesis<a class="headerlink" href="#hypothesis" title="Permanent link">&para;</a></h2>
+<p>Populations of Drosophila suzukii depend on food and shelter in the winter months. The animals also need certain levels of shadow and humidty during the summer months to prevent dehydration. Forests and bushes close to the vineyards may therefore support the survival of Drosophila suzukii by balancing extreme temperatures and providing diverse sources of food during winter time.</p>
 <h2 id="prediction-of-infested-areas">Prediction of Infested Areas<a class="headerlink" href="#prediction-of-infested-areas" title="Permanent link">&para;</a></h2>
 <p>We enriched the data provided by VitiMeteo, by adding information about the environmental surroundings of each station.
 First, we added the height information, which we extracted from ASTER. Second, we added the surrounding land usage
@@ -1497,9 +1499,6 @@ avoid this, we employ oversampling of the minority class using the Synthetic Min
 SMOTE picks pairs of nearest neighbors in the minority class and creates artificial instances by randomly placing a
 point on the line between the nearest neighbors until the data is balanced. Thus, allowing us to employ default machine
 learning algorithms.</p>
-<h2 id="hypothesenentwicklung">Hypothesenentwicklung<a class="headerlink" href="#hypothesenentwicklung" title="Permanent link">&para;</a></h2>
-<p>Hypothesenentwicklung zur Vermehrung der KEF aufgrund biologischer Erkenntnisse
-(v.a. abhängig von Umgebungstemperatur und Vegetation)</p>
 <h2 id="development-of-the-vector-data-pipeline-in-biggis">Development of the Vector Data Pipeline in BigGIS<a class="headerlink" href="#development-of-the-vector-data-pipeline-in-biggis" title="Permanent link">&para;</a></h2>
 <p>If you are working with geo data you are faced with two different kinds of data types: vector and raster data. Both have
 different requirements for collection, processing and storing of the data. The data provided by VitiMeteo
