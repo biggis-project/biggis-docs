@@ -82,10 +82,8 @@ endangered persons. This data can be captured by a [flying robot equipped with m
 sensors](../demos/optical_remote_sensing/index.md) (similar to SIGIS2) and flying autonomously over the scene of the
 accident. These so-called UAS (Unmanned Aerial Systems) continuously send data over a broad spectrum (visible light up
 to infrared or far infrared) of the underlying air layers to BigGIS. Hyperspectral sensors often generate data volumes
-in the gigabyte range for each photo flight and application, which must be integrated into the geodata described above.
-BigGIS shall use this data to perform an automated geocoding process and interpret the image data in an automatic
-process and integrate it into a database of the accident environment based on the archive data (OGC services and
-COPERNICUS data) named above (TODO: is this really implemented or should the last sentence be omitted?).
+in the gigabyte range for each photo flight and application. BigGIS should be able to handle these data volumes and
+offer suitable APIs to perform data analysis and integration at scale.
 
 Further images taken with the aid of the flying robots indicate the direction and velocity of propagation of pollutants
 (liquid, gaseous). This allows for forecasts of the diffusion and drift of the pollutants more accurately than with the
@@ -96,10 +94,10 @@ systems for that purpose. In the BigGIS project, [initial feasibility studies](.
 were carried out to test the substance identification of simulated noxious gas clouds with multi-spectral cameras for
 the visible range, which are suitable for use with small drones due to their relatively low weight.
 
-In order to be able to use such recon drones efficiently, the BigGIS project is working on the implementation of
-[autonomous, optimal flight planning](../demos/optimize-drones.md) by the drone itself.
+In order to make efficient use of such drones, the BigGIS project is offers an implementation of [autonomous, optimal
+flight planning](../demos/optimize-drones.md) by the drone itself.
 
-At the same time, models are being developed that are to be used for [predicting the propagation of a detected
+At the same time, models are being developed that can [predict the propagation of a detected gas
 cloud](../demos/gas-predict.md). The aim is to predict possible future scenarios for the spread of the pollutant, wind
 directions and strengths (e. g. taken from FeWIS), the geo-positions of neighbouring residential areas and their
 surrounding structure, for example via satellite images, geographical characteristics of the accident area, depending on
