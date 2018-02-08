@@ -19,35 +19,42 @@ available as a static website: [Docs Website].
 
 ## Before building the docs
 
-First of all, you need **python** and **pip** to be installed.
+First of all, you need **python 3** and **pip3** to be installed.
+(On some Linux distros, you need to use pip3 instead of pip)
+
 Using pip, you need to install the following packages:
 
 - **mkdocs** : Provides the executable command `mkdocs`.
 - **mkdocs-material** : A material design theme. See also [this page](http://squidfunk.github.io/mkdocs-material/).
 - **pyembed-markdown** : A markdown extension that allows for embedding Youtube videos in documents.
                          See also [this page](https://pyembed.github.io/usage/markdown/).
+- **mkdocs-awesome-pages-plugin** : This plugin automatically generates the pages section from directory structure.
+  (For more info see [this github repository](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin))
 
 !!! help "How to install as a user (recommended)"
     You can install the packages locally as a user into `~/.local/`
     ```sh
-    pip install --user mkdocs
-    pip install --user mkdocs-material
-    pip install --user pyembed-markdown
+    pip3 install --user mkdocs
+    pip3 install --user mkdocs-material
+    pip3 install --user pyembed-markdown
+    pip3 install --user mkdocs-awesome-pages-plugin
     ```
 
 !!! warning "How to install system-wide as root (not recommended)"
     ```sh
-    pip install mkdocs
-    pip install mkdocs-material
-    pip install pyembed-markdown
+    pip3 install mkdocs
+    pip3 install mkdocs-material
+    pip3 install pyembed-markdown
+    pip3 install mkdocs-awesome-pages-plugin
     ```
 
 !!! help "How to upgrade (as a user)"
     Make sure you are using **mkdocs version 0.17.2+**.
     ```sh
-    pip install -U --user mkdocs
-    pip install -U --user mkdocs-material
-    pip install -U --user pyembed-markdown
+    pip3 install -U --user mkdocs
+    pip3 install -U --user mkdocs-material
+    pip3 install -U --user pyembed-markdown
+    pip3 install -U --user mkdocs-awesome-pages-plugin
     ```
 
 ## Recommended editor
@@ -80,18 +87,7 @@ INFO    -  Cleaning site directory
 [I 171024 15:03:51 handlers:60] Start watching changes
 ```    
 
-You can now edit the markdown documents with the `docs/` directory.
-
-!!! warning
-    If you are renaming or creating new markdown files (`*.md` extension), you should also update the
-    `pages` configuration section in `mkdocs.yml`. Otherwise the update will not be reloaded in your browser.
-    This is a known limitation of mkdocs that will be addressed in future releases. Until then, there is
-    a small shell script that updates the `pages` section automatically. However, it only works on Unix systems.
-    ```sh
-    # refreshes the pages section
-    ./fix-mkdocs-pages.sh mkdocs.yml
-    ```
-      
+You can now edit the markdown documents within the `docs/` directory.
 
 ## Deployment
 
