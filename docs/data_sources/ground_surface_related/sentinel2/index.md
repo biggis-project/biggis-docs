@@ -1,5 +1,13 @@
 # Sentinel 2
 
+!!! todo
+    Adrian (EFTAS)
+    : optimize text
+
+Used in [Landuse classification](../../../demos/landuse.md) as input to classify landcover for the landuse analysis 
+
+## Description
+
 Sentinel 2 dataset is multispectral satellite raster data with 13 bands in the visible (RGB), near infrared (NIR) and short wave infrared (SWIR) spectrum.
 It can be updated approximately every 5 days. The Sentinel-2A and 2B satellites are operated by the European Space Agency (ESA) as part of the Copernicus Programme.
 
@@ -8,13 +16,12 @@ see: https://en.wikipedia.org/wiki/Sentinel-2
 ## Source of the data is the ESA Sentinel Portal
 
 - ESA: - https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products
-        - Access to Sentinel Data - https://sentinel.esa.int/web/sentinel/sentinel-data-access
-            - Copernicus Open Access Hub - https://scihub.copernicus.eu/dhus/#/home
+    - Access to Sentinel Data - https://sentinel.esa.int/web/sentinel/sentinel-data-access
+        - Copernicus Open Access Hub - https://scihub.copernicus.eu/dhus/#/home
 
 ### Alternative Sources
 - AWS: - https://aws.amazon.com/de/public-datasets/sentinel-2/
 
-It is used as input to classify landcover in [Landuse classification](../../../demos/landuse.md)
 
 ## Sentinel 2 bands and resolutions
 
@@ -61,15 +68,4 @@ It is used as input to classify landcover in [Landuse classification](../../../d
 | 1    | Coastal aerosol      | 0.443                   | 60             | 20             |
 | 9    | Water vapour         | 0.945                   | 60             | 20             |
 | 10   | SWIR – Cirrus        | 1.375                   | 60             | 20             |
-
-!!! todo
-    Adrian (EFTAS)
-    : Used in [Landuse classification](../../../demos/landuse.md) as input to classify landcover, needed for landuse analysis
-
-!!! note
-    - ESA: - https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products
-        - Access to Sentinel Data - https://sentinel.esa.int/web/sentinel/sentinel-data-access
-            - Copernicus Open Access Hub - https://scihub.copernicus.eu/dhus/#/home
-    - AWS: - https://aws.amazon.com/de/public-datasets/sentinel-2/
-    - Wiki: - https://en.wikipedia.org/wiki/Sentinel-2
 
