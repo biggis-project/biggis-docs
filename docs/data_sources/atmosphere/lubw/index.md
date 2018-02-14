@@ -12,7 +12,7 @@ The data is public and can be downloaded from the official web-page: https://www
 
 
     **Figure 1:** Webpage LUBW with distribution of air measurement stations .
-    ![Distribution of air measurement stations](LUBW Measurement.PNG)
+    ![Distribution of air measurement stations](biggis-docs/docs/data_sources/atmosphere/lubw/LUBW Measurement.PNG)
 
 ## LUBW REST API
 
