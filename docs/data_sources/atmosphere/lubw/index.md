@@ -1,15 +1,20 @@
 # LUBW Stations
 
-!!! TODO
-    Hannes (LUBW)
     
-## LUBW REST API
-
 ## Air Measurements
 
-## Mobile Air Measurements at FZI
+The LUBW mangages 50-80 aktive measurement stations across Baden-Württemberg, which provide hourly information on three main air pollutants:
+    -Nitrogen oxides
+    -Ozone 
+    -Particular matter (Feinstaub)
 
-  - the device was mounted at FZI in January 2017 for measuring air pressure, temperature, wind speed, precipitation, humidity and global       radiation.
-  - measurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz 
-  - measurement devices will be dismounted at April 2018
+The data is public and can be downloaded from the official web-page: https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte
 
+## LUBW REST API
+
+Air measurment data collected by the LUBW (Nirtogen oxides, Ozone, Particular Matter) is also provided by a REST-Service for the BigGVIS project. The service is not public and delivers the current measurement value of each measurement station and each pollutant in json format. The service also allows to aquire data on air pollutant from Bavaria, Thuringia, Saxony-Anhalt and Schleswig-holstein. Here the data source is the Federal Environmental Agency: https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q64FAA==&_k=ep8c63        
+
+
+## Meteorological Station at FZI
+
+In January 2017 a meteorological station was mounted at the roof of FZI for measuring air pressure, temperature, wind speed, precipitation, humidity and global radiation. The measurements serve for calibrating and validating the sense boxes. The measurement device will be dismounted in April 2018. 
