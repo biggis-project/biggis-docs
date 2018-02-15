@@ -10,9 +10,9 @@ The LUBW mangages 50-80 aktive measurement stations across Baden-Württemberg, w
 
 The data is public and can be downloaded from the official web-page: https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte
 
-
-    **Figure 1:** Webpage LUBW with distribution of air measurement stations .
-    ![Distribution of air measurement stations](LUBW_Measurement.PNG)
+!!! note ""
+  **Figure 1:** Webpage LUBW with distribution of air measurement stations .
+  ![Distribution of air measurement stations](./LUBW_Measurement.PNG)
 
 ## LUBW REST API
 
