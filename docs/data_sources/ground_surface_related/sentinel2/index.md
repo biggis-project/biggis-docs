@@ -4,12 +4,13 @@
     Adrian (EFTAS)
     : optimize text
 
-Used in [Landuse classification](../../../demos/landuse.md) as input to classify landcover for the landuse analysis 
+Used in [Landuse classification](../../../demos/landuse.md) as input to classify landcover for the landuse analysis
 
 ## Description
 
-Sentinel 2 dataset is multispectral satellite raster data with 13 bands in the visible (RGB), near infrared (NIR) and short wave infrared (SWIR) spectrum.
-It can be updated approximately every 5 days. The Sentinel-2A and 2B satellites are operated by the European Space Agency (ESA) as part of the Copernicus Programme.
+Sentinel 2 dataset is multispectral satellite raster data with 13 bands in the visible (RGB), near infrared (NIR) and
+short wave infrared (SWIR) spectrum. It can be updated approximately every 5 days. The Sentinel-2A and 2B satellites are
+operated by the European Space Agency (ESA) as part of the Copernicus Programme.
 
 see: https://en.wikipedia.org/wiki/Sentinel-2
 
