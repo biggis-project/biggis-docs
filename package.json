@@ -1,13 +1,17 @@
 {
-  "description": "BigGIS documentation using mkdocs. This is not a javascript project! We use this `package.json` only for convenience. We could have also used Makefile instead.",
+  "description": "BigGIS documentation using mkdocs. This is NOT a JavaScript project! We just use `package.json` for convenience. We could have also used Makefile instead.",
   "author": "Viliam Simko (viliam.simko@gmail.com)",
   "contributors": [
     "Alexander Gröschel",
     "Patrick Wiener ",
     "Adrian Klink",
-    "Julian Bruns",
     "Matthias Frank",
-    "Marc Gassenschmidt"
+    "Marc Gassenschmidt",
+    "Manuel Stein",
+    "Hannes Müller",
+    "Daniel Seebacher",
+    "Jochen Lutz",
+    "Johannes Kutterer"
   ],
   "private": true,
   "license": "MIT",
@@ -15,7 +19,6 @@
     "serve": "mkdocs serve",
     "browse": "browse http://localhost:8000",
     "build": "mkdocs build",
-    "fixpages": "./fix-mkdocs-pages.sh",
     "git-cred": "git config credential.helper store",
     "deploy": "mkdocs gh-deploy",
     "clean": "rimraf site/"
