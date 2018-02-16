@@ -603,13 +603,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lubw-rest-api" title="LUBW REST API" class="md-nav__link">
-    LUBW REST API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#air-measurements" title="Air Measurements" class="md-nav__link">
     Air Measurements
   </a>
@@ -617,8 +610,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mobile-air-measurements-at-fzi" title="Mobile Air Measurements at FZI" class="md-nav__link">
-    Mobile Air Measurements at FZI
+  <a href="#lubw-rest-api" title="LUBW REST API" class="md-nav__link">
+    LUBW REST API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meteorological-station-at-fzi" title="Meteorological Station at FZI" class="md-nav__link">
+    Meteorological Station at FZI
   </a>
   
 </li>
@@ -698,8 +698,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../ground_surface_related/highres_landcover/" title="Airbord High Resolution Land Cover" class="md-nav__link">
-      Airbord High Resolution Land Cover
+    <a href="../../ground_surface_related/highres_landcover/" title="Digital ortho-images (Arial photographs)" class="md-nav__link">
+      Digital ortho-images (Arial photographs)
     </a>
   </li>
 
@@ -1275,13 +1275,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lubw-rest-api" title="LUBW REST API" class="md-nav__link">
-    LUBW REST API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#air-measurements" title="Air Measurements" class="md-nav__link">
     Air Measurements
   </a>
@@ -1289,8 +1282,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mobile-air-measurements-at-fzi" title="Mobile Air Measurements at FZI" class="md-nav__link">
-    Mobile Air Measurements at FZI
+  <a href="#lubw-rest-api" title="LUBW REST API" class="md-nav__link">
+    LUBW REST API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meteorological-station-at-fzi" title="Meteorological Station at FZI" class="md-nav__link">
+    Meteorological Station at FZI
   </a>
   
 </li>
@@ -1311,18 +1311,31 @@
                 
                 
                 <h1 id="lubw-stations">LUBW Stations<a class="headerlink" href="#lubw-stations" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Hannes (LUBW)</p>
+<h2 id="air-measurements">Air Measurements<a class="headerlink" href="#air-measurements" title="Permanent link">&para;</a></h2>
+<p>The LUBW mangages 50-80 aktive measurement stations across Baden-Württemberg, which provide hourly information on three
+main air pollutants:</p>
+<ul>
+<li>Nitrogen oxides</li>
+<li>Ozone </li>
+<li>Particular matter (Feinstaub)</li>
+</ul>
+<p>The data is public and can be downloaded from the official web-page:
+<a href="https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte">https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte</a></p>
+<div class="admonition note">
+<p><strong>Figure 1:</strong> Webpage LUBW with distribution of air measurement stations.
+<img alt="Distribution of air measurement stations" src="./LUBW_Measurement.png" /></p>
 </div>
 <h2 id="lubw-rest-api">LUBW REST API<a class="headerlink" href="#lubw-rest-api" title="Permanent link">&para;</a></h2>
-<h2 id="air-measurements">Air Measurements<a class="headerlink" href="#air-measurements" title="Permanent link">&para;</a></h2>
-<h2 id="mobile-air-measurements-at-fzi">Mobile Air Measurements at FZI<a class="headerlink" href="#mobile-air-measurements-at-fzi" title="Permanent link">&para;</a></h2>
-<ul>
-<li>the device was mounted at FZI in January 2017 for measuring air pressure, temperature, wind speed, precipitation (was bedeuten die Parameter "strg_1" und "rlf_1").</li>
-<li>measurement results (*.mw1.xml) are pushed via xml-files on BigGIS SFTP Server at the University Konstanz </li>
-<li>measurement devices will be dismounted at April 2018</li>
-</ul>
+<p>Air measurment data collected by the LUBW (Nirtogen oxides, Ozone, Particular Matter) is also provided by a REST-Service
+for the BigGVIS project. The service is not public and delivers the current measurement value of each measurement
+station and each pollutant in json format. The service also allows to aquire data on air pollutant from Bavaria,
+Thuringia, Saxony-Anhalt and Schleswig-holstein.</p>
+<p>Here the data source is the Federal Environmental Agency:
+<a href="https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q64FAA==&amp;_k=ep8c63">https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q64FAA==&amp;_k=ep8c63</a></p>
+<h2 id="meteorological-station-at-fzi">Meteorological Station at FZI<a class="headerlink" href="#meteorological-station-at-fzi" title="Permanent link">&para;</a></h2>
+<p>In January 2017 a meteorological station was mounted at the roof of FZI for measuring air pressure, temperature, wind
+speed, precipitation, humidity and global radiation. The measurements serve for calibrating and validating the sense
+boxes. The measurement device will be dismounted in April 2018.</p>
                 
                   
                 

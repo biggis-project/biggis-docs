@@ -648,8 +648,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../highres_landcover/" title="Airbord High Resolution Land Cover" class="md-nav__link">
-      Airbord High Resolution Land Cover
+    <a href="../highres_landcover/" title="Digital ortho-images (Arial photographs)" class="md-nav__link">
+      Digital ortho-images (Arial photographs)
     </a>
   </li>
 
@@ -704,9 +704,90 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Sentinel 2
+      </label>
+    
     <a href="./" title="Sentinel 2" class="md-nav__link md-nav__link--active">
       Sentinel 2
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-of-the-data-is-the-esa-sentinel-portal" title="Source of the data is the ESA Sentinel Portal" class="md-nav__link">
+    Source of the data is the ESA Sentinel Portal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-sources" title="Alternative Sources" class="md-nav__link">
+    Alternative Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentinel-2-bands-and-resolutions" title="Sentinel 2 bands and resolutions" class="md-nav__link">
+    Sentinel 2 bands and resolutions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10m-bands" title="10m bands" class="md-nav__link">
+    10m bands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20m-bands" title="20m bands" class="md-nav__link">
+    20m bands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#60m-bands" title="60m bands" class="md-nav__link">
+    60m bands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1230,6 +1311,74 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-of-the-data-is-the-esa-sentinel-portal" title="Source of the data is the ESA Sentinel Portal" class="md-nav__link">
+    Source of the data is the ESA Sentinel Portal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-sources" title="Alternative Sources" class="md-nav__link">
+    Alternative Sources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentinel-2-bands-and-resolutions" title="Sentinel 2 bands and resolutions" class="md-nav__link">
+    Sentinel 2 bands and resolutions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10m-bands" title="10m bands" class="md-nav__link">
+    10m bands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20m-bands" title="20m bands" class="md-nav__link">
+    20m bands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#60m-bands" title="60m bands" class="md-nav__link">
+    60m bands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1244,27 +1393,274 @@
                 <h1 id="sentinel-2">Sentinel 2<a class="headerlink" href="#sentinel-2" title="Permanent link">&para;</a></h1>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
-<p>Bodo (EFTAS)
-<strong>Frage:</strong> welche Art sind die zur Verfügung gestellten Daten: Landnutzung oder Rohdaten zur Landbeschaffenheit?</p>
-</div>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
 <p>Adrian (EFTAS)
-: Used in <a href="../../../demos/landuse/">Landuse classification</a> as input to classify landcover, needed for landuse analysis</p>
+: optimize text</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>Used in <a href="../../../demos/landuse/">Landuse classification</a> as input to classify landcover for the landuse analysis</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Sentinel 2 dataset is multispectral satellite raster data with 13 bands in the visible (RGB), near infrared (NIR) and
+short wave infrared (SWIR) spectrum. It can be updated approximately every 5 days. The Sentinel-2A and 2B satellites are
+operated by the European Space Agency (ESA) as part of the Copernicus Programme.</p>
+<p>see: <a href="https://en.wikipedia.org/wiki/Sentinel-2">https://en.wikipedia.org/wiki/Sentinel-2</a></p>
+<h2 id="source-of-the-data-is-the-esa-sentinel-portal">Source of the data is the ESA Sentinel Portal<a class="headerlink" href="#source-of-the-data-is-the-esa-sentinel-portal" title="Permanent link">&para;</a></h2>
 <ul>
 <li>ESA: - <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products">https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products</a><ul>
+<li>Sentinel Tiles - <a href="https://sentinel.esa.int/documents/247904/1955685/S2A_OPER_GIP_TILPAR_MPC__20151209T095117_V20150622T000000_21000101T000000_B00.kml">Sentinel-2 tiling grid kml</a></li>
 <li>Access to Sentinel Data - <a href="https://sentinel.esa.int/web/sentinel/sentinel-data-access">https://sentinel.esa.int/web/sentinel/sentinel-data-access</a><ul>
 <li>Copernicus Open Access Hub - <a href="https://scihub.copernicus.eu/dhus/#/home">https://scihub.copernicus.eu/dhus/#/home</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="alternative-sources">Alternative Sources<a class="headerlink" href="#alternative-sources" title="Permanent link">&para;</a></h3>
+<ul>
 <li>AWS: - <a href="https://aws.amazon.com/de/public-datasets/sentinel-2/">https://aws.amazon.com/de/public-datasets/sentinel-2/</a></li>
 </ul>
-</div>
+<p>Example download (Tile 32UMU - 2016-05-05 - bands B2,B3,B4,B8 - Blue Green Red NIR )
+<div class="codehilite"><pre><span></span>wget http://sentinel-s2-l1c.s3.amazonaws.com/tiles/32/U/MU/2016/5/5/0/B02.jp2
+wget http://sentinel-s2-l1c.s3.amazonaws.com/tiles/32/U/MU/2016/5/5/0/B03.jp2
+wget http://sentinel-s2-l1c.s3.amazonaws.com/tiles/32/U/MU/2016/5/5/0/B04.jp2
+wget http://sentinel-s2-l1c.s3.amazonaws.com/tiles/32/U/MU/2016/5/5/0/B08.jp2
+</pre></div></p>
+<h2 id="sentinel-2-bands-and-resolutions">Sentinel 2 bands and resolutions<a class="headerlink" href="#sentinel-2-bands-and-resolutions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Bandname</th>
+<th>Central Wavelength (µm)</th>
+<th>Resolution (m)</th>
+<th>Bandwidth (nm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Coastal aerosol</td>
+<td>0.443</td>
+<td>60</td>
+<td>20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Blue</td>
+<td>0.490</td>
+<td>10</td>
+<td>65</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Green</td>
+<td>0.560</td>
+<td>10</td>
+<td>35</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Red</td>
+<td>0.665</td>
+<td>10</td>
+<td>30</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vegetation Red Edge</td>
+<td>0.705</td>
+<td>20</td>
+<td>15</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vegetation Red Edge</td>
+<td>0.740</td>
+<td>20</td>
+<td>15</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Vegetation Red Edge</td>
+<td>0.783</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>8</td>
+<td>NIR</td>
+<td>0.842</td>
+<td>10</td>
+<td>115</td>
+</tr>
+<tr>
+<td>8A</td>
+<td>Narrow NIR</td>
+<td>0.865</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Water vapour</td>
+<td>0.945</td>
+<td>60</td>
+<td>20</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SWIR – Cirrus</td>
+<td>1.375</td>
+<td>60</td>
+<td>20</td>
+</tr>
+<tr>
+<td>11</td>
+<td>SWIR</td>
+<td>1.610</td>
+<td>20</td>
+<td>90</td>
+</tr>
+<tr>
+<td>12</td>
+<td>SWIR</td>
+<td>2.190</td>
+<td>20</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10m-bands">10m bands<a class="headerlink" href="#10m-bands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Bandname</th>
+<th>Central Wavelength (µm)</th>
+<th>Resolution (m)</th>
+<th>Bandwidth (nm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Blue</td>
+<td>0.490</td>
+<td>10</td>
+<td>65</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Green</td>
+<td>0.560</td>
+<td>10</td>
+<td>35</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Red</td>
+<td>0.665</td>
+<td>10</td>
+<td>30</td>
+</tr>
+<tr>
+<td>8</td>
+<td>NIR</td>
+<td>0.842</td>
+<td>10</td>
+<td>115</td>
+</tr>
+</tbody>
+</table>
+<h3 id="20m-bands">20m bands<a class="headerlink" href="#20m-bands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Bandname</th>
+<th>Central Wavelength (µm)</th>
+<th>Resolution (m)</th>
+<th>Bandwidth (nm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Vegetation Red Edge</td>
+<td>0.705</td>
+<td>20</td>
+<td>15</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vegetation Red Edge</td>
+<td>0.740</td>
+<td>20</td>
+<td>15</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Vegetation Red Edge</td>
+<td>0.783</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>8A</td>
+<td>Narrow NIR</td>
+<td>0.865</td>
+<td>20</td>
+<td>20</td>
+</tr>
+<tr>
+<td>11</td>
+<td>SWIR</td>
+<td>1.610</td>
+<td>20</td>
+<td>90</td>
+</tr>
+<tr>
+<td>12</td>
+<td>SWIR</td>
+<td>2.190</td>
+<td>20</td>
+<td>180</td>
+</tr>
+</tbody>
+</table>
+<h3 id="60m-bands">60m bands<a class="headerlink" href="#60m-bands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Bandname</th>
+<th>Central Wavelength (µm)</th>
+<th>Resolution (m)</th>
+<th>Bandwidth (nm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Coastal aerosol</td>
+<td>0.443</td>
+<td>60</td>
+<td>20</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Water vapour</td>
+<td>0.945</td>
+<td>60</td>
+<td>20</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SWIR – Cirrus</td>
+<td>1.375</td>
+<td>60</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
