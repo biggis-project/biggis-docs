@@ -983,9 +983,50 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Stability of hotspots
+      </label>
+    
     <a href="./" title="Stability of hotspots" class="md-nav__link md-nav__link--active">
       Stability of hotspots
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-hotspots-for-geo-data" title="Calculation of hotspots for geo data" class="md-nav__link">
+    Calculation of hotspots for geo data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-hotspots-for-geotemporal-data" title="Calculation of hotspots for geotemporal data" class="md-nav__link">
+    Calculation of hotspots for geotemporal data
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1228,6 +1269,34 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-hotspots-for-geo-data" title="Calculation of hotspots for geo data" class="md-nav__link">
+    Calculation of hotspots for geo data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-of-hotspots-for-geotemporal-data" title="Calculation of hotspots for geotemporal data" class="md-nav__link">
+    Calculation of hotspots for geotemporal data
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1239,18 +1308,108 @@
               
                 
                 
-                <div class="admonition note">
+                <h1 id="stability-of-hotspots">Stability of hotspots<a class="headerlink" href="#stability-of-hotspots" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
 <p class="admonition-title">Responsible person for this section</p>
 <p>Marc Gassenschmidt</p>
-</div>
-<h1 id="stability-of-hotspots">Stability of hotspots<a class="headerlink" href="#stability-of-hotspots" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
 <ul>
 <li>comparison of different metrics (soh, jaccard, ...)</li>
 <li>comparison of different methods (gstar, focalgstar, ...)</li>
 </ul>
 </div>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>In <code>parameters.Setting</code> the folders have to be specified first.</p>
+<p><code>inputDirectoryCSV</code>:
+Folder for the CSV data. If data does not exist change to local folders.
+To download the data in demo. Execute the main program up to the line 16. 
+This will automatically download the New York Taxi Trip Data for January/February/March 2011-2016.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This dataset is approx. 30 GB</p>
+</div>
+<p>Results are stored in directories <code>ouptDirectory</code> and <code>statDirectory</code>.</p>
+<h2 id="calculation-of-hotspots-for-geo-data">Calculation of hotspots for geo data<a class="headerlink" href="#calculation-of-hotspots-for-geo-data" title="Permanent link">&para;</a></h2>
+<p>Execute <code>demo.Main'</code> for the calculation of hotspots and variation of the focal matrix/weight matrix and aggregation
+level.</p>
+<p>Scenario(variation of parameters between parent and child): Focal/Weight/Aggregationsstufe</p>
+<p>Results can be found at "outputDirectory"/"Scenaria"/focal_/"(true|false)"d3.csv
+For example: "outputDirectory"/Aggregation/focal_falsed3.csv</p>
+<div class="codehilite"><pre><span></span>F,W,Z,Down,Up
+0,1,2,0.0,0.06053811659192825
+0,1,3,0.0,0.10396039603960396
+</pre></div>
+
+<p>As well as the TIFs in folder <code>2016</code>.
+Can then be displayed in the following way using QGis:
+<img alt="Geo Example" src="./FocalGStarExampleSingelBand.png" /></p>
+<h2 id="calculation-of-hotspots-for-geotemporal-data">Calculation of hotspots for geotemporal data<a class="headerlink" href="#calculation-of-hotspots-for-geotemporal-data" title="Permanent link">&para;</a></h2>
+<p><code>scripts. MetricValidation</code> can be executed to perform the calculation for the geo-temporal space. Here the metrics
+<code>getisOrd. SoH#getMetrikResults</code> will be called. An <code>Array</code> with different test settings can be createdUnder
+<code>scripts.MetricValidation#getScenarioSettings</code>.</p>
+<p>The following will be computed:</p>
+<ul>
+<li>G* for 2016</li>
+<li>Various Metrics</li>
+<li>
+<p>G* for 2011-2015 including the percentage match</p>
+</li>
+<li>
+<p>Focal G* for 2016</p>
+</li>
+<li>Various Metrics</li>
+<li>Focal G* für 2011-2015 including the percentage match</li>
+</ul>
+<p>The path of the metrics results is defined in the method <code>importExport. PathFormatter#getResultDirectoryAndName</code>.</p>
+<p>For example "ouptDirectory"/GIS_Daten/2016/1/Metrik/focal/a4_w5_wT1_f20_fT2result.txt</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SoH_Down</td>
+<td>0.7549668874172185</td>
+</tr>
+<tr>
+<td>SoH_Up</td>
+<td>0.04694835680751175</td>
+</tr>
+<tr>
+<td>neighbours</td>
+<td>(1,0,1,0,1,0)</td>
+</tr>
+<tr>
+<td>jaccard</td>
+<td>0.5352112676056338</td>
+</tr>
+<tr>
+<td>percentual</td>
+<td>-1.0</td>
+</tr>
+<tr>
+<td>time_Down</td>
+<td>0.45329470205147443</td>
+</tr>
+<tr>
+<td>time_Up</td>
+<td>0.13020833333333334</td>
+</tr>
+<tr>
+<td>KL</td>
+<td>0.9963685899429499</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p>The paths to the TIFs are defined within the method <code>importExport.PathFormatter#getDirectoryAndName</code>.
+For example: "ouptDirectory"/GIS_Daten/Mulitbandtrue/2016/3/GStar/focal/a3_w6_wT2_f16_fT3_z1
+<img alt="Geotemporal Example" src="./FocalGStarExampleMultiband.png" /></p>
                 
                   
                 
