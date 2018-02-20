@@ -33,3 +33,7 @@ https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q
 In January 2017 a meteorological station was mounted at the roof of FZI for measuring air pressure, temperature, wind
 speed, precipitation, humidity and global radiation. The measurements serve for calibrating and validating the sense
 boxes. The measurement device will be dismounted in April 2018.
+
+!!! note ""
+    **Figure 2:** Weather station at the FZI 
+    ![Weather station FZI] (Wetterstation_FZI.jpg)
