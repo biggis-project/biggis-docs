@@ -35,5 +35,5 @@ speed, precipitation, humidity and global radiation. The measurements serve for 
 boxes. The measurement device will be dismounted in April 2018.
 
 !!! note ""
-    **Figure 2:** Weather station at the FZI 
-    ![Weather station FZI] (Wetterstation_FZI.jpg)
+**Figure 2:** Weather station at the FZI 
+![Weather station FZI](Wetterstation_FZI.jpg)
