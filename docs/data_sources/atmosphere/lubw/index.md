@@ -24,7 +24,7 @@ for the BigGIS project. The service is not public and delivers the current measu
 station and each pollutant in json format. The service also allows to aquire data on air pollutant from Bavaria,
 Thuringia, Saxony-Anhalt and Schleswig-holstein.
 
-Here the data source is the Federal Environmental Agency:
+Data on air pollutants across different states of germany can be acquired by the Federal Environmental Agency:
 https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q64FAA==&_k=ep8c63
 
 
