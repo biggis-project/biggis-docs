@@ -4,7 +4,7 @@
 ## Air Measurements
 
 The LUBW mangages 50-80 aktive measurement stations across Baden-Württemberg, which provide hourly information on three
-main air pollutants:
+main air pollutants (see **Figure 1**):
 
   - Nitrogen oxides
   - Ozone 
@@ -31,7 +31,7 @@ https://www.umweltbundesamt.de/daten/luftbelastung/aktuelle-luftdaten#/start?s=q
 ## Meteorological Station at FZI
 
 In January 2017 a meteorological station was mounted at the roof of FZI for measuring air pressure, temperature, wind
-speed, precipitation, humidity and global radiation. The measurements serve for calibrating and validating the sense
+speed, precipitation, humidity and global radiation  (see **Figure 2**). The measurements serve for calibrating and validating the sense
 boxes. The measurement device will be dismounted in April 2018.
 
 !!! note ""
