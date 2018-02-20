@@ -20,7 +20,7 @@ https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte
 ## LUBW REST API
 
 Air measurment data collected by the LUBW (Nirtogen oxides, Ozone, Particular Matter) is also provided by a REST-Service
-for the BigGVIS project. The service is not public and delivers the current measurement value of each measurement
+for the BigGIS project. The service is not public and delivers the current measurement value of each measurement
 station and each pollutant in json format. The service also allows to aquire data on air pollutant from Bavaria,
 Thuringia, Saxony-Anhalt and Schleswig-holstein.
 
