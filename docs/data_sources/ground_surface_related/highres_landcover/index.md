@@ -7,4 +7,4 @@ green, red, infra-red) and a spatial resolution of 20cm (see **Figure 1 B**). Th
 
 !!! note ""
 **Figure 1:** A) Overview on image aquisition years B) False color composite (R= infra-red, G=green, B=blue) of digital ortho-images with 20cm spatial resolution.
-    ![digital ortho image example](Ortho_image_example.PNG)
+    ![digital ortho image example](Ortho_image.png)
