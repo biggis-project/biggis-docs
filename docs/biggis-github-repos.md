@@ -42,6 +42,7 @@
 <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet"></link>
 <style>
 th a * { float:right; color: white }
+.md-header a, .md-tabs a {color: white}
 html { font-size: 62.5%; } /* mkdocs vs vuetify fix */
 .comma-list > span:not(:last-child):after {
   content: ", ";
