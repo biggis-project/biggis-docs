@@ -96,7 +96,7 @@
     
         
     <url>
-     <loc>/data_sources/</loc>
+     <loc>/data-sources/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -108,7 +108,7 @@
     </url>
         
     <url>
-     <loc>/data_sources/biosphere/vitimeteo/</loc>
+     <loc>/data-sources/biosphere/vitimeteo/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -184,13 +184,13 @@
     </url>
         
     <url>
-     <loc>/demos/enviro_car/</loc>
+     <loc>/demos/enviro-car/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/hotspot_analysis/</loc>
+     <loc>/demos/hotspot-analysis/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -202,25 +202,25 @@
     </url>
         
     <url>
-     <loc>/demos/optical_remote_sensing/</loc>
+     <loc>/demos/optical-remote-sensing/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/stability_of_hotspots/</loc>
+     <loc>/demos/soh-eval/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/traffic_incidents/</loc>
+     <loc>/demos/traffic-incidents/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/demos/uhi_visual_analysis/</loc>
+     <loc>/demos/uhi-visual-analysis/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -288,19 +288,19 @@
     
         
     <url>
-     <loc>/scenarios/01_city/</loc>
+     <loc>/scenarios/smartcity/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/scenarios/02_bos/</loc>
+     <loc>/scenarios/disaster/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/scenarios/03_env/</loc>
+     <loc>/scenarios/environment/</loc>
      <lastmod>2018-02-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
