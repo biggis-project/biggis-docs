@@ -13,8 +13,7 @@ main air pollutants (see **Figure 1**):
 The data is public and can be downloaded from the official web-page:
 https://www.lubw.baden-wuerttemberg.de/luft/messwerte-immissionswerte#karte
 
-!!! note ""
-    **Figure 1:** Webpage LUBW with distribution of air measurement stations.
+!!! info "Figure 1: Webpage LUBW with distribution of air measurement stations."
     ![Distribution of air measurement stations](LUBW_Measurement.png)
 
 ## LUBW REST API
@@ -34,6 +33,5 @@ In January 2017 a meteorological station was mounted at the roof of FZI for meas
 speed, precipitation, humidity and global radiation  (see **Figure 2**). The measurements serve for calibrating and validating the sense
 boxes. The measurement device will be dismounted in April 2018.
 
-!!! note ""
-**Figure 2:** Weather station at the FZI 
-![Weather station FZI](Wetterstation_FZI.jpg)
+!!! info "Figure 2: Meteorological Station at FZI"
+    ![Weather station FZI](Wetterstation_FZI.jpg)
