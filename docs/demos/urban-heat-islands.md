@@ -12,7 +12,7 @@
     
 - Temperaturinseln in Karlsruhe und anderen Städten
 - Temperaturdaten: Volunteered geographic data (z.B. wunderground.com)
-- Korrelation zwischen Bereichen in verschiedenen Städten mit ähnlichem Temperaturverlauf -> Zugang zu Ursachen für Temperaturentwicklung
+- Korrelation zwischen Bereichen in verschiedenen Städten mit ähnlichem Temperaturverlauf --> Zugang zu Ursachen für Temperaturentwicklung
 
 - Vorstellung der Heat-Islands-Analyse
 - Wetterstationen
@@ -25,4 +25,5 @@
 
 
 ## Related Scenarios
-- [Smart City](../scenarios/01_city.md)
+
+  - [Smart City](../scenarios/smartcity/index.md)

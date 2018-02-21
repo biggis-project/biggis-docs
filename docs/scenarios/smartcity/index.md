@@ -3,4 +3,4 @@
 
 # Smart City
 
-![Smart City Scenario Icon](img/scen-smartcity.svg)
+![Smart City Scenario Icon](scen-smartcity.svg)

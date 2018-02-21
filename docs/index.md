@@ -12,9 +12,9 @@ pipeline.
 |:---------------:|:----------------------------:|:--------------------:|
 | [![][img-sma]][link-sma] | [![][img-env]][link-env]   | [![][img-dis]][link-dis]
 
-[img-sma]: scenarios/img/scen-smartcity.svg
-[img-env]: scenarios/img/scen-environment.svg
-[img-dis]: scenarios/img/scen-disaster.svg
+[img-sma]: scenarios/smartcity/scen-smartcity.svg
+[img-env]: scenarios/environment/scen-environment.svg
+[img-dis]: scenarios/disaster/scen-disaster.svg
 
 [link-sma]: scenarios/01_city "Smart City"
 [link-env]: scenarios/03_env "Environmental Management"

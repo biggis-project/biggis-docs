@@ -28,8 +28,7 @@ standard procedures. It was found that building differences just show interefere
 row of Picture 1). Good results were given by a Halcon referencing based on sub pixel accuracy (row two in Picture 1).
 Using difference analysis on about 25 pictures show a clear signature of the exhaling methane (row three in Picture 1).
 
-!!! note ""
-    **Picture 1:** Gas cloud detection using thermal imageries
+!!! info "Picture 1: Gas cloud detection using thermal imageries"
     ![Gas cloud detection](gas_cloud_detection.jpg)
  
 ## Spectral Analysis of Gas Clouds
@@ -74,10 +73,10 @@ asphalt, not on the green strip or the tree due to the fact that the
 method cannot distinguish chlorophyll from the plants from
 chlorophyll of the cloud.
 
-!!! TODO
-    Wie ist die obige Erklärung zu verstehen? Geht es hier darum die Bereiche mit zeitlich konstant hohem
-    TCI-Wert (= nicht die Chlorophyll-Wolke) auszuschließen?
+!!! info "TODO: Chemical cloud detection"
     ![Chemical cloud detection](chemical_cloud_detection.jpg)
+    Wie ist die obige Erklärung zu verstehen? Geht es hier darum die Bereiche mit zeitlich konstant hohem TCI-Wert (=
+    nicht die Chlorophyll-Wolke) auszuschließen?
 
 
 Picture 3 now shows the composition of the referenced and analyzed
@@ -85,8 +84,7 @@ pictures with all three stages of the moving chlorophyll cloud. One now can
 see the grass strip and the tree in addition to the gas cloud over the
 asphalt.
 
-!!! TODO
-    **Picture 3:** Eingefärbte Elemente detailierter erklären.
+!!! info "Picture 3: TODO: Eingefärbte Elemente detailierter erklären."
     ![Composition](composition.jpg)
 
 ### Logistic Regression Classification of Cloud Reflectance
@@ -112,11 +110,11 @@ The reflectance spectra of evaporated mixtures of fog fluid with chlorophyll not
 chlorophyll absorption minimum. Consequently, chlorophyll is not uniformly evaporated with the given setup but ejected
 in irregular chlorophyll bursts instead. Therefore, a TCI pre-evaluation was carried through on each pixel of all
 recordings of clouds of evaporated chlorophyll mixtures, in order to label positive chlorophyll spectra as training and
-test data for the logistic regression. After spectra inspection of several samples a threshold of TCI = 0.05 was chosen
-above which the spectra was labeled chlorophyll-containing. Spectra of evaporated chlorophyll mixtures with TCI < 0.05
-were not regarded in the further analysis. The spectra of clouds of evaporated pure fog fluids provided the negative
-chlorophyll data. The table below shows the count of spectra for the different cloud categories that was used for
-training for the logistic regression classifiers in the next subsections.
+test data for the logistic regression. After spectra inspection of several samples a threshold of $TCI = 0.05$ was
+chosen above which the spectra was labeled chlorophyll-containing. Spectra of evaporated chlorophyll mixtures with
+$TCI < 0.05$ were not regarded in the further analysis. The spectra of clouds of evaporated pure fog fluids provided the
+negative chlorophyll data. The table below shows the count of spectra for the different cloud categories that was used
+for training for the logistic regression classifiers in the next subsections.
 
 |                | Fog Fluid 1  | Fog Fluid 2 |
 |: ------------  |:------------:|:-----------:|
@@ -135,7 +133,8 @@ Based on this data different logistic regression classifiers were trained.
 
 #### Chlorophyll vs. Non-Chlorophyll
 
-![pureFogVsChloro](fog_vs_chloro.png)
+!!! info "Figure TODO: Pure Fog vs Chlorophyl"
+    ![pureFogVsChloro](fog_vs_chloro.png)
 
 First a logistic regression classifier was trained to distinguish between spectra of clouds containing chlorophyll and
 pure fog fluid, irrespective of the type of the fog fluid. The figure above displays typical spectra for a cloud aof
@@ -151,12 +150,12 @@ $$
 
 The out-of-sample test also showed very reliable results:
 
-!!! note "Test samples with fog fluid 1"
+Test samples with fog fluid 1:
 
-    |                   | Classified No-Chloro.  | Classified Chloro. |
-    |: ---------------- |:----------------------:|:------------------:|
-    | Sample No-Chloro. |                   2500 |                  0 |
-    | Sample Chloro.    |                      0 |               2500 |
+|                   | Classified No-Chloro.  | Classified Chloro. |
+|: ---------------- |:----------------------:|:------------------:|
+| Sample No-Chloro. |                   2500 |                  0 |
+| Sample Chloro.    |                      0 |               2500 |
 
 $$
 Acc_{test} = 1
@@ -168,12 +167,12 @@ Recall_{test} = 1
 F1_{test} = 1
 $$
 
-!!! note "Test samples with fog fluid 2"
+Test samples with fog fluid 2:
 
-    |                   | Classified No-Chloro.  | Classified Chloro.
-    |: -----------------|:----------------------:|:-------------------:
-    | Sample No-Chloro. |                   2500 |                  0
-    | Sample Chloro.    |                      0 |               2463
+|                   | Classified No-Chloro.  | Classified Chloro.
+|: -----------------|:----------------------:|:-------------------:
+| Sample No-Chloro. |                   2500 |                  0
+| Sample Chloro.    |                      0 |               2463
 
 $$
 Acc_{test} = 1
@@ -194,12 +193,12 @@ $$
 Acc_{train} = 1
 $$
 
-!!! note "Out-of-sample performance"
+Out-of-sample performance:
 
-    |                    | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
-    |: ------------------|:-----------------------:|:----------------------:|
-    | Sample Fog Fluid 1 |                    2452 |                     48 |
-    | Sample Fog Fluid 2 |                       1 |                   2499 |
+|                    | Classified Fog Fluid 1  | Classified Fog Fluid 2 |
+|: ------------------|:-----------------------:|:----------------------:|
+| Sample Fog Fluid 1 |                    2452 |                     48 |
+| Sample Fog Fluid 2 |                       1 |                   2499 |
 
 $$
 Acc_{test} = 0.99

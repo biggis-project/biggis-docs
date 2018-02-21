@@ -25,7 +25,7 @@
             that persists the events from the Kafka queue into MySQL or PostgreSQL exists,
             could be extended to support other JDBC databases
     - should be sent to https://opensensemap.org/ (TODO:Jochen)
-    - Outlier filtering node (kafka->flink->kafka)
+    - Outlier filtering node (kafka --> flink --> kafka)
 
 - Deployment
     - 34 LoRa sensor units should be deployed, Julian handles locations, external organizations etc.

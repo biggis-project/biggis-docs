@@ -39,7 +39,9 @@ F,W,Z,Down,Up
 
 As well as the TIFs in folder `2016`.
 Can then be displayed in the following way using QGis:
-![Geo Example](FocalGStarExampleSingelBand.png)
+
+!!! info "Focal G* example - single band"
+    ![Geo Example](FocalGStarExampleSingelBand.png)
 
 ## Calculation of hotspots for geotemporal data
 
@@ -57,9 +59,9 @@ The following will be computed:
   - Various Metrics
   - Focal G* für 2011-2015 including the percentage match
 
-The path of the metrics results is defined in the method `importExport. PathFormatter#getResultDirectoryAndName`.
+The path of the metrics results is defined in the method `importExport.PathFormatter#getResultDirectoryAndName`.
 
-For example "ouptDirectory"/GIS_Daten/2016/1/Metrik/focal/a4_w5_wT1_f20_fT2result.txt
+For example `{ouptDirectory}/GIS_Daten/2016/1/Metrik/focal/a4_w5_wT1_f20_fT2result.txt`
 
 Metric     | Value
 -----------|-------
@@ -74,5 +76,7 @@ KL         | 0.9963685899429499
 ...        | ...
 
 The paths to the TIFs are defined within the method `importExport.PathFormatter#getDirectoryAndName`.
-For example: "ouptDirectory"/GIS_Daten/Mulitbandtrue/2016/3/GStar/focal/a3_w6_wT2_f16_fT3_z1
-![Geotemporal Example](FocalGStarExampleMultiband.png)
+
+!!! info "Focal G* example  (multi-band)"
+    `{ouptDirectory}/GIS_Daten/Mulitbandtrue/2016/3/GStar/focal/a3_w6_wT2_f16_fT3_z1`
+    ![Geotemporal Example](FocalGStarExampleMultiband.png)

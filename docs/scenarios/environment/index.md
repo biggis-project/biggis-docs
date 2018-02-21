@@ -5,14 +5,14 @@
     - Andreas Abecker (Disy)
     - Johannes Kutterer (Disy)
 
-![Environment Scenario Icon](img/scen-environment.svg)
+![Environment Scenario Icon](scen-environment.svg)
 
 In the globalized world invasive species are a growing concern. Certain invasive species can lead to ecological damage
 and commercial losses and eventually health problem for humans and animals. The geographical nature of these phenomena
 advise the analysis, evaluation and visualization with geographic information system (GIS).
 
 !!! info "Drosophila suzukii (male)"
-    ![Drosophila suzukii](img/spotted_winged_drosophila.jpg)
+    ![Drosophila suzukii](spotted_winged_drosophila.jpg)
     Clearly recognizable is the dot on the wing. The spotted wing indicates that the picture
     shows an male individual. (Photo: Judy Gallagher, http://www.flickr.com/photos/52450054@N04/15675291741/,
     [Creative Commons Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/))
@@ -24,7 +24,7 @@ arround the world. In the last 10 years they could be observed in Swisserland an
 In other parts of the world e.g. the United States this spread has also been observed.
 
 !!! info "Visualisation in Disy Cadenza"
-    ![Distribution of Drosophila suzukii Eggs in 2016](img/distribution_2016.png)
+    ![Distribution of Drosophila suzukii Eggs in 2016](distribution_2016.png)
     Distribution of egg finds of the Drosophila suzukii in 2016 in south west Germany
 
 Unlike other Drosophila, it infests non-rotting and healthy fruits and is therefore of concern to fruit growers, such as

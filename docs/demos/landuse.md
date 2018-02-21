@@ -10,7 +10,7 @@
 - We have the following datasets:
     - An existing Landuse vector dataset
     - Orthorectified Aerial images (Digital Ortho Photos = DOP) 
-    - Satellite images (SAT), e.g. [Sentinel2](../data_sources/ground_surface_related/sentinel2/index.md) 10m
+    - Satellite images (SAT), e.g. [Sentinel 2](../data-sources/ground/sentinel2/index.md) 10m
 - We want to select / extract landcover classes from landuse classes.
 - We want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.
     - see section [Support Vector Machines](../methods/support_vector_machine.md)
@@ -57,5 +57,5 @@ biggis.landuse.api.writeRddToLayer(rdd, LayerId(layerName, zoom))
 - Using Other Classififiers
 
 ## Related Scenarios
-- [Environment](../scenarios/03_env.md)
-- [Smart City](../scenarios/01_city.md)
+- [Environment](../scenarios/environment/index.md)
+- [Smart City](../scenarios/smartcity/index.md)
