@@ -201,19 +201,20 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
 
     With the following hack, you can create a nice looking caption rendered under a figure.
     
-        !!! note ""
-            **Figure:** Here comes some multi-line caption.
+        !!! info "Figure: Here comes a single line title"
+            ![](path/to/image.svg)
+            
+            Here comes some additional multi-line text.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
-            
-            ![](path/to/image.svg)
 
-    !!! note ""
-        **Figure:** Here comes some multi-line caption.
+    !!! info "Figure: Here comes a single line title"
+        ![](http://www.gstatic.com/webp/gallery/1.jpg)
+        
+        Here comes some additional multi-line text.
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Morbi et iaculis mi, ut interdum risus. Nulla facilisis viverra felis tincidunt sagittis.
         
-        ![](scenarios/img/scen-disaster.svg)
 
 ??? summary "Tables"
 
@@ -322,10 +323,12 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
     
          <style>.special img {height:32px; vertical-align:middle}</style>
          <div class="special">
-           [![](scenarios/img/scen-smartcity.svg) Smart City](scenarios/01_city)
+           [![](https://www.gstatic.com/webp/gallery3/5.png)](https://developers.google.com/speed/webp/gallery2)
+           Click on this icon
          </div>
 
      <style>.special img {height:32px; vertical-align:middle}</style>
      <div class="special">
-       [![](scenarios/img/scen-smartcity.svg) Smart City](scenarios/01_city)
+       [![](https://www.gstatic.com/webp/gallery3/5.png)](https://developers.google.com/speed/webp/gallery2)
+       Click on this icon
      </div>
