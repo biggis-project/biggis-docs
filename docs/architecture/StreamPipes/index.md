@@ -6,8 +6,16 @@
 
 ![StreamPipes Logo](https://www.streampipes.org/images/streampipes-logo-left.png)
 
-- [Official Documentation](https://docs.streampipes.org/user_guide/features/)
+With StreamPipes, it is possible to build distributed pipelines to process your data in real-time without development
+effort by providing an easy-to-use graphical user interface on top of existing stream processing frameworks.
+Pipelines consist of data streams, real-time event processors and data sinks. StreamPipes provides a system that
+can be used by domain experts with little to no technical understanding to explore and analyse their data.
+The whole system is designed in a way that it is flexible and can be easily extended by adding data streams,
+data processors or data sinks. A community edition of StreamPipes is available under the Apache Licence. 
+
 - [Features Overview](https://www.streampipes.org/en/features)
+- [Official Documentation](https://docs.streampipes.org/)
+
 
 
 ## BigGIS extensions
