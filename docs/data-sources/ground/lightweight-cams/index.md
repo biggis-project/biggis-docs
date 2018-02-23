@@ -1,5 +1,8 @@
 # Lightweight Camera Systems
 
+!!! info "Figure 1: Sony QX1 mounted on UAV Dual Camera Gimbal together with FLIR"
+    ![UAV with DualCam Gimbal Sony QX1 / FLIR ](UAV_DualCam.JPG)
+
 ## RGB
 
 !!! todo
@@ -48,6 +51,9 @@ implementation with the following features:
 
 Further information:
 <https://www.sony.de/electronics/wechselobjektivkameras/ilce-qx1-body-kit>
+
+!!! info "Figure 2: Sony QX1 mounted on UAV Dual Camera Gimbal together with FLIR"
+    ![DualCam Gimbal Sony QX1 /FLIR](DualCam_Gimbal.JPG)
 
 
 ## IR
@@ -144,6 +150,11 @@ FLIR Vue Pro R: <http://www.flir.de/suas/content/?id=70728>
 TaAx Technology ThermalCapture Grabber:
 <http://thermalcapture.com/thermalcapture-grabber-usb/>
 
+!!! info "Figure 3: FLIR Vue Pro R with TEAX Thermal Capture Grabber USB"
+    ![FLIR Vue Pro R TEAX Thermal Capture Grabber USB (side)](FLIR_side.JPG)
+    ![FLIR Vue Pro R TEAX Thermal Capture Grabber USB (back)](FLIR_TCG.JPG)
+    ![Odroid XU4](Odroid_XU4.jpg)
+
 ## Hyperspectral
 
 !!! todo
@@ -183,3 +194,7 @@ Further information:
 
 Today’s model: S 185 Hyperspectral SE FireflEYE:
 <http://cubert-gmbh.com/uhd-185-firefly/>
+
+!!! info "Figure 4: Hyperspectral Cubert UHD 186 Firefly"
+    ![Hyperspectral Cubert UHD 186 Firefly (1)](Cubert_1.JPG)
+    ![Hyperspectral Cubert UHD 186 Firefly (2)](Cubert_2.JPG)
