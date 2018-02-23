@@ -189,7 +189,7 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
         ![Image "alt" description](path/to/image.svg)
     
     
-    ![Sample image](scenarios/img/scen-smartcity.svg)
+    ![Sample image](http://www.gstatic.com/webp/gallery/1.jpg)
     
     See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
     
