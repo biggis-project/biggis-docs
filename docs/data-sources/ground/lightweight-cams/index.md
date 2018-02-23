@@ -1,11 +1,9 @@
 # Lightweight Camera Systems
 
-## RGB
+## RGB camera information
 
 !!! todo
     Bodo
-
-RGB camera information
 
 As RGB camera systems the SONY Alpha series was used in the
 BigGIS-Project. These consumer market cameras are used due to the fact
@@ -15,11 +13,9 @@ Alpha 1 camera in the first flying campaign the project switched to the
 Sony QX1 ILCE (Alpha series) because of several reasons which are tested
 in the second campaign:
 
--   No camera body (reduction of camera weight)
--   WiFi connection (no straps / cables which can influence the
-    gimbal position)
--   Exchangeable objectives (lenses) for a perfect fit to the focal
-    length of the IR camera
+  - No camera body (reduction of camera weight)
+  - WiFi connection (no straps / cables which can influence the gimbal position)
+  - Exchangeable objectives (lenses) for a perfect fit to the focal length of the IR camera
 
 Specifications and relation to the flight height over ground:
 
@@ -40,38 +36,33 @@ Specifications and relation to the flight height over ground:
 To program the Sony QX1 one can use Sony Capture API, which is an C++
 implementation with the following features:
 
--   Based on SONY DSC-QX10
--   LINUX / Python Wrapper
--   SSDP Client to establish the WiFi connection
--   HTTP commands
--   JSON format
+  - Based on SONY DSC-QX10
+  - LINUX / Python Wrapper
+  - SSDP Client to establish the WiFi connection
+  - HTTP commands
+  - JSON format
 
 Further information:
 <https://www.sony.de/electronics/wechselobjektivkameras/ilce-qx1-body-kit>
 
 
-## IR
+## Thermal IR camera information
 
 !!! todo
     Bodo
-
-
-
-Thermal IR camera information
 
 Like with the RGB camera the project used two types of IR cameras which
 could easily be mounted on a UAV. In the first flying campaign we
 performed a test using the OPTRIS PI LightWeight camera which is a very
 small thermal image camera with appropriate specifications:
 
--   Operation system: Linux
--   Full radiometric IR inspection
--   Radiometric data saved on a CuBOX industry computer during the
-    flight
--   Optical resolution 640 x 480 pixel
--   Weight (camera + companion PC): 325 g
--   Size 46 x 56 x 90 mm
--   Spectral range 7,5 to 13 µm
+  - Operation system: Linux
+  - Full radiometric IR inspection
+  - Radiometric data saved on a CuBOX industry computer during the flight
+  - Optical resolution 640 x 480 pixel
+  - Weight (camera + companion PC): 325 g
+  - Size 46 x 56 x 90 mm
+  - Spectral range 7,5 to 13 µm
 
 The possibility to safe real radiometric data was of special interest
 for the later on analysis. During the work it got clear, that the real
@@ -87,14 +78,13 @@ UAV applications. Two facts speaks for the Vue Pro: 1.) There is a full
 access to the raw radiometric data and 2.) there are a choice of three
 different lenses (9 mm, 13 mm, 19 mm).
 
--   Operation system: Linux
--   Full radiometric IR inspection
--   Radiometric data saved as raw data on any companion PC during the
-    flight
--   Optical resolution 640 x 512 pixel
--   Weight (only camera): 92,1 – 113,4 g depending on configuration
--   Size 44,4 x 57,4 x 67 mm
--   Spectral range 7,5 to 13,5 µm
+  - Operation system: Linux
+  - Full radiometric IR inspection
+  - Radiometric data saved as raw data on any companion PC during the flight
+  - Optical resolution 640 x 512 pixel
+  - Weight (only camera): 92,1 – 113,4 g depending on configuration
+  - Size 44,4 x 57,4 x 67 mm
+  - Spectral range 7,5 to 13,5 µm
 
 The FLIR Vue pro R was used together with the so called TeAx Thermal
 Capture device which stores the radiometric raw data on a storage device
@@ -102,11 +92,11 @@ like a USB stick, a memory chip or a companion PC. Within the project
 the camera was combined with a ODROID PC. The features of the
 ThermalCapture device:
 
--   Store Digital RAW data on a storage device
--   No transmission errors in images
--   Provides position and time (GPS) based on UAV downlink
--   Weigh 45 g including housing
--   Easy post-production due to free ThermalCapture software
+  - Store Digital RAW data on a storage device
+  - No transmission errors in images
+  - Provides position and time (GPS) based on UAV downlink
+  - Weigh 45 g including housing
+  - Easy post-production due to free ThermalCapture software
 
 RAW Data is transformed into images during post-processing with the help
 of included software ThermoViewer. The needed parameters for conversion
@@ -144,12 +134,11 @@ FLIR Vue Pro R: <http://www.flir.de/suas/content/?id=70728>
 TaAx Technology ThermalCapture Grabber:
 <http://thermalcapture.com/thermalcapture-grabber-usb/>
 
-## Hyperspectral
+
+## Hyperspectral camera information
 
 !!! todo
     Alex
-
-Hyperspectral camera information
 
 The reason to choose the Cubert UHD 186 Firefly as a specific
 hyperspectral camera depends on the scenario. It was aimed to detect
@@ -169,11 +158,11 @@ chlorophyll in the smoke to what the Firefly is able.
 
 Specifications:
 
--   wavelength range: 450nm – 950nm 125 channels
--   resolution: 8 nm @ 532 nm sampling 4 nm
--   pan resolution: 1 Megapixel 2500 spectra / cube
--   elongated version, weight 490g
--   power consumption 8W @ 12V
+  - wavelength range: 450nm – 950nm 125 channels
+  - resolution: 8 nm @ 532 nm sampling 4 nm
+  - pan resolution: 1 Megapixel 2500 spectra / cube
+  - elongated version, weight 490g
+  - power consumption 8W @ 12V
 
 To mount the camera to an UAV ist was necessary to build a special
 gimbal. In both flight campaign only vertical photographs was
