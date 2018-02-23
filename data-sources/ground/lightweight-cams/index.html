@@ -493,8 +493,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../architecture/Semantic/" title="Semantic" class="md-nav__link">
-      Semantic
+    <a href="../../../architecture/Semantics/" title="Semantics" class="md-nav__link">
+      Semantics
     </a>
   </li>
 
@@ -699,22 +699,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rgb" title="RGB" class="md-nav__link">
-    RGB
+  <a href="#rgb-camera-information" title="RGB camera information" class="md-nav__link">
+    RGB camera information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ir" title="IR" class="md-nav__link">
-    IR
+  <a href="#thermal-ir-camera-information" title="Thermal IR camera information" class="md-nav__link">
+    Thermal IR camera information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hyperspectral" title="Hyperspectral" class="md-nav__link">
-    Hyperspectral
+  <a href="#hyperspectral-camera-information" title="Hyperspectral camera information" class="md-nav__link">
+    Hyperspectral camera information
   </a>
   
 </li>
@@ -1111,6 +1111,66 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../methods/exasol_docker/" title="Exasol Docker Support" class="md-nav__link">
+      Exasol Docker Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../methods/exasol_geo/" title="Exasol GEO data and spatial indexes" class="md-nav__link">
+      Exasol GEO data and spatial indexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../methods/exasol_udf/" title="Exasol UDF framework" class="md-nav__link">
+      Exasol UDF framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../methods/exasol_virtual_schema/" title="Exasol virtual schema" class="md-nav__link">
+      Exasol virtual schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../methods/exasol_websockets/" title="Exasol JSON over WebSockets API" class="md-nav__link">
+      Exasol JSON over WebSockets API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../methods/focal_getis_ord/" title="Focal Getis-ord" class="md-nav__link">
       Focal Getis-ord
     </a>
@@ -1287,22 +1347,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rgb" title="RGB" class="md-nav__link">
-    RGB
+  <a href="#rgb-camera-information" title="RGB camera information" class="md-nav__link">
+    RGB camera information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ir" title="IR" class="md-nav__link">
-    IR
+  <a href="#thermal-ir-camera-information" title="Thermal IR camera information" class="md-nav__link">
+    Thermal IR camera information
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hyperspectral" title="Hyperspectral" class="md-nav__link">
-    Hyperspectral
+  <a href="#hyperspectral-camera-information" title="Hyperspectral camera information" class="md-nav__link">
+    Hyperspectral camera information
   </a>
   
 </li>
@@ -1323,20 +1383,448 @@
                 
                 
                 <h1 id="lightweight-camera-systems">Lightweight Camera Systems<a class="headerlink" href="#lightweight-camera-systems" title="Permanent link">&para;</a></h1>
-<h2 id="rgb">RGB<a class="headerlink" href="#rgb" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Figure 1: Sony QX1 mounted on UAV Dual Camera Gimbal together with FLIR</p>
+<p><img alt="UAV with DualCam Gimbal Sony QX1 / FLIR " src="./UAV_DualCam.JPG" /></p>
+</div>
+<h2 id="rgb-camera-information">RGB camera information<a class="headerlink" href="#rgb-camera-information" title="Permanent link">&para;</a></h2>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <p>Bodo</p>
 </div>
-<h2 id="ir">IR<a class="headerlink" href="#ir" title="Permanent link">&para;</a></h2>
+<p>As RGB camera systems the SONY Alpha series was used in the
+BigGIS-Project. These consumer market cameras are used due to the fact
+that the optical specification fits to the need of the project and that
+they are wildly used to be mounted to a UAV/UAS. After using a Sony
+Alpha 1 camera in the first flying campaign the project switched to the
+Sony QX1 ILCE (Alpha series) because of several reasons which are tested
+in the second campaign:</p>
+<ul>
+<li>No camera body (reduction of camera weight)</li>
+<li>WiFi connection (no straps / cables which can influence the gimbal position)</li>
+<li>Exchangeable objectives (lenses) for a perfect fit to the focal length of the IR camera</li>
+</ul>
+<p>Specifications and relation to the flight height over ground:</p>
+<table>
+<thead>
+<tr>
+<th><strong>SONY ILCE QX 1</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sensor format</strong></td>
+<td>23,2</td>
+<td>15,4</td>
+<td>[mm²] according to manufacturer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>5456</td>
+<td>3632</td>
+<td>pixel  according to manufacturer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>4,25</td>
+<td>4,24</td>
+<td>size of pixels in µm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>focal length (mm)</strong></td>
+<td>28,0</td>
+<td>28,0</td>
+<td>28,0</td>
+<td>28,0</td>
+<td></td>
+<td>19,0</td>
+<td>19,0</td>
+<td>19,0</td>
+<td>19,0</td>
+</tr>
+<tr>
+<td>pixel size (μm)</td>
+<td>4,3</td>
+<td>4,3</td>
+<td>4,3</td>
+<td>4,3</td>
+<td></td>
+<td>4,3</td>
+<td>4,3</td>
+<td>4,3</td>
+<td>4,3</td>
+</tr>
+<tr>
+<td>cruising altitude (m)</td>
+<td>25,0</td>
+<td>50,0</td>
+<td>75,0</td>
+<td>100,0</td>
+<td></td>
+<td>25,0</td>
+<td>50,0</td>
+<td>75,0</td>
+<td>100,0</td>
+</tr>
+<tr>
+<td>ground resolution (cm)</td>
+<td>0,4</td>
+<td>0,8</td>
+<td>1,1</td>
+<td>1,5</td>
+<td></td>
+<td>0,6</td>
+<td>1,1</td>
+<td>1,7</td>
+<td>2,2</td>
+</tr>
+<tr>
+<td>ground coverage X (m)</td>
+<td>20,7</td>
+<td>41,4</td>
+<td>62,1</td>
+<td>82,8</td>
+<td></td>
+<td>30,5</td>
+<td>61,0</td>
+<td>91,5</td>
+<td>122,0</td>
+</tr>
+<tr>
+<td>ground Coverage  Y (m)</td>
+<td>13,8</td>
+<td>27,6</td>
+<td>41,3</td>
+<td>55,1</td>
+<td></td>
+<td>20,3</td>
+<td>40,6</td>
+<td>60,9</td>
+<td>81,2</td>
+</tr>
+</tbody>
+</table>
+<p>To program the Sony QX1 one can use Sony Capture API, which is an C++
+implementation with the following features:</p>
+<ul>
+<li>Based on SONY DSC-QX10</li>
+<li>LINUX / Python Wrapper</li>
+<li>SSDP Client to establish the WiFi connection</li>
+<li>HTTP commands</li>
+<li>JSON format</li>
+</ul>
+<p>Further information:
+<a href="https://www.sony.de/electronics/wechselobjektivkameras/ilce-qx1-body-kit">https://www.sony.de/electronics/wechselobjektivkameras/ilce-qx1-body-kit</a></p>
+<div class="admonition info">
+<p class="admonition-title">Figure 2: Sony QX1 mounted on UAV Dual Camera Gimbal together with FLIR</p>
+<p><img alt="DualCam Gimbal Sony QX1 /FLIR" src="./DualCam_Gimbal.JPG" /></p>
+</div>
+<h2 id="thermal-ir-camera-information">Thermal IR camera information<a class="headerlink" href="#thermal-ir-camera-information" title="Permanent link">&para;</a></h2>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <p>Bodo</p>
 </div>
-<h2 id="hyperspectral">Hyperspectral<a class="headerlink" href="#hyperspectral" title="Permanent link">&para;</a></h2>
+<p>Like with the RGB camera the project used two types of IR cameras which
+could easily be mounted on a UAV. In the first flying campaign we
+performed a test using the OPTRIS PI LightWeight camera which is a very
+small thermal image camera with appropriate specifications:</p>
+<ul>
+<li>Operation system: Linux</li>
+<li>Full radiometric IR inspection</li>
+<li>Radiometric data saved on a CuBOX industry computer during the flight</li>
+<li>Optical resolution 640 x 480 pixel</li>
+<li>Weight (camera + companion PC): 325 g</li>
+<li>Size 46 x 56 x 90 mm</li>
+<li>Spectral range 7,5 to 13 µm</li>
+</ul>
+<p>The possibility to safe real radiometric data was of special interest
+for the later on analysis. During the work it got clear, that the real
+specification (calibration etc.) for the thermal calculation could only
+be accessed by using the original OPTRIS software. It was encrypted and
+the data was stored in an additional line in the thermal images. OPTRIS
+gave no access to that line which make it difficult to transfer the data
+to an image processing software.</p>
+<p>Therefore, the second campaign was performed by using a FLIR Vue Pro R,
+were the “R” stands for “radiometric”. The Vue Pro also was designed for
+UAV applications. Two facts speaks for the Vue Pro: 1.) There is a full
+access to the raw radiometric data and 2.) there are a choice of three
+different lenses (9 mm, 13 mm, 19 mm).</p>
+<ul>
+<li>Operation system: Linux</li>
+<li>Full radiometric IR inspection</li>
+<li>Radiometric data saved as raw data on any companion PC during the flight</li>
+<li>Optical resolution 640 x 512 pixel</li>
+<li>Weight (only camera): 92,1 – 113,4 g depending on configuration</li>
+<li>Size 44,4 x 57,4 x 67 mm</li>
+<li>Spectral range 7,5 to 13,5 µm</li>
+</ul>
+<p>The FLIR Vue pro R was used together with the so called TeAx Thermal
+Capture device which stores the radiometric raw data on a storage device
+like a USB stick, a memory chip or a companion PC. Within the project
+the camera was combined with a ODROID PC. The features of the
+ThermalCapture device:</p>
+<ul>
+<li>Store Digital RAW data on a storage device</li>
+<li>No transmission errors in images</li>
+<li>Provides position and time (GPS) based on UAV downlink</li>
+<li>Weigh 45 g including housing</li>
+<li>Easy post-production due to free ThermalCapture software</li>
+</ul>
+<p>RAW Data is transformed into images during post-processing with the help
+of included software ThermoViewer. The needed parameters for conversion
+can be detected automatically. Those parameters can be changed
+afterwards manually by the user, to receive the result for every case.</p>
+<p>Of special interest is the possibility to choose from three different
+focal lengths / lenses. So it could be fitted to the focal length of the
+SONY QX1 which ensure a nearly similar ground coverage:</p>
+<table>
+<thead>
+<tr>
+<th><strong>FLIR Vue Pro R</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sensor format</strong></td>
+<td>10,9</td>
+<td>8,70</td>
+<td>[mm²] according to manufacturer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>640</td>
+<td>512</td>
+<td>pixel  according to manufacturer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>17</td>
+<td>17</td>
+<td>size of pixels in µm</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>focal length (mm)</strong></td>
+<td>13,0</td>
+<td>13,0</td>
+<td>13,0</td>
+<td>13,0</td>
+<td></td>
+<td>9,0</td>
+<td>9,0</td>
+<td>9,0</td>
+<td>9,0</td>
+</tr>
+<tr>
+<td>pixel size (μm)</td>
+<td>17,0</td>
+<td>17,0</td>
+<td>17,0</td>
+<td>17,0</td>
+<td></td>
+<td>17,0</td>
+<td>17,0</td>
+<td>17,0</td>
+<td>17,0</td>
+</tr>
+<tr>
+<td>cruising altitude (m)</td>
+<td>25,0</td>
+<td>50,0</td>
+<td>75,0</td>
+<td>100,0</td>
+<td></td>
+<td>25,0</td>
+<td>50,0</td>
+<td>75,0</td>
+<td>100,0</td>
+</tr>
+<tr>
+<td>ground resolution (cm)</td>
+<td>3,3</td>
+<td>6,5</td>
+<td>9,8</td>
+<td>13,1</td>
+<td></td>
+<td>4,7</td>
+<td>9,4</td>
+<td>14,2</td>
+<td>18,9</td>
+</tr>
+<tr>
+<td>ground coverage X (m)</td>
+<td>20,9</td>
+<td>41,8</td>
+<td>62,8</td>
+<td>83,7</td>
+<td></td>
+<td>30,2</td>
+<td>60,4</td>
+<td>90,7</td>
+<td>120,9</td>
+</tr>
+<tr>
+<td>ground coverage  Y (m)</td>
+<td>16,7</td>
+<td>33,5</td>
+<td>50,2</td>
+<td>67,0</td>
+<td></td>
+<td>24,2</td>
+<td>48,4</td>
+<td>72,5</td>
+<td>96,7</td>
+</tr>
+</tbody>
+</table>
+<p>Within the project the lens with the 13 mm focal length was chosen for
+it has nearly the same ground coverage them the 28 mm lens of the SONY
+QX1.</p>
+<p>Further information:</p>
+<p>Optris PI LightWeight: <a href="https://www.optris.de/pi-lightweight-netbox">https://www.optris.de/pi-lightweight-netbox</a></p>
+<p>FLIR Vue Pro R: <a href="http://www.flir.de/suas/content/?id=70728">http://www.flir.de/suas/content/?id=70728</a></p>
+<p>TaAx Technology ThermalCapture Grabber:
+<a href="http://thermalcapture.com/thermalcapture-grabber-usb/">http://thermalcapture.com/thermalcapture-grabber-usb/</a></p>
+<div class="admonition info">
+<p class="admonition-title">Figure 3: FLIR Vue Pro R with TEAX Thermal Capture Grabber USB</p>
+<p><img alt="FLIR Vue Pro R TEAX Thermal Capture Grabber USB (back, side) and Odroid XU4" src="./combined-FLIR.jpg" /></p>
+</div>
+<h2 id="hyperspectral-camera-information">Hyperspectral camera information<a class="headerlink" href="#hyperspectral-camera-information" title="Permanent link">&para;</a></h2>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <p>Alex</p>
+</div>
+<p>The reason to choose the Cubert UHD 186 Firefly as a specific
+hyperspectral camera depends on the scenario. It was aimed to detect
+“chemicals” in a smoke cloud during a fire event. This proof of concept
+should give a realistic scenario with a CBRN incident: A fire produces
+smoke and with help of the convective process a chemical is distributed
+into the environment.</p>
+<p>Due to the fact that it was not allowed to choose toxic / dangerous
+chemicals it was decided to use a fire training smoke
+(1,2-Propylenglycol) for a standard smoke machine. The training smoke
+was contaminated with at least 40 % of chlorophyll from the food industry
+which usually is uses as food colorant and a not toxic substance.</p>
+<p>Therefore, an appropriate hyperspectral camera had to be able to find
+chlorophyll in the smoke to what the Firefly is able.</p>
+<p>Specifications:</p>
+<ul>
+<li>wavelength range: 450nm – 950nm 125 channels</li>
+<li>resolution: 8 nm @ 532 nm sampling 4 nm</li>
+<li>pan resolution: 1 Megapixel 2500 spectra / cube</li>
+<li>elongated version, weight 490g</li>
+<li>power consumption 8W @ 12V</li>
+</ul>
+<p>To mount the camera to an UAV ist was necessary to build a special
+gimbal. In both flight campaign only vertical photographs was
+collected.</p>
+<p>Further information:</p>
+<p>Today’s model: S 185 Hyperspectral SE FireflEYE:
+<a href="http://cubert-gmbh.com/uhd-185-firefly/">http://cubert-gmbh.com/uhd-185-firefly/</a></p>
+<div class="admonition info">
+<p class="admonition-title">Figure 4: Hyperspectral Cubert UHD 186 Firefly</p>
+<p><img alt="Hyperspectral Cubert UHD 186 Firefly" src="./combined-Cubert.jpg" /></p>
 </div>
                 
                   

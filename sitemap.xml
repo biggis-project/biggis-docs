@@ -86,7 +86,7 @@
     </url>
         
     <url>
-     <loc>/architecture/Semantic/</loc>
+     <loc>/architecture/Semantics/</loc>
      <lastmod>2018-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -237,6 +237,36 @@
         
     <url>
      <loc>/methods/</loc>
+     <lastmod>2018-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/methods/exasol_docker/</loc>
+     <lastmod>2018-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/methods/exasol_geo/</loc>
+     <lastmod>2018-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/methods/exasol_udf/</loc>
+     <lastmod>2018-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/methods/exasol_virtual_schema/</loc>
+     <lastmod>2018-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/methods/exasol_websockets/</loc>
      <lastmod>2018-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
