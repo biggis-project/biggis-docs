@@ -566,6 +566,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Semantic/" title="Semantic" class="md-nav__link">
+      Semantic
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../StreamPipes/" title="StreamPipes" class="md-nav__link">
       StreamPipes
     </a>
@@ -1356,48 +1368,54 @@
 <p>Related repository is <a href="https://github.com/biggis-project/biggis-infrastructure">https://github.com/biggis-project/biggis-infrastructure</a></p>
 </div>
 <p><img alt="BigGIS Architecture" src="./biggis-architecture.png" /></p>
-<p>The BigGIS architecture, as depicted in the picture above, consists of several layers that are briefly discussed in the
-following.</p>
+<p>The BigGIS architecture, as depicted in the picture above, consists of several layers that are 
+briefly discussed in the following.</p>
 <h2 id="modelling">Modelling<a class="headerlink" href="#modelling" title="Permanent link">&para;</a></h2>
-<p><a href="./../StreamPipes">StreamPipes</a>
-tbd.</p>
+<p>Pipelines in BigGIS are modelled leveraging <a href="./../StreamPipes">StreamPipes</a>. StreamPipes allows to 
+transform and analyse sensor landscape and other data streams with less programming effort. We 
+extend StreamPipes to support geo-spatial data analytics, e.g. raster data.</p>
 <h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h2>
-<p>Analytics and processing</p>
-<ul>
-<li><a href="https://flink.apache.org/">Apache Flink</a></li>
-<li><a href="https://spark.apache.org/">Apache Spark</a> featuring <a href="https://geotrellis.io/">GeoTrellis</a></li>
-<li>Other Languages and Notebooks: R, Java, ...
-tbd.</li>
-</ul>
+<p>To process and analyze the geo-spatial data, BigGIS relies on multiple big data analytics 
+frameworks. While <a href="https://flink.apache.org/">Apache Flink</a> is mainly used for sensor data,
+some application use cases need to process geo-spatial raster or vector data in batches as well. 
+Thus, we integrate <a href="https://spark.apache.org/">Apache Spark</a> featuring <a href="https://geotrellis.io/">GeoTrellis</a> into our architectural design in order to process geographic data. GeoTrellis provides a 
+number of operations to manipulate raster data including map algebra operations. In addition, we 
+provide other data science notebooks (RStudio, Jupyter) to exploratively analyze the data.</p>
 <h2 id="middleware-connectors">Middleware &amp; Connectors<a class="headerlink" href="#middleware-connectors" title="Permanent link">&para;</a></h2>
-<p>Data and control flow, connectors are nodes in StreamPipes that enable the user to load various data sources in Apache
-Kafka or to tbd.</p>
+<p><a href="https://kafka.apache.org/">Apache Kafka</a> is used as the primary message broker. It handles the 
+communication between the data processing elements, i.e. nodes, within the analytics pipelines. 
+Besides, <a href="http://activemq.apache.org/">ActiveMQ</a> is another message broker which can be used in 
+addition to Kafka. Currently, the main purpose is to provide an endpoint for the websocket 
+connections required by the real-time dashboard of the StreamPipes UI.</p>
 <h2 id="storage-backends">Storage Backends<a class="headerlink" href="#storage-backends" title="Permanent link">&para;</a></h2>
 <p>Internally, BigGIS uses a variety of different storage backends for designated purposes.</p>
 <ul>
-<li><a href="http://hadoop.apache.org/">HDFS</a> for GeoTrellis catalog</li>
-<li><a href="https://www.exasol.com/de/">Exasol</a> for xx</li>
-<li><a href="http://couchdb.apache.org/">CouchDB</a> for StreamPipes user and pipeline configurations</li>
-<li><a href="http://rdf4j.org/">Sesame</a> for semantic framework of StreamPipes
-tbd.</li>
+<li><a href="http://hadoop.apache.org/">HDFS</a> for GeoTrellis catalog and Spark jobs.</li>
+<li><a href="https://www.exasol.com/de/">Exasol</a> for fast access of stored data.</li>
+<li><a href="http://couchdb.apache.org/">CouchDB</a> for pipelines, users and visualizations created in the 
+dashboard.</li>
+<li><a href="http://rdf4j.org/">RDF4J</a> (formerly Sesame) as a semantic backend of StreamPipes.</li>
 </ul>
 <h2 id="container-management">Container Management<a class="headerlink" href="#container-management" title="Permanent link">&para;</a></h2>
-<p>Running these containers in a distributed manner requires a wide variety of technologies, that must be integrated and
-managed throughout their lifecycle. To easily deploy our containers, our infrastructure is designed to run on
-<a href="http://rancher.com/">Rancher</a> as our container management platform. Rancher enables organizations to run and manage
-Docker and Kubernetes in production, providing four major components, that are:</p>
+<p>Running these containers in a distributed manner requires a wide variety of technologies, that 
+must be integrated and
+managed throughout their lifecycle. To easily deploy our containers, our infrastructure is 
+designed to run on
+<a href="http://rancher.com/">Rancher</a> as our container management platform. Rancher enables 
+organizations to run and manage Docker and Kubernetes in production, providing four major 
+components, that are:</p>
 <ol>
 <li>Infrastructure Orchestration</li>
 <li>Container Orchestration and Scheduling</li>
 <li>Application Catalog</li>
 <li>Authentication</li>
 </ol>
-<p>That way, it is fairly easy to set up a distributed Rancher cluster in a couple of minutes (see the official
-<a href="http://rancher.com/docs/rancher/v1.6/en/">documentation</a> for more information).</p>
+<p>That way, it is fairly easy to set up a distributed Rancher cluster in a couple of minutes (see 
+the official <a href="http://rancher.com/docs/rancher/v1.6/en/">documentation</a> for more information).</p>
 <h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
-<p>BigGIS infrastructure leverages <a href="https://www.bw-cloud.org/">bwCloud</a> Infrastructure-as-a-Service (IaaS) offer powered by
-Openstack. See the section <a href="../Platform_bwCloud/">bwCloud</a> for additional information about the infrastructure
-setup.</p>
+<p>BigGIS infrastructure leverages <a href="https://www.bw-cloud.org/">bwCloud</a> Infrastructure-as-a-Service 
+(IaaS) offer powered by Openstack. See the section <a href="../Platform_bwCloud/">bwCloud</a> for 
+additional information about the infrastructure setup.</p>
                 
                   
                 
