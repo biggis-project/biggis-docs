@@ -141,9 +141,7 @@ TaAx Technology ThermalCapture Grabber:
 <http://thermalcapture.com/thermalcapture-grabber-usb/>
 
 !!! info "Figure 3: FLIR Vue Pro R with TEAX Thermal Capture Grabber USB"
-    ![FLIR Vue Pro R TEAX Thermal Capture Grabber USB (side)](FLIR_side.JPG)
-    ![FLIR Vue Pro R TEAX Thermal Capture Grabber USB (back)](FLIR_TCG.JPG)
-    ![Odroid XU4](Odroid_XU4.jpg)
+    ![FLIR Vue Pro R TEAX Thermal Capture Grabber USB (back, side) and Odroid XU4](combined-FLIR.jpg)
 
 
 ## Hyperspectral camera information
@@ -185,5 +183,4 @@ Today’s model: S 185 Hyperspectral SE FireflEYE:
 <http://cubert-gmbh.com/uhd-185-firefly/>
 
 !!! info "Figure 4: Hyperspectral Cubert UHD 186 Firefly"
-    ![Hyperspectral Cubert UHD 186 Firefly (1)](Cubert_1.JPG)
-    ![Hyperspectral Cubert UHD 186 Firefly (2)](Cubert_2.JPG)
+    ![Hyperspectral Cubert UHD 186 Firefly](combined-Cubert.jpg)
