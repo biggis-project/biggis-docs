@@ -1,4 +1,4 @@
-# Digital ortho-images (Arial photographs)
+# Digital ortho-images (Aerial photographs)
 
 Digital ortho-images were aquired across different flight campaigns between 2013 and 2015 building a mosaic that covers
 Baden-Württemberg entirely (see **Figure 1 A**). The georeferenced images come with 4 spectral bands (blue,
