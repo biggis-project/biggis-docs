@@ -79,7 +79,7 @@ possible pollutants and the prediction of their temporal and spatial dispersion 
 In addition to the previously available geo and meteorological data, the BigGIS project will use optical, airborne data
 to record traffic infrastructure, existing buildings, protected goods and, if necessary, the identification of
 endangered persons. This data can be captured by a [flying robot equipped with multi-spectral or hyperspectral
-sensors](../../demos/optical-remote-sensing/index.md) (similar to SIGIS2) and flying autonomously over the scene of the
+sensors](../../demos/optical-remote-sensing) (similar to SIGIS2) and flying autonomously over the scene of the
 accident. These so-called UAS (Unmanned Aerial Systems) continuously send data over a broad spectrum (visible light up
 to infrared or far infrared) of the underlying air layers to BigGIS. Hyperspectral sensors often generate data volumes
 in the gigabyte range for each photo flight and application. BigGIS should be able to handle these data volumes and
@@ -91,12 +91,12 @@ usual approaches (Halpaap's club, MET or Memplex club etc.). In principle, it is
 substances or reaction products in pollutant pools or noxious gas clouds by means of absorption spectra in the infrared
 and far infrared range. Sensors such as Hygas, SIGIS 2 and CHARM are already available as ground stated or aviated
 systems for that purpose. In the BigGIS project, [initial feasibility
-studies](../../demos/optical-remote-sensing/index.md) were carried out to test the substance identification of simulated
+studies](../../demos/optical-remote-sensing) were carried out to test the substance identification of simulated
 noxious gas clouds with multi-spectral cameras for the visible range, which are suitable for use with small drones due
 to their relatively low weight.
 
 In order to make efficient use of such drones, the BigGIS project is offers an implementation of [autonomous, optimal
-flight planning](../../demos/optimize-drones.md) by the drone itself.
+flight planning](../../demos/drone-flight-planning) by the drone itself.
 
 At the same time, models are being developed that can [predict the propagation of a detected gas
 cloud](../../demos/gas-predict.md). The aim is to predict possible future scenarios for the spread of the pollutant,
