@@ -80,12 +80,6 @@
     </url>
         
     <url>
-     <loc>/architecture/Platform_bwCloud/</loc>
-     <lastmod>2018-02-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/architecture/Semantics/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
@@ -93,6 +87,12 @@
         
     <url>
      <loc>/architecture/StreamPipes/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/architecture/platform-bwcloud/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -166,12 +166,6 @@
     </url>
         
     <url>
-     <loc>/demos/landuse/</loc>
-     <lastmod>2018-02-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/demos/urban-heat-islands/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
@@ -197,6 +191,12 @@
         
     <url>
      <loc>/demos/invasive-species/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/demos/landuse/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>

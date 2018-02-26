@@ -481,6 +481,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../Semantics/" title="Semantics" class="md-nav__link">
+      Semantics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../StreamPipes/" title="StreamPipes" class="md-nav__link">
+      StreamPipes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -522,30 +546,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Semantics/" title="Semantics" class="md-nav__link">
-      Semantics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../StreamPipes/" title="StreamPipes" class="md-nav__link">
-      StreamPipes
-    </a>
   </li>
 
         
@@ -927,18 +927,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../demos/landuse/" title="Landuse classification" class="md-nav__link">
-      Landuse classification
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
       Urban Heat Islands
     </a>
@@ -989,6 +977,18 @@
   <li class="md-nav__item">
     <a href="../../demos/invasive-species/" title="Invasive species" class="md-nav__link">
       Invasive species
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/landuse/" title="Landuse classification" class="md-nav__link">
+      Landuse classification
     </a>
   </li>
 
@@ -1352,20 +1352,18 @@
               
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Patrick Wiener</p>
-</div>
-<h1 id="bwcloud">bwCloud<a class="headerlink" href="#bwcloud" title="Permanent link">&para;</a></h1>
+                <h1 id="bwcloud">bwCloud<a class="headerlink" href="#bwcloud" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="./bwcloud_logo.svg" /></p>
-<p>Within the scope of BigGIS, we build our platform on top of the <a href="https://www.bw-cloud.org/">bwCloud</a> offering. The Baden-Württemberg Cloud (bwCloud) 
-provides virtual machines (servers) for members of science- and research institutions in Baden-Württemberg (e.g. students and 
-staff-members) much like Amazon’s EC2. Building on the openstack-platform the infrastructure is currently operated by four sites 
-in Baden-Württemberg: the Universities of Mannheim, Karlsruhe, Ulm and Freiburg.</p>
+<p>Within the scope of BigGIS, we build our platform on top of the <a href="https://www.bw-cloud.org/">bwCloud</a> offering. The
+Baden-Württemberg Cloud (bwCloud) provides virtual machines (servers) for members of science- and research institutions
+in Baden-Württemberg (e.g. students and staff-members) much like Amazon’s EC2. Building on the openstack-platform the
+infrastructure is currently operated by four sites in Baden-Württemberg: the Universities of Mannheim, Karlsruhe, Ulm
+and Freiburg.</p>
 <h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
-<p>Currently, we run a total of <strong>nine</strong> Virtual Machines (VM), serving different kinds of purposes, that are providing (1) 
-a single-node Rancher Testing environment, (2) a multi-node Rancher Cluster environment, and (3) infrastructure supporting services (e.g. private
-Docker registry for sensitive images, OpenVPN server to connect to the virtual private cloud).</p>
+<p>Currently, we run a total of <strong>nine</strong> Virtual Machines (VM), serving different kinds of purposes, that are providing (1)
+a single-node Rancher Testing environment, (2) a multi-node Rancher Cluster environment, and (3) infrastructure
+supporting services (e.g. private Docker registry for sensitive images, OpenVPN server to connect to the virtual private
+cloud).</p>
 <table>
 <thead>
 <tr>
@@ -1414,13 +1412,17 @@ Docker registry for sensitive images, OpenVPN server to connect to the virtual p
 </tr>
 </tbody>
 </table>
-<p>Rancher is deployed as a set of Docker containers. Running Rancher involves launching at least two containers. One container as the management <strong>server</strong> and another container on a node as an <strong>agent</strong>.</p>
+<p>Rancher is deployed as a set of Docker containers. Running Rancher involves launching at least two containers. One
+container as the management <strong>server</strong> and another container on a node as an <strong>agent</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Figure: Container-based Rancher Setup in bwCloud.</p>
 <p><img alt="" src="./bwcloud_infrastructure.png" /></p>
-<blockquote>
-<p><strong>Figure:</strong>
-Container-based Rancher Setup in bwCloud.</p>
-</blockquote>
-<p>Whilte the server runs on a single VM, we set up a single node agent for development and testing environment as well as a five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the dev/testing as well as the cluster environment make use of a the network file system (NFS) in order to overcome the problem of strictly coupeling a service to a node. While this is only mandatory in the cluster environment, it makes sense to setup the dev/testing environment as an exact clone to have the same workflows within Rancher.</p>
+</div>
+<p>While the server runs on a single VM, we set up a single node agent for development and testing environment as well as a
+five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the
+dev/testing as well as the cluster environment make use of a the network file system (NFS) in order to overcome the
+problem of strictly coupeling a service to a node. While this is only mandatory in the cluster environment, it makes
+sense to setup the dev/testing environment as an exact clone to have the same workflows within Rancher.</p>
                 
                   
                 
@@ -1439,7 +1441,7 @@ Container-based Rancher Setup in bwCloud.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Components/" title="Components" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../StreamPipes/" title="StreamPipes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1448,19 +1450,19 @@ Container-based Rancher Setup in bwCloud.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Components
+                StreamPipes
               </span>
             </div>
           </a>
         
         
-          <a href="../Semantics/" title="Semantics" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../data-sources/" title="Datasets in BigGIS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Semantics
+                Datasets in BigGIS
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
