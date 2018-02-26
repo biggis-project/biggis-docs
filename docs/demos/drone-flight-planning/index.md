@@ -1,6 +1,6 @@
 # Optimal Flight Plan for Drones
 
-Motivation
+## Motivation
 
 Drones equipped with remote sensing systems are rapidly becoming a valuable tool for emergency response units as they
 can quickly provide reliable information after an incident. However, controlling these vehicles and interpreting the

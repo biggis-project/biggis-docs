@@ -129,6 +129,7 @@ aggregation and various details-on-demand data visualizations.
 
 !!! info "Figure 3: Overview of the Drosophigator application"
     ![Trips per sensor](drosophigator_new.png)
+    
     Drosophigator enables experts to perform a visual analysis of spatio-temporal event predictions.
 
 ## Use Cases
@@ -140,12 +141,14 @@ of environmental factors by Pelton et al.
 
 !!! info "Figure 4: Overview glyph-visualization of all vineyards in Baden-Wuerttemberg."
     ![Trips per sensor](more_kef_in_late_summer_new.png)
+    
     The development over the time-segments shows that the severity of infestation and the certainty of our prediction
     increases in late summer and stays high until the end of the year. This corroborates the hypothesis of the JKI.
 
 
 !!! info "Figure 5: Comparison of the vineyards contained in two neighboring cells."
     ![Trips per sensor](less_kef_in_winter_new2.png)
+    
     The upper cell (purple) exhibits an earlier infestation by D. suzukii that the lower cell (brown). The parallel
     coordinates plot shows, that the vineyards in the upper cell have around 10% more surrounding woodland (_Wald_) than
     those in the lower cell. This finding strongly supports the hypothesis of Pelton et al.
@@ -163,6 +166,7 @@ design decisions.
 
 !!! info "Figure 7: Evaluation of system feedback of all participants (n=37)"
     ![Trips per sensor](evaluation_all.png)
+    
     Shown are the responses of the participants on questions regarding the visualization design (_V1, V2, V3_), the
     interaction design (_I1, I2_) and the analysis capabilities (_A1, A2, A3, A4_) of our system Drosophigator.
 

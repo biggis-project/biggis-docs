@@ -1,6 +1,3 @@
-!!! note "Responsible person for this section"
-    Julian Bruns
-
 # Heatstress Routing App
 
 !!! note
