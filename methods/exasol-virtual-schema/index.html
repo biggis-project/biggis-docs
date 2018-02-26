@@ -40,7 +40,7 @@
     
     
       
-        <title>Exasol virtual schema - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+        <title>Exasol Virtual Schema - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
       
     
     
@@ -124,7 +124,7 @@
                 BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
               </span>
               <span class="md-header-nav__topic">
-                Exasol virtual schema
+                Exasol Virtual Schema
               </span>
             
           
@@ -1104,11 +1104,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Exasol virtual schema
+        Exasol Virtual Schema
       </label>
     
-    <a href="./" title="Exasol virtual schema" class="md-nav__link md-nav__link--active">
-      Exasol virtual schema
+    <a href="./" title="Exasol Virtual Schema" class="md-nav__link md-nav__link--active">
+      Exasol Virtual Schema
     </a>
     
       
@@ -1668,7 +1668,7 @@
               
                 
                 
-                <h1 id="exasol-virtual-schema">Exasol virtual schema<a class="headerlink" href="#exasol-virtual-schema" title="Permanent link">&para;</a></h1>
+                <h1 id="exasol-virtual-schema">Exasol Virtual Schema<a class="headerlink" href="#exasol-virtual-schema" title="Permanent link">&para;</a></h1>
 <p>Virtual schemas provide a powerful abstraction to conveniently access
 arbitrary data sources. Virtual schemas are a kind of read-only link
 to an external source and contain virtual tables which look like
@@ -1985,11 +1985,17 @@ execution of Exasol.</p>
 </tbody>
 </table>
 <p>We describe each of the types in the following sections.</p>
-<p><strong>Please note:</strong> To keep the documentation concise we defined the elements which are commonly in separate sections below, e.g. <code>schemaMetadataInfo</code> and <code>schemaMetadata</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Please note</p>
+<p>To keep the documentation concise we defined the elements which are commonly in separate sections below, e.g.
+<code>schemaMetadataInfo</code> and <code>schemaMetadata</code>.</p>
+</div>
 <h2 id="requests-and-responses">Requests and Responses<a class="headerlink" href="#requests-and-responses" title="Permanent link">&para;</a></h2>
 <h3 id="create-virtual-schema">Create Virtual Schema<a class="headerlink" href="#create-virtual-schema" title="Permanent link">&para;</a></h3>
-<p>Informs the Adapter about the request to create a Virtual Schema, and asks the Adapter for the metadata (tables and columns).</p>
-<p>The Adapter is allowed to throw an Exception if the user missed to provide mandatory properties or in case of any other problems (e.g. connectivity).</p>
+<p>Informs the Adapter about the request to create a Virtual Schema, and asks the Adapter for the metadata (tables and
+columns).</p>
+<p>The Adapter is allowed to throw an Exception if the user missed to provide mandatory properties or in case of any other
+problems (e.g. connectivity).</p>
 <p><strong>Request:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;createVirtualSchema&quot;</span><span class="p">,</span>
@@ -2008,8 +2014,10 @@ execution of Exasol.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-* <code>schemaMetadata</code> is mandatory. However, it is allowed to contain no tables.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p><code>schemaMetadata</code> is mandatory. However, it is allowed to contain no tables.</p>
+</div>
 <h3 id="refresh">Refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
 <p>Request to refresh the metadata for the whole Virtual Schema, or for specified tables.</p>
 <p><strong>Request:</strong></p>
@@ -2022,8 +2030,12 @@ execution of Exasol.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-* <code>requestedTables</code> is optional. If existing, only the specified tables shall be refreshed. The specified tables do not have to exist, it just tell Adapter to update these tables (which might be changed, deleted, added, or non-existing).</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p><code>requestedTables</code> is optional. If existing, only the specified tables shall be refreshed. The specified tables
+do not have to exist, it just tell Adapter to update these tables (which might be changed, deleted, added, or
+non-existing).</p>
+</div>
 <p><strong>Response:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;refresh&quot;</span><span class="p">,</span>
@@ -2034,11 +2046,18 @@ execution of Exasol.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-<em> <code>schemaMetadata</code> is optional. It can be skipped if the adapter does not want to refresh (e.g. because he detected that there is no change).
-</em> <code>requestedTables</code> must exist if and only if the element existed in the request. The values must be the same as in the request (to make sure that Adapter only refreshed these tables).</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><code>schemaMetadata</code> is optional. It can be skipped if the adapter does not want to refresh (e.g. because he
+  detected that there is no change).</li>
+<li><code>requestedTables</code> must exist if and only if the element existed in the request. The values must be the same
+  as in the request (to make sure that Adapter only refreshed these tables).</li>
+</ul>
+</div>
 <h3 id="set-properties">Set Properties<a class="headerlink" href="#set-properties" title="Permanent link">&para;</a></h3>
-<p>Request to set properties. The Adapter can decide whether he needs to send back new metadata. The Adapter is allowed to throw an Exception if the user provided invalid properties or in case of any other problems (e.g. connectivity).</p>
+<p>Request to set properties. The Adapter can decide whether he needs to send back new metadata. The Adapter is allowed to
+throw an Exception if the user provided invalid properties or in case of any other problems (e.g. connectivity).</p>
 <p><strong>Request:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;setProperties&quot;</span><span class="p">,</span>
@@ -2062,11 +2081,18 @@ execution of Exasol.</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-<em> Request: A property set to null means that this property was asked to be deleted. Properties set to null might also not have existed before.
-</em> Response: <code>schemaMetadata</code> is optional. It only exists if the adapter wants to send back new metadata. The existing metadata are overwritten completely.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><strong>Request:</strong> A property set to null means that this property was asked to be deleted. Properties set to null might
+  also not have existed before.</li>
+<li><strong>Response:</strong> <code>schemaMetadata</code> is optional. It only exists if the adapter wants to send back new metadata.
+  The existing metadata are overwritten completely.</li>
+</ul>
+</div>
 <h3 id="drop-virtual-schema">Drop Virtual Schema<a class="headerlink" href="#drop-virtual-schema" title="Permanent link">&para;</a></h3>
-<p>Inform the Adapter that a Virtual Schema is about to be dropped. The Adapter can update external dependencies if he has such. The Adapter is not expected to throw an exception, and if he does, it will be ignored.</p>
+<p>Inform the Adapter that a Virtual Schema is about to be dropped. The Adapter can update external dependencies if he has
+such. The Adapter is not expected to throw an exception, and if he does, it will be ignored.</p>
 <p><strong>Request:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;dropVirtualSchema&quot;</span><span class="p">,</span>
@@ -2083,7 +2109,8 @@ execution of Exasol.</p>
 </pre></div>
 
 <h3 id="get-capabilities">Get Capabilities<a class="headerlink" href="#get-capabilities" title="Permanent link">&para;</a></h3>
-<p>Request the list of capabilities supported by the Adapter. Based on these capabilities, the database will collect everything that can be pushed down in the current query and sends a pushdown request afterwards.</p>
+<p>Request the list of capabilities supported by the Adapter. Based on these capabilities, the database will collect
+everything that can be pushed down in the current query and sends a pushdown request afterwards.</p>
 <p><strong>Request:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;getCapabilities&quot;</span><span class="p">,</span>
@@ -2132,14 +2159,17 @@ execution of Exasol.</p>
  <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">user_id</span>
  <span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
 </pre></div></p>
-<p>The whole set of capabilities is a lot longer. The current list of supported Capabilities can be found in the sources of the JDBC Adapter:
-<em> <a href="../../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/MainCapability.java">High Level Capabilities</a>
-</em> <a href="../../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/LiteralCapability.java">Literal Capabilities</a>
-<em> <a href="../../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/PredicateCapability.java">Predicate Capabilities</a>
-</em> <a href="../../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/ScalarFunctionCapability.java">Scalar Function Capabilities</a>
-* <a href="../../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/AggregateFunctionCapability.java">Aggregate Function Capabilities</a></p>
+<p>The whole set of capabilities is a lot longer. The current list of supported Capabilities can be found in the sources of the JDBC Adapter:</p>
+<ul>
+<li><a href="https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/MainCapability.java">High Level Capabilities</a></li>
+<li><a href="https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/LiteralCapability.java">Literal Capabilities</a></li>
+<li><a href="https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/PredicateCapability.java">Predicate Capabilities</a></li>
+<li><a href="https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/ScalarFunctionCapability.java">Scalar Function Capabilities</a></li>
+<li><a href="https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/AggregateFunctionCapability.java">Aggregate Function Capabilities</a></li>
+</ul>
 <h3 id="pushdown">Pushdown<a class="headerlink" href="#pushdown" title="Permanent link">&para;</a></h3>
-<p>Contains an abstract specification of what to be pushed down, and requests an pushdown SQL statement from the Adapter which can be used to retrieve the requested data.</p>
+<p>Contains an abstract specification of what to be pushed down, and requests an pushdown SQL statement from the Adapter
+which can be used to retrieve the requested data.</p>
 <p><strong>Request:</strong></p>
 <p>Running the following query
 <div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">user_id</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">VS</span><span class="p">.</span><span class="n">clicks</span>
@@ -2297,18 +2327,26 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-<em> <code>pushdownRequest</code>: Specification what needs to be pushed down. You can think of it like a parsed SQL statement.
-  * <code>from</code>: The requested from clause. Currently only tables are supported, joins might be supported in future.
-  * <code>selectList</code>: The requested select list elements, a list of expression. The order of the selectlist elements matters. If the select list is an empty list, we request at least a single column/expression, which could also be constant TRUE.
-  * <code>selectList.columnNr</code>: Position of the column in the virtual table, starting with 0
-  * <code>filter</code>: The requested filter (where clause), a single expression.
-  * <code>aggregationType</code>: Optional element, set if an aggregation is requested. Either "group_by" or "single_group", if a aggregate function is used but no group by.
-  * <code>groupBy</code>: The requested group by clause, a list of expressions.
-  * <code>having</code>: The requested having clause, a single expression.
-  * <code>orderBy</code>: The requested order-by clause, a list of <code>order_by_element</code> elements. The field <code>expression</code> contains the expression to order by.
-  * <code>limit</code> The requested limit of the result set, with an optional offset.
-</em> <code>involvedTables</code>: Metadata of the involved tables, encoded like in schemaMetadata.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><code>pushdownRequest</code>: Specification what needs to be pushed down. You can think of it like a parsed SQL statement.</li>
+<li><code>from</code>: The requested from clause. Currently only tables are supported, joins might be supported in future.</li>
+<li><code>selectList</code>: The requested select list elements, a list of expression. The order of the selectlist elements
+    matters. If the select list is an empty list, we request at least a single column/expression, which could also
+    be constant TRUE.</li>
+<li><code>selectList.columnNr</code>: Position of the column in the virtual table, starting with 0</li>
+<li><code>filter</code>: The requested filter (where clause), a single expression.</li>
+<li><code>aggregationType</code>: Optional element, set if an aggregation is requested. Either <code>group_by</code> or <code>single_group</code>,
+    if a aggregate function is used but no group by.</li>
+<li><code>groupBy</code>: The requested group by clause, a list of expressions.</li>
+<li><code>having</code>: The requested having clause, a single expression.</li>
+<li><code>orderBy</code>: The requested order-by clause, a list of <code>order_by_element</code> elements. The field <code>expression</code>
+    contains the expression to order by.</li>
+<li><code>limit</code> The requested limit of the result set, with an optional offset.</li>
+<li><code>involvedTables</code>: Metadata of the involved tables, encoded like in schemaMetadata.</li>
+</ul>
+</div>
 <p><strong>Response:</strong></p>
 <p>Following the example above, a valid result could look like this:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -2317,12 +2355,15 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-* <code>sql</code>: The pushdown SQL statement. It must be either an <code>SELECT</code> or <code>IMPORT</code> statement.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>sql</code>: The pushdown SQL statement. It must be either an <code>SELECT</code> or <code>IMPORT</code> statement.</p>
+</div>
 <h2 id="embedded-commonly-used-json-elements">Embedded Commonly Used Json Elements<a class="headerlink" href="#embedded-commonly-used-json-elements" title="Permanent link">&para;</a></h2>
 <p>The following Json objects can be embedded in a request or response. They have a fixed structure.</p>
 <h3 id="schema-metadata-info">Schema Metadata Info<a class="headerlink" href="#schema-metadata-info" title="Permanent link">&para;</a></h3>
-<p>This document contains the most important metadata of the virtual schema and is sent to the adapter just "for information" with each request. It is the value of an element called <code>schemaMetadataInfo</code>.</p>
+<p>This document contains the most important metadata of the virtual schema and is sent to the adapter just "for
+information" with each request. It is the value of an element called <code>schemaMetadataInfo</code>.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span><span class="nt">&quot;schemaMetadataInfo&quot;</span><span class="p">:{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MY_HIVE_VSCHEMA&quot;</span><span class="p">,</span>
     <span class="nt">&quot;adapterNotes&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2338,7 +2379,12 @@ will produce the following Request, assuming that the Adapter has all required c
 </pre></div>
 
 <h3 id="schema-metadata">Schema Metadata<a class="headerlink" href="#schema-metadata" title="Permanent link">&para;</a></h3>
-<p>This document is usually embedded in responses from the Adapter and informs the database about all metadata of the Virtual Schema, especially the contained Virtual Tables and it's columns. The Adapter can store so called <code>adapterNotes</code> on each level (schema, table, column), to remember information which might be relevant for the Adapter in future. In the example below, the Adapter remembers the table partitioning and the data type of a column which is not directly supported in EXASOL. The Adapter has these information during pushdown and can consider the table partitioning during pushdown or can add an appropriate cast for the column.</p>
+<p>This document is usually embedded in responses from the Adapter and informs the database about all metadata of the
+Virtual Schema, especially the contained Virtual Tables and it's columns. The Adapter can store so called <code>adapterNotes</code>
+on each level (schema, table, column), to remember information which might be relevant for the Adapter in future. In the
+example below, the Adapter remembers the table partitioning and the data type of a column which is not directly
+supported in EXASOL. The Adapter has these information during pushdown and can consider the table partitioning during
+pushdown or can add an appropriate cast for the column.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span><span class="nt">&quot;schemaMetadata&quot;</span><span class="p">:{</span>
     <span class="nt">&quot;adapterNotes&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;lastRefreshed&quot;</span><span class="p">:</span> <span class="s2">&quot;2015-03-01 12:10:01&quot;</span><span class="p">,</span>
@@ -2410,8 +2456,13 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}}</span>
 </pre></div>
 
-<p>Notes
-* <code>adapterNotes</code> is an optional field which can be attached to the schema, a table or a column. It can be an arbitrarily nested Json document.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><code>adapterNotes</code> is an optional field which can be attached to the schema, a table or a column.
+  It can be an arbitrarily nested Json document.</li>
+</ul>
+</div>
 <p>The following EXASOL data types are supported:</p>
 <p><strong>Decimal:</strong></p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -2584,14 +2635,16 @@ will produce the following Request, assuming that the Adapter has all required c
 </pre></div>
 
 <h2 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h2>
-<p>This section handles the expressions that can occur in a pushdown request. Expressions are consistently encoded in the following way. This allows easy and consisting parsing and serialization.</p>
+<p>This section handles the expressions that can occur in a pushdown request. Expressions are consistently encoded in the
+following way. This allows easy and consisting parsing and serialization.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;type-of-expression&gt;&quot;</span><span class="p">,</span>
     <span class="err">...</span>
 <span class="p">}</span>
 </pre></div>
 
-<p>Each expression-type can have any number of additional fields of arbitrary type. In the following sections we define the known expressions.</p>
+<p>Each expression-type can have any number of additional fields of arbitrary type. In the following sections we define the
+known expressions.</p>
 <h3 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h3>
 <p>This element currently only occurs in from clause</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -2610,9 +2663,14 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-<em> <strong>tablePosFromClause</strong>: Position of the table in the from clause, starting with 0. Required for joins where same table occurs several times.
-</em> <strong>columnNr</strong>: column number in the virtual table, starting with 0</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><strong>tablePosFromClause</strong>: Position of the table in the from clause, starting with 0. Required for joins where same
+  table occurs several times.</li>
+<li><strong>columnNr</strong>: column number in the virtual table, starting with 0</li>
+</ul>
+</div>
 <h3 id="literal">Literal<a class="headerlink" href="#literal" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;literal_null&quot;</span>
@@ -2691,7 +2749,7 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>The same can be used for "predicate_notequals", "predicate_less" and "predicate_lessequals".</p>
+<p>The same can be used for <code>predicate_notequals</code>, <code>predicate_less</code> and <code>predicate_lessequals</code>.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;predicate_like&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expression&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2704,9 +2762,13 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>The same can be used for predicate_like_regexp</p>
-<p>Notes
-* <strong>escapeChar</strong> is optional</p>
+<p>The same can be used for <code>predicate_like_regexp</code></p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><strong>escapeChar</strong> is optional</li>
+</ul>
+</div>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;predicate_between&quot;</span><span class="p">,</span>
     <span class="nt">&quot;expression&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2781,9 +2843,12 @@ will produce the following Request, assuming that the Adapter has all required c
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes
-* <strong>variableInputArgs</strong>: default value is false. If true, numArgs is not defined.</p>
-<p>Arithmetic operators have following names: ADD, SUB, MULT, FLOAT_DIV. They are defined as infix (just a hint, not necessary)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>variableInputArgs</strong>: default value is <code>false</code>. If true, <code>numArgs</code> is not defined.</p>
+</div>
+<p>Arithmetic operators have following names: ADD, SUB, MULT, FLOAT_DIV. They are defined as infix (just a hint, not
+necessary)</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function_scalar&quot;</span><span class="p">,</span>
     <span class="nt">&quot;numArgs&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -2837,7 +2902,7 @@ CAST(exp1 AS dataType) (requires scalar-function capability CAST) </p>
            <span class="k">END</span>
 </pre></div>
 
-<p><div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;function_scalar_case&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;CASE&quot;</span><span class="p">,</span>
     <span class="nt">&quot;basis&quot;</span> <span class="p">:</span>
@@ -2873,10 +2938,15 @@ CAST(exp1 AS dataType) (requires scalar-function capability CAST) </p>
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-Notes:
-<em> <code>arguments</code>: The different cases.
-</em> <code>results</code>: The different results in the same order as the arguments. If present, the ELSE result
-is the last entry in the <code>results</code> array.</p>
+
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><code>arguments</code>: The different cases.</li>
+<li><code>results</code>: The different results in the same order as the arguments. If present, the ELSE result
+  is the last entry in the <code>results</code> array.</li>
+</ul>
+</div>
 <h3 id="aggregate-functions">Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permanent link">&para;</a></h3>
 <p>Consistent with scalar functions. To be detailed: star-operator, distinct, ...</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
@@ -3005,10 +3075,16 @@ AVG(exp)     (requires set-function capability AVG)</p>
 <span class="p">}</span>
 </pre></div>
 
-<p>Notes:
-<em> <code>distinct</code>: Optional. Requires set-function capability GROUP_CONCAT_DISTINCT.
-</em> <code>orderBy</code>: Optional. The requested order-by clause, a list of <code>order_by_element</code> elements. The field <code>expression</code> contains the expression to order by. The group-by clause of a SELECT query uses the same <code>order_by_element</code> element type. The clause requires the set-function capability GROUP_CONCAT_ORDER_BY.
-* <code>separator</code>: Optional. Requires set-function capability GROUP_CONCAT_SEPARATOR.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<ul>
+<li><code>distinct</code>: Optional. Requires set-function capability <code>GROUP_CONCAT_DISTINCT</code>.</li>
+<li><code>orderBy</code>: Optional. The requested order-by clause, a list of <code>order_by_element</code> elements.
+  The field <code>expression</code> contains the expression to order by. The group-by clause of a SELECT query uses the
+  same <code>order_by_element</code> element type. The clause requires the set-function capability <code>GROUP_CONCAT_ORDER_BY</code>.</li>
+<li><code>separator</code>: Optional. Requires set-function capability <code>GROUP_CONCAT_SEPARATOR</code>.</li>
+</ul>
+</div>
                 
                   
                 
