@@ -1516,7 +1516,7 @@ docs/
 </pre></div>
 
 
-<p>For the sake of simplicity, we use two-level hierarchy inside <code>docs/</code>:</p>
+<p>For the sake of simplicity, we use the following hierarchy inside <code>docs/</code>:</p>
 <ul>
 <li><strong>Level 1</strong> : areas (directories) that appear in the main menu.</li>
 <li><strong>Level 2</strong> : pages (markdown files) that appear in the left side bar.</li>
@@ -1524,8 +1524,8 @@ docs/
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do not use spaces in file names. Replace them with underscores <code>_</code>.
-This allows for easier refactoring because spaces are transformed to <code>%20</code> in markdown.</p>
+<p>Do not use spaces in file names. Replace them with dashes <code>-</code> (or alternatively with underscores <code>_</code>).
+This allows for easier refactoring because spaces are usually transformed to <code>%20</code> in markdown which looks weird.</p>
 </div>
 <h2 id="formatting-examples">Formatting examples<a class="headerlink" href="#formatting-examples" title="Permanent link">&para;</a></h2>
 <details class="summary"><summary>Sectioning, Headings and Table of Contents</summary><div class="codehilite"><pre><span></span># Chapter
@@ -1535,7 +1535,7 @@ This allows for easier refactoring because spaces are transformed to <code>%20</
 ### Subsection
 </pre></div>
 
-</details><details class="summary"><summary>Footnotes</summary><div class="codehilite"><pre><span></span>Some text with a footnote[^LABEL]
+<p>Table of contents is generated automatically from the document structure.</p></details><details class="summary"><summary>Footnotes</summary><div class="codehilite"><pre><span></span>Some text with a footnote[^LABEL]
 
 [^LABEL]: Text of the footnote
 </pre></div>
@@ -1563,8 +1563,8 @@ nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
 massa, nec semper lorem quam in massa.</p></details><p>For more information see <a href="https://facelessuser.github.io/pymdown-extensions/extensions/details/">https://facelessuser.github.io/pymdown-extensions/extensions/details/</a></p></details><details class="summary"><summary>Images</summary><p>You can include images into the documentation in the following format:</p><ul><li><strong>SVG</strong> (scalable vectors).</li><li><strong>JPG</strong> (photos)</li><li><strong>PNG</strong> (raster graphics)</li></ul><p>In contrast to scientific papers, it is not possible to create references to numbered figures in markdown.</p><div class="codehilite"><pre><span></span>![Image &quot;alt&quot; description](path/to/image.svg)
 </pre></div>
 
-<p><img alt="Sample image" src="http://www.gstatic.com/webp/gallery/1.jpg" /></p><p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media">http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media</a></p><div class="admonition note"><p class="admonition-title">Note</p><p>When editing a file e.g. <code>path/to/ABC.md</code>, store all related images in the same folder
-folder (<code>path/to/ABC</code>). This way, different topics are better encapsulated.</p></div></details><details class="summary"><summary>Figures with caption (on top)</summary><p>With the following hack, you can create a nice looking caption rendered under a figure.</p><div class="codehilite"><pre><span></span>!!! info &quot;Figure: Here comes a single line title&quot;
+<p><img alt="Sample image" src="http://www.gstatic.com/webp/gallery/1.jpg" /></p><p>See also <a href="http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media">http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media</a></p><div class="admonition note"><p class="admonition-title">Note</p><p>When editing a file e.g. <code>path/to/ABC.md</code>, store all related images in the same
+folder (<code>path/to/ABC</code>). This way, different topics are better encapsulated.</p></div></details><details class="summary"><summary>Figures with caption (on top)</summary><p>You can create images with a nice looking caption and additional description.</p><div class="codehilite"><pre><span></span>!!! info &quot;Figure: Here comes a single line title&quot;
     ![](path/to/image.svg)
 
     Here comes some additional multi-line text.
@@ -1610,7 +1610,7 @@ def my_function():
     <span class="s2">&quot;just a test&quot;</span>
     <span class="k">print</span> <span class="mi">8</span><span class="o">/</span><span class="mi">2</span> 
 </pre></div>
-</details><details class="summary"><summary>Smart Symbols</summary><div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
+<p>Other useful langauge codes are:</p><ul><li><strong>sh</strong> : source code written in shell script</li><li><strong>console</strong>: commands written to console, e.g.: <code>$ cat /dev/urandom</code></li><li><strong>json</strong>: data in JSON format</li><li><strong>javascript</strong>: JavaScript source code</li></ul></details><details class="summary"><summary>Smart Symbols</summary><div class="codehilite"><pre><span></span>Some smart symbols: --&gt;,  &lt;--, 1st, 2nd, 1/4
 </pre></div>
 
 <p>Some smart symbols: &rarr;,  &larr;, 1<sup>st</sup>, 2<sup>nd</sup>, &frac14;</p><p>See also <a href="https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/">https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/</a></p></details><details class="summary"><summary>Sequence diagrams</summary><div class="codehilite"><pre><span></span>```sequence
