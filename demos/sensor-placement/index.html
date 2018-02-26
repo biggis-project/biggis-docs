@@ -40,7 +40,7 @@
     
     
       
-        <title>Placement of sensors under uncertainty - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+        <title>Optimal Sensor Placement - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
       
     
     
@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#placement-of-sensors-under-uncertainty" tabindex="1" class="md-skip">
+      <a href="#optimal-sensor-placement" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -124,7 +124,7 @@
                 BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
               </span>
               <span class="md-header-nav__topic">
-                Placement of sensors under uncertainty
+                Optimal Sensor Placement
               </span>
             
           
@@ -656,8 +656,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Arial photographs)" class="md-nav__link">
-      Digital ortho-images (Arial photographs)
+    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Aerial photographs)" class="md-nav__link">
+      Digital ortho-images (Aerial photographs)
     </a>
   </li>
 
@@ -903,30 +903,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../optimize-drones/" title="Optimal flight plan for drones" class="md-nav__link">
-      Optimal flight plan for drones
+    <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Placement of sensors under uncertainty" class="md-nav__link md-nav__link--active">
-      Placement of sensors under uncertainty
-    </a>
-    
   </li>
 
         
@@ -936,8 +915,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
-      Urban Heat Islands
+    <a href="../drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
+      Optimal Flight Plan for Drones
     </a>
   </li>
 
@@ -987,6 +966,61 @@
     <a href="../optical-remote-sensing/" title="Optical Remote Sensing" class="md-nav__link">
       Optical Remote Sensing
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Optimal Sensor Placement
+      </label>
+    
+    <a href="./" title="Optimal Sensor Placement" class="md-nav__link md-nav__link--active">
+      Optimal Sensor Placement
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-approach-and-results" title="Solution Approach and Results" class="md-nav__link">
+    Solution Approach and Results
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1300,6 +1334,27 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution-approach-and-results" title="Solution Approach and Results" class="md-nav__link">
+    Solution Approach and Results
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1311,20 +1366,41 @@
               
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Katharina Glock</p>
+                <h1 id="optimal-sensor-placement">Optimal Sensor Placement<a class="headerlink" href="#optimal-sensor-placement" title="Permanent link">&para;</a></h1>
+<p>Semistationary sensors such as the SenseBox (<a href="https://sensebox.de/en/">https://sensebox.de/en/</a>) offer an excellent possibility for gaining
+detailed insights into the urban climate. Connected to WiFI or LAN, they continuously provide measurements, e.g.
+concerning the temperature, humidity, noise or brightness. However, these measurements are local in nature, meaning
+that in order to gain detailed and reliable information about an entire city, several sensors have to be distributed
+within the region of interest. In this case, the placement of sensors becomes essential.  We therefore propose an
+approach for proposing optimal sensing locations, taking into account their relative distance, covered land use classes
+and temperatures.</p>
+<div class="admonition info">
+<p class="admonition-title">Figure 1: Land use classes in Karlsruhe</p>
+<p><img alt="" src="./landuse_classes.png" /></p>
 </div>
-<h1 id="placement-of-sensors-under-uncertainty">Placement of sensors under uncertainty<a class="headerlink" href="#placement-of-sensors-under-uncertainty" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<ul>
-<li>describe the idea</li>
-<li>add some images</li>
-<li>add some links to related papers</li>
-<li>add links to related github repos</li>
-<li>add links to related scenarios</li>
-</ul>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<p>Our model incorporates several features:
+-   Sensors are placed such that they are within a maximum range to a number of base stations of a LoRaWAN (Long Range
+Wide Area Network), allowing to continuously transmit their measurements.
+-   The set of sensors should cover all land use classes within the city.
+-   The selected sensing locations should cover a wide range of temperatures.
+-   The locations of any other available sensor should be taken into account in order to avoid redundant measurements.</p>
+<div class="admonition info">
+<p class="admonition-title">Figure 2: Temperatures aggregated for landuse class polygons</p>
+<p><img alt="" src="./temperatures.png" /></p>
+</div>
+<h2 id="solution-approach-and-results">Solution Approach and Results<a class="headerlink" href="#solution-approach-and-results" title="Permanent link">&para;</a></h2>
+<p>In a preprocessing step, the centers of the polygons describing individual land use classes are selected as candidate
+sensing locations, making it possible to formulate a discrete planning problem. The range of the LoRaWAN restricts
+possible locations, thus ensuring connectivity.
+We can then model the planning problem as a p-center problem. Generally speaking, this formulation seeks to minimize
+the maximum distance between locations of interest as described above and the next sensing locations.  The approach
+yields both optimal sensing locations as well as alternative candidates in case the initially chosen locations is
+unavailable. As shown in Figure 3, locations are distributed well across the city, covering as large an area as
+possible.</p>
+<div class="admonition info">
+<p class="admonition-title">Figure 3: Proposed sensing locations and alternative positions</p>
+<p><img alt="" src="./sensor_placement.png" /></p>
 </div>
                 
                   
@@ -1344,7 +1420,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../optimize-drones/" title="Optimal flight plan for drones" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../optical-remote-sensing/" title="Optical Remote Sensing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1353,19 +1429,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Optimal flight plan for drones
+                Optical Remote Sensing
               </span>
             </div>
           </a>
         
         
-          <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../soh-eval/" title="Stability of hotspots" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Urban Heat Islands
+                Stability of hotspots
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

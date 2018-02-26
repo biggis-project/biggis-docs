@@ -40,7 +40,7 @@
     
     
       
-        <title>Optimal flight plan for drones - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+        <title>Optimal Flight Plan for Drones - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
       
     
     
@@ -124,7 +124,7 @@
                 BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
               </span>
               <span class="md-header-nav__topic">
-                Optimal flight plan for drones
+                Optimal Flight Plan for Drones
               </span>
             
           
@@ -656,8 +656,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Arial photographs)" class="md-nav__link">
-      Digital ortho-images (Arial photographs)
+    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Aerial photographs)" class="md-nav__link">
+      Digital ortho-images (Aerial photographs)
     </a>
   </li>
 
@@ -901,6 +901,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -911,34 +923,58 @@
       
     
     
-    <a href="./" title="Optimal flight plan for drones" class="md-nav__link md-nav__link--active">
-      Optimal flight plan for drones
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Optimal Flight Plan for Drones
+      </label>
+    
+    <a href="./" title="Optimal Flight Plan for Drones" class="md-nav__link md-nav__link--active">
+      Optimal Flight Plan for Drones
     </a>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../optimize-sensors/" title="Placement of sensors under uncertainty" class="md-nav__link">
-      Placement of sensors under uncertainty
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
-      Urban Heat Islands
-    </a>
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vision-interactive-uav-deployment" title="Vision: Interactive UAV Deployment" class="md-nav__link">
+    Vision: Interactive UAV Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informative-path-planning" title="Informative Path Planning" class="md-nav__link">
+    Informative Path Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heuristic-solution-approach" title="Heuristic Solution Approach" class="md-nav__link">
+    Heuristic Solution Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-and-results" title="Evaluation and Results" class="md-nav__link">
+    Evaluation and Results
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -986,6 +1022,18 @@
   <li class="md-nav__item">
     <a href="../optical-remote-sensing/" title="Optical Remote Sensing" class="md-nav__link">
       Optical Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sensor-placement/" title="Optimal Sensor Placement" class="md-nav__link">
+      Optimal Sensor Placement
     </a>
   </li>
 
@@ -1300,6 +1348,41 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vision-interactive-uav-deployment" title="Vision: Interactive UAV Deployment" class="md-nav__link">
+    Vision: Interactive UAV Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informative-path-planning" title="Informative Path Planning" class="md-nav__link">
+    Informative Path Planning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heuristic-solution-approach" title="Heuristic Solution Approach" class="md-nav__link">
+    Heuristic Solution Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-and-results" title="Evaluation and Results" class="md-nav__link">
+    Evaluation and Results
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1311,20 +1394,78 @@
               
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Katharina Glock</p>
+                <h1 id="optimal-flight-plan-for-drones">Optimal Flight Plan for Drones<a class="headerlink" href="#optimal-flight-plan-for-drones" title="Permanent link">&para;</a></h1>
+<p>Motivation</p>
+<p>Drones equipped with remote sensing systems are rapidly becoming a valuable tool for emergency response units as they
+can quickly provide reliable information after an incident. However, controlling these vehicles and interpreting the
+obtained measurements also imposes further demands on the response squad in an already stressful situation. Therefore,
+integrated and automatic mission planning tools are needed that plan drone routes such that the maximum amount of
+information is provided within as short a delay as possible.</p>
+<h2 id="vision-interactive-uav-deployment">Vision: Interactive UAV Deployment<a class="headerlink" href="#vision-interactive-uav-deployment" title="Permanent link">&para;</a></h2>
+<p>Our vision for an interactive tool supporting automated UAV deployment is depicted in Figure 1. In this scenario, we
+consider a drone equipped with a hyperspectral camera that is used to identify hazardous substances. This drone is
+started immediately after the response unit arrives on scene. First, it takes an initial survey image at high altitude,
+providing a first overview of the target region. This serves as an initial data source for planning the remainder of the
+flight. It also represents the first data source for identifying and prediction gas clouds. The drone then proceeds with
+its tour, making more measurements as it travels across the target area. During this time, the planned route is modified
+in an iterative process: The newly obtained images are prepared and preprocessed in order to be transmitted to the base
+station. They are used as updates for the gas cloud prediction and are communicated to the user. The drone mission can
+furthermore be adapted based on these measurements, e.g. moving to areas where hazardous gases are most likely to be
+present. Furthermore, the user can define additional POIs such as public building</p>
+<div class="admonition info">
+<p class="admonition-title">Figure 1: Interactive drone deployment</p>
+<p><img alt="" src="./deployment.png" /></p>
 </div>
-<h1 id="optimal-flight-plan-for-drones">Optimal flight plan for drones<a class="headerlink" href="#optimal-flight-plan-for-drones" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<ul>
-<li>describe the idea</li>
-<li>add some images</li>
-<li>add some links to related papers</li>
-<li>add links to related github repos</li>
-<li>add links to related scenarios</li>
-</ul>
+<h2 id="informative-path-planning">Informative Path Planning<a class="headerlink" href="#informative-path-planning" title="Permanent link">&para;</a></h2>
+<p>The planning problem consists of determining a path <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>, i.e. an ordered sequence of target locations for the drone. The
+cost of this path <span><span class="MathJax_Preview">cost(P)</span><script type="math/tex">cost(P)</script></span>, e.g. in terms of required flight time, needs to be less or equal to the maximum budget
+<span><span class="MathJax_Preview">C_{max}</span><script type="math/tex">C_{max}</script></span> available. Specifically, the drone needs to return before its energy supply is depleted. The objective is to
+find a path <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> that maximises some measure of informativeness <span><span class="MathJax_Preview">I(P)</span><script type="math/tex">I(P)</script></span>. Hence, the fundamental planning problem is to
+balance resource consumption and information gain during the trip. This problem can be formulated as follows:</p>
+<div>
+<div class="MathJax_Preview">\max I(P) \\
+s.t. cost(P) &lt;= C_{max}</div>
+<script type="math/tex; mode=display">\max I(P) \\
+s.t. cost(P) <= C_{max}</script>
+</div>
+<p>Several objective functions <span><span class="MathJax_Preview">I(P)</span><script type="math/tex">I(P)</script></span> exist to describe this informativeness.
+Two of the most frequently used ones in literature are
+- Maximising the achieved reduction of the prediction error variance,
+- Maximising the mutual information between observed and unobserved locations.</p>
+<p>The prediction error variance increases the further away an unobserved location is from a selected sensing location.
+Similarly, the mutual information typically decreases the farther locations are from one another. Hence, both measures
+favour sensing locations that are well distributed across the region of interest. However, both of these approaches
+require a reliable model of the observed phenomenon in form of a Gaussian Process in order to determine error variances
+and mutual information. In practice, it is unlikely that an accurate process model is available before the start of the
+drone flight. We therefore use an approximate model of spatial correlations. While this approximation is not an accurate
+description of the observed phenomenon, it can be computed more efficiently, which is highly relevant for a
+time-constraint application such as the use case considered here. Similar to the two measures discussed above, it
+considers paths as “informative” that consist of sensing locations distributed as evenly as possible within the target
+region.</p>
+<h2 id="heuristic-solution-approach">Heuristic Solution Approach<a class="headerlink" href="#heuristic-solution-approach" title="Permanent link">&para;</a></h2>
+<p>Rather than solving an exact model, we use a heuristic solution approach for determining drone routes. An initial path
+is determined using a simple construction strategy. Then, this path is iteratively improved by destroying and rebuilding
+parts of a solution using an Adaptive Large Neighbourhood Search approach. These approaches have been shown to quickly
+determine high-quality solutions even for large vehicle routing problems with several hundred candidate sensing
+locations.</p>
+<h2 id="evaluation-and-results">Evaluation and Results<a class="headerlink" href="#evaluation-and-results" title="Permanent link">&para;</a></h2>
+<p>We evaluate the proposed model and solution approach in an extensive simulative study on artificial spatially correlated
+random fields. This way, we can consider scenarios larger than any that would be possible in preliminary test flights,
+and validate the robustness and effectiveness of our approach on a wide range of possible situations.</p>
+<p>Figure 2 gives one example of such a scenario: We consider a target region of 1200 x 1200 m, and a drone with a maximum
+flight time of 900 seconds at a maximum speed of 10 m/s. The left image represents the actual distribution of values
+within the target region, i.e. the simulated smoke cloud. Below, we present the results of the solution approach. The
+middle image indicates the remaining prediction error variance. Here we can recognize selected sensing locations for the
+drone flight dark red. At these locations, the drone obtains accurate information about the random field, which means
+that error variance is minimal. For the remainder of the target region, error variance increases with increasing
+distance to the next sensing locations, since there is less information is available about these locations. The
+resulting prediction is indicated on the right hand side. Obviously, the information gained about the underlying process
+is rather accurate, as the prediction closely follows the actual distribution. Hence, even though the maximum flight
+time would be insufficient to survey each location within the target area, it still allows to accurately detect the
+smoke cloud and to provide detailed information about the spatial distribution of hazardous gases.</p>
+<div class="admonition info">
+<p class="admonition-title">Figure 2: Autocorrelated field, predicted values and prediction quality.</p>
+<p><img alt="" src="./evaluation_example.png" /></p>
 </div>
                 
                   
@@ -1344,7 +1485,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../landuse/" title="Landuse classification" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../urban-heat-islands/" title="Urban Heat Islands" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1353,19 +1494,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Landuse classification
+                Urban Heat Islands
               </span>
             </div>
           </a>
         
         
-          <a href="../optimize-sensors/" title="Placement of sensors under uncertainty" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../enviro-car/" title="EnviroCar (Smart City)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Placement of sensors under uncertainty
+                EnviroCar (Smart City)
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
