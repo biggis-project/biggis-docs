@@ -1,0 +1,2335 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Central documentation of the BigGIS project">
+      
+      
+      
+        <meta name="author" content="BigGIS Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Exasol Docker Support - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../animations.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="dark-blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#exasol-docker-support" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="BigGIS - Scalable GIS for Predictive and Prescriptive Analytics" class="md-header-nav__button md-logo">
+          
+            <img src="../../favicon.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+              </span>
+              <span class="md-header-nav__topic">
+                Exasol Docker Support
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About BigGIS" class="md-tabs__link">
+        About BigGIS
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../architecture/arch-overview/" title="Architecture" class="md-tabs__link">
+          Architecture
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-sources/" title="Data sources" class="md-tabs__link">
+          Data sources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../demos/" title="Demos" class="md-tabs__link">
+          Demos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="Methods" class="md-tabs__link md-tabs__link--active">
+          Methods
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../scenarios/smartcity/" title="Scenarios" class="md-tabs__link">
+          Scenarios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../favicon.svg" width="24" height="24">
+      
+    </span>
+    BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About BigGIS" class="md-nav__link">
+      About BigGIS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-github-repos/" title="List of Github Repositories" class="md-nav__link">
+      List of Github Repositories
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-papers/" title="List of Papers" class="md-nav__link">
+      List of Papers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-presentations/" title="List of Presentations" class="md-nav__link">
+      List of Presentations
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-press/" title="List of Press Releases" class="md-nav__link">
+      List of Press Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../consortium/" title="Project Consortium" class="md-nav__link">
+      Project Consortium
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../docs-howto/" title="Documentation Howto" class="md-nav__link">
+      Documentation Howto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/arch-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/platform-bwcloud/" title="bwCloud" class="md-nav__link">
+      bwCloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/semantics/" title="Semantics" class="md-nav__link">
+      Semantics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/stream-pipes/" title="StreamPipes" class="md-nav__link">
+      StreamPipes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Data sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Data sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/" title="Datasets in BigGIS" class="md-nav__link">
+      Datasets in BigGIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
+    
+    <label class="md-nav__link" for="nav-10-2">
+      Atmosphere
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        Atmosphere
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/dwd/" title="DWD (Meteorological Data)" class="md-nav__link">
+      DWD (Meteorological Data)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/lubw/" title="LUBW Stations" class="md-nav__link">
+      LUBW Stations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/sensebox-fzi/" title="SenseBox-based Weather Stations (FZI)" class="md-nav__link">
+      SenseBox-based Weather Stations (FZI)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/wunderground/" title="Wunderground Dataset" class="md-nav__link">
+      Wunderground Dataset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/biosphere/vitimeteo/" title="Drosophila Suzukii Observations (Vitimeteo)" class="md-nav__link">
+      Drosophila Suzukii Observations (Vitimeteo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      Ground Surface
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        Ground Surface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Aerial photographs)" class="md-nav__link">
+      Digital ortho-images (Aerial photographs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/lightweight-cams/" title="Lightweight Camera Systems" class="md-nav__link">
+      Lightweight Camera Systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-elevation/" title="NASA Elevation Profile" class="md-nav__link">
+      NASA Elevation Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-modis/" title="MODIS Dataset" class="md-nav__link">
+      MODIS Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/sentinel2/" title="Sentinel 2" class="md-nav__link">
+      Sentinel 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/uba-air/" title="Umweltbundesamt Air Pollution" class="md-nav__link">
+      Umweltbundesamt Air Pollution
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
+    
+    <label class="md-nav__link" for="nav-10-5">
+      Socio-Economic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-5">
+        Socio-Economic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/envirocar/" title="Envirocar Dataset" class="md-nav__link">
+      Envirocar Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/landuse/" title="Land use data" class="md-nav__link">
+      Land use data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/newyork-taxi/" title="New York Taxi Drives" class="md-nav__link">
+      New York Taxi Drives
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Demos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Demos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/" title="About demos" class="md-nav__link">
+      About demos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/firefighting/" title="Firefighting" class="md-nav__link">
+      Firefighting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-detect/" title="Gas Cloud Detection" class="md-nav__link">
+      Gas Cloud Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-predict/" title="Gas Cloud Prediction" class="md-nav__link">
+      Gas Cloud Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/heatstress/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
+      Optimal Flight Plan for Drones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
+      EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/hotspot-analysis/" title="Hotspot analysis (using G*)" class="md-nav__link">
+      Hotspot analysis (using G*)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/invasive-species/" title="Invasive species" class="md-nav__link">
+      Invasive species
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/landuse/" title="Landuse classification" class="md-nav__link">
+      Landuse classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/optical-remote-sensing/" title="Optical Remote Sensing" class="md-nav__link">
+      Optical Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/sensor-placement/" title="Optimal Sensor Placement" class="md-nav__link">
+      Optimal Sensor Placement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/soh-eval/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
+      Visual Analysis of Spatio-Temporal Event Predictions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Methods
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Methods
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="About Method" class="md-nav__link">
+      About Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Exasol Docker Support
+      </label>
+    
+    <a href="./" title="Exasol Docker Support" class="md-nav__link md-nav__link--active">
+      Exasol Docker Support
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-image" title="How to use this image" class="md-nav__link">
+    How to use this image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exasol-docker-tool-exadt" title="EXASOL Docker Tool — exadt" class="md-nav__link">
+    EXASOL Docker Tool — exadt
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creating-a-cluster" title="1. Creating a cluster" class="md-nav__link">
+    1. Creating a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-initializing-a-cluster" title="2. Initializing a cluster" class="md-nav__link">
+    2. Initializing a cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatically-creating-and-assigning-file-devices" title="Automatically creating and assigning file devices" class="md-nav__link">
+    Automatically creating and assigning file devices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adding-exastorage-devices" title="3. Adding EXAStorage devices" class="md-nav__link">
+    3. Adding EXAStorage devices
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assigning-devices-to-volumes" title="Assigning devices to volumes" class="md-nav__link">
+    Assigning devices to volumes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-starting-a-cluster" title="4. Starting a cluster" class="md-nav__link">
+    4. Starting a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-inspecting-a-cluster" title="5. Inspecting a cluster" class="md-nav__link">
+    5. Inspecting a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stopping-a-cluster" title="6. Stopping a cluster" class="md-nav__link">
+    6. Stopping a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-updating-a-cluster" title="7. Updating a cluster" class="md-nav__link">
+    7. Updating a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-deleting-a-cluster" title="8. Deleting a cluster" class="md-nav__link">
+    8. Deleting a cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-stand-alone-exasol-container" title="Creating a stand-alone EXASOL container" class="md-nav__link">
+    Creating a stand-alone EXASOL container
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-persistent-volume-of-a-stand-alone-exasol-container" title="Updating the persistent volume of a stand-alone EXASOL container" class="md-nav__link">
+    Updating the persistent volume of a stand-alone EXASOL container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-multi-host-exasol-cluster" title="Creating a multi-host EXASOL cluster" class="md-nav__link">
+    Creating a multi-host EXASOL cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-the-configuration" title="1. Create the configuration" class="md-nav__link">
+    1. Create the configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-create-an-exa-directory-template-recommended" title="a. Create an /exa/ directory template (RECOMMENDED):" class="md-nav__link">
+    a. Create an /exa/ directory template (RECOMMENDED):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-create-an-exaconf-template" title="b. Create an EXAConf template" class="md-nav__link">
+    b. Create an EXAConf template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complete-the-configuration" title="2. Complete the configuration" class="md-nav__link">
+    2. Complete the configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-private-network-of-all-nodes" title="The private network of all nodes:" class="md-nav__link">
+    The private network of all nodes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exastorage-devices-on-all-nodes" title="The EXAStorage devices on all nodes:" class="md-nav__link">
+    The EXAStorage devices on all nodes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exavolume-sizes" title="The EXAVolume sizes:" class="md-nav__link">
+    The EXAVolume sizes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-network-port-numbers-optional" title="The network port numbers (optional)" class="md-nav__link">
+    The network port numbers (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-nameservers-optional" title="The nameservers (optional):" class="md-nav__link">
+    The nameservers (optional):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-copy-the-configuration-to-all-nodes" title="3. Copy the configuration to all nodes" class="md-nav__link">
+    3. Copy the configuration to all nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-the-exastorage-device-files" title="4. Create the EXAStorage device files" class="md-nav__link">
+    4. Create the EXAStorage device files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-start-the-cluster" title="5. Start the cluster" class="md-nav__link">
+    5. Start the cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-custom-jdbc-drivers" title="Installing custom JDBC drivers" class="md-nav__link">
+    Installing custom JDBC drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-oracle-drivers" title="Installing Oracle drivers" class="md-nav__link">
+    Installing Oracle drivers
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-geo/" title="Exasol GEO data and spatial indexes" class="md-nav__link">
+      Exasol GEO data and spatial indexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-udf/" title="Exasol UDF framework" class="md-nav__link">
+      Exasol UDF framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-virtual-schema/" title="Exasol virtual schema" class="md-nav__link">
+      Exasol virtual schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-websockets/" title="Exasol JSON over WebSockets API" class="md-nav__link">
+      Exasol JSON over WebSockets API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord-raster/" title="Foal Getis-ord on rasters" class="md-nav__link">
+      Foal Getis-ord on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord/" title="Focal Getis-ord" class="md-nav__link">
+      Focal Getis-ord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord-raster/" title="Getis-ord G* on rasters" class="md-nav__link">
+      Getis-ord G* on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
+      Standards Getis-Ord G*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../one-vs-rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../soh/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spectral-analysis-tci/" title="Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing" class="md-nav__link">
+      Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../svm/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Scenarios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Scenarios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/smartcity/" title="Smart City" class="md-nav__link">
+      Smart City
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/disaster/" title="Disaster Management" class="md-nav__link">
+      Disaster Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/environment/" title="Environment" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-image" title="How to use this image" class="md-nav__link">
+    How to use this image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exasol-docker-tool-exadt" title="EXASOL Docker Tool — exadt" class="md-nav__link">
+    EXASOL Docker Tool — exadt
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creating-a-cluster" title="1. Creating a cluster" class="md-nav__link">
+    1. Creating a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-initializing-a-cluster" title="2. Initializing a cluster" class="md-nav__link">
+    2. Initializing a cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automatically-creating-and-assigning-file-devices" title="Automatically creating and assigning file devices" class="md-nav__link">
+    Automatically creating and assigning file devices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adding-exastorage-devices" title="3. Adding EXAStorage devices" class="md-nav__link">
+    3. Adding EXAStorage devices
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assigning-devices-to-volumes" title="Assigning devices to volumes" class="md-nav__link">
+    Assigning devices to volumes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-starting-a-cluster" title="4. Starting a cluster" class="md-nav__link">
+    4. Starting a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-inspecting-a-cluster" title="5. Inspecting a cluster" class="md-nav__link">
+    5. Inspecting a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-stopping-a-cluster" title="6. Stopping a cluster" class="md-nav__link">
+    6. Stopping a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-updating-a-cluster" title="7. Updating a cluster" class="md-nav__link">
+    7. Updating a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-deleting-a-cluster" title="8. Deleting a cluster" class="md-nav__link">
+    8. Deleting a cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-stand-alone-exasol-container" title="Creating a stand-alone EXASOL container" class="md-nav__link">
+    Creating a stand-alone EXASOL container
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-the-persistent-volume-of-a-stand-alone-exasol-container" title="Updating the persistent volume of a stand-alone EXASOL container" class="md-nav__link">
+    Updating the persistent volume of a stand-alone EXASOL container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-multi-host-exasol-cluster" title="Creating a multi-host EXASOL cluster" class="md-nav__link">
+    Creating a multi-host EXASOL cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-the-configuration" title="1. Create the configuration" class="md-nav__link">
+    1. Create the configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-create-an-exa-directory-template-recommended" title="a. Create an /exa/ directory template (RECOMMENDED):" class="md-nav__link">
+    a. Create an /exa/ directory template (RECOMMENDED):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-create-an-exaconf-template" title="b. Create an EXAConf template" class="md-nav__link">
+    b. Create an EXAConf template
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-complete-the-configuration" title="2. Complete the configuration" class="md-nav__link">
+    2. Complete the configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-private-network-of-all-nodes" title="The private network of all nodes:" class="md-nav__link">
+    The private network of all nodes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exastorage-devices-on-all-nodes" title="The EXAStorage devices on all nodes:" class="md-nav__link">
+    The EXAStorage devices on all nodes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-exavolume-sizes" title="The EXAVolume sizes:" class="md-nav__link">
+    The EXAVolume sizes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-network-port-numbers-optional" title="The network port numbers (optional)" class="md-nav__link">
+    The network port numbers (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-nameservers-optional" title="The nameservers (optional):" class="md-nav__link">
+    The nameservers (optional):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-copy-the-configuration-to-all-nodes" title="3. Copy the configuration to all nodes" class="md-nav__link">
+    3. Copy the configuration to all nodes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-the-exastorage-device-files" title="4. Create the EXAStorage device files" class="md-nav__link">
+    4. Create the EXAStorage device files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-start-the-cluster" title="5. Start the cluster" class="md-nav__link">
+    5. Start the cluster
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-custom-jdbc-drivers" title="Installing custom JDBC drivers" class="md-nav__link">
+    Installing custom JDBC drivers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-oracle-drivers" title="Installing Oracle drivers" class="md-nav__link">
+    Installing Oracle drivers
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="exasol-docker-support">Exasol Docker Support<a class="headerlink" href="#exasol-docker-support" title="Permanent link">&para;</a></h1>
+<p>Exasol has developed support for running the Exasol RDBMS inside a dockerized environment.</p>
+<p>Currently supported features:</p>
+<ul>
+<li>create / start / stop a database in a virtual cluster</li>
+<li>use the UDF framework</li>
+<li>expose ports from containers on the local host</li>
+<li>update the virtual cluster</li>
+<li>create backups on archive volumes</li>
+</ul>
+<h2 id="how-to-use-this-image">How to use this image<a class="headerlink" href="#how-to-use-this-image" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pull the image to your Docker host:
+  <div class="codehilite"><pre><span></span><span class="gp">$</span> docker pull exasol/docker-db:latest
+</pre></div></li>
+<li>Install <code>exadt</code>:
+  <div class="codehilite"><pre><span></span><span class="gp">$</span> git clone https://github.com/EXASOL/docker-db.git
+<span class="gp">$</span> <span class="nb">cd</span> docker-db
+</pre></div></li>
+<li>Install the <code>exadt</code> dependencies:
+  <div class="codehilite"><pre><span></span><span class="gp">$</span> pip install --upgrade -r exadt_requirements.txt
+</pre></div></li>
+<li>Create and configure your virtual EXASOL cluster by using the commands described in the <code>exadt</code> documentation below.</li>
+</ul>
+<h2 id="exasol-docker-tool-exadt">EXASOL Docker Tool — <code>exadt</code><a class="headerlink" href="#exasol-docker-tool-exadt" title="Permanent link">&para;</a></h2>
+<p>The <code>exadt</code> command-line tool is used to create, initialize, start, stop, update and delete a Docker based EXASOL
+cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>exadt</code> currently only supports single-host-clusters. See below for how to create a multi-host-cluster
+(with one container per host).</p>
+</div>
+<h3 id="1-creating-a-cluster">1. Creating a cluster<a class="headerlink" href="#1-creating-a-cluster" title="Permanent link">&para;</a></h3>
+<p>Select a root directory for your EXASOl cluster. It will be used to store the data, metadata and buckets of all local
+containers and should therefore be located on a filesystem with sufficient free space (min. 10 GiB are recommended).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>this example creates only one node. You can easily create mutliple (virtual) nodes by using the --num-nodes option.</p>
+</div>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt create-cluster --root ~/MyCluster/ --create-root MyCluster
+<span class="go">Successfully created cluster &#39;MyCluster&#39; with root directory &#39;/home/user/MyCluster/&#39;.</span>
+</pre></div>
+
+<p><code>exadt</code> stores information about all clusters within <code>$HOME/.exadt.conf</code> and <code>/etc/exadt.conf</code> (if the current user has
+write permission in <code>/etc</code>). Both files are searched when executing a command that needs the cluster name as an
+argument.</p>
+<p>In order to list all existing clusters you can use <code>exadt list-clusters</code>:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt list-clusters
+<span class="go"> CLUSTER                     ROOT                                       IMAGE                    </span>
+<span class="go"> MyCluster                   /home/user/MyCluster                       &lt;uninitialized&gt;</span>
+</pre></div>
+
+<h3 id="2-initializing-a-cluster">2. Initializing a cluster<a class="headerlink" href="#2-initializing-a-cluster" title="Permanent link">&para;</a></h3>
+<p>After creating a cluster it has to be initialized. Mandatory parameters are:</p>
+<ul>
+<li>the EXASOL Docker image </li>
+<li>the license file</li>
+<li>the type of EXAStorage devices (currently only 'file' is supported)</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt init-cluster --image exasol/docker-db:latest --license ./license/license.xml --auto-storage MyCluster
+<span class="go">Successfully initialized configuration in &#39;/home/user/MyCluster/EXAConf&#39;.</span>
+<span class="go">Successfully initialized root directory &#39;/home/user/MyCluster/&#39;.</span>
+</pre></div>
+
+<p>This command creates subdirectories for each virtual node in the root directory. These are mounted as Docker volumes
+within each container (at '/exa') and contain all data, metadata and buckets.</p>
+<p>It also creates the file <code>EXAConf</code> in the root directory, which contains the configuration for the whole cluster and
+currently has to be edited manually if a non-default setup is used.</p>
+<h4 id="automatically-creating-and-assigning-file-devices">Automatically creating and assigning file devices<a class="headerlink" href="#automatically-creating-and-assigning-file-devices" title="Permanent link">&para;</a></h4>
+<p>The example above uses the <code>--auto-storage</code> option which tells <code>exadt</code> to automatically create file-devices for all
+virtual nodes (within the root directory). These devices are assigned to the EXAStorage volumes, that are also
+automatically created. The devices need at least 10GiB of free space and use up to 100GiB of it (all devices combined).</p>
+<p>If <code>--auto-storage</code> is used, you can skip the next step entirely (and <em>continue with section 4</em>).</p>
+<h3 id="3-adding-exastorage-devices">3. Adding EXAStorage devices<a class="headerlink" href="#3-adding-exastorage-devices" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step can be skipped if <code>--auto-storage</code> has been used during initialization.</p>
+</div>
+<p>Next, devices for EXAStorage need to be added. This can be done by executing:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt create-file-devices --size 80GiB MyCluster
+<span class="go">Successfully created the following file devices:</span>
+<span class="go">Node 11 : [&#39;/home/user/MyCluster/n11/data/storage/dev.1&#39;]</span>
+</pre></div>
+
+<p>As you can see, the file devices are created within the <code>data/storage</code> subdirectory of each node's Docker root. They are
+created as <em>sparse files</em>, i. e. their size is stated as the given size but they actually have size 0 and grow as new
+data is being written.</p>
+<p>All devices must be assigned to a 'disk'. A disk is a group of devices that can be assigned to an EXAStorage volume. The
+disk name can be specified with the <code>--disk</code> parameter. If omitted, the newly created devices will be assigned to the
+disk named 'default'.</p>
+<h4 id="assigning-devices-to-volumes">Assigning devices to volumes<a class="headerlink" href="#assigning-devices-to-volumes" title="Permanent link">&para;</a></h4>
+<p>After creating the devices, they have to be assigned to the corresponding volumes. If you did not use <code>--auto-storage</code>
+(see above), you have to edit <code>EXAConf</code> manually. Open it and locate the following section:</p>
+<div class="codehilite"><pre><span></span>[EXAVolume : DataVolume1]
+    Type = data
+    Nodes = 11
+    Disk =
+    Size =
+    Redundancy = 1
+</pre></div>
+
+<p>Now add the name of the disk ('default', if you did not specify a name when executing <code>create-file-devices</code>) and the
+volume size, e. g:</p>
+<div class="codehilite"><pre><span></span>    Disk = default
+    Size = 100GiB
+</pre></div>
+
+<p>Then do the same for the section <code>[EXAVolume : ArchiveVolume1]</code>.</p>
+<p>Make sure not to make the volume too big! The specified size is the size that is available for the database, i. e. if
+the redundancy is 2, the volume will actually use twice the amount of space! Also make sure to leave some free space for
+the temporary volume, that is created by the database during startup.</p>
+<h3 id="4-starting-a-cluster">4. Starting a cluster<a class="headerlink" href="#4-starting-a-cluster" title="Permanent link">&para;</a></h3>
+<p>The cluster is started using the <code>exadt start-cluster</code> command. Before the containers are actually created, <code>exadt</code>
+checks if there is enough free space for the sparse files (if they grow to their max. size). If not, the startup will
+fail:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt start-cluster MyCluster
+<span class="go">Free space on &#39;/&#39; is only 22.2 GiB, but accumulated size of (sparse) file-devices is 80.0 GiB!</span>
+<span class="go">&#39;ERROR::DockerHandler: Check for space usage failed! Aborting startup.&#39;</span>
+</pre></div>
+
+<p>If that's the case, you can replace the existing devices with smaller ones and (optionally) place them on an external
+partition:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt create-file-devices --size 10GiB MyCluster --replace --path /mnt/data/
+<span class="go">Do you really want to replace all file-devices of cluster &#39;MyCluster&#39;? (y/n): y</span>
+<span class="go">The following file devices have been removed:</span>
+<span class="go">Node 11 : [&#39;/home/user/MyCluster/n11/data/storage/dev.1&#39;]</span>
+<span class="go">Successfully created the following file devices:</span>
+<span class="go">Node 11 : [&#39;/mnt/data/n11/dev.1&#39;]</span>
+</pre></div>
+
+<p>The devices that are located outside of the root directory are mapped into the file system of the container (within
+<code>/exa/data/storage/</code>). They are often referenced as 'mapped devices'.</p>
+<p>Now the cluster can be started:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt start-cluster MyCluster
+<span class="go">Copying EXAConf to all node volumes.</span>
+<span class="go">Creating private network 10.10.10.0/24 (&#39;MyCluster_priv&#39;)... successful</span>
+<span class="go">No public network specified.</span>
+<span class="go">Creating container &#39;MyCluster_11&#39;... successful</span>
+<span class="go">Starting container &#39;MyCluster_11&#39;... successful</span>
+</pre></div>
+
+<p>This command creates and starts all containers and networks. Each cluster uses one or two networks to connect the
+containers. These networks are not connected to other clusters.</p>
+<p>The containers are (re)created each time the cluster is started and they are destroyed when it is deleted! All
+persistent data is stored within the root directory (and the mapped devices, if any).</p>
+<h3 id="5-inspecting-a-cluster">5. Inspecting a cluster<a class="headerlink" href="#5-inspecting-a-cluster" title="Permanent link">&para;</a></h3>
+<p>All containers of an existing cluster can be listed by executing:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt ps MyCluster
+<span class="go"> NODE ID      STATUS          IMAGE                       NAME   CONTAINER ID   CONTAINER NAME    EXPOSED PORTS       </span>
+<span class="go"> 11           Up 5 seconds    exasol/docker-db:6.0.0-d1   n11    e9347c3e41ca   MyCluster_11      8899-&gt;8888,6594-&gt;6583</span>
+</pre></div>
+
+<p>The <code>EXPOSED PORTS</code> column shows all container ports that are reachable from outside the local host
+('host'-&gt;'container'), usually one for the database and one for BucketFS.</p>
+<h3 id="6-stopping-a-cluster">6. Stopping a cluster<a class="headerlink" href="#6-stopping-a-cluster" title="Permanent link">&para;</a></h3>
+<p>A cluster can be stopped by executing:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt stop-cluster MyCluster
+<span class="go">Stopping container &#39;MyCluster_11&#39;... successful</span>
+<span class="go">Removing container &#39;MyCluster_11&#39;... successful</span>
+<span class="go">Removing network &#39;MyCluster_priv&#39;... successful</span>
+</pre></div>
+
+<p>As stated above, the containers are deleted when a cluster is stopped, but the root directory is preserved (as well as
+all mapped devices). Also the automatically created networks are removed.</p>
+<h3 id="7-updating-a-cluster">7. Updating a cluster<a class="headerlink" href="#7-updating-a-cluster" title="Permanent link">&para;</a></h3>
+<p>A cluster can be updated by exchanging the EXASOL Docker image (but it has to be stopped first):</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> git pull
+<span class="gp">$</span> pip install --upgrade -r exadt_requirements.txt
+<span class="gp">$</span> docker pull exasol/docker-db:latest
+<span class="gp">$</span> ./exadt update-cluster --image exasol/docker-db:latest MyCluster
+<span class="go">Cluster &#39;MyCluster&#39; has been successfully updated!</span>
+<span class="go">- Image :  exasol/docker-db:6.0.0-d1 --&gt; exasol/docker-db:6.0.0-d2</span>
+<span class="go">- DB    :  6.0.0                     --&gt; 6.0.1</span>
+<span class="go">- OS    :  6.0.0                     --&gt; 6.0.0</span>
+<span class="go">Restart the cluster in order to apply the changes.</span>
+</pre></div>
+
+<p>The cluster has to be restarted in order to recreate the containers from the new image (and trigger the internal update
+mechanism).</p>
+<h3 id="8-deleting-a-cluster">8. Deleting a cluster<a class="headerlink" href="#8-deleting-a-cluster" title="Permanent link">&para;</a></h3>
+<p>A cluster can be completely deleted by executing:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> ./exadt delete-cluster MyCluster
+<span class="go">Do you really want to delete cluster &#39;MyCluster&#39; (and all file-devices)?  (y/n): y</span>
+<span class="go">Deleting directory &#39;/mnt/data/n11&#39;.</span>
+<span class="go">Deleting directory &#39;/mnt/data/n11&#39;.</span>
+<span class="go">Deleting root directory &#39;/home/user/MyCluster/&#39;.</span>
+<span class="go">Successfully removed cluster &#39;MyCluster&#39;.</span>
+</pre></div>
+
+<p>Note that all file devices (even the mapped ones) and the root directory are deleted. You can use <code>--keep-root</code> and
+<code>--keep-mapped-devices</code> in order to prevent this.</p>
+<p>A cluster has to be stopped before it can be deleted (even if all containers are down)!</p>
+<h2 id="creating-a-stand-alone-exasol-container">Creating a stand-alone EXASOL container<a class="headerlink" href="#creating-a-stand-alone-exasol-container" title="Permanent link">&para;</a></h2>
+<p>Starting with version 6.0.2-d1, there is no more separate "self-contained" image version. You can simply create an
+EXASOL container from the EXASOL docker image using the following command:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run --name exasoldb -p <span class="m">127</span>.0.0.1:8899:8888 --detach --privileged <span class="se">\</span>
+    --stop-timeout <span class="m">120</span>  exasol/docker-db:latest
+</pre></div>
+
+<p>In this example port 8888 (within the container) is exposed on the local port 8899. Use this port to connect to the DB.</p>
+<p>All data is stored within the container and lost when the container is removed. In order to make it persistent, you'd
+have to mount a volume into the container at <code>/exa</code>, for example:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run --name exasoldb  -p <span class="m">127</span>.0.0.1:8899:8888 --detach --privileged <span class="se">\</span>
+    --stop-timeout <span class="m">120</span> -v exa_volume:/exa exasol/docker-db:latest
+</pre></div>
+
+<p>See <a href="https://docs.docker.com/engine/tutorials/dockervolumes/">the Docker volumes documentation</a> for more examples on how
+to create and manage persistent volumes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure the database has been shut down correctly before stopping the container!</p>
+</div>
+<p>A high stop-timeout (see example above) increases the chance that the DB can be shut down gracefully before the
+container is stopped, but it's not guaranteed. However, it can be stopped manually by executing the following command
+within the container (after attaching to it):</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> dwad_client stop-wait DB1
+</pre></div>
+
+<p>Or from outside the container:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker <span class="nb">exec</span> -ti exasoldb dwad_client stop-wait DB1
+</pre></div>
+
+<h3 id="updating-the-persistent-volume-of-a-stand-alone-exasol-container">Updating the persistent volume of a stand-alone EXASOL container<a class="headerlink" href="#updating-the-persistent-volume-of-a-stand-alone-exasol-container" title="Permanent link">&para;</a></h3>
+<p>Starting with version 6.0.3-d1, an existing persistent volume can be updated (for use with a later version of an EXASOL
+image) by calling the following command with the <em>new</em> image:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run -v exa_volume:/exa exasol/docker-db:6.0.3-d1 update-sc
+</pre></div>
+
+<p>If everything works correctly, you should see output similar to this:</p>
+<div class="codehilite"><pre><span></span><span class="go">Updating EXAConf &#39;/exa/etc/EXAConf&#39; from version &#39;6.0.2&#39; to &#39;6.0.3&#39;</span>
+<span class="go">Container has been successfully updated!</span>
+<span class="go">- Image ver. :  6.0.2-d1 --&gt; 6.0.3-d1</span>
+<span class="go">- DB ver.    :  6.0.2 --&gt; 6.0.3</span>
+<span class="go">- OS ver.    :  6.0.2 --&gt; 6.0.3</span>
+</pre></div>
+
+<p>After that, a new container can be created (from the new image) using the old / updated volume.</p>
+<h2 id="creating-a-multi-host-exasol-cluster">Creating a multi-host EXASOL cluster<a class="headerlink" href="#creating-a-multi-host-exasol-cluster" title="Permanent link">&para;</a></h2>
+<p>Starting with version 6.0.7-d1, it's possible to create multiple containers on different hosts and connect them to a
+cluster (one container per host).</p>
+<h3 id="1-create-the-configuration">1. Create the configuration<a class="headerlink" href="#1-create-the-configuration" title="Permanent link">&para;</a></h3>
+<p>First you have to create the configuration for the cluster. There are two possible ways to do so:</p>
+<h4 id="a-create-an-exa-directory-template-recommended">a. Create an /exa/ directory template (RECOMMENDED):<a class="headerlink" href="#a-create-an-exa-directory-template-recommended" title="Permanent link">&para;</a></h4>
+<p>Execute the following command (<code>--num-nodes</code> is the number of containers in the cluster):</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run -v <span class="nv">$HOME</span>/exa_template:/exa --rm -i exasol/docker-db:latest <span class="se">\</span>
+    init-sc --template --num-nodes <span class="m">3</span>
+</pre></div>
+
+<p>After the command has finished, the directory <code>$HOME/exa_template</code> contains all subdirectories as well as an EXAConf
+template (in <code>/etc</code>). The EXAConf is also printed to stdout.</p>
+<h4 id="b-create-an-exaconf-template">b. Create an EXAConf template<a class="headerlink" href="#b-create-an-exaconf-template" title="Permanent link">&para;</a></h4>
+<p>You can create a template file and redirect it to wherever you want by executing: </p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run --rm -i exasol/docker-db:latest init-sc --template <span class="se">\</span>
+    --num-nodes <span class="m">3</span> &gt; ~/MyExaConf
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend to create an /exa/ template directory and the following steps assume that you did so.
+If you choose to only create the EXAConf file, you have to build a new Docker image with it and create
+the EXAStorage devices files within that image.</p>
+</div>
+<h3 id="2-complete-the-configuration">2. Complete the configuration<a class="headerlink" href="#2-complete-the-configuration" title="Permanent link">&para;</a></h3>
+<p>The EXAConf template has to be completed before the cluster can be started. You have to provide:</p>
+<h4 id="the-private-network-of-all-nodes">The private network of all nodes:<a class="headerlink" href="#the-private-network-of-all-nodes" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="go">[Node : 11]</span>
+<span class="go">    PrivateNet = 10.10.10.11/24 # &lt;-- replace with the real network</span>
+</pre></div>
+
+<h4 id="the-exastorage-devices-on-all-nodes">The EXAStorage devices on all nodes:<a class="headerlink" href="#the-exastorage-devices-on-all-nodes" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="go">[[Disk : default]]</span>
+<span class="go">        Devices = dev.1    #&#39;dev.1.data&#39; and &#39;dev.1.meta&#39; files must be located in &#39;/exa/data/storage&#39;</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can leave this entry as it is if you create the devices as described below.</p>
+</div>
+<h4 id="the-exavolume-sizes">The EXAVolume sizes:<a class="headerlink" href="#the-exavolume-sizes" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="go">[EXAVolume : DataVolume1]</span>
+<span class="go">    Type = data</span>
+<span class="go">    Nodes = 11, 12, 13</span>
+<span class="go">    Disk = default</span>
+<span class="gp">    #</span> Volume size <span class="o">(</span>e. g. <span class="s1">&#39;1 TiB&#39;</span><span class="o">)</span>
+<span class="go">    Size =  # &lt;-- enter volume size here</span>
+</pre></div>
+
+<h4 id="the-network-port-numbers-optional">The network port numbers (optional)<a class="headerlink" href="#the-network-port-numbers-optional" title="Permanent link">&para;</a></h4>
+<p>If you are using the host network mode (see "Start the cluster" below), you may have to adjust the port numbers used by
+the EXASOL services. The one that's most likely to collide is the SSH daemon, which is using the well-known port 22. You
+can change it in EXAConf:</p>
+<div class="codehilite"><pre><span></span><span class="go">[Global]</span>
+<span class="go">    SSHPort = 22  # &lt;-- replace with any unused port number</span>
+</pre></div>
+
+<p>The other EXASOL services (e. g. Cored, BucketFS and the DB itself) are using port numbers above 1024. However, you can
+change them all by editing EXAConf.</p>
+<h4 id="the-nameservers-optional">The nameservers (optional):<a class="headerlink" href="#the-nameservers-optional" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><span class="go">[Global]</span>
+<span class="go">    ...</span>
+<span class="gp">    #</span> Comma-separated list of nameservers <span class="k">for</span> this cluster.
+<span class="go">    NameServers =</span>
+</pre></div>
+
+<h3 id="3-copy-the-configuration-to-all-nodes">3. Copy the configuration to all nodes<a class="headerlink" href="#3-copy-the-configuration-to-all-nodes" title="Permanent link">&para;</a></h3>
+<p>Copy the <code>$HOME/exa_template/</code> directory to all cluster nodes (the exact path is not relevant, but should be identical
+on all nodes).</p>
+<h3 id="4-create-the-exastorage-device-files">4. Create the EXAStorage device files<a class="headerlink" href="#4-create-the-exastorage-device-files" title="Permanent link">&para;</a></h3>
+<p>You can create the EXAStorage device files by executing (on each node):</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span><span class="nv">$HOME</span>/exa_template/data/storage/dev.1.data <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span><span class="m">1</span> <span class="nv">seek</span><span class="o">=</span><span class="m">999</span>
+<span class="gp">$</span> touch <span class="nv">$HOME</span>/exa_template/data/storage/dev.1.meta
+</pre></div>
+
+<p>This will create a sparse file of 1GB (1000 blocks of 1 MB) that holds the data and also a file that holds the metadata
+for that device. Adjust the size to your needs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alternatively you can partition a block-device (the meta partition needs only 2 MB) and place symlinks (or new
+device files) named <code>dev.1.data</code> and <code>dev.1.meta</code> in the same directory.</p>
+</div>
+<h3 id="5-start-the-cluster">5. Start the cluster<a class="headerlink" href="#5-start-the-cluster" title="Permanent link">&para;</a></h3>
+<p>The cluster is started by creating all containers individually and passing each of them its ID from the EXAConf. For
+<code>n11</code> the command would be:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> docker run --detach --network<span class="o">=</span>host --privileged <span class="se">\</span>
+    -v <span class="nv">$HOME</span>/exa_template:/exa exasol/docker-db:latest <span class="se">\</span>
+    init-sc --node-id <span class="m">11</span>
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This example uses the host network stack, i. e. the containers are directly accessing a host interface to connect
+to each other. There is no need to expose ports in this mode: they are all accessible on the host.</p>
+</div>
+<h2 id="installing-custom-jdbc-drivers">Installing custom JDBC drivers<a class="headerlink" href="#installing-custom-jdbc-drivers" title="Permanent link">&para;</a></h2>
+<p>Starting with version 6.0.7-d1, custom JDBC drivers can be added by uploading them into a bucket. The bucket and path
+for the drivers can be configured in each database section of EXAConf. The default configuration is:</p>
+<div class="codehilite"><pre><span></span><span class="go">[DB : DB1]</span>
+<span class="go">    ...</span>
+<span class="gp">    #</span> OPTIONAL: JDBC driver configuration
+<span class="go">    [[JDBC]]</span>
+<span class="go">        BucketFS = bfsdefault</span>
+<span class="go">        Bucket = default</span>
+<span class="gp">        #</span> Directory within the bucket that contains the drivers
+<span class="go">        Dir = drivers/jdbc</span>
+</pre></div>
+
+<p>In order for the database to find the driver, you need to upload it into a subdirectory of <code>drivers/jdbc</code> of the default
+bucket (which is automatically created if you don't modify EXAConf). See the section <code>Installing Oracle drivers</code> for
+help on how to upload files to BucketFS.</p>
+<p>In addition to the driver file(s), you also have to create and upload a file called <code>settings.cfg</code> , that looks like
+this:</p>
+<div class="codehilite"><pre><span></span><span class="go">DRIVERNAME=MY_JDBC_DRIVER</span>
+<span class="go">JAR=my_jdbc_driver.jar</span>
+<span class="go">DRIVERMAIN=com.mydriver.jdbc.Driver</span>
+<span class="go">PREFIX=jdbc:mydriver:</span>
+<span class="go">FETCHSIZE=100000</span>
+<span class="go">INSERTSIZE=-1</span>
+</pre></div>
+
+<p>Change the variables DRIVERNAME, JAR, DRIVERMAIN and PREFIX according to your driver and upload the file (into the
+<strong>same directory</strong> as the driver itself).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not modify the last two lines!</p>
+</div>
+<p>If you use the default bucket and the default path, you can add multiple JDBC drivers during runtime. The DB will find
+them without having to restart it (as long as they're located in a subfolder of the default path). Otherwise, a
+container restart is required.</p>
+<h2 id="installing-oracle-drivers">Installing Oracle drivers<a class="headerlink" href="#installing-oracle-drivers" title="Permanent link">&para;</a></h2>
+<p>Starting with version 6.0.7-d1, Oracle drivers can be added by uploading them into a bucket. The bucket and path for the
+drivers can be configured in each database section of EXAConf. The default configuration is:</p>
+<div class="codehilite"><pre><span></span><span class="go">[DB : DB1]</span>
+<span class="go">    ...</span>
+<span class="gp">    #</span> OPTIONAL: Oracle driver configuration
+<span class="go">    [[ORACLE]]</span>
+<span class="go">        BucketFS = bfsdefault</span>
+<span class="go">        Bucket = default</span>
+<span class="gp">        #</span> Directory within the bucket that contains the drivers
+<span class="go">        Dir = drivers/oracle</span>
+</pre></div>
+
+<p>In order for the database to find the driver, you have to upload it to <code>drivers/oracle</code> of the default bucket (which is
+automatically created if you don't modify EXAConf).</p>
+<p>You can use <code>curl</code> for uploading, e. g.:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> curl -v -X PUT -T instantclient-basic-linux.x64-12.1.0.2.0.zip <span class="se">\</span>
+    http://w:PASSWORD@10.10.10.11:6583/default/drivers/oracle/instantclient-basic-linux.x64-12.2.0.1.0.zip
+</pre></div>
+
+<p>Replace <code>PASSWORD</code> with the <code>WritePasswd</code> for the bucket. You can find it in the EXAConf. It's base64 encoded and can be
+decoded like this:</p>
+<div class="codehilite"><pre><span></span><span class="gp">$</span> awk <span class="s1">&#39;/WritePasswd/{ print $3; }&#39;</span> EXAConf <span class="p">|</span> base64 -d
+</pre></div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The only currently supported driver version is 12.1.0.20. Please download the package
+<code>instantclient-basic-linux.x64-12.1.0.2.0.zip</code> from <a href="http://www.oracle.com">http://www.oracle.com</a> and upload it as described above.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="About Method" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                About Method
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../exasol-geo/" title="Exasol GEO data and spatial indexes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Exasol GEO data and spatial indexes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> - BigGIS website maintained by <b><a href="https://github.com/vsimko">Viliam Simko</a></b> 
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://biggis-project.eu" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/biggis-project" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-112317697-1","biggis-project.eu"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

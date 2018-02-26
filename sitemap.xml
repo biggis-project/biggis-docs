@@ -68,31 +68,31 @@
     
         
     <url>
-     <loc>/architecture/ArchOverview/</loc>
+     <loc>/architecture/arch-overview/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/architecture/Components/</loc>
-     <lastmod>2018-02-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/architecture/Semantics/</loc>
-     <lastmod>2018-02-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/architecture/StreamPipes/</loc>
+     <loc>/architecture/components/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/platform-bwcloud/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/architecture/semantics/</loc>
+     <lastmod>2018-02-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/architecture/stream-pipes/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -242,61 +242,61 @@
     </url>
         
     <url>
-     <loc>/methods/exasol_docker/</loc>
+     <loc>/methods/exasol-docker/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/exasol_geo/</loc>
+     <loc>/methods/exasol-geo/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/exasol_udf/</loc>
+     <loc>/methods/exasol-udf/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/exasol_virtual_schema/</loc>
+     <loc>/methods/exasol-virtual-schema/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/exasol_websockets/</loc>
+     <loc>/methods/exasol-websockets/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/focal_getis_ord/</loc>
+     <loc>/methods/focal-getis-ord-raster/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/focal_getis_ord_raster/</loc>
+     <loc>/methods/focal-getis-ord/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/getis_ord/</loc>
+     <loc>/methods/getis-ord-raster/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/getis_ord_raster/</loc>
+     <loc>/methods/getis-ord/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/one_vs_rest/</loc>
+     <loc>/methods/one-vs-rest/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -308,13 +308,13 @@
     </url>
         
     <url>
-     <loc>/methods/spectral_analysis_tci/</loc>
+     <loc>/methods/spectral-analysis-tci/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/methods/support_vector_machine/</loc>
+     <loc>/methods/svm/</loc>
      <lastmod>2018-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>

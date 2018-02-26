@@ -1,0 +1,3415 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Central documentation of the BigGIS project">
+      
+      
+      
+        <meta name="author" content="BigGIS Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Exasol JSON over WebSockets API - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../animations.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="dark-blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#exasol-json-over-websockets-api" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="BigGIS - Scalable GIS for Predictive and Prescriptive Analytics" class="md-header-nav__button md-logo">
+          
+            <img src="../../favicon.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+              </span>
+              <span class="md-header-nav__topic">
+                Exasol JSON over WebSockets API
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About BigGIS" class="md-tabs__link">
+        About BigGIS
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../architecture/arch-overview/" title="Architecture" class="md-tabs__link">
+          Architecture
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-sources/" title="Data sources" class="md-tabs__link">
+          Data sources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../demos/" title="Demos" class="md-tabs__link">
+          Demos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="Methods" class="md-tabs__link md-tabs__link--active">
+          Methods
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../scenarios/smartcity/" title="Scenarios" class="md-tabs__link">
+          Scenarios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../favicon.svg" width="24" height="24">
+      
+    </span>
+    BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About BigGIS" class="md-nav__link">
+      About BigGIS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-github-repos/" title="List of Github Repositories" class="md-nav__link">
+      List of Github Repositories
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-papers/" title="List of Papers" class="md-nav__link">
+      List of Papers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-presentations/" title="List of Presentations" class="md-nav__link">
+      List of Presentations
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-press/" title="List of Press Releases" class="md-nav__link">
+      List of Press Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../consortium/" title="Project Consortium" class="md-nav__link">
+      Project Consortium
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../docs-howto/" title="Documentation Howto" class="md-nav__link">
+      Documentation Howto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/arch-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/platform-bwcloud/" title="bwCloud" class="md-nav__link">
+      bwCloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/semantics/" title="Semantics" class="md-nav__link">
+      Semantics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/stream-pipes/" title="StreamPipes" class="md-nav__link">
+      StreamPipes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Data sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Data sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/" title="Datasets in BigGIS" class="md-nav__link">
+      Datasets in BigGIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
+    
+    <label class="md-nav__link" for="nav-10-2">
+      Atmosphere
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        Atmosphere
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/dwd/" title="DWD (Meteorological Data)" class="md-nav__link">
+      DWD (Meteorological Data)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/lubw/" title="LUBW Stations" class="md-nav__link">
+      LUBW Stations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/sensebox-fzi/" title="SenseBox-based Weather Stations (FZI)" class="md-nav__link">
+      SenseBox-based Weather Stations (FZI)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/wunderground/" title="Wunderground Dataset" class="md-nav__link">
+      Wunderground Dataset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/biosphere/vitimeteo/" title="Drosophila Suzukii Observations (Vitimeteo)" class="md-nav__link">
+      Drosophila Suzukii Observations (Vitimeteo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      Ground Surface
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        Ground Surface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Aerial photographs)" class="md-nav__link">
+      Digital ortho-images (Aerial photographs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/lightweight-cams/" title="Lightweight Camera Systems" class="md-nav__link">
+      Lightweight Camera Systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-elevation/" title="NASA Elevation Profile" class="md-nav__link">
+      NASA Elevation Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-modis/" title="MODIS Dataset" class="md-nav__link">
+      MODIS Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/sentinel2/" title="Sentinel 2" class="md-nav__link">
+      Sentinel 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/uba-air/" title="Umweltbundesamt Air Pollution" class="md-nav__link">
+      Umweltbundesamt Air Pollution
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
+    
+    <label class="md-nav__link" for="nav-10-5">
+      Socio-Economic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-5">
+        Socio-Economic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/envirocar/" title="Envirocar Dataset" class="md-nav__link">
+      Envirocar Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/landuse/" title="Land use data" class="md-nav__link">
+      Land use data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/newyork-taxi/" title="New York Taxi Drives" class="md-nav__link">
+      New York Taxi Drives
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Demos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Demos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/" title="About demos" class="md-nav__link">
+      About demos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/firefighting/" title="Firefighting" class="md-nav__link">
+      Firefighting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-detect/" title="Gas Cloud Detection" class="md-nav__link">
+      Gas Cloud Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-predict/" title="Gas Cloud Prediction" class="md-nav__link">
+      Gas Cloud Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/heatstress/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
+      Optimal Flight Plan for Drones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
+      EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/hotspot-analysis/" title="Hotspot analysis (using G*)" class="md-nav__link">
+      Hotspot analysis (using G*)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/invasive-species/" title="Invasive species" class="md-nav__link">
+      Invasive species
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/landuse/" title="Landuse classification" class="md-nav__link">
+      Landuse classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/optical-remote-sensing/" title="Optical Remote Sensing" class="md-nav__link">
+      Optical Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/sensor-placement/" title="Optimal Sensor Placement" class="md-nav__link">
+      Optimal Sensor Placement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/soh-eval/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
+      Visual Analysis of Spatio-Temporal Event Predictions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Methods
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Methods
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="About Method" class="md-nav__link">
+      About Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-docker/" title="Exasol Docker Support" class="md-nav__link">
+      Exasol Docker Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-geo/" title="Exasol GEO data and spatial indexes" class="md-nav__link">
+      Exasol GEO data and spatial indexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-udf/" title="Exasol UDF framework" class="md-nav__link">
+      Exasol UDF framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-virtual-schema/" title="Exasol virtual schema" class="md-nav__link">
+      Exasol virtual schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Exasol JSON over WebSockets API
+      </label>
+    
+    <a href="./" title="Exasol JSON over WebSockets API" class="md-nav__link md-nav__link--active">
+      Exasol JSON over WebSockets API
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-an-websockets-api" title="Why an WebSockets API?" class="md-nav__link">
+    Why an WebSockets API?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients-support" title="Clients support" class="md-nav__link">
+    Clients support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-protocol-v1" title="WebSocket Protocol v1" class="md-nav__link">
+    WebSocket Protocol v1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-establishes-a-connection-to-exasol" title="Login: Establishes a connection to EXASOL" class="md-nav__link">
+    Login: Establishes a connection to EXASOL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublogin-establishes-a-subconnection-to-exasol" title="SubLogin: Establishes a subconnection to EXASOL" class="md-nav__link">
+    SubLogin: Establishes a subconnection to EXASOL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disconnect-closes-a-connection-to-exasol" title="Disconnect: Closes a connection to EXASOL" class="md-nav__link">
+    Disconnect: Closes a connection to EXASOL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getattributes-gets-the-session-attribute-values" title="GetAttributes: Gets the session attribute values" class="md-nav__link">
+    GetAttributes: Gets the session attribute values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setattributes-sets-the-given-session-attribute-values" title="SetAttributes: Sets the given session attribute values" class="md-nav__link">
+    SetAttributes: Sets the given session attribute values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createpreparedstatement-creates-a-prepared-statement" title="CreatePreparedStatement: Creates a prepared statement" class="md-nav__link">
+    CreatePreparedStatement: Creates a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executepreparedstatement-executes-a-prepared-statement" title="ExecutePreparedStatement: Executes a prepared statement" class="md-nav__link">
+    ExecutePreparedStatement: Executes a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closepreparedstatement-closes-a-prepared-statement" title="ClosePreparedStatement: Closes a prepared statement" class="md-nav__link">
+    ClosePreparedStatement: Closes a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-executes-an-sql-statement" title="Execute: Executes an SQL statement" class="md-nav__link">
+    Execute: Executes an SQL statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-retrieves-data-from-a-result-set" title="Fetch: Retrieves data from a result set" class="md-nav__link">
+    Fetch: Retrieves data from a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeresultset-closes-a-result-set" title="CloseResultSet: Closes a result set" class="md-nav__link">
+    CloseResultSet: Closes a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethosts-gets-the-hosts-in-a-cluster" title="GetHosts: Gets the hosts in a cluster" class="md-nav__link">
+    GetHosts: Gets the hosts in a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executebatch-executes-multiple-sql-statements-as-a-batch" title="ExecuteBatch: Executes multiple SQL statements as a batch" class="md-nav__link">
+    ExecuteBatch: Executes multiple SQL statements as a batch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterparallel-opens-subconnections-for-parallel-execution" title="EnterParallel: Opens subconnections for parallel execution" class="md-nav__link">
+    EnterParallel: Opens subconnections for parallel execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getresultsetheader-gets-a-result-set-header" title="GetResultSetHeader: Gets a result set header" class="md-nav__link">
+    GetResultSetHeader: Gets a result set header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoffset-gets-the-row-offset-of-a-result-set" title="GetOffset: Gets the row offset of a result set" class="md-nav__link">
+    GetOffset: Gets the row offset of a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abortquery-aborts-a-running-query" title="AbortQuery: Aborts a running query" class="md-nav__link">
+    AbortQuery: Aborts a running query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" title="Attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes-session-and-database-properties" title="Attributes: Session and database properties" class="md-nav__link">
+    Attributes: Session and database properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" title="Data Types" class="md-nav__link">
+    Data Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-types-type-names-and-properties" title="Data Types: Type names and properties" class="md-nav__link">
+    Data Types: Type names and properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" title="Compression" class="md-nav__link">
+    Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heartbeatfeedback-messages" title="Heartbeat/Feedback Messages" class="md-nav__link">
+    Heartbeat/Feedback Messages
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord-raster/" title="Foal Getis-ord on rasters" class="md-nav__link">
+      Foal Getis-ord on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord/" title="Focal Getis-ord" class="md-nav__link">
+      Focal Getis-ord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord-raster/" title="Getis-ord G* on rasters" class="md-nav__link">
+      Getis-ord G* on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
+      Standards Getis-Ord G*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../one-vs-rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../soh/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spectral-analysis-tci/" title="Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing" class="md-nav__link">
+      Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../svm/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Scenarios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Scenarios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/smartcity/" title="Smart City" class="md-nav__link">
+      Smart City
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/disaster/" title="Disaster Management" class="md-nav__link">
+      Disaster Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/environment/" title="Environment" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-an-websockets-api" title="Why an WebSockets API?" class="md-nav__link">
+    Why an WebSockets API?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clients-support" title="Clients support" class="md-nav__link">
+    Clients support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-protocol-v1" title="WebSocket Protocol v1" class="md-nav__link">
+    WebSocket Protocol v1
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-establishes-a-connection-to-exasol" title="Login: Establishes a connection to EXASOL" class="md-nav__link">
+    Login: Establishes a connection to EXASOL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sublogin-establishes-a-subconnection-to-exasol" title="SubLogin: Establishes a subconnection to EXASOL" class="md-nav__link">
+    SubLogin: Establishes a subconnection to EXASOL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" title="Commands" class="md-nav__link">
+    Commands
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disconnect-closes-a-connection-to-exasol" title="Disconnect: Closes a connection to EXASOL" class="md-nav__link">
+    Disconnect: Closes a connection to EXASOL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getattributes-gets-the-session-attribute-values" title="GetAttributes: Gets the session attribute values" class="md-nav__link">
+    GetAttributes: Gets the session attribute values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setattributes-sets-the-given-session-attribute-values" title="SetAttributes: Sets the given session attribute values" class="md-nav__link">
+    SetAttributes: Sets the given session attribute values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createpreparedstatement-creates-a-prepared-statement" title="CreatePreparedStatement: Creates a prepared statement" class="md-nav__link">
+    CreatePreparedStatement: Creates a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executepreparedstatement-executes-a-prepared-statement" title="ExecutePreparedStatement: Executes a prepared statement" class="md-nav__link">
+    ExecutePreparedStatement: Executes a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closepreparedstatement-closes-a-prepared-statement" title="ClosePreparedStatement: Closes a prepared statement" class="md-nav__link">
+    ClosePreparedStatement: Closes a prepared statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-executes-an-sql-statement" title="Execute: Executes an SQL statement" class="md-nav__link">
+    Execute: Executes an SQL statement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetch-retrieves-data-from-a-result-set" title="Fetch: Retrieves data from a result set" class="md-nav__link">
+    Fetch: Retrieves data from a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeresultset-closes-a-result-set" title="CloseResultSet: Closes a result set" class="md-nav__link">
+    CloseResultSet: Closes a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethosts-gets-the-hosts-in-a-cluster" title="GetHosts: Gets the hosts in a cluster" class="md-nav__link">
+    GetHosts: Gets the hosts in a cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executebatch-executes-multiple-sql-statements-as-a-batch" title="ExecuteBatch: Executes multiple SQL statements as a batch" class="md-nav__link">
+    ExecuteBatch: Executes multiple SQL statements as a batch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enterparallel-opens-subconnections-for-parallel-execution" title="EnterParallel: Opens subconnections for parallel execution" class="md-nav__link">
+    EnterParallel: Opens subconnections for parallel execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getresultsetheader-gets-a-result-set-header" title="GetResultSetHeader: Gets a result set header" class="md-nav__link">
+    GetResultSetHeader: Gets a result set header
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoffset-gets-the-row-offset-of-a-result-set" title="GetOffset: Gets the row offset of a result set" class="md-nav__link">
+    GetOffset: Gets the row offset of a result set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abortquery-aborts-a-running-query" title="AbortQuery: Aborts a running query" class="md-nav__link">
+    AbortQuery: Aborts a running query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" title="Attributes" class="md-nav__link">
+    Attributes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributes-session-and-database-properties" title="Attributes: Session and database properties" class="md-nav__link">
+    Attributes: Session and database properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" title="Data Types" class="md-nav__link">
+    Data Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-types-type-names-and-properties" title="Data Types: Type names and properties" class="md-nav__link">
+    Data Types: Type names and properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" title="Compression" class="md-nav__link">
+    Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heartbeatfeedback-messages" title="Heartbeat/Feedback Messages" class="md-nav__link">
+    Heartbeat/Feedback Messages
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="exasol-json-over-websockets-api">Exasol JSON over WebSockets API<a class="headerlink" href="#exasol-json-over-websockets-api" title="Permanent link">&para;</a></h1>
+<h2 id="why-an-websockets-api">Why an WebSockets API?<a class="headerlink" href="#why-an-websockets-api" title="Permanent link">&para;</a></h2>
+<p>The JSON over WebSockets client-server protocol allows customers to 
+implement their own drivers for all kinds of platforms using a 
+connection-based web protocol. </p>
+<p>The main advantages are flexibility regarding the programming languages 
+you want to integrate EXASOL into, and a more native access compared to 
+the standardized ways of communicating with a database, such as JDBC, 
+ODBC or ADO.NET, which are mostly old and static standards and create
+additional complexity due to the necessary driver managers.</p>
+<h2 id="clients-support">Clients support<a class="headerlink" href="#clients-support" title="Permanent link">&para;</a></h2>
+<p>Currently a native Python driver using this WebSocket API has been
+implemented. By that you don't need any pyodbc bridge anymore, but 
+can connect your Python directly with EXASOL. PyODBC is not ideal due
+to the need for an ODBC driver manager and certain restrictions in 
+data type conversions.</p>
+<p>Further languages will be added in the future, and we encourage you
+to provide us feedback what languages you are interested in, and 
+maybe you are even keen to support our community with own developments. 
+It would then be nice if you could share your work with us, and 
+we will of course help you by any means. </p>
+<h2 id="websocket-protocol-v1">WebSocket Protocol v1<a class="headerlink" href="#websocket-protocol-v1" title="Permanent link">&para;</a></h2>
+<p>WebSocket Protocol v1 requires an EXASOL client/server protocol of
+at least v14. It follows the standards IETF as RFC 6455.</p>
+<p>The connection server identifies the initial GET request by the client.
+This request contains information about the used protocol version.
+Depending on this information the matching login and protocol class is
+chosen.</p>
+<p>After the handshake the process is identical to a connection using the
+standard drivers like JDBC or ODBC: The connection server listens to
+incoming messages and forwards the requests to the database. </p>
+<h3 id="login-establishes-a-connection-to-exasol">Login: Establishes a connection to EXASOL<a class="headerlink" href="#login-establishes-a-connection-to-exasol" title="Permanent link">&para;</a></h3>
+<p>This command invokes the login process which establishes a connection
+between the client and EXASOL. As long as the connection is open,
+the user can interact with EXASOL using the commands specified
+below.</p>
+<p>The login process is composed of four steps:</p>
+<ol>
+<li>
+<p>The client sends the login command including the requested protocol 
+   version.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "login"</li>
+<li>protocolVersion (number) =&gt; requested WebSocket protocol version, (e.g., 1)</li>
+</ul>
+<p>Request JSON format
+   <div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;login&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;protocolVersion&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The server returns a public key which is used to encode the
+   user's password. The public key can be obtained in one of two ways:
+    a. importing the key using the publicKeyPem field
+    b. constructing the key using the publicKeyModulus and publicKeyExponent fields</p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"</li>
+<li>publicKeyPem (string) =&gt; PEM-formatted, 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>publicKeyModulus (string) =&gt; hexadecimal modulus of the 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>publicKeyExponent (string) =&gt; hexadecimal exponent of the 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>exception (object, optional) =&gt; only present if status is "error"</li>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+<p>Response JSON format
+   <div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;publicKeyPem&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;publicKeyModulus&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;publicKeyExponent&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+ <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The client sends the username, encrypted password, and optionally
+   other client information.</p>
+<p>Request fields:</p>
+<ul>
+<li>username (string) =&gt; EXASOL user name to use for the login process</li>
+<li>password (string) =&gt; user's password, which is encrypted using publicKey (see 2.) and PKCS #1 v1.5 padding, encoded in Base64 format</li>
+<li>useCompression (boolean) =&gt; use compression for messages during the session (beginning after the login process is completed)</li>
+<li>sessionId (number, optional) =&gt; requested session ID</li>
+<li>clientName (string, optional) =&gt; client program name, (e.g., "EXAplus")</li>
+<li>driverName (string, optional) =&gt; driver name, (e.g., "EXA Python")</li>
+<li>clientOs (string, optional) =&gt; name and version of the client operating system</li>
+<li>clientOsUsername (string, optional) =&gt; client's operating system user name</li>
+<li>clientLanguage (string, optional) =&gt; language setting of the client system</li>
+<li>clientVersion (string, optional) =&gt; client version number</li>
+<li>clientRuntime (string, optional) =&gt; name and version of the client runtime</li>
+<li>attributes (object, optional) =&gt; array of attributes to set for the connection (see below)</li>
+</ul>
+<p>Request JSON format
+   <div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;useCompression&quot;</span><span class="p">:</span> <span class="err">&lt;boolean&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;sessionId&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;driverName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientOs&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientOsUsername&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientLanguage&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientVersion&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;clientRuntime&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The server uses username and password (see 3.) to authenticate the
+   user. If successful, the server replies with an "ok" response and a
+   connection is established. If authentication of the user fails, the
+   server sends an "error" response to the client indicating that the login
+   process failed and a connection couldn't be established.</p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"</li>
+<li>sessionId (number) =&gt; current session ID</li>
+<li>protocolVersion (number) =&gt; protocol version of the connection (e.g., 14)</li>
+<li>releaseVersion (string) =&gt; EXASOL version (e.g. "6.0.0")</li>
+<li>databaseName (string) =&gt; database name (e.g., "productionDB1")</li>
+<li>productName (string) =&gt; EXASOL product name: "EXASolution"</li>
+<li>maxDataMessageSize (number) =&gt; maximum size of a data message in bytes</li>
+<li>maxIdentifierLength (number) =&gt; maximum length of identifiers</li>
+<li>maxVarcharLength (number) =&gt;  maximum length of VARCHAR values</li>
+<li>identifierQuoteString (string) =&gt; value of the identifier quote string (e.g., "'")</li>
+<li>timeZone (string) =&gt; name of the session time zone</li>
+<li>timeZoneBehavior (string) =&gt; value of the session option "TIME_ZONE_BEHAVIOR"</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"</li>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+<p>Response JSON format
+   <div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;sessionId&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;protocolVersion&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;releaseVersion&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;databaseName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;productName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxDataMessageSize&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxIdentifierLength&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxVarcharLength&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;identifierQuoteString&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;timeZone&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;timeZoneBehavior&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+</li>
+</ol>
+<h3 id="sublogin-establishes-a-subconnection-to-exasol">SubLogin: Establishes a subconnection to EXASOL<a class="headerlink" href="#sublogin-establishes-a-subconnection-to-exasol" title="Permanent link">&para;</a></h3>
+<p>This command invokes the login process, which establishes a
+subconnection between the client and EXASOL. Using subconnections,
+the user can interact with EXASOL in parallel using the commands
+specified below.</p>
+<p>The login process is composed of four steps:</p>
+<ol>
+<li>
+<p>The client sends the login command including the requested protocol
+   version.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "login"</li>
+<li>protocolVersion (number) =&gt; requested WebSocket protocol version, (e.g., 1)</li>
+</ul>
+<p>Request JSON format
+   <div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;subLogin&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;protocolVersion&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The server returns a public key which is used to encode the
+   user's password. The public key can be obtained in one of two ways:
+    a. importing the key using the publicKeyPem field
+    b. constructing the key using the publicKeyModulus and publicKeyExponent fields.</p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"</li>
+<li>publicKeyPem (string) =&gt; PEM-formatted, 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>publicKeyModulus (string) =&gt; hexadecimal modulus of the 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>publicKeyExponent (string) =&gt; hexadecimal exponent of the 1024-bit RSA public key used to encode the user's password (see 3.)</li>
+<li>exception (object, optional) =&gt; only present if status is "error"</li>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+<p>Response JSON format
+   <div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;publicKeyPem&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;publicKeyModulus&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;publicKeyExponent&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The client sends the username, encrypted password, and token.</p>
+<p>Request fields:</p>
+<ul>
+<li>username (string) =&gt; EXASOL user name to use for the login process</li>
+<li>password (string) =&gt; user's password, which is encrypted using publicKey (see 2.) and PKCS #1 v1.5 padding, encoded in Base64 format</li>
+<li>token (number) =&gt; token required for subconnection logins (see, EnterParallel)</li>
+</ul>
+<p>Request JSON format
+   <div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+<li>
+<p>The server uses username, password, and token (see 3.) to
+   authenticate the user. If successful, the server replies with an
+   "ok" response and a subconnection is established. If authentication of
+   the user fails, the server sends an "error" response to the client
+   indicating that the login process failed and a subconnection couldn't
+   be established.</p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"</li>
+<li>sessionId (number) =&gt; current session ID</li>
+<li>protocolVersion (number) =&gt; protocol version of the connection (e.g., 14)</li>
+<li>releaseVersion (string) =&gt; EXASOL version (e.g. "6.0.0")</li>
+<li>databaseName (string) =&gt; database name (e.g., "productionDB1")</li>
+<li>productName (string) =&gt; EXASOL product name: "EXASolution"</li>
+<li>maxDataMessageSize (number) =&gt; maximum size of a data message in bytes</li>
+<li>maxIdentifierLength (number) =&gt; maximum length of identifiers</li>
+<li>maxVarcharLength (number) =&gt;  maximum length of VARCHAR values</li>
+<li>identifierQuoteString (string) =&gt; value of the identifier quote string (e.g., "'")</li>
+<li>timeZone (string) =&gt; name of the session time zone</li>
+<li>timeZoneBehavior (string) =&gt; value of the session option "TIME_ZONE_BEHAVIOR"</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"</li>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+<p>Response JSON format
+   <div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;sessionId&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;protocolVersion&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;releaseVersion&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;databaseName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;productName&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxDataMessageSize&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxIdentifierLength&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;maxVarcharLength&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;identifierQuoteString&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;timeZone&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;timeZoneBehavior&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+</li>
+</ol>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<h3 id="disconnect-closes-a-connection-to-exasol">Disconnect: Closes a connection to EXASOL<a class="headerlink" href="#disconnect-closes-a-connection-to-exasol" title="Permanent link">&para;</a></h3>
+<p>This command closes the connection between the client and EXASOL.
+After the connection is closed, it cannot be used for further
+interaction with EXASOL anymore.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "disconnect"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;disconnect&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<h3 id="getattributes-gets-the-session-attribute-values">GetAttributes: Gets the session attribute values<a class="headerlink" href="#getattributes-gets-the-session-attribute-values" title="Permanent link">&para;</a></h3>
+<p>This command retrieves the session attribute values.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "getAttributes"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+</ul>
+<p>JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;getAttributes&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>exception(object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Reponse JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="setattributes-sets-the-given-session-attribute-values">SetAttributes: Sets the given session attribute values<a class="headerlink" href="#setattributes-sets-the-given-session-attribute-values" title="Permanent link">&para;</a></h3>
+<p>This command sets the specified session attribute values.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "getAttributes"</li>
+<li>attributes (object, optional) =&gt;  attributes to set for the connection (see below)</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;setAttributes&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt;  attributes set for the connection (see below)</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="createpreparedstatement-creates-a-prepared-statement">CreatePreparedStatement: Creates a prepared statement<a class="headerlink" href="#createpreparedstatement-creates-a-prepared-statement" title="Permanent link">&para;</a></h3>
+<p>This command creates a prepared statement.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "createPreparedStatement"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>sqlText (string) =&gt; SQL statement</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;createPreparedStatement&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;sqlText&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>statementHandle (number) =&gt; prepared statement handle</li>
+<li>parameterData (object) =&gt; prepared statement parameter information</li>
+<li>numColumns (number) =&gt; number of columns</li>
+<li>columns (object[]) =&gt; array of column metadata objects<ul>
+<li>name (string) =&gt; column name: always "" as named parameters are not supported</li>
+<li>dataType (object) =&gt; column metadata</li>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+<li>numResults (number) =&gt; number of result objects</li>
+<li>results (object[]) =&gt; array of result objects<ul>
+<li>resultType (string) =&gt; type of result: "resultSet" or "rowCount"</li>
+<li>rowCount (number, optional) =&gt; present if resultType is "rowCount", number of rows</li>
+<li>resultSet (object, optional) =&gt; present if resultType is "resultSet", result set</li>
+<li>resultSetHandle (number, optional) =&gt; result set handle</li>
+<li>numColumns (number) =&gt; number of columns in the result set</li>
+<li>numRows (number) =&gt; number of rows in the result set</li>
+<li>numRowsInMessage (number) =&gt; number of rows in the current message</li>
+<li>columns (object[]) =&gt; array of column metadata objects<ul>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata</li>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;statementHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;parameterData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+                 <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span><span class="err">&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+                 <span class="p">}</span>
+             <span class="p">}</span> <span class="p">]</span>
+         <span class="p">},</span>
+         <span class="nt">&quot;numResults&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+             <span class="nt">&quot;resultType&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;resultSet&quot;</span> <span class="err">|</span> <span class="s2">&quot;rowCount&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;rowCount&quot;</span>
+             <span class="s2">&quot;rowCount&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;resultSet&quot;</span>
+             <span class="s2">&quot;resultSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                 <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRowsInMessage&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span><span class="err">&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+                     <span class="p">}</span>
+                 <span class="p">}</span> <span class="p">]</span>
+             <span class="p">}</span>
+         <span class="p">}</span> <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">if</span> <span class="err">status</span> <span class="err">is</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="executepreparedstatement-executes-a-prepared-statement">ExecutePreparedStatement: Executes a prepared statement<a class="headerlink" href="#executepreparedstatement-executes-a-prepared-statement" title="Permanent link">&para;</a></h3>
+<p>This command executes a prepared statement which has already been
+created.</p>
+<p>If the SQL statement returns a result set which has less than 1,000 rows of data, the data will be provided in the data field of resultSet. However if the SQL statement returns a result set which has 1,000 or more rows of data, a result set will be opened whose handle is returned in the resultSetHandle field of resultSet. Using this handle, the data from the result set can be retrieved using the Fetch command. Once the result set is no longer needed, it should be closed using the CloseResultSet command.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "executePreparedStatement"</li>
+<li>attributes (object, optional) =&gt;   attributes to set for the connection (see below)</li>
+<li>statementHandle (number) =&gt; prepared statement handle</li>
+<li>numColumns (number) =&gt; number of columns in data</li>
+<li>numRows (number) =&gt; number of rows in data</li>
+<li>columns (object[], optional) =&gt; array of column metadata objects<ul>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata</li>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+<li>data (array[], optional) =&gt; array containing the data for the prepared statement in column-major order</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+    <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;executePreparedStatement&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;statementHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+    <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+    <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+    <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+        <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;boolean&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+            <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="p">],</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">[</span>
+            <span class="err">&lt;string</span> <span class="err">|</span> <span class="err">number</span> <span class="err">|</span> <span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span> <span class="err">|</span> <span class="kc">null</span><span class="err">&gt;</span>
+        <span class="p">]</span>
+    <span class="p">]</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numResults (number) =&gt; number of result objects</li>
+<li>results (object[]) =&gt; array of result objects</li>
+<li>resultType (string) =&gt; type of result: "resultSet" or "rowCount"</li>
+<li>rowCount (number, optional) =&gt; present if resultType is "rowCount", number of rows</li>
+<li>resultSet (object, optional) =&gt; present if resultType is "resultSet", result set<ul>
+<li>resultSetHandle (number, optional) =&gt; result set handle</li>
+<li>numColumns (number) =&gt; number of columns in the result set</li>
+<li>numRows (number) =&gt; number of rows in the result set</li>
+<li>numRowsInMessage (number) =&gt; number of rows in the current message</li>
+<li>columns (object[]) =&gt; array of column metadata objects</li>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata<ul>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+<li>data (array[], optional) =&gt; object containing the data for the prepared statement in column-major order</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="o">|</span> <span class="s2">&quot;error&quot;</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="s2">&quot;attributes&quot;</span><span class="o">:</span> <span class="p">{</span>
+         <span class="c1">// as defined separately</span>
+     <span class="p">},</span>
+     <span class="c1">// in case of &quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="o">:</span> <span class="p">{</span>
+         <span class="s2">&quot;numResults&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+         <span class="s2">&quot;results&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span>
+             <span class="s2">&quot;resultType&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="s2">&quot;resultSet&quot;</span> <span class="o">|</span> <span class="s2">&quot;rowCount&quot;</span><span class="o">&gt;</span><span class="p">,</span>
+             <span class="c1">// if type is &quot;rowCount&quot;</span>
+             <span class="s2">&quot;rowCount&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+             <span class="c1">// if type is &quot;resultSet&quot;</span>
+             <span class="s2">&quot;resultSet&quot;</span><span class="o">:</span> <span class="p">{</span>
+                 <span class="s2">&quot;resultSetHandle&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                 <span class="s2">&quot;numColumns&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                 <span class="s2">&quot;numRows&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                 <span class="s2">&quot;numRowsInMessage&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                 <span class="s2">&quot;columns&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="p">{</span>
+                     <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">,</span>
+                     <span class="s2">&quot;dataType&quot;</span><span class="o">:</span> <span class="p">{</span>
+                         <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;precision&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;scale&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;size&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;characterSet&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;withLocalTimeZone&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="kc">true</span> <span class="o">|</span> <span class="kc">false</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;fraction&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span>
+                         <span class="s2">&quot;srid&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span>
+                     <span class="p">}</span>
+                 <span class="p">}</span> <span class="p">],</span>
+                 <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">[</span>
+                     <span class="p">[</span>
+                         <span class="o">&lt;</span><span class="nx">string</span> <span class="o">|</span> <span class="nx">number</span> <span class="o">|</span> <span class="kc">true</span> <span class="o">|</span> <span class="kc">false</span> <span class="o">|</span> <span class="kc">null</span><span class="o">&gt;</span>
+                     <span class="p">]</span>
+                 <span class="p">]</span>
+             <span class="p">}</span>
+         <span class="p">}</span> <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="c1">// in case of &quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="o">:</span> <span class="p">{</span>
+         <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">,</span>
+         <span class="s2">&quot;sqlCode&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="closepreparedstatement-closes-a-prepared-statement">ClosePreparedStatement: Closes a prepared statement<a class="headerlink" href="#closepreparedstatement-closes-a-prepared-statement" title="Permanent link">&para;</a></h3>
+<p>This command closes a prepared statement which has already been
+created.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "closePreparedStatement"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>statementHandle (number) =&gt; prepared statement handle</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;closePreparedStatement&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;statementHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object) =&gt; attributes set for the connection (see below)</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="execute-executes-an-sql-statement">Execute: Executes an SQL statement<a class="headerlink" href="#execute-executes-an-sql-statement" title="Permanent link">&para;</a></h3>
+<p>This command executes an SQL statement.</p>
+<p>If the SQL statement returns a result set which has less than 1,000 rows of data, the data will be provided in the data field of resultSet. However if the SQL statement returns a result set which has 1,000 or more rows of data, a result set will be opened whose handle is returned in the resultSetHandle field of resultSet. Using this handle, the data from the result set can be retrieved using the Fetch command. Once the result set is no longer needed, it should be closed using the CloseResultSet command.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "executePreparedStatement"</li>
+<li>attributes (object) =&gt; attributes to set for the connection (see below)</li>
+<li>sqlText (string) =&gt; SQL statement to execute</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;execute&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;sqlText&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numResults (number) =&gt; number of result objects</li>
+<li>results (object[]) =&gt; array of result objects</li>
+<li>resultType (string) =&gt; type of result: "resultSet" or "rowCount"</li>
+<li>rowCount (number, optional) =&gt; present if resultType is "rowCount", number of rows</li>
+<li>resultSet (object, optional) =&gt; present if resultType is "resultSet", result set<ul>
+<li>resultSetHandle (number) =&gt; result set handle</li>
+<li>numColumns (number) =&gt; number of columns in the result set</li>
+<li>numRows (number) =&gt; number of rows in the result set</li>
+<li>numRowsInMessage (number, optional) =&gt; number of rows in the current message</li>
+<li>columns (object[]) =&gt; array of column metadata objects</li>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata<ul>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+<li>data (array[], optional) =&gt; object containing the data for the prepared statement in column-major order</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">//</span> <span class="err">Optional:</span> <span class="err">ok</span>
+         <span class="nt">&quot;numResults&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+             <span class="nt">&quot;resultType&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;resultSet&quot;</span> <span class="err">|</span> <span class="s2">&quot;rowCount&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;rowCount&quot;</span>
+             <span class="s2">&quot;rowCount&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;resultSet&quot;</span>
+             <span class="s2">&quot;resultSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                 <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRowsInMessage&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span><span class="err">&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+                     <span class="p">}</span>
+                 <span class="p">}</span> <span class="p">],</span>
+                 <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                     <span class="p">[</span>
+                         <span class="err">&lt;string</span> <span class="err">|</span> <span class="err">number</span> <span class="err">|</span> <span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span> <span class="err">|</span> <span class="kc">null</span><span class="err">&gt;</span>
+                     <span class="p">]</span>
+                 <span class="p">]</span>
+             <span class="p">}</span>
+         <span class="p">}</span> <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="fetch-retrieves-data-from-a-result-set">Fetch: Retrieves data from a result set<a class="headerlink" href="#fetch-retrieves-data-from-a-result-set" title="Permanent link">&para;</a></h3>
+<p>This command retrieves data from a result set.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "fetch"</li>
+<li>attributes (object, optional) =&gt;  attributes to set for the connection (see below)</li>
+<li>resultSetHandle (number) =&gt; result set handle</li>
+<li>startPosition (number) =&gt; row offset (0-based) from which to begin data retrieval</li>
+<li>numBytes (number) =&gt; number of bytes to retrieve (max: 64MB)</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;fetch&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;startPosition&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;numBytes&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numRows (number) =&gt; number of rows fetched from the result set</li>
+<li>data (array[]) =&gt; object containing the data for the prepared statement in column-major order</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                 <span class="p">[</span>
+                     <span class="err">&lt;string</span> <span class="err">|</span> <span class="err">number</span> <span class="err">|</span> <span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span> <span class="err">|</span> <span class="kc">null</span><span class="err">&gt;</span>
+                 <span class="p">]</span>
+             <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="closeresultset-closes-a-result-set">CloseResultSet: Closes a result set<a class="headerlink" href="#closeresultset-closes-a-result-set" title="Permanent link">&para;</a></h3>
+<p>This command closes result sets.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "closeResultSet"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>resultSetHandles (number[]) =&gt; array of result set handles</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;closeResultSet&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;resultSetHandles&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="err">&lt;number&gt;</span> <span class="p">]</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="err">//</span> <span class="err">Optional:</span> <span class="err">error</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span> <span class="err">//</span> <span class="err">Exception</span> <span class="err">text</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span> <span class="err">//</span> <span class="err">Five-character</span> <span class="err">exception</span> <span class="err">code</span> <span class="err">if</span> <span class="err">known</span><span class="p">,</span> <span class="err">otherwise</span> <span class="nt">&quot;00000&quot;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="gethosts-gets-the-hosts-in-a-cluster">GetHosts: Gets the hosts in a cluster<a class="headerlink" href="#gethosts-gets-the-hosts-in-a-cluster" title="Permanent link">&para;</a></h3>
+<p>This command gets the number hosts and the IP address of each host in
+an EXASOL cluster.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "getHosts"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;getHosts&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:
+  * status (string) =&gt; command status: "ok" or "error"
+  * responseData (object, optional) =&gt; only present if status is "ok"
+    * numNodes (number) =&gt; number of nodes in the cluster
+    * nodes (string[]) =&gt; array of cluster node IP addresses
+  * exception (object, optional) =&gt;  only present if status is "error"
+    * text (string) =&gt; exception message which provides error
+         details
+    * sqlCode (string) =&gt; five-character exception code if known,
+         otherwise "00000"</p>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;numNodes&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                     <span class="err">&lt;string&gt;</span>
+             <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="executebatch-executes-multiple-sql-statements-as-a-batch">ExecuteBatch: Executes multiple SQL statements as a batch<a class="headerlink" href="#executebatch-executes-multiple-sql-statements-as-a-batch" title="Permanent link">&para;</a></h3>
+<p>This command executes multiple SQL statements sequentially as a batch.</p>
+<p>If the SQL statement returns a result set which has less than 1,000 rows of data, the data will be provided in the data field of resultSet. However if the SQL statement returns a result set which has 1,000 or more rows of data, a result set will be opened whose handle is returned in the resultSetHandle field of resultSet. Using this handle, the data from the result set can be retrieved using the Fetch command. Once the result set is no longer needed, it should be closed using the CloseResultSet command.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "executeBatch"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>sqlTexts (string[]) =&gt; array of SQL statement to execute</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;executeBatch&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;sqlTexts&quot;</span><span class="p">:</span> <span class="p">[</span>
+             <span class="err">&lt;string&gt;</span>
+     <span class="p">]</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numResults (number) =&gt; number of result objects</li>
+<li>results (object[]) =&gt; array of result objects</li>
+<li>resultType (string) =&gt; type of result: "resultSet" or "rowCount"</li>
+<li>rowCount (number, optional) =&gt; present if resultType is "rowCount", number of rows</li>
+<li>resultSet (object, optional) =&gt; present if resultType is "resultSet", result set<ul>
+<li>resultSetHandle (number, optional) =&gt; result set handle</li>
+<li>numColumns (number) =&gt; number of columns in the result set</li>
+<li>numRows (number) =&gt; number of rows in the result set</li>
+<li>numRowsInMessage (number) =&gt; number of rows in the current message</li>
+<li>columns (object[]) =&gt; array of column metadata objects</li>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata<ul>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+<li>data (array[], optional) =&gt; object containing the data for the prepared statement in column-major order</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;numResults&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+             <span class="nt">&quot;resultType&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;resultSet&quot;</span> <span class="err">|</span> <span class="s2">&quot;rowCount&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;rowCount&quot;</span>
+             <span class="s2">&quot;rowCount&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="err">//</span> <span class="err">if</span> <span class="err">type</span> <span class="err">is</span> <span class="nt">&quot;resultSet&quot;</span>
+             <span class="s2">&quot;resultSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                 <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRowsInMessage&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span><span class="err">&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+                     <span class="p">}</span>
+                 <span class="p">}</span> <span class="p">],</span>
+                 <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                     <span class="p">[</span>
+                         <span class="err">&lt;string</span> <span class="err">|</span> <span class="err">number</span> <span class="err">|</span> <span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span> <span class="err">|</span> <span class="kc">null</span><span class="err">&gt;</span>
+                     <span class="p">]</span>
+                 <span class="p">]</span>
+             <span class="p">}</span>
+         <span class="p">}</span> <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="enterparallel-opens-subconnections-for-parallel-execution">EnterParallel: Opens subconnections for parallel execution<a class="headerlink" href="#enterparallel-opens-subconnections-for-parallel-execution" title="Permanent link">&para;</a></h3>
+<p>This command opens subconnections, which are additional connections to
+other nodes in the cluster, for the purpose of parallel execution. If
+the requested number of subconnections is 0, all open subconnections
+are closed.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "enterParallel"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>numRequestedConnections (number) =&gt; number of subconnections to open. If 0, all open subconnections are closed.</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;enterParallel&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;numRequestedConnections&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numOpenConnections (number) =&gt; number of subconnections actually opened</li>
+<li>token (number) =&gt; token required for the login of subconnections</li>
+<li>nodes (string[]) =&gt; IP addresses and ports of the nodes, to which subconnections may be established</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;numOpenConnections&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+                     <span class="err">&lt;string&gt;</span>
+             <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="getresultsetheader-gets-a-result-set-header">GetResultSetHeader: Gets a result set header<a class="headerlink" href="#getresultsetheader-gets-a-result-set-header" title="Permanent link">&para;</a></h3>
+<p>This command retrieves a header (i.e., empty result set) which contains
+the metadata for an open result set.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "getResultSetHeader"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>resultSetHandles (number[]) =&gt; array of open result set handles</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;getResultSetHeader&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;resultSetHandles&quot;</span><span class="p">:</span> <span class="p">[</span>
+         <span class="err">&lt;number&gt;</span>
+     <span class="p">]</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>attributes (object, optional) =&gt; attributes set for the connection (see below)</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>numResults (number) =&gt; number of result objects</li>
+<li>results (object[]) =&gt; array of result objects</li>
+<li>resultType (string) =&gt; type of result: "resultSet"</li>
+<li>resultSet (object) =&gt; result set<ul>
+<li>resultSetHandle (number, optional) =&gt; result set handle</li>
+<li>numColumns (number) =&gt; number of columns in the result set</li>
+<li>numRows (number) =&gt; number of rows in the result set</li>
+<li>numRowsInMessage (number) =&gt; number of rows in the current message</li>
+<li>columns (object[]) =&gt; array of column metadata objects</li>
+<li>name (string) =&gt; column name</li>
+<li>dataType (object) =&gt; column metadata<ul>
+<li>type (string) =&gt; column data type</li>
+<li>precision (number, optional) =&gt; column precision</li>
+<li>scale (number, optional) =&gt; column scale</li>
+<li>size (number, optional) =&gt; maximum size in bytes of a column value</li>
+<li>characterSet (string, optional) =&gt; character encoding of a text column</li>
+<li>withLocalTimeZone (true | false, optional) =&gt; specifies if a timestamp has a local time zone</li>
+<li>fraction (number, optional) =&gt; fractional part of number</li>
+<li>srid (number, optional) =&gt; spatial reference system identifier</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;numResults&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+             <span class="nt">&quot;resultType&quot;</span><span class="p">:</span> <span class="s2">&quot;resultSet&quot;</span><span class="p">,</span>
+             <span class="nt">&quot;resultSet&quot;</span><span class="p">:</span> <span class="p">{</span>
+                 <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numColumns&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRows&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;numRowsInMessage&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                 <span class="nt">&quot;columns&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span>
+                     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                     <span class="nt">&quot;dataType&quot;</span><span class="p">:</span> <span class="p">{</span>
+                         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;precision&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;size&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;characterSet&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;withLocalTimeZone&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="kc">true</span> <span class="err">|</span> <span class="kc">false</span><span class="err">&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;fraction&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span><span class="p">,</span>
+                         <span class="nt">&quot;srid&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+                     <span class="p">}</span>
+                 <span class="p">}</span> <span class="p">]</span>
+             <span class="p">}</span>
+         <span class="p">}</span> <span class="p">]</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+         <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="getoffset-gets-the-row-offset-of-a-result-set">GetOffset: Gets the row offset of a result set<a class="headerlink" href="#getoffset-gets-the-row-offset-of-a-result-set" title="Permanent link">&para;</a></h3>
+<p>This command retrieves the row offset of the result set of this
+(sub)connection. This is the row number of the first row of the current
+(sub)connection's result set in the global result set.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "getOffset"</li>
+<li>attributes (object, optional) =&gt; attributes to set for the connection (see below)</li>
+<li>resultSetHandle (number) =&gt; open result set handle</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;getOffset&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="err">//</span> <span class="err">as</span> <span class="err">defined</span> <span class="err">separately</span>
+     <span class="p">},</span>
+     <span class="nt">&quot;resultSetHandle&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<p>Response fields:</p>
+<ul>
+<li>status (string) =&gt; command status: "ok" or "error"</li>
+<li>responseData (object, optional) =&gt; only present if status is "ok"<ul>
+<li>rowOffset (number) =&gt; row offset of connection's result set</li>
+</ul>
+</li>
+<li>exception (object, optional) =&gt;  only present if status is "error"<ul>
+<li>text (string) =&gt; exception message which provides error details</li>
+<li>sqlCode (string) =&gt; five-character exception code if known, otherwise "00000"</li>
+</ul>
+</li>
+</ul>
+<p>Response JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="err">&lt;</span><span class="s2">&quot;ok&quot;</span> <span class="err">|</span> <span class="s2">&quot;error&quot;</span><span class="err">&gt;</span><span class="p">,</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;ok&quot;</span>
+     <span class="s2">&quot;responseData&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;rowOffset&quot;</span><span class="p">:</span> <span class="err">&lt;number&gt;</span>
+     <span class="p">},</span>
+     <span class="err">//</span> <span class="err">in</span> <span class="err">case</span> <span class="err">of</span> <span class="nt">&quot;error&quot;</span>
+     <span class="s2">&quot;exception&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span><span class="p">,</span>
+             <span class="nt">&quot;sqlCode&quot;</span><span class="p">:</span> <span class="err">&lt;string&gt;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h3 id="abortquery-aborts-a-running-query">AbortQuery: Aborts a running query<a class="headerlink" href="#abortquery-aborts-a-running-query" title="Permanent link">&para;</a></h3>
+<p>This command aborts a running query. It does not have a response.</p>
+<p>Request fields:</p>
+<ul>
+<li>command (string) =&gt; command name: "abortQuery"</li>
+</ul>
+<p>Request JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;abortQuery&quot;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="attributes-session-and-database-properties">Attributes: Session and database properties<a class="headerlink" href="#attributes-session-and-database-properties" title="Permanent link">&para;</a></h3>
+<p>Attributes can be queried with the GetAttributes command and some of
+them can be modified with the SetAttributes command. Modified
+attributes are included in command replies.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>JSON value</th>
+<th>Read-only</th>
+<th>Committable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autocommit</td>
+<td>true | false</td>
+<td>no</td>
+<td>no</td>
+<td>If true, commit() will be executed automatically after each statement. If false, commit() and rollback() must be executed manually.</td>
+</tr>
+<tr>
+<td>compressionEnabled</td>
+<td>true | false</td>
+<td>yes</td>
+<td>no</td>
+<td>If true, the WebSocket data frame payload data is compressed. If false, it is not compressed.</td>
+</tr>
+<tr>
+<td>currentSchema</td>
+<td>string</td>
+<td>no</td>
+<td>yes</td>
+<td>Current schema name</td>
+</tr>
+<tr>
+<td>dateFormat</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Date format</td>
+</tr>
+<tr>
+<td>dateLanguage</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Language used for the day and month of dates.</td>
+</tr>
+<tr>
+<td>datetimeFormat</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Timestamp format</td>
+</tr>
+<tr>
+<td>defaultLikeEscapeCharacter</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Escape character in LIKE expressions.</td>
+</tr>
+<tr>
+<td>feedbackInterval</td>
+<td>number</td>
+<td>no</td>
+<td>no</td>
+<td>Time interval (in seconds) specifying how often heartbeat/feedback packets are sent to the client during query execution.</td>
+</tr>
+<tr>
+<td>numericCharacters</td>
+<td>string</td>
+<td>no</td>
+<td>yes</td>
+<td>Characters specifying the group and decimal separators (NLS_NUMERIC_CHARACTERS). For example, ",." would result in "123,456,789.123".</td>
+</tr>
+<tr>
+<td>openTransaction</td>
+<td>true | false</td>
+<td>yes</td>
+<td>no</td>
+<td>If true, a transaction is open. If false, a transaction is not open.</td>
+</tr>
+<tr>
+<td>queryTimeout</td>
+<td>number</td>
+<td>no</td>
+<td>yes</td>
+<td>Query timeout value (in seconds). If a query runs longer than the specified time, it will be aborted.</td>
+</tr>
+<tr>
+<td>snapshotTransactionsEnabled</td>
+<td>true | false</td>
+<td>no</td>
+<td>no</td>
+<td>If true, snapshot transactions will be used. If false, they will not be used.</td>
+</tr>
+<tr>
+<td>timestampUtcEnabled</td>
+<td>true | false</td>
+<td>no</td>
+<td>no</td>
+<td>If true, timestamps will be converted to UTC. If false, UTC will not be used.</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Timezone of the session.</td>
+</tr>
+<tr>
+<td>timeZoneBehavior</td>
+<td>string</td>
+<td>yes</td>
+<td>yes</td>
+<td>Specifies the conversion behavior of UTC timestamps to local timestamps when the time value occurs during a time shift because of daylight saving time (TIME_ZONE_BEHAVIOR).</td>
+</tr>
+</tbody>
+</table>
+<p>Attributes are specified as an object of name/value pairs. Multiple attributes are separated by a comma.</p>
+<p>Attribute JSON format
+<div class="codehilite"><pre><span></span> <span class="p">{</span>
+     <span class="err">//</span> <span class="err">name:</span> <span class="err">value</span>
+     <span class="err">&lt;string&gt;:</span> <span class="err">&lt;string</span> <span class="err">|</span> <span class="err">number</span> <span class="err">|</span> <span class="err">true</span> <span class="err">|</span> <span class="err">false&gt;</span>
+ <span class="p">}</span>
+</pre></div></p>
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<h3 id="data-types-type-names-and-properties">Data Types: Type names and properties<a class="headerlink" href="#data-types-type-names-and-properties" title="Permanent link">&para;</a></h3>
+<p>The following data types and properties can be used to specify column
+types in the executePreparedStatement request.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required Properties</th>
+<th>Optional Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CHAR</td>
+<td>size</td>
+<td></td>
+</tr>
+<tr>
+<td>DATE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td>precision, scale</td>
+<td></td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GEOMETRY</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>INTERVAL DAY TO SECOND</td>
+<td>precision, fraction</td>
+<td></td>
+</tr>
+<tr>
+<td>INTERVAL YEAR TO MONTH</td>
+<td>precision</td>
+<td></td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td></td>
+<td>withLocalTimeZone</td>
+</tr>
+<tr>
+<td>TIMESTAMP WITH LOCAL TIME ZONE</td>
+<td></td>
+<td>withLocalTimeZone</td>
+</tr>
+<tr>
+<td>VARCHAR</td>
+<td>size</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The following data types and properties are used to specify column
+types in responses from EXASOL.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BOOLEAN</td>
+<td></td>
+</tr>
+<tr>
+<td>CHAR</td>
+<td>size, characterSet</td>
+</tr>
+<tr>
+<td>DATE</td>
+<td>size</td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td>precision, scale</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td></td>
+</tr>
+<tr>
+<td>GEOMETRY</td>
+<td>size, srid</td>
+</tr>
+<tr>
+<td>INTERVAL DAY TO SECOND</td>
+<td>size, precision, fraction</td>
+</tr>
+<tr>
+<td>INTERVAL YEAR TO MONTH</td>
+<td>size, precision</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>size, withLocalTimeZone</td>
+</tr>
+<tr>
+<td>TIMESTAMP WITH LOCAL TIME ZONE</td>
+<td>size, withLocalTimeZone</td>
+</tr>
+<tr>
+<td>VARCHAR</td>
+<td>size, characterSet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h2>
+<p>The data in the WebSocket data frames may be compressed using zlib. In
+order to enable compression, the client must set the useCompression
+field in the login command to true. If compression is enabled during
+login, all messages sent and received after login completion must be
+binary data frames, in which the payload data (i.e., command
+request/response) is zlib-compressed.</p>
+<h2 id="heartbeatfeedback-messages">Heartbeat/Feedback Messages<a class="headerlink" href="#heartbeatfeedback-messages" title="Permanent link">&para;</a></h2>
+<p>The feedbackInterval session attribute specifies how often (in seconds)
+unidirectional heartbeat/feedback messages are sent to the client
+during query execution. These messages are sent using Pong WebSocket
+control frames (see RFC 6455), and thus a response is not expected.</p>
+<p>The client may send Ping WebSocket control frames (see RFC 6455) to
+EXASOL, for example, as client-initiated keepalives. EXASOL
+will respond to a Ping frame with a Pong response.</p>
+<p>EXASOL will not send Ping frames to the client.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../exasol-virtual-schema/" title="Exasol virtual schema" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Exasol virtual schema
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../focal-getis-ord-raster/" title="Foal Getis-ord on rasters" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Foal Getis-ord on rasters
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> - BigGIS website maintained by <b><a href="https://github.com/vsimko">Viliam Simko</a></b> 
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://biggis-project.eu" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/biggis-project" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-112317697-1","biggis-project.eu"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

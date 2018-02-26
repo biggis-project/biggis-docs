@@ -1,0 +1,2551 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Central documentation of the BigGIS project">
+      
+      
+      
+        <meta name="author" content="BigGIS Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.6.0">
+    
+    
+      
+        <title>Exasol UDF framework - BigGIS - Scalable GIS for Predictive and Prescriptive Analytics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.aa3de92b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../animations.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="dark-blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#exasol-udf-framework" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="BigGIS - Scalable GIS for Predictive and Prescriptive Analytics" class="md-header-nav__button md-logo">
+          
+            <img src="../../favicon.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+              </span>
+              <span class="md-header-nav__topic">
+                Exasol UDF framework
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About BigGIS" class="md-tabs__link">
+        About BigGIS
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../architecture/arch-overview/" title="Architecture" class="md-tabs__link">
+          Architecture
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../data-sources/" title="Data sources" class="md-tabs__link">
+          Data sources
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../demos/" title="Demos" class="md-tabs__link">
+          Demos
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="Methods" class="md-tabs__link md-tabs__link--active">
+          Methods
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../scenarios/smartcity/" title="Scenarios" class="md-tabs__link">
+          Scenarios
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="../../favicon.svg" width="24" height="24">
+      
+    </span>
+    BigGIS - Scalable GIS for Predictive and Prescriptive Analytics
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/biggis-project" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About BigGIS" class="md-nav__link">
+      About BigGIS
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-github-repos/" title="List of Github Repositories" class="md-nav__link">
+      List of Github Repositories
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-papers/" title="List of Papers" class="md-nav__link">
+      List of Papers
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-presentations/" title="List of Presentations" class="md-nav__link">
+      List of Presentations
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../biggis-press/" title="List of Press Releases" class="md-nav__link">
+      List of Press Releases
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../consortium/" title="Project Consortium" class="md-nav__link">
+      Project Consortium
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../contributing/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../docs-howto/" title="Documentation Howto" class="md-nav__link">
+      Documentation Howto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Architecture
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/arch-overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/platform-bwcloud/" title="bwCloud" class="md-nav__link">
+      bwCloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/semantics/" title="Semantics" class="md-nav__link">
+      Semantics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../architecture/stream-pipes/" title="StreamPipes" class="md-nav__link">
+      StreamPipes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Data sources
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Data sources
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/" title="Datasets in BigGIS" class="md-nav__link">
+      Datasets in BigGIS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2">
+    
+    <label class="md-nav__link" for="nav-10-2">
+      Atmosphere
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        Atmosphere
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/dwd/" title="DWD (Meteorological Data)" class="md-nav__link">
+      DWD (Meteorological Data)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/lubw/" title="LUBW Stations" class="md-nav__link">
+      LUBW Stations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/sensebox-fzi/" title="SenseBox-based Weather Stations (FZI)" class="md-nav__link">
+      SenseBox-based Weather Stations (FZI)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/atmosphere/wunderground/" title="Wunderground Dataset" class="md-nav__link">
+      Wunderground Dataset
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/biosphere/vitimeteo/" title="Drosophila Suzukii Observations (Vitimeteo)" class="md-nav__link">
+      Drosophila Suzukii Observations (Vitimeteo)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-4" type="checkbox" id="nav-10-4">
+    
+    <label class="md-nav__link" for="nav-10-4">
+      Ground Surface
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-4">
+        Ground Surface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/landcover/" title="Digital ortho-images (Aerial photographs)" class="md-nav__link">
+      Digital ortho-images (Aerial photographs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/lightweight-cams/" title="Lightweight Camera Systems" class="md-nav__link">
+      Lightweight Camera Systems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-elevation/" title="NASA Elevation Profile" class="md-nav__link">
+      NASA Elevation Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/nasa-modis/" title="MODIS Dataset" class="md-nav__link">
+      MODIS Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/sentinel2/" title="Sentinel 2" class="md-nav__link">
+      Sentinel 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/ground/uba-air/" title="Umweltbundesamt Air Pollution" class="md-nav__link">
+      Umweltbundesamt Air Pollution
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10-5" type="checkbox" id="nav-10-5">
+    
+    <label class="md-nav__link" for="nav-10-5">
+      Socio-Economic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-5">
+        Socio-Economic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/envirocar/" title="Envirocar Dataset" class="md-nav__link">
+      Envirocar Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/landuse/" title="Land use data" class="md-nav__link">
+      Land use data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/newyork-taxi/" title="New York Taxi Drives" class="md-nav__link">
+      New York Taxi Drives
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../data-sources/socio-economic/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Demos
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Demos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/" title="About demos" class="md-nav__link">
+      About demos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/firefighting/" title="Firefighting" class="md-nav__link">
+      Firefighting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-detect/" title="Gas Cloud Detection" class="md-nav__link">
+      Gas Cloud Detection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/gas-predict/" title="Gas Cloud Prediction" class="md-nav__link">
+      Gas Cloud Prediction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/heatstress/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
+      Optimal Flight Plan for Drones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
+      EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/hotspot-analysis/" title="Hotspot analysis (using G*)" class="md-nav__link">
+      Hotspot analysis (using G*)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/invasive-species/" title="Invasive species" class="md-nav__link">
+      Invasive species
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/landuse/" title="Landuse classification" class="md-nav__link">
+      Landuse classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/optical-remote-sensing/" title="Optical Remote Sensing" class="md-nav__link">
+      Optical Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/sensor-placement/" title="Optimal Sensor Placement" class="md-nav__link">
+      Optimal Sensor Placement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/soh-eval/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/traffic-incidents/" title="Traffic Incidents" class="md-nav__link">
+      Traffic Incidents
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
+      Visual Analysis of Spatio-Temporal Event Predictions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
+    
+    <label class="md-nav__link" for="nav-12">
+      Methods
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Methods
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="About Method" class="md-nav__link">
+      About Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-docker/" title="Exasol Docker Support" class="md-nav__link">
+      Exasol Docker Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-geo/" title="Exasol GEO data and spatial indexes" class="md-nav__link">
+      Exasol GEO data and spatial indexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Exasol UDF framework
+      </label>
+    
+    <a href="./" title="Exasol UDF framework" class="md-nav__link md-nav__link--active">
+      Exasol UDF framework
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-examples" title="Introducing examples" class="md-nav__link">
+    Introducing examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-functions" title="Scalar functions" class="md-nav__link">
+    Scalar functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-and-analytical-functions" title="Aggregate and analytical functions" class="md-nav__link">
+    Aggregate and analytical functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-input-and-output-parameters" title="Dynamic input and output parameters" class="md-nav__link">
+    Dynamic input and output parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapreduce-programs" title="MapReduce programs" class="md-nav__link">
+    MapReduce programs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-to-external-services" title="Access to external services" class="md-nav__link">
+    Access to external services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-etl-using-udfs" title="User-defined ETL using UDFs" class="md-nav__link">
+    User-defined ETL using UDFs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucketfs" title="BucketFS" class="md-nav__link">
+    BucketFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-bucketfs" title="What is BucketFS?" class="md-nav__link">
+    What is BucketFS?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-bucketfs-and-creating-buckets" title="Setting up BucketFS and creating buckets" class="md-nav__link">
+    Setting up BucketFS and creating buckets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-and-access-control" title="Access and access control" class="md-nav__link">
+    Access and access control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expanding-script-languages-using-bucketfs" title="Expanding script languages using BucketFS" class="md-nav__link">
+    Expanding script languages using BucketFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expanding-the-existing-script-languages" title="Expanding the existing script languages" class="md-nav__link">
+    Expanding the existing script languages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-files-jar" title="Java files (.jar)" class="md-nav__link">
+    Java files (.jar)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-libraries" title="Python libraries" class="md-nav__link">
+    Python libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-packages" title="R packages" class="md-nav__link">
+    R packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-new-script-languages" title="Installing new script languages" class="md-nav__link">
+    Installing new script languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-script-client" title="Creating a script client" class="md-nav__link">
+    Creating a script client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-aliases-for-the-integration-into-sql" title="Script aliases for the integration into SQL" class="md-nav__link">
+    Script aliases for the integration into SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-virtual-schema/" title="Exasol virtual schema" class="md-nav__link">
+      Exasol virtual schema
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../exasol-websockets/" title="Exasol JSON over WebSockets API" class="md-nav__link">
+      Exasol JSON over WebSockets API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord-raster/" title="Foal Getis-ord on rasters" class="md-nav__link">
+      Foal Getis-ord on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../focal-getis-ord/" title="Focal Getis-ord" class="md-nav__link">
+      Focal Getis-ord
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord-raster/" title="Getis-ord G* on rasters" class="md-nav__link">
+      Getis-ord G* on rasters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
+      Standards Getis-Ord G*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../one-vs-rest/" title="One vs. Rest" class="md-nav__link">
+      One vs. Rest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../soh/" title="Stability of hotspots" class="md-nav__link">
+      Stability of hotspots
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../spectral-analysis-tci/" title="Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing" class="md-nav__link">
+      Triangular Chlorophyll Index (TCI) in Spectral Remote Sensing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../svm/" title="Support Vector Machine" class="md-nav__link">
+      Support Vector Machine
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Scenarios
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Scenarios
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/smartcity/" title="Smart City" class="md-nav__link">
+      Smart City
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/disaster/" title="Disaster Management" class="md-nav__link">
+      Disaster Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../scenarios/environment/" title="Environment" class="md-nav__link">
+      Environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducing-examples" title="Introducing examples" class="md-nav__link">
+    Introducing examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scalar-functions" title="Scalar functions" class="md-nav__link">
+    Scalar functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-and-analytical-functions" title="Aggregate and analytical functions" class="md-nav__link">
+    Aggregate and analytical functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-input-and-output-parameters" title="Dynamic input and output parameters" class="md-nav__link">
+    Dynamic input and output parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapreduce-programs" title="MapReduce programs" class="md-nav__link">
+    MapReduce programs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-to-external-services" title="Access to external services" class="md-nav__link">
+    Access to external services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-etl-using-udfs" title="User-defined ETL using UDFs" class="md-nav__link">
+    User-defined ETL using UDFs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bucketfs" title="BucketFS" class="md-nav__link">
+    BucketFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-bucketfs" title="What is BucketFS?" class="md-nav__link">
+    What is BucketFS?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-bucketfs-and-creating-buckets" title="Setting up BucketFS and creating buckets" class="md-nav__link">
+    Setting up BucketFS and creating buckets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-and-access-control" title="Access and access control" class="md-nav__link">
+    Access and access control
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expanding-script-languages-using-bucketfs" title="Expanding script languages using BucketFS" class="md-nav__link">
+    Expanding script languages using BucketFS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expanding-the-existing-script-languages" title="Expanding the existing script languages" class="md-nav__link">
+    Expanding the existing script languages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java-files-jar" title="Java files (.jar)" class="md-nav__link">
+    Java files (.jar)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-libraries" title="Python libraries" class="md-nav__link">
+    Python libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-packages" title="R packages" class="md-nav__link">
+    R packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-new-script-languages" title="Installing new script languages" class="md-nav__link">
+    Installing new script languages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-script-client" title="Creating a script client" class="md-nav__link">
+    Creating a script client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-aliases-for-the-integration-into-sql" title="Script aliases for the integration into SQL" class="md-nav__link">
+    Script aliases for the integration into SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="exasol-udf-framework">Exasol UDF framework<a class="headerlink" href="#exasol-udf-framework" title="Permanent link">&para;</a></h1>
+<p>UDF scripts provides you the ability to program your own analyses,
+processing or generation functions and execute them in parallel inside
+Exasol's high performance cluster (In Database Analytics). Through
+this principle many problems can be solved very efficiently which were
+not possible with SQL statements. Via UDF scripts you therefore get a
+highly flexible interface for implementing nearly every
+requirement. Hence you become a HPC developer without the need for
+certain previous knowledge.</p>
+<p>With UDF scripts you can implement the following extensions:</p>
+<ul>
+<li>Scalar functions</li>
+<li>Aggregate functions</li>
+<li>Analytical functions</li>
+<li>MapReduce algorithms</li>
+<li>User-defined ETL processes</li>
+</ul>
+<p>To take advantage of the variety of UDF scripts, you only need to
+create a script and use this script afterwards within a SELECT
+statement. By this close embedding within SQL you can achieve ideal
+performance and scalability.</p>
+<p>Exasol supports multiple programming languages (Java, Lua, Python, R)
+to simplify your start. Furthermore the different languages provide
+you different advantages due to their respective focus
+(e.g. statistical functions in R) and the different delivered
+libraries (XML parser, etc.). Thus, please note the next chapters in
+which the specific characteristics of each language is described.</p>
+<p>The actual versions of the scripting languages can be listed with
+corresponding metadata functions.</p>
+<p>Within the <code>CREATE SCRIPT STATEMENT</code> command, you have to define the
+type of input and output values. You can e.g. create a script which
+generates multiple result rows out of a single input row
+(<code>SCALAR ... EMITS</code>).</p>
+<ul>
+<li>
+<p>Input values:</p>
+<ul>
+<li>
+<p>SCALAR</p>
+<p>The keyword SCALAR specifies that the script processes single
+ input rows. It's code is therefore called once per input row.</p>
+</li>
+<li>
+<p>SET</p>
+<p>If you define the option SET, then the processing refers to a
+ set of input values. Within the code, you can iterate through
+ those values.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Output values:</p>
+<ul>
+<li>
+<p>RETURNS</p>
+<p>In this case the script returns a single value.</p>
+</li>
+<li>
+<p>EMITS</p>
+<p>If the keyword EMITS was defined, the script can create
+ (emit) multiple result rows (tuples). In case of input type
+ SET, the EMITS result can only be used alone, thus not be
+ combined with other expressions. However you can of course
+ nest it through a subselect to do further processing of those
+ intermediate results.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>The data types of input and output parameters can be defined to
+specify the conversion between internal data types and the database
+SQL data types. If you don't specify them, the script has to handle
+that dynamically (see details and examples below).</p>
+<p>Please note that input parameters of scripts are always treated
+case-sensitive, similar to the script code itself. This is different
+to SQL identifiers which are only treated case-sensitive when being
+delimited.</p>
+<p>Scripts must contain the main function <code>run()</code>. This function is
+called with a parameter providing access to the input data of
+Exasol. If your script processes multiple input tuples (thus a SET
+script), you can iterate through the single tuples by the use of this
+parameter.</p>
+<p>Please note the information in the following table:</p>
+<ul>
+<li>
+<p>Internal processing</p>
+<p>During the processing of an SELECT statement, multiple virtual
+machines are started for each script and node, which process the
+data independently.</p>
+<p>For scalar functions, the input rows are distributed across those
+virtual machines to achieve a maximal parallelism.</p>
+<p>In case of SET input tuples, the virtual machines are used per
+group (if you specify a GROUP BY clause). If no GROUP BY clause is
+defined, then only one group exists and therefore only one node
+and virtual machine can process the data.</p>
+</li>
+<li>
+<p><code>ORDER BY</code></p>
+<p>Either when creating a script or when calling it you can specify
+an ORDER BY clause which leads to a sorted processing of the
+groups of SET input data. For some algorithms, this can be
+reasonable. But if it is necessary for the algorithm, then you
+should already specify this clause during the creation to avoid
+wrong results due to misuse.</p>
+</li>
+<li>
+<p>Performance</p>
+<p>The performance of the different languages can hardly be compared,
+since the specific elements of the languages can have different
+capacities. Thus a string processing can be faster in one
+language, while the XML parsing is faster in the other one.</p>
+<p>However, we generally recommend to use Lua if performance is the
+most important criteria. Due to technical reasons, Lua is
+integrated in Exasol in the most native way and therefore has the
+smallest process overhead.</p>
+</li>
+</ul>
+<h2 id="introducing-examples">Introducing examples<a class="headerlink" href="#introducing-examples" title="Permanent link">&para;</a></h2>
+<p>In this chapter we provide some introducing Lua examples to give you a
+general idea about the functionality of user defined scripts. Examples
+for the other programming languages can be found in the later chapters
+explaining the details of each language.</p>
+<h3 id="scalar-functions">Scalar functions<a class="headerlink" href="#scalar-functions" title="Permanent link">&para;</a></h3>
+<p>User defined scalar functions (keyword <code>SCALAR</code>) are the simplest case
+of user defined scripts, returning one scalar result value (keyword
+<code>RETURNS</code>) or several result tuples (keyword <code>SET</code>) for each input
+value (or tuple).</p>
+<p>Please note that scripts have to implement a function <code>run()</code> in which
+the processing is done. This function is called during the execution
+and gets a kind of context as parameter (has name <em>data</em> in the
+examples) which is the actual interface between the script and the
+database.</p>
+<p>In the following example, a script is defined which returns the
+maximum of two values. This is equivalent to the <code>CASE</code> expression <code>CASE WHEN x&gt;=y THEN x WHEN
+x&lt;y THEN y ELSE NULL</code>. The ending slash (<code>/</code>) is only required
+when using EXAplus.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">LUA</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">my_maximum</span> <span class="p">(</span><span class="n">a</span> <span class="n">DOUBLE</span><span class="p">,</span> <span class="n">b</span> <span class="n">DOUBLE</span><span class="p">)</span> 
+           <span class="k">RETURNS</span> <span class="n">DOUBLE</span> <span class="k">AS</span>
+<span class="k">function</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span> <span class="o">==</span> <span class="k">null</span> <span class="k">or</span> <span class="n">ctx</span><span class="p">.</span><span class="n">b</span> <span class="o">==</span> <span class="k">null</span>
+        <span class="k">then</span> <span class="k">return</span> <span class="k">null</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">ctx</span><span class="p">.</span><span class="n">b</span> 
+        <span class="k">then</span> <span class="k">return</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span>
+        <span class="k">else</span> <span class="k">return</span> <span class="n">ctx</span><span class="p">.</span><span class="n">b</span>      
+    <span class="k">end</span>
+<span class="k">end</span> 
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">my_maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">t</span><span class="p">;</span>
+
+<span class="n">X</span>                 <span class="n">Y</span>                 <span class="n">MY_MAXIMUM</span><span class="p">(</span><span class="n">T</span><span class="p">.</span><span class="n">X</span><span class="p">,</span><span class="n">T</span><span class="p">.</span><span class="n">Y</span><span class="p">)</span> 
+<span class="c1">----------------- ----------------- -------------------</span>
+                <span class="mi">1</span>                 <span class="mi">2</span>                   <span class="mi">2</span>
+                <span class="mi">2</span>                 <span class="mi">2</span>                   <span class="mi">2</span>
+                <span class="mi">3</span>                 <span class="mi">2</span>                   <span class="mi">3</span>
+</pre></div>
+
+<h3 id="aggregate-and-analytical-functions">Aggregate and analytical functions<a class="headerlink" href="#aggregate-and-analytical-functions" title="Permanent link">&para;</a></h3>
+<p>UDF scripts get essentially more interesting if the script processes
+multiple data at once. Hereby you can create any kind of aggregate or
+analytical functions. By defining the keyword <code>SET</code> you specify that
+multiple input tuples are processed.  Within the <code>run()</code> method, you
+can iterate through this data (by the method<code>next()</code>).</p>
+<p>Furthermore, scripts can either return a single scalar value (keyword
+<code>RETURNS</code>) or multiple result tuples (keyword <code>EMITS</code>).</p>
+<p>The following example defines two scripts: the aggregate function
+<code>my_average</code> (simulates <code>AVG</code>) the
+analytical function <code>my_sum</code> which creates three values per input row
+(one sequential number, the current value and the sum of the previous
+values). The latter one processes the input data in sorted order due
+to the <code>ORDER BY</code> clause.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">LUA</span> <span class="k">SET</span> <span class="n">SCRIPT</span> <span class="n">my_average</span> <span class="p">(</span><span class="n">a</span> <span class="n">DOUBLE</span><span class="p">)</span> 
+           <span class="k">RETURNS</span> <span class="n">DOUBLE</span> <span class="k">AS</span>
+<span class="k">function</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ctx</span><span class="p">.</span><span class="k">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">then</span> <span class="k">return</span> <span class="k">null</span>
+    <span class="k">else</span>
+        <span class="k">local</span> <span class="k">sum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">repeat</span>
+            <span class="k">if</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span> <span class="o">~=</span> <span class="k">null</span> <span class="k">then</span> 
+                <span class="k">sum</span> <span class="o">=</span> <span class="k">sum</span> <span class="o">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span>
+            <span class="k">end</span>
+        <span class="k">until</span> <span class="k">not</span> <span class="n">ctx</span><span class="p">.</span><span class="k">next</span><span class="p">()</span>
+        <span class="k">return</span> <span class="k">sum</span><span class="o">/</span><span class="n">ctx</span><span class="p">.</span><span class="k">size</span><span class="p">()</span>
+    <span class="k">end</span>
+<span class="k">end</span> 
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">my_average</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">t</span><span class="p">;</span>
+
+<span class="n">MY_AVERAGE</span><span class="p">(</span><span class="n">T</span><span class="p">.</span><span class="n">X</span><span class="p">)</span>     
+<span class="c1">-----------------</span>
+             <span class="mi">7</span><span class="p">.</span><span class="mi">75</span>
+
+<span class="k">CREATE</span> <span class="n">LUA</span> <span class="k">SET</span> <span class="n">SCRIPT</span> <span class="n">my_sum</span> <span class="p">(</span><span class="n">a</span> <span class="n">DOUBLE</span><span class="p">)</span> 
+           <span class="n">EMITS</span> <span class="p">(</span><span class="k">count</span> <span class="n">DOUBLE</span><span class="p">,</span> <span class="n">val</span> <span class="n">DOUBLE</span><span class="p">,</span> <span class="k">sum</span> <span class="n">DOUBLE</span><span class="p">)</span> <span class="k">AS</span>
+<span class="k">function</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+    <span class="k">local</span> <span class="k">sum</span>   <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">local</span> <span class="k">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">repeat</span>
+        <span class="k">if</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span> <span class="o">~=</span> <span class="k">null</span> <span class="k">then</span> 
+            <span class="k">sum</span> <span class="o">=</span> <span class="k">sum</span> <span class="o">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">a</span>
+            <span class="k">count</span> <span class="o">=</span> <span class="k">count</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">ctx</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="k">count</span><span class="p">,</span><span class="n">ctx</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="k">sum</span><span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">until</span> <span class="k">not</span> <span class="n">ctx</span><span class="p">.</span><span class="k">next</span><span class="p">()</span>
+<span class="k">end</span> 
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">my_sum</span><span class="p">(</span><span class="n">x</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">x</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">t</span><span class="p">;</span>
+
+<span class="k">COUNT</span>             <span class="n">VAL</span>               <span class="k">SUM</span>              
+<span class="c1">----------------- ----------------- -----------------</span>
+                <span class="mi">1</span>                 <span class="mi">4</span>                 <span class="mi">4</span>
+                <span class="mi">2</span>                 <span class="mi">7</span>                <span class="mi">11</span>
+                <span class="mi">3</span>                 <span class="mi">9</span>                <span class="mi">20</span>
+                <span class="mi">4</span>                <span class="mi">11</span>                <span class="mi">31</span>
+</pre></div>
+
+<h3 id="dynamic-input-and-output-parameters">Dynamic input and output parameters<a class="headerlink" href="#dynamic-input-and-output-parameters" title="Permanent link">&para;</a></h3>
+<p>Instead of statically defining input and output parameters, you can
+use the syntax <code>(...)</code> within <code>CREATE SCRIPT</code> to create extremely
+flexible scripts with dynamic parameters. The same script can then be
+used for any input data type (e.g. a maximum function independent of
+the data type) and for a varying number of input columns.  Similarly,
+if you have an EMITS script, the number of output parameters and their
+type can also be made dynamic.</p>
+<p>In order to access and evaluate dynamic input parameters in UDF
+      scripts, extract the number of input parameters and their types from the
+      metadata and then access each parameter value by its index. For
+      instance, in Python the number of input parameters is stored in the
+      variable <code>exa.meta.input_column_count</code>.</p>
+<p>If the UDF script is defined with dynamic output parameters, the
+      actual output parameters and their types are determined dynamically
+      whenever the UDF is called. There are three possibilities:</p>
+<ul>
+<li>
+<p>You can specify the output parameters directly in the query
+          after the UDF call using the <code>EMITS</code> keyword followed by
+          the names and types the UDF shall output in this specific
+          call.</p>
+</li>
+<li>
+<p>If the UDF is used in the top level <code>SELECT</code> of an
+          <code>INSERT INTO SELECT</code> statement, the columns of the target
+          table are used as output parameters.</p>
+</li>
+<li>
+<p>If neither <code>EMITS</code> is specified, nor <code>INSERT
+          INTO SELECT</code> is used, the database tries to call the function
+          <code>default_output_columns()</code> (the name varies, here for
+          Python) which returns the output parameters dynamically, e.g. based
+          on the input parameters. This method can be implemented by the user.</p>
+</li>
+</ul>
+<p>In the example below you can see all three possibilities.</p>
+<div class="codehilite"><pre><span></span><span class="c1">-- Define a pretty simple sampling script where the last parameter defines </span>
+<span class="c1">-- the percentage of samples to be emitted. </span>
+<span class="k">CREATE</span> <span class="n">PYTHON</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">sample_simple</span> <span class="p">(...)</span> <span class="n">EMITS</span> <span class="p">(...)</span> <span class="k">AS</span>
+<span class="k">from</span> <span class="n">random</span> <span class="n">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1001</span><span class="p">)</span>
+<span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+  <span class="n">percent</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">[</span><span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_column_count</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">percent</span><span class="p">:</span>
+    <span class="n">currentRow</span> <span class="o">=</span> <span class="p">[</span><span class="n">ctx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_column_count</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="n">ctx</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="o">*</span><span class="n">currentRow</span><span class="p">)</span>
+<span class="o">/</span>
+
+<span class="c1">-- This is the same UDF, but output arguments are generated automatically </span>
+<span class="c1">-- to avoid explicit EMITS definition in SELECT.</span>
+<span class="c1">-- In default_output_columns(), a prefix &#39;c&#39; is added to the column names </span>
+<span class="c1">-- because the input columns are autogenerated numbers</span>
+<span class="k">CREATE</span> <span class="n">PYTHON</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">sample</span> <span class="p">(...)</span> <span class="n">EMITS</span> <span class="p">(...)</span> <span class="k">AS</span>
+<span class="k">from</span> <span class="n">random</span> <span class="n">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1001</span><span class="p">)</span>
+<span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">):</span>
+  <span class="n">percent</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">[</span><span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_column_count</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+  <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">percent</span><span class="p">:</span>
+    <span class="n">currentRow</span> <span class="o">=</span> <span class="p">[</span><span class="n">ctx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_column_count</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="n">ctx</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="o">*</span><span class="n">currentRow</span><span class="p">)</span>
+<span class="n">def</span> <span class="n">default_output_columns</span><span class="p">():</span>
+  <span class="n">output_args</span> <span class="o">=</span> <span class="n">list</span><span class="p">()</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_column_count</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_columns</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">name</span>
+    <span class="k">type</span> <span class="o">=</span> <span class="n">exa</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">input_columns</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">sql_type</span>
+    <span class="n">output_args</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;c&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="ss">&quot; &quot;</span> <span class="o">+</span> <span class="k">type</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">str</span><span class="p">(</span><span class="ss">&quot;, &quot;</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">output_args</span><span class="p">))</span>
+<span class="o">/</span>
+
+<span class="c1">-- Example table</span>
+<span class="n">ID</span>       <span class="n">USER_NAME</span> <span class="n">PAGE_VISITS</span>
+<span class="c1">-------- --------- -----------</span>
+       <span class="mi">1</span> <span class="n">Alice</span>              <span class="mi">12</span>
+       <span class="mi">2</span> <span class="n">Bob</span>                 <span class="mi">4</span>
+       <span class="mi">3</span> <span class="n">Pete</span>                <span class="mi">0</span>
+       <span class="mi">4</span> <span class="n">Hans</span>              <span class="mi">101</span>
+       <span class="mi">5</span> <span class="n">John</span>               <span class="mi">32</span>
+       <span class="mi">6</span> <span class="n">Peter</span>              <span class="mi">65</span>
+       <span class="mi">7</span> <span class="n">Graham</span>             <span class="mi">21</span>
+       <span class="mi">8</span> <span class="n">Steve</span>               <span class="mi">4</span>
+       <span class="mi">9</span> <span class="n">Bill</span>               <span class="mi">64</span>
+      <span class="mi">10</span> <span class="n">Claudia</span>           <span class="mi">201</span> 
+
+
+<span class="c1">-- The first UDF requires to specify the output columns via EMITS.</span>
+<span class="c1">-- Here, 20% of rows should be extracted randomly.</span>
+
+<span class="k">SELECT</span> <span class="n">sample_simple</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">page_visits</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+ <span class="n">EMITS</span> <span class="p">(</span><span class="n">id</span> <span class="nb">INT</span><span class="p">,</span> <span class="n">user_name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">PAGE_VISITS</span> <span class="nb">int</span><span class="p">)</span>
+ <span class="k">FROM</span> <span class="n">people</span><span class="p">;</span>
+
+<span class="n">ID</span>       <span class="n">USER_NAME</span> <span class="n">PAGE_VISITS</span>
+<span class="c1">-------- --------- -----------</span>
+       <span class="mi">2</span> <span class="n">Bob</span>                 <span class="mi">4</span>
+       <span class="mi">5</span> <span class="n">John</span>               <span class="mi">32</span>
+
+<span class="c1">-- The second UDF computes the output columns dynamically</span>
+<span class="k">SELECT</span> <span class="n">SAMPLE</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">page_visits</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="n">people</span><span class="p">;</span>
+
+<span class="n">C0</span>       <span class="n">C1</span>        <span class="n">C2</span>
+<span class="c1">-------- --------- -----------</span>
+       <span class="mi">2</span> <span class="n">Bob</span>                 <span class="mi">4</span>
+       <span class="mi">5</span> <span class="n">John</span>               <span class="mi">32</span>
+
+<span class="c1">-- In case of INSERT INTO, the UDF uses the target types automatically</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">people_sample</span> <span class="k">LIKE</span> <span class="n">people</span><span class="p">;</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">people_sample</span>
+  <span class="k">SELECT</span> <span class="n">sample_simple</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">page_visits</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">people</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="mapreduce-programs">MapReduce programs<a class="headerlink" href="#mapreduce-programs" title="Permanent link">&para;</a></h3>
+<p>Due to its flexibility, the UDF scripts framework is able to
+      implement any kind of analyses you can imagine. To show you it's power,
+      we list an example of a MapReduce program which calculates the frequency
+      of single words within a text - a problem which cannot be solved with
+      standard SQL.</p>
+<p>In the example, the script <code>map_words</code> extracts single
+      words out of a text and emits them. This script is integrated within a
+      SQL query without having the need for an additional aggregation script
+      (the typical Reduce step of MapReduce), because we can use the built-in
+      SQL function <code>COUNT</code>. This reduces the
+      implementation efforts since a whole bunch of built-in SQL functions are
+      already available in Exasol. Additionally, the performance can be
+      increased by that since the SQL execution within the built-in functions
+      is more native.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">LUA</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">map_words</span><span class="p">(</span><span class="n">w</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10000</span><span class="p">))</span>
+<span class="n">EMITS</span> <span class="p">(</span><span class="n">words</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span>
+<span class="k">function</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+    <span class="k">local</span> <span class="n">word</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">w</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">word</span> <span class="o">~=</span> <span class="k">null</span><span class="p">)</span>
+    <span class="k">then</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">unicode</span><span class="p">.</span><span class="n">utf8</span><span class="p">.</span><span class="n">gmatch</span><span class="p">(</span><span class="n">word</span><span class="p">,</span><span class="s1">&#39;([%w%p]+)&#39;</span><span class="p">)</span>
+        <span class="k">do</span>
+            <span class="n">ctx</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">words</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> 
+    <span class="p">(</span><span class="k">SELECT</span> <span class="n">map_words</span><span class="p">(</span><span class="n">l_comment</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">tpc</span><span class="p">.</span><span class="n">lineitem</span><span class="p">)</span> 
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">words</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="mi">2</span> <span class="k">desc</span> <span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="n">WORDS</span>                       <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>           
+<span class="c1">--------------------------- -------------------</span>
+<span class="n">the</span>                                     <span class="mi">1376964</span>
+<span class="n">slyly</span>                                    <span class="mi">649761</span>
+<span class="n">regular</span>                                  <span class="mi">619211</span>
+<span class="k">final</span>                                    <span class="mi">542206</span>
+<span class="n">carefully</span>                                <span class="mi">535430</span>
+<span class="n">furiously</span>                                <span class="mi">534054</span>
+<span class="n">ironic</span>                                   <span class="mi">519784</span>
+<span class="n">blithely</span>                                 <span class="mi">450438</span>
+<span class="n">even</span>                                     <span class="mi">425013</span>
+<span class="n">quickly</span>                                  <span class="mi">354712</span>
+</pre></div>
+
+<h3 id="access-to-external-services">Access to external services<a class="headerlink" href="#access-to-external-services" title="Permanent link">&para;</a></h3>
+<p>Within scripts you can exchange data with external services which
+      increases your flexibility significantly.</p>
+<p>In the following example, a list of URLs (stored in a table) is
+      processed, the corresponding documents are read from the webserver and
+      finally the length of the documents is calculated. Please note that
+      every script language provides different libraries to connect to the
+      internet.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">LUA</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">length_of_doc</span> <span class="p">(</span><span class="n">url</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span> 
+           <span class="n">EMITS</span> <span class="p">(</span><span class="n">url</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">doc_length</span> <span class="n">DOUBLE</span><span class="p">)</span> <span class="k">AS</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="ss">&quot;socket.http&quot;</span><span class="p">)</span>
+<span class="k">function</span> <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span> 
+    <span class="n">file</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">file</span> <span class="o">==</span> <span class="n">nil</span> <span class="k">then</span> <span class="n">error</span><span class="p">(</span><span class="s1">&#39;Cannot open URL &#39;</span> <span class="p">..</span> <span class="n">ctx</span><span class="p">.</span><span class="n">url</span><span class="p">)</span> <span class="k">end</span>
+    <span class="n">ctx</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">url</span><span class="p">,</span> <span class="n">unicode</span><span class="p">.</span><span class="n">utf8</span><span class="p">.</span><span class="n">len</span><span class="p">(</span><span class="n">file</span><span class="p">))</span>
+<span class="k">end</span>
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">length_of_doc</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">t</span><span class="p">;</span>
+
+<span class="n">URL</span>                                                <span class="n">DOC_LENGTH</span>           
+<span class="c1">-------------------------------------------------- -----------------</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">en</span><span class="p">.</span><span class="n">wikipedia</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Main_Page</span><span class="p">.</span><span class="n">htm</span>                     <span class="mi">59960</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">en</span><span class="p">.</span><span class="n">wikipedia</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="n">Exasol</span>                            <span class="mi">30007</span>
+</pre></div>
+
+<h3 id="user-defined-etl-using-udfs">User-defined ETL using UDFs<a class="headerlink" href="#user-defined-etl-using-udfs" title="Permanent link">&para;</a></h3>
+<p>UDF scripts can also be used to implement very flexible ETL
+      processes by defining how to extract and convert data from external data
+      sources.</p>
+<h2 id="bucketfs">BucketFS<a class="headerlink" href="#bucketfs" title="Permanent link">&para;</a></h2>
+<p>When scripts are executed in parallel on the Exasol cluster, there
+    exist some use cases where all instances have to access the same external
+    data. Your algorithms could for example use a statistical model or weather
+    data. For such requirements, it's obviously possible to use an external
+    service (e.g. a file server). But in terms of performance, it would be
+    quite handy to have such data available locally on the cluster
+    nodes.</p>
+<p>The Exasol BucketFS file system has been developed for such use
+    cases, where data should be stored synchronously and replicated across the
+    cluster. But we will also explain in the following sections how this
+    concept can be used to extend script languages and even to install
+    completely new script languages on the Exasol cluster.</p>
+<h3 id="what-is-bucketfs">What is BucketFS?<a class="headerlink" href="#what-is-bucketfs" title="Permanent link">&para;</a></h3>
+<p>The BucketFS file system is a synchronous file system which is
+      available in the Exasol cluster. This means that each cluster node can
+      connect to this service (e.g. through the http interface) and will see
+      exactly the same content.</p>
+<p>The data is replicated locally on every server and automatically
+        synchronized. Hence, you shouldn't store large amounts of data
+        there.</p>
+<p>The data in BucketFS is not part of the database backups and has
+        to be backed up manually if necessary.</p>
+<p>One BucketFS service contains any number of so-called buckets, and
+      every bucket stores any number of files. Every bucket can have different
+      access privileges as we will explain later on. Folders are not supported
+      directly, but if you specify an upload path including folders, these
+      will be created transparently if they do not exist yet. If all files
+      from a folder are deleted, the folder will be dropped
+      automatically.</p>
+<p>Writing data is an atomic operation. There don't exist any locks
+      on files, so the latest write operation will finally overwrite the file.
+      In contrast to the database itself, BucketFS is a pure file-based system
+      and has no transactional semantic.</p>
+<h3 id="setting-up-bucketfs-and-creating-buckets">Setting up BucketFS and creating buckets<a class="headerlink" href="#setting-up-bucketfs-and-creating-buckets" title="Permanent link">&para;</a></h3>
+<p>On the left part of the EXAoperation administration interface,
+      you'll find the link to the BucketFS configuration. You will find a
+      pre-installed default BucketFS service for the configured data disk. If
+      you want to create additional file system services, you need to specify
+      only the data disk and specify ports for http(s).</p>
+<p>If you follow the link of an BucketFS Id, you can create and
+      configure any number of buckets within this BucketFS. Beside the bucket
+      name, you have to specify read/write passwords and define whether the
+      bucket should be public readable, i.e. accessible for everyone.</p>
+<p>A default bucket already exists in the default BucketFS which
+        contains the pre-installed script languages (Java, Python, R).
+        However, for storing larger user data we highly recommend to create a
+        separate BucketFS instance on a separate partition.</p>
+<h3 id="access-and-access-control">Access and access control<a class="headerlink" href="#access-and-access-control" title="Permanent link">&para;</a></h3>
+<p>From outside the cluster, it is possible to access the buckets and
+      the contained files through http(s) clients such as
+      <productname>curl. You only have to use one of the
+      database servers' IP address, the specified port and the bucket name,
+      and potentially adjust your internal firewall configuration.</p>
+<p>For accessing a bucket through http(s) the users <code>r</code>
+        and <code>w</code> are always configured and are associated with the
+        configured read and write passwords.</p>
+<p>In the following example the http client <code>curl</code> is used
+      to list the existing buckets, upload the files <code>file1</code> and
+      <code>tar1.tgz</code> into the bucket <code>bucket</code>1 and finally
+      display the list of contained files in this bucket. The relevant
+      parameters for our example are the port of the BucketFS
+      (<code>1234</code>), the name of the bucket (<code>bucket</code>1) and
+      the passwords (<code>readpw</code> and <code>writepw</code>).</p>
+<div class="codehilite"><pre><span></span><span class="err">$</span><span class="o">&gt;</span> <span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">75</span><span class="p">:</span><span class="mi">1234</span>
+<span class="k">default</span>
+<span class="n">bucket1</span>
+<span class="err">$</span><span class="o">&gt;</span> <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">PUT</span> <span class="o">-</span><span class="n">T</span> <span class="n">file1</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">w</span><span class="p">:</span><span class="n">writepw</span><span class="o">@</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">75</span><span class="p">:</span><span class="mi">1234</span><span class="o">/</span><span class="n">bucket1</span><span class="o">/</span><span class="n">file1</span>
+<span class="err">$</span><span class="o">&gt;</span> <span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">PUT</span> <span class="o">-</span><span class="n">T</span> <span class="n">tar1</span><span class="p">.</span><span class="n">tgz</span> <span class="err">\</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">w</span><span class="p">:</span><span class="n">writepw</span><span class="o">@</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">75</span><span class="p">:</span><span class="mi">1234</span><span class="o">/</span><span class="n">bucket1</span><span class="o">/</span><span class="n">tar1</span><span class="p">.</span><span class="n">tgz</span>
+<span class="err">$</span><span class="o">&gt;</span> <span class="n">curl</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">r</span><span class="p">:</span><span class="n">readpw</span><span class="o">@</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">75</span><span class="p">:</span><span class="mi">1234</span><span class="o">/</span><span class="n">bucket1</span>
+<span class="n">file1</span>
+<span class="n">tar1</span><span class="p">.</span><span class="n">tgz</span>
+</pre></div>
+
+<p>From scripts running on the Exasol cluster, you can access the
+      files locally for simplification reasons. You don't need to define any
+      IP address and can be sure that the data is used from the local node.
+      The corresponding path for a bucket can be found in EXAoperation in the
+      overview of a bucket.</p>
+<p>The access control is organized by using a database CONNECTION
+      object,
+      because for the database, buckets look similar to normal external data
+      sources. The connection contains the path to the bucket and the read
+      password. After granting that connection to someone using the <code>GRANT</code> command, the bucket becomes
+      visible/accessible for that user. If you want to allow all users to
+      access a bucket, you can define that bucket in EXAoperation as
+      <em>public</em>.</p>
+<p>Similar to external clients, write access from scripts is only
+        possible via http(s), but you still would have to be careful with the
+        parallelism of script processes.</p>
+<p>In the following example, a connection to a bucket is defined and
+      granted. Afterwards, a script is created which lists the files from a
+      local path. You can see in the example that the equivalent local path
+      for the previously created bucket <code>bucket</code>1 is
+      <code>/buckets/bfsdefault/bucket</code>1.</p>
+<p><div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="k">CONNECTION</span> <span class="n">my_bucket_access</span> <span class="k">TO</span> <span class="s1">&#39;bucketfs:bfsdefault/bucket1&#39;</span> 
+  <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;readpw&#39;</span><span class="p">;</span>
+
+<span class="k">GRANT</span> <span class="k">CONNECTION</span> <span class="n">my_bucket_access</span> <span class="k">TO</span> <span class="n">my_user</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="n">PYTHON</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">ls</span><span class="p">(</span><span class="n">my_path</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span> 
+<span class="n">EMITS</span> <span class="p">(</span><span class="n">files</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span> <span class="k">AS</span>
+<span class="n">import</span> <span class="n">subprocess</span>
+
+<span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">c</span><span class="p">):</span>
+    <span class="n">try</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="p">.</span><span class="n">Popen</span><span class="p">(</span><span class="s1">&#39;ls &#39;</span><span class="o">+</span><span class="k">c</span><span class="p">.</span><span class="n">my_path</span><span class="p">,</span> 
+                             <span class="k">stdout</span>    <span class="o">=</span> <span class="n">subprocess</span><span class="p">.</span><span class="n">PIPE</span><span class="p">,</span> 
+                             <span class="n">stderr</span>    <span class="o">=</span> <span class="n">subprocess</span><span class="p">.</span><span class="k">STDOUT</span><span class="p">,</span> 
+                             <span class="n">close_fds</span> <span class="o">=</span> <span class="k">True</span><span class="p">,</span> 
+                             <span class="n">shell</span>     <span class="o">=</span> <span class="k">True</span><span class="p">)</span>
+        <span class="k">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">communicate</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="k">out</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">):</span>
+            <span class="k">c</span><span class="p">.</span><span class="n">emit</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">finally</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
+            <span class="n">try</span><span class="p">:</span> <span class="n">p</span><span class="p">.</span><span class="n">kill</span><span class="p">()</span>
+            <span class="k">except</span><span class="p">:</span> <span class="n">pass</span>
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/buckets/bfsdefault/bucket1&#39;</span><span class="p">);</span>
+
+<span class="n">FILES</span>                                                                                                
+<span class="c1">---------------------</span>
+<span class="n">file1</span>
+<span class="n">tar1</span>
+
+<span class="k">SELECT</span> <span class="n">ls</span><span class="p">(</span><span class="s1">&#39;/buckets/bfsdefault/bucket1/tar1/&#39;</span><span class="p">);</span>
+
+<span class="n">FILES</span>                                                                                                
+<span class="c1">---------------------</span>
+<span class="n">a</span>
+<span class="n">b</span>        
+</pre></div>
+As you might have recognized in the example, archives
+      (<code>.zip</code>, <code>.tar</code>, <code>.tar.gz</code> or
+      <code>.tgz</code>) are always extracted for the script access on the
+      local file system. From outside (e.g. via <code>curl</code>) you see the
+      archive while you can locally use the extracted files from within the
+      scripts.
+<note>If you store archives (<code>.zip</code>, <code>.tar</code>,
+        <code>.tar.gz</code> or <code>.tgz</code>) in the BucketFS, both the
+        original files and the extracted files are stored and need therefore
+        storage space twice.</p>
+<p><tip>If you want to work on an archive directly, you can avoid the
+        extraction by renaming the file extension (e.g. <code>.zipx</code>
+        instead of <code>.zip</code>).</p>
+<h2 id="expanding-script-languages-using-bucketfs">Expanding script languages using BucketFS<a class="headerlink" href="#expanding-script-languages-using-bucketfs" title="Permanent link">&para;</a></h2>
+<p>If Exasol's preconfigured set of script languages is sufficient for
+    your needs, you don't need to consider this chapter. But if you want to
+    expand the script languages (e.g. installing additional R packages) or
+    even integrate completely new languages into the script framework, you can
+    easily do that using BucketFS.</p>
+<h3 id="expanding-the-existing-script-languages">Expanding the existing script languages<a class="headerlink" href="#expanding-the-existing-script-languages" title="Permanent link">&para;</a></h3>
+<p>The first option is to expand the existing languages by adding
+      further packages. The corresponding procedure differs for every language
+      and will therefore be explained in the following sections.</p>
+<p>The script language Lua is not expandable, because it is
+        natively compiled into the Exasol database software.</p>
+<h4 id="java-files-jar">Java files (.jar)<a class="headerlink" href="#java-files-jar" title="Permanent link">&para;</a></h4>
+<p>For Java, you can integrate<code>.jar</code> files in Exasol
+        easily. You only have to save the file in a bucket and reference the
+        corresponding path directly in your Java script.</p>
+<p>If you for instance want to use Google's library to process
+        telephone numbers (<a href="http://mavensearch.io/repo/com.googlecode.libphonenumber/libphonenumber/4.2">http://mavensearch.io/repo/com.googlecode.libphonenumber/libphonenumber/4.2</a>),
+        you could upload the file similarly to the examples above in the
+        bucket named <code>javalib</code>. The corresponding local bucket path
+        would look like the following:
+        <code>/buckets/bfsdefault/javalib/libphonenumber-4.2.jar</code>.</p>
+<p>In the script below you can see how this path is specified to be
+        able to import the library.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">JAVA</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">jphone</span><span class="p">(</span><span class="n">num</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2000</span><span class="p">))</span>
+<span class="k">RETURNS</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="k">AS</span>
+<span class="o">%</span><span class="n">jar</span> <span class="o">/</span><span class="n">buckets</span><span class="o">/</span><span class="n">bfsdefault</span><span class="o">/</span><span class="n">javalib</span><span class="o">/</span><span class="n">libphonenumber</span><span class="o">-</span><span class="mi">4</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="n">jar</span><span class="p">;</span>
+
+<span class="n">import</span> <span class="n">com</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">i18n</span><span class="p">.</span><span class="n">phonenumbers</span><span class="p">.</span><span class="n">PhoneNumberUtil</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">com</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">i18n</span><span class="p">.</span><span class="n">phonenumbers</span><span class="p">.</span><span class="n">NumberParseException</span><span class="p">;</span>
+<span class="n">import</span> <span class="n">com</span><span class="p">.</span><span class="n">google</span><span class="p">.</span><span class="n">i18n</span><span class="p">.</span><span class="n">phonenumbers</span><span class="p">.</span><span class="n">Phonenumber</span><span class="p">.</span><span class="n">PhoneNumber</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="n">JPHONE</span> <span class="err">{</span>
+  <span class="k">static</span> <span class="n">String</span> <span class="n">run</span><span class="p">(</span><span class="n">ExaMetadata</span> <span class="n">exa</span><span class="p">,</span> <span class="n">ExaIterator</span> <span class="n">ctx</span><span class="p">)</span> <span class="n">throws</span> <span class="k">Exception</span> <span class="err">{</span>
+    <span class="n">PhoneNumberUtil</span> <span class="n">phoneUtil</span> <span class="o">=</span> <span class="n">PhoneNumberUtil</span><span class="p">.</span><span class="n">getInstance</span><span class="p">();</span>
+    <span class="n">try</span> <span class="err">{</span>
+      <span class="n">PhoneNumber</span> <span class="n">swissNumberProto</span> <span class="o">=</span> <span class="n">phoneUtil</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="ss">&quot;num&quot;</span><span class="p">),</span>
+                                                     <span class="ss">&quot;DE&quot;</span><span class="p">);</span>
+      <span class="k">return</span> <span class="n">swissNumberProto</span><span class="p">.</span><span class="n">toString</span><span class="p">();</span>
+    <span class="err">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">NumberParseException</span> <span class="n">e</span><span class="p">)</span> <span class="err">{</span>
+      <span class="k">System</span><span class="p">.</span><span class="n">err</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="ss">&quot;NumberParseException thrown: &quot;</span> <span class="o">+</span> <span class="n">e</span><span class="p">.</span><span class="n">toString</span><span class="p">());</span>
+    <span class="err">}</span>
+    <span class="k">return</span> <span class="ss">&quot;failed&quot;</span><span class="p">;</span>
+  <span class="err">}</span>
+<span class="err">}</span>
+<span class="o">/</span> 
+</pre></div>
+
+<h4 id="python-libraries">Python libraries<a class="headerlink" href="#python-libraries" title="Permanent link">&para;</a></h4>
+<p>Python libraries are often provided in the form of
+        <code>.whl</code> files. You can easily integrate such libraries into
+        Exasol by uploading the file to a bucket and extend the Python search
+        path appropriately.</p>
+<p>If you for instance want to use Google's library for processing
+        phone numbers (<a href="https://pypi.python.org/pypi/phonenumbers">https://pypi.python.org/pypi/phonenumbers</a>), you could
+        upload the file into the bucket named <code>pylib</code>. The
+        corresponding local path would look like the following:
+        <code>/buckets/bfsdefault/pylib/phonenumbers-7.7.5-py2.py3-none-any.whl</code>.</p>
+<p>In the script below you can see how this path is specified to be
+        able to import the library.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">PYTHON</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">phonenumber</span><span class="p">(</span><span class="n">phone_number</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2000</span><span class="p">))</span> 
+<span class="k">RETURNS</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="k">AS</span>
+<span class="n">import</span> <span class="n">sys</span>
+<span class="n">import</span> <span class="n">glob</span>
+
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">glob</span><span class="p">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;/buckets/bfsdefault/pylib/*&#39;</span><span class="p">))</span>
+<span class="n">import</span> <span class="n">phonenumbers</span>
+
+<span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">c</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">str</span><span class="p">(</span><span class="n">phonenumbers</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">phone_number</span><span class="p">,</span><span class="k">None</span><span class="p">))</span>
+<span class="o">/</span>
+
+<span class="k">SELECT</span> <span class="n">phonenumber</span><span class="p">(</span><span class="s1">&#39;+1-555-2368&#39;</span><span class="p">)</span> <span class="k">AS</span> <span class="n">ghost_busters</span><span class="p">;</span>
+
+<span class="n">GHOST_BUSTERS</span>
+<span class="c1">-----------------------------------------</span>
+<span class="n">Country</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">1</span> <span class="k">National</span> <span class="nb">Number</span><span class="p">:</span> <span class="mi">55552368</span>
+</pre></div>
+
+<h4 id="r-packages">R packages<a class="headerlink" href="#r-packages" title="Permanent link">&para;</a></h4>
+<p>The installation of R packages is a bit more complex because
+        they have to be compiled using the c compiler. To manage that, you can
+        download the existing Exasol Linux container, compile the package in
+        that container and upload the resulting package into BucketFS. Details
+        about the Linux container will be explained in the following
+        chapter.</p>
+<p>A simple method is using Docker as described in the following
+        example.</p>
+<div class="codehilite"><pre><span></span>$&gt; bucketfs = http://192.168.6.75:1234
+$&gt; cont = /default/EXAClusterOS/ScriptLanguages-2016-10-21.tar.gz
+$&gt; docker $bucketfs$cont import my_dock
+$&gt; mkdir r_pkg
+$&gt; docker run -v `pwd`/r_pkg:/r_pkg --name=my_dock -it my_dock /bin/bash
+</pre></div>
+
+<p>Again we want to use an existing package for processing phone
+        numbers, this time from Steve Myles (<a href="https://cran.r-project.org/web/packages/phonenumber/index.html">https://cran.r-project.org/web/packages/phonenumber/index.html</a>).</p>
+<p>Within the Docker container, you can start R and install
+        it:</p>
+<div class="codehilite"><pre><span></span># export R_LIBS=&quot;/r_pkg/&quot;
+# R
+&gt; install.packages(&#39;phonenumber&#39;, repos=&quot;http://cran.r-project.org&quot;)
+Installing package into &#39;/r_pkg&#39;
+(as &#39;lib&#39; is unspecified)
+trying URL &#39;http://cran.r-project.org/src/contrib/phonenumber_0.2.2.tar.gz&#39;
+Content type &#39;application/x-gzip&#39; length 10516 bytes (10 KB)
+==================================================
+downloaded 10 KB
+</pre></div>
+
+<p>The first line installs the package from the Linux container
+        into the subfolder <code>r_pkg</code> which can be accessed outside
+        the Docker container.</p>
+<p>Afterwards, the resulting tgz archive is uploaded into the
+        bucket named <code>rlib</code>:</p>
+<p><div class="codehilite"><pre><span></span><span class="err">$</span><span class="o">&gt;</span> <span class="n">bucketfs</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">w</span><span class="p">:</span><span class="n">writepw</span><span class="o">@</span><span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">75</span><span class="p">:</span><span class="mi">1234</span>
+<span class="err">$</span><span class="o">&gt;</span> <span class="n">curl</span> <span class="o">-</span><span class="n">vX</span> <span class="n">PUT</span> <span class="o">-</span><span class="n">T</span> <span class="n">r_pkg</span><span class="p">.</span><span class="n">tgz</span> <span class="err">$</span><span class="n">bucketfs</span><span class="o">/</span><span class="n">rlib</span><span class="o">/</span><span class="n">r_pkg</span><span class="p">.</span><span class="n">tgz</span>
+</pre></div>
+In the following script you can see how the resulting local path
+        (<code>/buckets/bfsdefault/rlib/r_pkg</code>) is specified to be able
+        to use the library.</p>
+<div class="codehilite"><pre><span></span><span class="k">CREATE</span> <span class="n">R</span> <span class="n">SCALAR</span> <span class="n">SCRIPT</span> <span class="n">tophone</span><span class="p">(</span><span class="n">letters</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">2000</span><span class="p">))</span> <span class="k">RETURNS</span> <span class="nb">INT</span> <span class="k">AS</span>
+<span class="p">.</span><span class="n">libPaths</span><span class="p">(</span> <span class="k">c</span><span class="p">(</span> <span class="p">.</span><span class="n">libPaths</span><span class="p">(),</span> <span class="ss">&quot;/buckets/bfsdefault/rlib/r_pkg&quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">phonenumber</span><span class="p">)</span>
+
+<span class="n">run</span> <span class="o">&lt;-</span> <span class="k">function</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="err">{</span>
+   <span class="n">letterToNumber</span><span class="p">(</span><span class="n">ctx$letters</span><span class="p">,</span> <span class="n">qz</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="err">}</span>
+<span class="o">/</span>
+</pre></div>
+
+<h3 id="installing-new-script-languages">Installing new script languages<a class="headerlink" href="#installing-new-script-languages" title="Permanent link">&para;</a></h3>
+<p>Due to Exasol's open script framework it is simply possible to
+      integrate completely new script languages into Exasol, following these 3
+      steps:</p>
+<ul>
+<li>Creating a functioning language client</li>
+<li>Upload the resulting client into a bucket</li>
+<li>Define a script language alias</li>
+</ul>
+<p>The language has to be expanded by some small
+      APIs which implement the communication between Exasol and the language.
+      Afterwards the client is compiled for the usage in the pre-installed
+      Exasol Linux Container, so that it can be started within a secure
+      process on the Exasol cluster.</p>
+<p>The last step creates a link between the language client and
+      Exasol's SQL language, actually the <code>CREATE SCRIPT</code> command. This facilitates many
+      options to try out new versions of a language or completely new
+      languages and finally replace them completely.</p>
+<p>If you for instance plan to migrate from Python 2 to Python 3, you
+      could upload a new client and link the alias <code>PYTHON</code>
+      temporarily to the new version via <code>ALTER SESSION</code>. After a thorough testing phase,
+      you can finally switch to the new version for all users via the <code>ALTER SYSTEM</code> statement.</p>
+<p>On the other side, it is also possible to use both language
+      versions in parallel by defining two aliases separately (e.g.
+      <code>PYTHON2</code> and <code>PYTHON3</code>).</p>
+<h3 id="creating-a-script-client">Creating a script client<a class="headerlink" href="#creating-a-script-client" title="Permanent link">&para;</a></h3>
+<p>The main task of installing new languages is developing the
+        script client. If you are interested in a certain language, you should
+        first check whether the corresponding client has already been
+        published in our open source repository (see <a href="https://github.com/exasol/script-languages">https://github.com/exasol/script-languages</a>). Otherwise
+        we would be very happy if you would contribute self-developed clients
+        to our open source community.</p>
+<p>A script client is based on a Linux container which is stored in
+        BucketFS. The pre-installed script client for languages Python, Java
+        and R is located in the default bucket of the default BucketFS. Using
+        the Linux container technology, an encapsulated virtual machine is
+        started in a safe environment whenever an SQL query contains script
+        code. The Linux container includes a complete Linux distribution and
+        starts the corresponding script client for executing the script code.
+        In general, you could also upload your own Linux container and combine
+        it with your script client.</p>
+<p>The script client has to implement a certain protocol that
+        controls the communication between the scripts and the database. For
+        that purpose, the established technologies ZeroMQ
+    and Google's Protocol Buffers are used. Because
+        of the length, the actual protocol definition is not included in this
+        user manual. For details, please have a look into our open source
+        repository where
+        you'll find the following:</p>
+<h3 id="script-aliases-for-the-integration-into-sql">Script aliases for the integration into SQL<a class="headerlink" href="#script-aliases-for-the-integration-into-sql" title="Permanent link">&para;</a></h3>
+<p>After building and uploading a script client, you have to
+        configure an alias within Exasol. The database then knows where each
+        script language has been installed.
+You can change the script aliases via the commands <code>ALTER SESSION</code> and <code>ALTER SYSTEM</code>, either session-wide or
+        system-wide. This is handy especially for using several language
+        versions in parallel, or migrating from one version to another.
+The current session and system parameters can be found in <code>EXA_PARAMETERS</code>. The scripts aliases are defined via the
+        parameter <code>SCRIPT_LANGUAGES</code>:</p>
+<p><div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">session_value</span> <span class="k">FROM</span> <span class="n">exa_parameters</span> 
+<span class="k">WHERE</span> <span class="n">parameter_name</span><span class="o">=</span><span class="s1">&#39;SCRIPT_LANGUAGES&#39;</span><span class="p">;</span>
+
+<span class="n">PARAMETER_NAME</span>
+<span class="c1">---------------------------------------------------</span>
+<span class="n">PYTHON</span><span class="o">=</span><span class="n">builtin_python</span> <span class="n">R</span><span class="o">=</span><span class="n">builtin_r</span> <span class="n">JAVA</span><span class="o">=</span><span class="n">builtin_java</span>
+</pre></div>
+These values are not very meaningful since they are just
+        internal macros to make that parameter compact and to dynamically use
+        the last installed version. Written out, the alias for Java would look
+        like the following:
+<code>JAVA=localzmq+protobuf:///bfsdefault/default/EXAClusterOS/ScriptLanguages-2016-10-21/?lang=java#buckets/bfsdefault/default/EXASolution-6.0.0/exaudfclient</code></p>
+<p>That alias means that for all <code>CREATE JAVA SCRIPT</code>
+        statements, the Exasol database will use the script client
+        <code>exaudfclient</code> from local path
+        <code>buckets/bfsdefault/default/EXASolution-2016-10-21/</code>,
+        started within the Exasol Linux container from path
+        <code>bfsdefault/default/EXAClusterOS/ScriptLanguages-2016-10-21</code>.
+        The used communication protocol is <code>localzmq+protobuf</code>
+        (this is the only supported protocol so far).</p>
+<p>For the three pre-installed languages (Python, R, Java), Exasol
+        uses one single script client which evaluates the parameter
+        <code>lang=java</code> to differentiate between these languages.
+        That's why the internal macro for the Python alias looks nearly
+        identical. Script clients implemented by users can of course define
+        and evaluate such optional parameters individually.</p>
+<p>In general, a script alias contains the following
+        elements:
+<div class="codehilite"><pre><span></span>&lt;alias&gt;=localzmq+protobuf:///&lt;path_to_linux-container&gt;/[?&lt;client_param_list&gt;]#&lt;path_to_client&gt;
+</pre></div></p>
+<p>Please note that a script alias may not contain
+            spaces.</p>
+<p>Maybe you have noticed in the Java alias that the path of the
+        Linux container begins with the BucketFS while the client path
+        contains the prefix <code>buckets/</code>. The reason for that is that
+        the client is started in a secure environment within the Linux
+        container and may only access the existing (and visible) buckets.
+        Access is granted just to the embedded buckets (via
+        <code>mount</code>), but not to the real server's underlying file
+        system. The path <code>/buckets/</code> can be used read-only from
+        within scripts as described in the previous chapter.</p>
+<p>You can define or rename any number of aliases. As mentioned
+        before, we recommend to test such adjustments at first in your own
+        session before making that change globally visible via <code>ALTER SYSTEM</code>.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../exasol-geo/" title="Exasol GEO data and spatial indexes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Exasol GEO data and spatial indexes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../exasol-virtual-schema/" title="Exasol virtual schema" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Exasol virtual schema
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+             <a href="https://www.fzi.de/footer/impressum/"> <b>Impressum:</b> FZI Forschungszentrum Informatik am Karlsruher Institut für Technologie.</a> <br/> <b>FKZ: 01IS14012</b> - BigGIS website maintained by <b><a href="https://github.com/vsimko">Viliam Simko</a></b> 
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://biggis-project.eu" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/biggis-project" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9fb73e57.js"></script>
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-112317697-1","biggis-project.eu"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
