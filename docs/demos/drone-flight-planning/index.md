@@ -79,4 +79,4 @@ time would be insufficient to survey each location within the target area, it st
 smoke cloud and to provide detailed information about the spatial distribution of hazardous gases.
 
 !!! info "Figure 2: Autocorrelated field, predicted values and prediction quality."
-    ![](evaluation_example.png)
+    ![](evaluation-example.png)

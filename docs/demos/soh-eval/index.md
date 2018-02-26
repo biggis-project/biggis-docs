@@ -41,7 +41,7 @@ As well as the TIFs in folder `2016`.
 Can then be displayed in the following way using QGis:
 
 !!! info "Focal G* example - single band"
-    ![Geo Example](FocalGStarExampleSingelBand.png)
+    ![Geo Example](focal-gstar-example-single.png)
 
 ## Calculation of hotspots for geotemporal data
 
@@ -79,4 +79,4 @@ The paths to the TIFs are defined within the method `importExport.PathFormatter#
 
 !!! info "Focal G* example  (multi-band)"
     `{ouptDirectory}/GIS_Daten/Mulitbandtrue/2016/3/GStar/focal/a3_w6_wT2_f16_fT3_z1`
-    ![Geotemporal Example](FocalGStarExampleMultiband.png)
+    ![Geotemporal Example](focal-gstar-example-multi.png)

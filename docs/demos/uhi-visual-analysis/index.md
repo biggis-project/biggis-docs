@@ -24,7 +24,7 @@ A variety of data source is used for our visual analysis of urban heat islands s
 We incorporoated data sets for Germany, however, focused on the analysis of regions around Karlsruhe. 
 
 !!! info "Picture 1: WU Station distribution in and around Karlsruhe"
-    ![Stations Karlsruhe](wu_stations_karlsruhe.png)
+    ![Stations Karlsruhe](wu-stations-karlsruhe.png)
 
 
 ## Visual Analysis of Urban Heat Islands
@@ -34,10 +34,10 @@ system for the visual analysis of the occurences of urban heat islands. Interact
 search allows to investigate impacts of different variables. 
 
 !!! info "Picture 2: Similarity search for urban heat islands, starting from Karlsruhe."
-    ![Similarity Search](urbanheatislandssimilaritysearch330.png)
+    ![Similarity Search](uhi-similarity-search.png)
 
 !!! info "Picture 3: Identified urban heat islands with high similarity for a station in Karlsruhe."
-    ![Similarity Search](urbanheatislandsidentifiedsimilar.png)
+    ![Similarity Search](uhi-identified-similar.png)
     The identified similar weather station is positioned in Duisburg. The user is enabled to further explore the dataset
     by brushing and linking.
 

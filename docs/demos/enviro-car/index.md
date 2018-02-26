@@ -25,11 +25,11 @@ be associated with a sensor. There are 160 registered sensors which may be direc
 information about the vehicle (type, etc.) is provided as well.
 
 !!! info "Picture 1: Distribution of trips per sensor (german)."
-    ![Trips per sensor](tripspersensor.png)
+    ![Trips per sensor](trips-per-sensor.png)
 
 
 !!! info "Picture 2: Distribution of trips per month in 2016 and 2017 (german)."
-    ![Trips per month](tripspermonth.png)
+    ![Trips per month](trips-per-month.png)
 
 
 ## Visual Analysis of Traffic Data
@@ -59,7 +59,7 @@ reproducibility of results arising from the inherent complexity of the system. T
 need to enable the analyst to maintain an overview of the previous analysis process.
 
 !!! info "Picture 6: Systematic approach for the realization of interactive visual logging."
-    ![Systematic Logging](logging2.png)
+    ![Systematic Logging](systematic-logging.png)
 
 ## Paper
 
