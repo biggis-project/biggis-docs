@@ -1,7 +1,7 @@
 # One vs. Rest
 
 The One-versus-Rest (or One-versus-All = OvA) Strategy is a Method to use Binary (Two-Class) Classifiers
-(such as [Support Vector Machines](../methods/support_vector_machine.md) ) for classifying multiple
+(such as [Support Vector Machines](svm.md) ) for classifying multiple
 (more than two) Classes.
 
 !!! note 

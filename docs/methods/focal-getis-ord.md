@@ -3,7 +3,7 @@
 !!! todo
     Julian Bruns : definition of Focal G* using points 
 
-The Focal Getis-Ord $G^*_i$ statistic differs from the [Standard Getis-ord](getis_ord.md) ...
+The Focal Getis-Ord $G^*_i$ statistic differs from the [Standard Getis-ord](getis-ord.md) ...
 
 $$
     FocalG^*_i = \frac{

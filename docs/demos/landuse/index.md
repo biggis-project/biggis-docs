@@ -13,9 +13,9 @@
     - Satellite images (SAT), e.g. [Sentinel 2](../../data-sources/ground/sentinel2) 10m
 - We want to select / extract landcover classes from landuse classes.
 - We want to use Support Vector Machines (or other Machine Learning Classifiers) for classifying landcover classes.
-    - see section [Support Vector Machines](../../methods/support_vector_machine.md)
+    - see section [Support Vector Machines](../../methods/svm.md)
 - We want to support Multiple classes using a One versus All (OvA) strategy or One vs. Rest.
-    - see section [One vs. Rest](../../methods/one_vs_rest.md)
+    - see section [One vs. Rest](../../methods/one-vs-rest.md)
 - We want to parallelize the computation in our Spark cluster using [Geotrellis](https://geotrellis.io/) for data loading and export.
 
 !!! note "Responsible person for this section"

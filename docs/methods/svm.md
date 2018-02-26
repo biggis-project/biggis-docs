@@ -2,7 +2,7 @@
 
 A Support Vector Machine (SVM) is a supervised learning model (machine learning) which can be used to classify image data. 
 For Parallelization we use a Linear SVM from [Apache Spark](https://spark.apache.org).
-Since we have more than two classes the One versus All (or [One vs. Rest](../methods/one_vs_rest.md) ) Strategy is used.
+Since we have more than two classes the One versus All (or [One vs. Rest](one-vs-rest.md) ) Strategy is used.
 
 !!! note
     - https://en.wikipedia.org/wiki/Support_vector_machine

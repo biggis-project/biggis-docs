@@ -1,6 +1,6 @@
 # Getis-ord G* on rasters
 
-The [Standard Getis-ord](getis_ord.md) is defined on individual points (vector data).
+The [Standard Getis-ord](getis-ord.md) is defined on individual points (vector data).
 In many situations, we want to compute $G^*_i$ in a raster rather than in a point cloud.
 This way, the computation can be expressed using map algebra operations and nicely parallelized in frameworks 
 such as [Geotrellis](https://geotrellis.io/).
