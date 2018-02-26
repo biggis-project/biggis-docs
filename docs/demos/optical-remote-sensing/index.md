@@ -75,6 +75,7 @@ chlorophyll of the cloud.
 
 !!! info "TODO: Chemical cloud detection"
     ![Chemical cloud detection](chemical_cloud_detection.jpg)
+    
     Wie ist die obige Erklärung zu verstehen? Geht es hier darum die Bereiche mit zeitlich konstant hohem TCI-Wert (=
     nicht die Chlorophyll-Wolke) auszuschließen?
 

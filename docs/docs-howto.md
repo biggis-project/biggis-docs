@@ -110,15 +110,15 @@ and deploy it automatically as a github page (served from `gh-pages` branch).
       index.md    # The documentation homepage.
       ...         # Other markdown pages, images and other files.
 
-For the sake of simplicity, we use two-level hierarchy inside `docs/`:
+For the sake of simplicity, we use the following hierarchy inside `docs/`:
  
   - **Level 1** : areas (directories) that appear in the main menu.
   - **Level 2** : pages (markdown files) that appear in the left side bar.
   - **Level 3** : headings (H1, H2, ...) that appear in the table of contents on the right
 
 !!! warning
-    Do not use spaces in file names. Replace them with underscores `_`.
-    This allows for easier refactoring because spaces are transformed to `%20` in markdown.
+    Do not use spaces in file names. Replace them with dashes `-` (or alternatively with underscores `_`).
+    This allows for easier refactoring because spaces are usually transformed to `%20` in markdown which looks weird.
 
 ## Formatting examples
 
@@ -129,6 +129,8 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
         ## Section
         
         ### Subsection
+        
+    Table of contents is generated automatically from the document structure.
 
 ??? summary "Footnotes"
 
@@ -194,12 +196,12 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
     See also http://www.mkdocs.org/user-guide/writing-your-docs/#images-and-media
     
     !!! note
-        When editing a file e.g. `path/to/ABC.md`, store all related images in the same folder
+        When editing a file e.g. `path/to/ABC.md`, store all related images in the same
         folder (`path/to/ABC`). This way, different topics are better encapsulated.
 
 ??? summary "Figures with caption (on top)"
 
-    With the following hack, you can create a nice looking caption rendered under a figure.
+    You can create images with a nice looking caption and additional description.
     
         !!! info "Figure: Here comes a single line title"
             ![](path/to/image.svg)
@@ -277,6 +279,13 @@ For the sake of simplicity, we use two-level hierarchy inside `docs/`:
         "just a test"
         print 8/2 
     ```
+    
+    Other useful langauge codes are:
+    
+      - **sh** : source code written in shell script
+      - **console**: commands written to console, e.g.: `$ cat /dev/urandom`
+      - **json**: data in JSON format
+      - **javascript**: JavaScript source code
 
 ??? summary "Smart Symbols"
     

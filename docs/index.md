@@ -16,9 +16,9 @@ pipeline.
 [img-env]: scenarios/environment/scen-environment.svg
 [img-dis]: scenarios/disaster/scen-disaster.svg
 
-[link-sma]: scenarios/01_city "Smart City"
-[link-env]: scenarios/03_env "Environmental Management"
-[link-dis]: scenarios/02_bos "Disaster Control and Civil Protection"
+[link-sma]: scenarios/smartcity "Smart City"
+[link-env]: scenarios/environment "Environmental Management"
+[link-dis]: scenarios/disaster "Disaster Control and Civil Protection"
 
 <style>
   #scenlist img {
