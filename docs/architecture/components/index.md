@@ -1,9 +1,7 @@
-!!! note "Responsible person for this section"
-    Patrick Wiener
-
 # Components
 
-tbd. some infos about the structure and hierarchical composition of our Docker images.
+!!! todo
+    - some info about the structure and hierarchical composition of our Docker images.
 
 - all sources should be on github
 - images should be hosted on dockerhub

@@ -35,11 +35,10 @@ connections required by the real-time dashboard of the StreamPipes UI.
 
 Internally, BigGIS uses a variety of different storage backends for designated purposes.
 
-- [HDFS](http://hadoop.apache.org/) for GeoTrellis catalog and Spark jobs.
-- [Exasol](https://www.exasol.com/de/) for fast access of stored data.
-- [CouchDB](http://couchdb.apache.org/) for pipelines, users and visualizations created in the 
-dashboard.
-- [RDF4J](http://rdf4j.org/) (formerly Sesame) as a semantic backend of StreamPipes.
+  - [HDFS](http://hadoop.apache.org/) for GeoTrellis catalog and Spark jobs.
+  - [Exasol](https://www.exasol.com/de/) for fast access of stored data.
+  - [CouchDB](http://couchdb.apache.org/) for pipelines, users and visualizations created in the dashboard.
+  - [RDF4J](http://rdf4j.org/) (formerly Sesame) as a semantic backend of StreamPipes.
 
 ## Container Management
 
