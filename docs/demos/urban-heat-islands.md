@@ -26,4 +26,4 @@
 
 ## Related Scenarios
 
-  - [Smart City](../scenarios/smartcity/index.md)
+  - [Smart City](../scenarios/smartcity)

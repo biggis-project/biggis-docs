@@ -24,24 +24,25 @@ trip, which is described by a trajectory. While there are 5734 trips, a set of t
 be associated with a sensor. There are 160 registered sensors which may be directly associated wit a vehicle. Additional
 information about the vehicle (type, etc.) is provided as well.
 
-Picture 1: Distribution of trips per sensor (german).
+!!! info "Picture 1: Distribution of trips per sensor (german)."
     ![Trips per sensor](tripspersensor.png)
 
 
-Picture 2: Distribution of trips per month in 2016 and 2017 (german).
+!!! info "Picture 2: Distribution of trips per month in 2016 and 2017 (german)."
     ![Trips per month](tripspermonth.png)
+
 
 ## Visual Analysis of Traffic Data
 
-Picture 3: Visualization using a clock metaphor - temporal development of the average CO2 emissions.
+!!! info "Picture 3: Visualization using a clock metaphor - temporal development of the average CO2 emissions."
     ![Clock View](clockview.png)
 
-Picture 4: Trip trajectories
+!!! info "Picture 4: Trip trajectories"
     ![Trajectories](trajectories.png)
     Exact course of all trip trajectories in the german city of Mönchengladbach between 0 am and 6 am **(left)**.
     Magnification of the selected region highlighted by the red rectangle **(right)**.
 
-Picture 5: Intersection
+!!! info "Picture 5: Intersection"
     ![Dot Maps](dotmaps.png)
     **(a)** Dot Map of a frequently traveled intersection.
     **(b)** Dense pixel display visualization of the same intersection.
@@ -57,7 +58,7 @@ lead to frustration with the system and also a loss of trust in the findings. An
 reproducibility of results arising from the inherent complexity of the system. To cope with both of these problems, we
 need to enable the analyst to maintain an overview of the previous analysis process.
 
-Picture 6: Systematic approach for the realization of interactive visual logging.
+!!! info "Picture 6: Systematic approach for the realization of interactive visual logging."
     ![Systematic Logging](logging2.png)
 
 ## Paper
@@ -67,5 +68,5 @@ and High-Dimensional Environmental Sensor Data" (currently under submission)
     
 ## Related Scenarios
 
-  - [Smart City](../../scenarios/smartcity/index.md)
-  - [Environment](../../scenarios/environment/index.md)
+  - [Smart City](../../scenarios/smartcity)
+  - [Environment](../../scenarios/environment)

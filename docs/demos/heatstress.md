@@ -6,7 +6,7 @@
 !!! note
     Related repository is https://github.com/biggis-project/path-optimizer
 
-Related Scenarios: [Smart City](../scenarios/smartcity/index.md)
+Related Scenarios: [Smart City](../scenarios/smartcity)
 
 The back-end exposes a simple REST-API, that can be used for routing or to find
 the optimal point in time. The API can be accessed on `http://localhost:8080/heatstressrouting/api/v1`.

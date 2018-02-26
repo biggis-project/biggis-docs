@@ -4,7 +4,7 @@
     Adrian (EFTAS)
     : optimize text
 
-Used in [Landuse classification](../../../demos/landuse.md) as input to classify landcover for the landuse analysis
+Used in [Landuse classification](../../../demos/landuse) as input to classify landcover for the landuse analysis
 
 ## Description
 
@@ -16,13 +16,13 @@ see: https://en.wikipedia.org/wiki/Sentinel-2
 
 ## Source of the data is the ESA Sentinel Portal
 
-- ESA: - https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products
+- ESA: https://sentinel.esa.int/web/sentinel/missions/sentinel-2/data-products
     - Sentinel Tiles - [Sentinel-2 tiling grid kml](https://sentinel.esa.int/documents/247904/1955685/S2A_OPER_GIP_TILPAR_MPC__20151209T095117_V20150622T000000_21000101T000000_B00.kml)
     - Access to Sentinel Data - https://sentinel.esa.int/web/sentinel/sentinel-data-access
         - Copernicus Open Access Hub - https://scihub.copernicus.eu/dhus/#/home
 
 ### Alternative Sources
-- AWS: - https://aws.amazon.com/de/public-datasets/sentinel-2/
+- AWS: https://aws.amazon.com/de/public-datasets/sentinel-2/
 
 Example download (Tile 32UMU - 2016-05-05 - bands B2,B3,B4,B8 - Blue Green Red NIR )
 ```bash

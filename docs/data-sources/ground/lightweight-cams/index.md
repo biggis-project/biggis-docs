@@ -159,7 +159,7 @@ into the environment.
 Due to the fact that it was not allowed to choose toxic / dangerous
 chemicals it was decided to use a fire training smoke
 (1,2-Propylenglycol) for a standard smoke machine. The training smoke
-was contaminated with at least 40 % of chlorophyll from the food industry
+was contaminated with at least 40% of chlorophyll from the food industry
 which usually is uses as food colorant and a not toxic substance.
 
 Therefore, an appropriate hyperspectral camera had to be able to find
@@ -180,7 +180,7 @@ collected.
 Further information:
 
 Today’s model: S 185 Hyperspectral SE FireflEYE:
-<http://cubert-gmbh.com/uhd-185-firefly/>
+http://cubert-gmbh.com/uhd-185-firefly/
 
 !!! info "Figure 4: Hyperspectral Cubert UHD 186 Firefly"
     ![Hyperspectral Cubert UHD 186 Firefly](combined-Cubert.jpg)

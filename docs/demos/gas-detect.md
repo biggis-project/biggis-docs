@@ -21,5 +21,5 @@
 
 ## Related Scenarios
 
-  - [Disaster Management](../scenarios/disaster/index.md)
-  - [Smart City](../scenarios/smartcity/index.md)
+  - [Disaster Management](../scenarios/disaster)
+  - [Smart City](../scenarios/smartcity)

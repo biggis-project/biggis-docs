@@ -62,7 +62,7 @@ the official [documentation](http://rancher.com/docs/rancher/v1.6/en/) for more 
 ## Infrastructure
 
 BigGIS infrastructure leverages [bwCloud](https://www.bw-cloud.org/) Infrastructure-as-a-Service 
-(IaaS) offer powered by Openstack. See the section [bwCloud](../Platform_bwCloud/index.md) for 
+(IaaS) offer powered by Openstack. See the section [bwCloud](../platform-bwcloud) for 
 additional information about the infrastructure setup.
 
 

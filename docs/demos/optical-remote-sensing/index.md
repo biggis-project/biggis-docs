@@ -14,7 +14,7 @@ hyperspectral cameras was used as well as RGB cameras to do some testing in simu
 To perform the simulations several test scenarios were prepared in two campaigns in Karlsruhe and Dortmund. The smoke of
 Heptane (UN 1206/Kemmler 33) was recorded as well as a mixture from gasoline (1203/33) and diesel (1202/30). A gas
 leakage was simulated at the Dortmund Fire Brigade Education Center using Methane ($CH_4$; 1971/23). And a gas cloud
-containing “chemicals” was simulated by a fog machine which nebulized a 50 % mixture of propylene glycol
+containing “chemicals” was simulated by a fog machine which nebulized a 50% mixture of propylene glycol
 (propane-1,2-diol) and chlorophyll from the food branch.
 
 First analysis eg. for the “invisible” Methane gas cloud show quite good results using the IR cameras. On UAVs offered

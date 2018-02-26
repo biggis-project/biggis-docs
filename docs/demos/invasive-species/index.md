@@ -29,7 +29,7 @@ investigate this data.
 In the data provided by [VitiMeteo] are, among other things, observations of the spread of D. suzukii. This data
 consists of trap findings of D. suzukii as well as percentage information about how many berries were infested in a
 sample taken at the station. Additionally, there is percentage information about how many eggs were found in a sample.
-This percentage can be over 100 %, if there are more egg findings than berries in a sample. These observations are
+This percentage can be over 100%, if there are more egg findings than berries in a sample. These observations are
 collected from 867 stations non-uniformly spread over Baden-Wuerttemberg. Some of them only report observations for one
 day, others report multiple observations over a time period of up to 1641 days. The observations are rather sparse and
 irregularly sampled, which makes the use of standard time series analysis techniques challenging, if not impossible.
@@ -175,4 +175,4 @@ However, experts are still divided in their opinion, whether the application can
 reflected in their opinion about the possibility to infer causes for the occurrence of D. suzukii from our application.
 
 ## Related Scenarios
-- [Environment](../../scenarios/environment/index.md)
+- [Environment](../../scenarios/environment)

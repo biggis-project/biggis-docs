@@ -44,4 +44,4 @@ search allows to investigate impacts of different variables.
 
 ## Related Scenarios
 
-  - [Smart City](../../scenarios/smartcity/index.md)
+  - [Smart City](../../scenarios/smartcity)
