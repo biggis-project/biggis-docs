@@ -1,4 +1,4 @@
-        # NASA Elevation Profile
+# NASA Elevation Profile
 
 
 Information taken from https://asterweb.jpl.nasa.gov/gdem.asp:
