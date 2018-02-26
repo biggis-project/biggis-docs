@@ -1,4 +1,4 @@
-# Exasol virtual schema
+# Exasol Virtual Schema
 
 Virtual schemas provide a powerful abstraction to conveniently access
 arbitrary data sources. Virtual schemas are a kind of read-only link
@@ -312,24 +312,28 @@ There are the following request and response types:
 
 | Type                        | Called ...     |
 | :-------------------------- | :------------- |
-| **Create Virtual Schema**   | ... for each ```CREATE VIRTUAL SCHEMA ...``` statement |
-| **Refresh**                 | ... for each ```ALTER VIRTUAL SCHEMA ... REFRESH ...``` statement. |
-| **Set Properties**          | ... for each ```ALTER VIRTUAL SCHEMA ... SET ...``` statement. |
-| **Drop Virtual Schema**     | ... for each ```DROP VIRTUAL SCHEMA ...``` statement. |
-| **Get Capabilities**        | ... whenever a virtual table is queried in a ```SELECT``` statement. |
-| **Pushdown**                | ... whenever a virtual table is queried in a ```SELECT``` statement. |
+| **Create Virtual Schema**   | ... for each `CREATE VIRTUAL SCHEMA ...` statement |
+| **Refresh**                 | ... for each `ALTER VIRTUAL SCHEMA ... REFRESH ...` statement. |
+| **Set Properties**          | ... for each `ALTER VIRTUAL SCHEMA ... SET ...` statement. |
+| **Drop Virtual Schema**     | ... for each `DROP VIRTUAL SCHEMA ...` statement. |
+| **Get Capabilities**        | ... whenever a virtual table is queried in a `SELECT` statement. |
+| **Pushdown**                | ... whenever a virtual table is queried in a `SELECT` statement. |
 
 We describe each of the types in the following sections.
 
-**Please note:** To keep the documentation concise we defined the elements which are commonly in separate sections below, e.g. ```schemaMetadataInfo``` and ```schemaMetadata```.
+!!! note "Please note"
+    To keep the documentation concise we defined the elements which are commonly in separate sections below, e.g.
+    `schemaMetadataInfo` and `schemaMetadata`.
 
 ## Requests and Responses
 
 ### Create Virtual Schema
 
-Informs the Adapter about the request to create a Virtual Schema, and asks the Adapter for the metadata (tables and columns).
+Informs the Adapter about the request to create a Virtual Schema, and asks the Adapter for the metadata (tables and
+columns).
 
-The Adapter is allowed to throw an Exception if the user missed to provide mandatory properties or in case of any other problems (e.g. connectivity).
+The Adapter is allowed to throw an Exception if the user missed to provide mandatory properties or in case of any other
+problems (e.g. connectivity).
 
 **Request:**
 
@@ -353,8 +357,8 @@ The Adapter is allowed to throw an Exception if the user missed to provide manda
 }
 ```
 
-Notes
-* ```schemaMetadata``` is mandatory. However, it is allowed to contain no tables.
+!!! notes
+    `schemaMetadata` is mandatory. However, it is allowed to contain no tables.
 
 
 ### Refresh
@@ -373,8 +377,10 @@ Request to refresh the metadata for the whole Virtual Schema, or for specified t
 }
 ```
 
-Notes
-* ```requestedTables``` is optional. If existing, only the specified tables shall be refreshed. The specified tables do not have to exist, it just tell Adapter to update these tables (which might be changed, deleted, added, or non-existing).
+!!! notes
+    `requestedTables` is optional. If existing, only the specified tables shall be refreshed. The specified tables
+    do not have to exist, it just tell Adapter to update these tables (which might be changed, deleted, added, or
+    non-existing).
 
 **Response:**
 
@@ -388,13 +394,16 @@ Notes
 }
 ```
 
-Notes
-* ```schemaMetadata``` is optional. It can be skipped if the adapter does not want to refresh (e.g. because he detected that there is no change).
-* ```requestedTables``` must exist if and only if the element existed in the request. The values must be the same as in the request (to make sure that Adapter only refreshed these tables).
+!!! notes
+    - `schemaMetadata` is optional. It can be skipped if the adapter does not want to refresh (e.g. because he
+      detected that there is no change).
+    - `requestedTables` must exist if and only if the element existed in the request. The values must be the same
+      as in the request (to make sure that Adapter only refreshed these tables).
 
 ### Set Properties
 
-Request to set properties. The Adapter can decide whether he needs to send back new metadata. The Adapter is allowed to throw an Exception if the user provided invalid properties or in case of any other problems (e.g. connectivity).
+Request to set properties. The Adapter can decide whether he needs to send back new metadata. The Adapter is allowed to
+throw an Exception if the user provided invalid properties or in case of any other problems (e.g. connectivity).
 
 **Request:**
 
@@ -423,14 +432,17 @@ Request to set properties. The Adapter can decide whether he needs to send back 
 }
 ```
 
-Notes
-* Request: A property set to null means that this property was asked to be deleted. Properties set to null might also not have existed before.
-* Response: ```schemaMetadata``` is optional. It only exists if the adapter wants to send back new metadata. The existing metadata are overwritten completely.
+!!! notes
+    - **Request:** A property set to null means that this property was asked to be deleted. Properties set to null might
+      also not have existed before.
+    - **Response:** `schemaMetadata` is optional. It only exists if the adapter wants to send back new metadata.
+      The existing metadata are overwritten completely.
 
 
 ### Drop Virtual Schema
 
-Inform the Adapter that a Virtual Schema is about to be dropped. The Adapter can update external dependencies if he has such. The Adapter is not expected to throw an exception, and if he does, it will be ignored.
+Inform the Adapter that a Virtual Schema is about to be dropped. The Adapter can update external dependencies if he has
+such. The Adapter is not expected to throw an exception, and if he does, it will be ignored.
 
 **Request:**
 
@@ -454,7 +466,8 @@ Inform the Adapter that a Virtual Schema is about to be dropped. The Adapter can
 
 ### Get Capabilities
 
-Request the list of capabilities supported by the Adapter. Based on these capabilities, the database will collect everything that can be pushed down in the current query and sends a pushdown request afterwards.
+Request the list of capabilities supported by the Adapter. Based on these capabilities, the database will collect
+everything that can be pushed down in the current query and sends a pushdown request afterwards.
 
 **Request:**
 
@@ -511,16 +524,18 @@ SELECT user_id, count(url) FROM VS.clicks
 ```
 
 The whole set of capabilities is a lot longer. The current list of supported Capabilities can be found in the sources of the JDBC Adapter:
-* [High Level Capabilities](../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/MainCapability.java)
-* [Literal Capabilities](../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/LiteralCapability.java)
-* [Predicate Capabilities](../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/PredicateCapability.java)
-* [Scalar Function Capabilities](../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/ScalarFunctionCapability.java)
-* [Aggregate Function Capabilities](../jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/AggregateFunctionCapability.java)
+
+  - [High Level Capabilities](https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/MainCapability.java)
+  - [Literal Capabilities](https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/LiteralCapability.java)
+  - [Predicate Capabilities](https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/PredicateCapability.java)
+  - [Scalar Function Capabilities](https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/ScalarFunctionCapability.java)
+  - [Aggregate Function Capabilities](https://github.com/EXASOL/virtual-schemas/blob/master/jdbc-adapter/virtualschema-common/src/main/java/com/exasol/adapter/capabilities/AggregateFunctionCapability.java)
 
 
 ### Pushdown
 
-Contains an abstract specification of what to be pushed down, and requests an pushdown SQL statement from the Adapter which can be used to retrieve the requested data.
+Contains an abstract specification of what to be pushed down, and requests an pushdown SQL statement from the Adapter
+which can be used to retrieve the requested data.
 
 **Request:**
 
@@ -683,18 +698,22 @@ will produce the following Request, assuming that the Adapter has all required c
 }
 ```
 
-Notes
-* ```pushdownRequest```: Specification what needs to be pushed down. You can think of it like a parsed SQL statement.
-  * ```from```: The requested from clause. Currently only tables are supported, joins might be supported in future.
-  * ```selectList```: The requested select list elements, a list of expression. The order of the selectlist elements matters. If the select list is an empty list, we request at least a single column/expression, which could also be constant TRUE.
-  * ```selectList.columnNr```: Position of the column in the virtual table, starting with 0
-  * ```filter```: The requested filter (where clause), a single expression.
-  * ```aggregationType```: Optional element, set if an aggregation is requested. Either "group_by" or "single_group", if a aggregate function is used but no group by.
-  * ```groupBy```: The requested group by clause, a list of expressions.
-  * ```having```: The requested having clause, a single expression.
-  * ```orderBy```: The requested order-by clause, a list of ```order_by_element``` elements. The field ```expression``` contains the expression to order by.
-  * ```limit``` The requested limit of the result set, with an optional offset.
-* ```involvedTables```: Metadata of the involved tables, encoded like in schemaMetadata.
+!!! notes
+    - `pushdownRequest`: Specification what needs to be pushed down. You can think of it like a parsed SQL statement.
+      - `from`: The requested from clause. Currently only tables are supported, joins might be supported in future.
+      - `selectList`: The requested select list elements, a list of expression. The order of the selectlist elements
+        matters. If the select list is an empty list, we request at least a single column/expression, which could also
+        be constant TRUE.
+      - `selectList.columnNr`: Position of the column in the virtual table, starting with 0
+      - `filter`: The requested filter (where clause), a single expression.
+      - `aggregationType`: Optional element, set if an aggregation is requested. Either `group_by` or `single_group`,
+        if a aggregate function is used but no group by.
+      - `groupBy`: The requested group by clause, a list of expressions.
+      - `having`: The requested having clause, a single expression.
+      - `orderBy`: The requested order-by clause, a list of `order_by_element` elements. The field `expression`
+        contains the expression to order by.
+      - `limit` The requested limit of the result set, with an optional offset.
+    - `involvedTables`: Metadata of the involved tables, encoded like in schemaMetadata.
 
 
 **Response:**
@@ -708,15 +727,17 @@ Following the example above, a valid result could look like this:
 }
 ```
 
-Notes
-* ```sql```: The pushdown SQL statement. It must be either an ```SELECT``` or ```IMPORT``` statement.
+!!! note
+    `sql`: The pushdown SQL statement. It must be either an `SELECT` or `IMPORT` statement.
 
 ## Embedded Commonly Used Json Elements
 
 The following Json objects can be embedded in a request or response. They have a fixed structure.
 
 ### Schema Metadata Info
-This document contains the most important metadata of the virtual schema and is sent to the adapter just "for information" with each request. It is the value of an element called ```schemaMetadataInfo```.
+
+This document contains the most important metadata of the virtual schema and is sent to the adapter just "for
+information" with each request. It is the value of an element called `schemaMetadataInfo`.
 
 ```json
 {"schemaMetadataInfo":{
@@ -735,7 +756,12 @@ This document contains the most important metadata of the virtual schema and is 
 
 ### Schema Metadata
 
-This document is usually embedded in responses from the Adapter and informs the database about all metadata of the Virtual Schema, especially the contained Virtual Tables and it's columns. The Adapter can store so called ```adapterNotes``` on each level (schema, table, column), to remember information which might be relevant for the Adapter in future. In the example below, the Adapter remembers the table partitioning and the data type of a column which is not directly supported in EXASOL. The Adapter has these information during pushdown and can consider the table partitioning during pushdown or can add an appropriate cast for the column.
+This document is usually embedded in responses from the Adapter and informs the database about all metadata of the
+Virtual Schema, especially the contained Virtual Tables and it's columns. The Adapter can store so called `adapterNotes`
+on each level (schema, table, column), to remember information which might be relevant for the Adapter in future. In the
+example below, the Adapter remembers the table partitioning and the data type of a column which is not directly
+supported in EXASOL. The Adapter has these information during pushdown and can consider the table partitioning during
+pushdown or can add an appropriate cast for the column.
 
 ```json
 {"schemaMetadata":{
@@ -809,8 +835,9 @@ This document is usually embedded in responses from the Adapter and informs the 
 }}
 ```
 
-Notes
-* ```adapterNotes``` is an optional field which can be attached to the schema, a table or a column. It can be an arbitrarily nested Json document.
+!!! notes
+    - `adapterNotes` is an optional field which can be attached to the schema, a table or a column.
+      It can be an arbitrarily nested Json document.
 
 The following EXASOL data types are supported:
 
@@ -1015,7 +1042,8 @@ The following EXASOL data types are supported:
 
 ## Expressions
 
-This section handles the expressions that can occur in a pushdown request. Expressions are consistently encoded in the following way. This allows easy and consisting parsing and serialization.
+This section handles the expressions that can occur in a pushdown request. Expressions are consistently encoded in the
+following way. This allows easy and consisting parsing and serialization.
 
 ```json
 {
@@ -1024,7 +1052,8 @@ This section handles the expressions that can occur in a pushdown request. Expre
 }
 ```
 
-Each expression-type can have any number of additional fields of arbitrary type. In the following sections we define the known expressions.
+Each expression-type can have any number of additional fields of arbitrary type. In the following sections we define the
+known expressions.
 
 ### Table
 
@@ -1049,9 +1078,10 @@ This element currently only occurs in from clause
 }
 ```
 
-Notes
-* **tablePosFromClause**: Position of the table in the from clause, starting with 0. Required for joins where same table occurs several times.
-* **columnNr**: column number in the virtual table, starting with 0
+!!! notes
+    - **tablePosFromClause**: Position of the table in the from clause, starting with 0. Required for joins where same
+      table occurs several times.
+    - **columnNr**: column number in the virtual table, starting with 0
 
 ### Literal
 
@@ -1112,7 +1142,7 @@ Notes
 
 ### Predicates
 
-Whenever there is ```...``` this is a shortcut for an arbitrary expression.
+Whenever there is `...` this is a shortcut for an arbitrary expression.
 
 ```json
 {
@@ -1146,7 +1176,7 @@ The same can be used for "predicate_or".
 }
 ```
 
-The same can be used for "predicate_notequals", "predicate_less" and "predicate_lessequals".
+The same can be used for `predicate_notequals`, `predicate_less` and `predicate_lessequals`.
 
 ```json
 {
@@ -1161,10 +1191,10 @@ The same can be used for "predicate_notequals", "predicate_less" and "predicate_
 }
 ```
 
-The same can be used for predicate_like_regexp
+The same can be used for `predicate_like_regexp`
 
-Notes
-* **escapeChar** is optional
+!!! notes
+    - **escapeChar** is optional
 
 ```json
 {
@@ -1249,10 +1279,11 @@ Multiple arguments
 }
 ```
 
-Notes
-* **variableInputArgs**: default value is false. If true, numArgs is not defined.
+!!! note
+    **variableInputArgs**: default value is `false`. If true, `numArgs` is not defined.
 
-Arithmetic operators have following names: ADD, SUB, MULT, FLOAT_DIV. They are defined as infix (just a hint, not necessary)
+Arithmetic operators have following names: ADD, SUB, MULT, FLOAT_DIV. They are defined as infix (just a hint, not
+necessary)
 
 ```json
 {
@@ -1352,10 +1383,11 @@ CASE basis WHEN exp1 THEN result1
     ]
 }
 ```
-Notes:
-* ```arguments```: The different cases.
-* ```results```: The different results in the same order as the arguments. If present, the ELSE result
-is the last entry in the ```results``` array.
+
+!!! notes
+    - `arguments`: The different cases.
+    - `results`: The different results in the same order as the arguments. If present, the ELSE result
+      is the last entry in the `results` array.
 
 ### Aggregate Functions
 
@@ -1504,7 +1536,9 @@ GROUP_CONCAT(DISTINCT exp1 orderBy SEPARATOR ', ') (requires set-function capabi
 }
 ```
 
-Notes:
-* ```distinct```: Optional. Requires set-function capability GROUP_CONCAT_DISTINCT.
-* ```orderBy```: Optional. The requested order-by clause, a list of ```order_by_element``` elements. The field ```expression``` contains the expression to order by. The group-by clause of a SELECT query uses the same ```order_by_element``` element type. The clause requires the set-function capability GROUP_CONCAT_ORDER_BY.
-* ```separator```: Optional. Requires set-function capability GROUP_CONCAT_SEPARATOR.
+!!! notes
+    - `distinct`: Optional. Requires set-function capability `GROUP_CONCAT_DISTINCT`.
+    - `orderBy`: Optional. The requested order-by clause, a list of `order_by_element` elements.
+      The field `expression` contains the expression to order by. The group-by clause of a SELECT query uses the
+      same `order_by_element` element type. The clause requires the set-function capability `GROUP_CONCAT_ORDER_BY`.
+    - `separator`: Optional. Requires set-function capability `GROUP_CONCAT_SEPARATOR`.
