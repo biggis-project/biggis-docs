@@ -6,9 +6,9 @@ trip, which is described by a trajectory. While there are 5734 trips, a set of t
 be associated with a sensor. There are 160 registered sensors which may be directly associated wit a vehicle. Additional
 information about the vehicle (type, etc.) is provided as well.
 
-Picture 1: Distribution of trips per sensor (german).
+!!! info "Picture 1: Distribution of trips per sensor (german)."
     ![Trips per sensor](tripspersensor.png)
 
 
-Picture 2: Distribution of trips per month in 2016 and 2017 (german).
+!!! info "Picture 2: Distribution of trips per month in 2016 and 2017 (german)."
     ![Trips per month](tripspermonth.png)
