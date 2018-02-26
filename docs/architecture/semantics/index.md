@@ -32,13 +32,13 @@ common knowledge of the concept of a city is already described in LOD sources li
 find instances of this concept in LOD, we link the category in LD-Wiki to the according LOD concepts:
 
 !!! info "Figure: Linking concepts from LOD to LD-Wiki"
-    ![Linking Concepts](category.JPG)
+    ![Linking Concepts](category.jpg)
 
 When creating new instances of this category withing LD-Wiki, existing instances of the related concepts in LOD with 
 a similar label can be employed and the values of their properties can be reused in the context of LD-Wiki:
 
 !!! info "Figure: Linking entities from LOD to LD-Wiki"
-    ![Linking Entities](page.JPG)
+    ![Linking Entities](page.jpg)
 
 ## Semantic Message Enrichment
 
@@ -112,7 +112,7 @@ message broker:
     ```
 
 !!! info "Figure: Example for LUBW data stream"
-    ![LUBW Stream](LubwStream.png)
+    ![LUBW Stream](lubw-stream.png)
 
 Another example are the JSON messages of [senseBox-based weather stations](../../data-sources/atmosphere/sensebox-fzi),
 which are pushed to another topic of the message broker:
@@ -133,13 +133,13 @@ which are pushed to another topic of the message broker:
     ```
 
 !!! info "Figure: Example for senseBox data stream"
-    ![senseBox Stream](senseBoxStream.png)
+    ![senseBox Stream](sensebox-stream.png)
 
 By employing the explicit meta data, we gain a new message stream of JSON-LD messages with explicit semantics of each
 observation:
 
 !!! info "Figure: Example for semantically enriched data stream"
-    ![enriched Stream](enrichedStream.png)
+    ![enriched Stream](enriched-stream.png)
 
 
 ## Semantic Data Validation

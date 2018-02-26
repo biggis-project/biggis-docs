@@ -12,7 +12,7 @@ and commercial losses and eventually health problem for humans and animals. The 
 advise the analysis, evaluation and visualization with geographic information system (GIS).
 
 !!! info "Drosophila suzukii (male)"
-    ![Drosophila suzukii](spotted_winged_drosophila.jpg)
+    ![Drosophila suzukii](spotted-winged-drosophila.jpg)
     Clearly recognizable is the dot on the wing. The spotted wing indicates that the picture
     shows an male individual. (Photo: Judy Gallagher, http://www.flickr.com/photos/52450054@N04/15675291741/,
     [Creative Commons Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/))
@@ -24,7 +24,7 @@ arround the world. In the last 10 years they could be observed in Swisserland an
 In other parts of the world e.g. the United States this spread has also been observed.
 
 !!! info "Visualisation in Disy Cadenza"
-    ![Distribution of Drosophila suzukii Eggs in 2016](distribution_2016.png)
+    ![Distribution of Drosophila suzukii Eggs in 2016](distribution-2016.png)
     Distribution of egg finds of the Drosophila suzukii in 2016 in south west Germany
 
 Unlike other Drosophila, it infests non-rotting and healthy fruits and is therefore of concern to fruit growers, such as

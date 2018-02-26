@@ -1,6 +1,6 @@
 # bwCloud
 
-![](bwcloud_logo.svg)
+![](bwcloud-logo.svg)
 
 Within the scope of BigGIS, we build our platform on top of the [bwCloud](https://www.bw-cloud.org/) offering. The
 Baden-Württemberg Cloud (bwCloud) provides virtual machines (servers) for members of science- and research institutions
@@ -28,7 +28,7 @@ Rancher is deployed as a set of Docker containers. Running Rancher involves laun
 container as the management **server** and another container on a node as an **agent**.
 
 !!! info "Figure: Container-based Rancher Setup in bwCloud."
-    ![](bwcloud_infrastructure.png)
+    ![](bwcloud-infrastructure.png)
 
 While the server runs on a single VM, we set up a single node agent for development and testing environment as well as a
 five node cluster environment to run the BigGIS components in a distributed manner (see figure below). Both, the
