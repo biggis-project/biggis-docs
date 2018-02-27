@@ -26,6 +26,12 @@
                   </v-btn>
                   <span>Go to our Homepage</span>
                 </v-tooltip>
+                <v-tooltip right>
+                  <v-btn fab dark large color="red darken-1" slot="activator" :href="reportIssueURL">
+                    <v-icon dark>bug_report</v-icon>
+                  </v-btn>
+                  <span>Report broken link to our issue tracker</span>
+                </v-tooltip>
               </v-flex>
             </v-layout>
           </v-container>
@@ -38,7 +44,17 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
 <script>
-  new Vue({el: '#app'})
+  new Vue({
+    el: '#app',
+    computed: {
+      reportIssueURL() {
+        const title = 'Broken URL'
+        const body = 'This URL caused error 404: ' + window.location.href
+        const newIssueLink = 'https://github.com/biggis-project/biggis-docs/issues/new'
+        return `${newIssueLink}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
+      }
+    }
+  })
 </script>
 </body>
 </html>
