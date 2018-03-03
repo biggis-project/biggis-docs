@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/biggis-github-repos/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>/biggis-papers/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>/biggis-presentations/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>/biggis-press/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>/consortium/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>/contributing/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
      <loc>/docs-howto/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -69,31 +69,31 @@
         
     <url>
      <loc>/architecture/arch-overview/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/components/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/platform-bwcloud/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/semantics/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/architecture/stream-pipes/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -103,7 +103,7 @@
         
     <url>
      <loc>/data-sources/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -115,7 +115,7 @@
         
     <url>
      <loc>/data-sources/biosphere/vitimeteo/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -137,97 +137,97 @@
         
     <url>
      <loc>/demos/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/firefighting/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/gas-detect/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/gas-predict/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/heatstress/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/urban-heat-islands/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/drone-flight-planning/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/enviro-car/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/hotspot-analysis/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/invasive-species/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/landuse/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/optical-remote-sensing/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/sensor-placement/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/soh-eval/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/traffic-incidents/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/demos/uhi-visual-analysis/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -237,85 +237,85 @@
         
     <url>
      <loc>/methods/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/exasol-docker/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/exasol-geo/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/exasol-udf/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/exasol-virtual-schema/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/exasol-websockets/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/focal-getis-ord-raster/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/focal-getis-ord/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/getis-ord-raster/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/getis-ord/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/one-vs-rest/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/soh/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/spectral-analysis-tci/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/methods/svm/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -325,19 +325,19 @@
         
     <url>
      <loc>/scenarios/smartcity/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/disaster/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/scenarios/environment/</loc>
-     <lastmod>2018-02-28</lastmod>
+     <lastmod>2018-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
