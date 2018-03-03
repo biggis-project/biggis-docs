@@ -106,8 +106,12 @@ not interpretable which makes it hard for experts to integrate their domain know
 we need visualization to help experts to identify spatial and temporal patterns easily. To achieve this, we follow the
 visual information seeking mantra of Ben Shneiderman: "Overview first, zoom and filter, details on demand"
 
-!!! info "Figure 2: Glyph-visualization of temporal-spatial event predictions as proposed by Seebacher et al. a) Sketch of a single time-segment, b) the resulting glyph-based temporal event prediction visualization and c) a real glyph example."
+!!! info "Figure 2: Glyph-visualization of temporal-spatial event predictions as proposed by Seebacher et al."
     ![Trips per sensor](visualization_no_text.png)
+    
+     a) Sketch of a single time-segment,
+     b) the resulting glyph-based temporal event prediction visualization and
+     c) a real glyph example.
 
 We build a geographic information system, using a map as the basis for interaction and spatio-temporal analysis. We
 consider the familiarity of domain experts with this kind of visualization as an additional benefit. We visualize our
