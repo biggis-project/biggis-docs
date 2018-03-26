@@ -9,8 +9,8 @@ The amount of formatting elements is deliberately small.
 Apart from wiki, we try to keep each page self contained and to minimize
 interlinking between pages because it only complicates reading of the docs.
 
-The documentation is written as a set of Markdown files within the `docs/` directory and after deployment
-available as a static website: [Docs Website].
+The documentation is written as a set of Markdown files within the `docs/` directory
+and after deployment available as a static website: [Docs Website].
 
 
 [Docs Website]: https://biggis-project.github.io/biggis-docs/
@@ -91,16 +91,21 @@ You can now edit the markdown documents within the `docs/` directory.
 
 ## Deployment
 
-Using the command `mkdocs gh-deploy` we can generate a static [Docs Website]
+!!! warning
+    This operation is relevant only to the administrators of the `biggis-docs` repository.
+    As a regular contributor, you should only preview your local changes and push them to the
+    `master` branch or through pull request instead of directly deploying the built docs to the
+    `gh-pages `branch.
+
+The deployment is about building the HTML version out of the markdown sources from
+the `master` git branch and and pushing the generated content to the `gh-pages` branch.
+Github then makes this new version available online.
+
+The responsible person then uses the command `mkdocs gh-deploy` to generate a static [Docs Website]
 and deploy it automatically as a github page (served from `gh-pages` branch).
 
 !!! info
     The newly deployed version appears after few seconds.
-
-!!! warning
-    This operation is relevant only to the administrators of the `biggis-docs` repository.
-    As a regular contributor, you should only preview your local changes and create
-    a pull request instead of directly deploying the built docs to the gh-pages branch.
     
 
 ## Documentation layout
