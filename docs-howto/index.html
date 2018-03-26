@@ -1426,8 +1426,8 @@ I should edit the docs locally, preview it in a browser and then suggest a pull 
 <p>The amount of formatting elements is deliberately small.
 Apart from wiki, we try to keep each page self contained and to minimize
 interlinking between pages because it only complicates reading of the docs.</p>
-<p>The documentation is written as a set of Markdown files within the <code>docs/</code> directory and after deployment
-available as a static website: <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>.</p>
+<p>The documentation is written as a set of Markdown files within the <code>docs/</code> directory
+and after deployment available as a static website: <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>.</p>
 <h2 id="before-building-the-docs">Before building the docs<a class="headerlink" href="#before-building-the-docs" title="Permanent link">&para;</a></h2>
 <p>First of all, you need <strong>python 3</strong> and <strong>pip3</strong> to be installed.
 (On some Linux distros, you need to use pip3 instead of pip)</p>
@@ -1496,17 +1496,21 @@ INFO    -  Cleaning site directory
 
 <p>You can now edit the markdown documents within the <code>docs/</code> directory.</p>
 <h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
-<p>Using the command <code>mkdocs gh-deploy</code> we can generate a static <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This operation is relevant only to the administrators of the <code>biggis-docs</code> repository.
+As a regular contributor, you should only preview your local changes and push them to the
+<code>master</code> branch or through pull request instead of directly deploying the built docs to the
+<code>gh-pages</code>branch.</p>
+</div>
+<p>The deployment is about building the HTML version out of the markdown sources from
+the <code>master</code> git branch and and pushing the generated content to the <code>gh-pages</code> branch.
+Github then makes this new version available online.</p>
+<p>The responsible person then uses the command <code>mkdocs gh-deploy</code> to generate a static <a href="https://biggis-project.github.io/biggis-docs/">Docs Website</a>
 and deploy it automatically as a github page (served from <code>gh-pages</code> branch).</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The newly deployed version appears after few seconds.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This operation is relevant only to the administrators of the <code>biggis-docs</code> repository.
-As a regular contributor, you should only preview your local changes and create
-a pull request instead of directly deploying the built docs to the gh-pages branch.</p>
 </div>
 <h2 id="documentation-layout">Documentation layout<a class="headerlink" href="#documentation-layout" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>mkdocs.yml    # The configuration file.
