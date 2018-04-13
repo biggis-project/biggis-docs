@@ -28,10 +28,6 @@ Example for Aalen:
 
 4)	The first quantifiable metric to detect the stability of found hot spots was developed, see [Stability of Hotspots](../../methods/soh.md).
 
-!!! TODO
-
-    Viliam: Ich bin mir nicht sicher ob der Link von mir richtig gesetzt ist. Evtl. ist auch eine Section aus der Methodik gemeint.
-
 5)	Existing VGI weather stations such as from the Wunderground project were used and their quality was automatically assessed, see [Bruns et al. (2018)] [^Bruns et al. (2018)].
 
 6)	New Big Data parallel predictions of temperature based on VGI and Kriging methods were developed and tested based on the work in [Bruns et al. (2018)] [^Bruns et al. (2018)].
