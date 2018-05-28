@@ -1,6 +1,3 @@
-!!! note "Responsible person for this section"
-    Julian Bruns
-
 # Urban Heat Islands
 
 The Urban Heat Islands (UHI) effect describes the systematic differences between cities and the surrounding areas. It was termed in [Oke, T. R. (1982)] [^Oke, T. R.], but is the topic of studies in the 19th century. In the BigGIS Project it was the use case of the smart city scenario. While it is regularly observed that huge temperature differences exist not only between cities and rural areas but also

@@ -1,11 +1,8 @@
-!!! note "Responsible person for this section"
-    Julian Bruns
-
 # Smart City
 
-![Smart City Scenario Icon](scen-smartcity.svg)
-
-## General
+<div style="float:right">
+<img src="scen-smartcity.svg" alt="Smart City Scenario Icon"/>
+</div>
 
 Today, the paradigm of Smart City is quite well-known. It is strongly connected to the rise of big data, as most big data applications are based on spatio-temporal data acquired in cities. These include such manifold of new data sources such as smartphones, humans as sensors for socio-economic changes, potential augmented applications as well as volunteered geographic information (VGI). Examples include the New York taxi data set or VGI temperature data such as from the Wunderground or OpenSenseMap platforms.
 

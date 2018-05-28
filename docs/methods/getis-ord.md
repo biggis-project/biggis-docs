@@ -1,6 +1,6 @@
 # Standard Getis-Ord G*
 
-The standard definition of Getis-Ord $G^*_i$ statistic[^Ord, J. K. and A. Getis (1995)] assumes a study area with $n$ points with measurements
+The standard definition of Getis-Ord $G^*_i$ statistic[^Ord1995] assumes a study area with $n$ points with measurements
 $X = [x_1, \ldots, x_n]$. Moreover, it assumes weights $w_{i,j}$ to be defined between all pairs of points $i$
 and $j$ (for all $i,j \in \{ 1, \ldots, n\}$). The formula to compute $G^*_i$ at a given point $i$ is then:
 
@@ -27,4 +27,4 @@ to its surrounding areas.
 !!! note
     For $x \in X$, the $zscore(x) = \frac{x - mean(X)}{stdev(X)}$
 
-[^Ord, J. K. and A. Getis (1995)]: Ord, J. K. and A. Getis (1995). Local spatial autocorrelation statistics: Distributional issues and an application. Geographical Analysis 27.
+[^Ord1995]: Ord, J. K. and A. Getis (1995). Local spatial autocorrelation statistics: Distributional issues and an application. Geographical Analysis 27.
