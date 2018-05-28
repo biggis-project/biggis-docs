@@ -80,6 +80,12 @@
     </url>
         
     <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/architecture/platform-bwcloud/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
@@ -154,12 +160,6 @@
     </url>
         
     <url>
-     <loc>/demos/gas-predict/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/demos/drone-flight-planning/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
@@ -167,6 +167,12 @@
         
     <url>
      <loc>/demos/enviro-car/</loc>
+     <lastmod>2018-05-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/demos/gas-predict/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -242,43 +248,7 @@
     </url>
         
     <url>
-     <loc>/methods/exasol-docker/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/exasol-geo/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/exasol-udf/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/exasol-virtual-schema/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/exasol-websockets/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/methods/focal-getis-ord-raster/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/methods/focal-getis-ord/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
