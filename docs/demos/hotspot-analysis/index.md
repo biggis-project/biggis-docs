@@ -1,7 +1,5 @@
 # Hotspot analysis (using G*)
 
-[Responsible person]: "Viliam Simko"
-
 ## Problem definition
 
 - We have a map, in this case a map of land surface temperatures

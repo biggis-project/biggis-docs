@@ -1,9 +1,5 @@
 # Sentinel 2
 
-!!! todo
-    Adrian (EFTAS)
-    : optimize text
-
 Used in [Landuse classification](../../../demos/landuse) as input to classify landcover for the landuse analysis
 
 ## Description

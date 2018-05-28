@@ -1,12 +1,5 @@
 # Stability of hotspots
 
-!!! note "Responsible person for this section"
-
-    Marc Gassenschmidt
-
-    - comparison of different metrics (soh, jaccard, ...)
-    - comparison of different methods (gstar, focalgstar, ...)
-
 ## Setup
 
 In `parameters.Setting` the folders have to be specified first.

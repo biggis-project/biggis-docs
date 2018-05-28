@@ -1,10 +1,3 @@
-!!! note "Responsible person for this section"
-    - Hannes Müller (LUBW)
-    - Johannes Kutterer (Disy)
-    - Daniel Seebacher (Uni Konstanz)
-
-[VitiMeteo]: http://www.vitimeteo.de
-
 # Invasive species
 
 ## Motiviation
@@ -20,6 +13,8 @@ investigate this data.
   - ATKIS/ALKIS landuse data
   - Counts of trapped Drosophila suzukii published on [VitiMeteo]
   - ASTER Elevation Map
+
+[VitiMeteo]: http://www.vitimeteo.de
 
 ## Data Description
 

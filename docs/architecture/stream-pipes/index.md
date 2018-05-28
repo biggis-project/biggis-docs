@@ -31,10 +31,6 @@ string    | boxId      | http://schema.org/id
 
 This component enriches each message in the SenseBox measurements data stream with meta-data (location, OpenSenseMap-Id)
 
-## Raster data processing
-
-This is achieved throuh geotrellis library... TODO
-
 ### [RasterDataEndlessSource](https://github.com/biggis-project/biggisstreampipes-rasterdataendlesssource)
 
 This component generates an endless Kafka stream of rasterdata messages to easily test and debug other rasterdata
@@ -43,5 +39,3 @@ processing components
 ### [RasterDataAdapter](https://github.com/biggis-project/biggisstreampipes-rasterdataadapter)
 
 This component provides the semantic description for the RasterDataEndlessSource
-
-### TODO: RasterDataProcessingCompoent

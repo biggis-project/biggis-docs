@@ -22,11 +22,7 @@ where:
 
 - $R$ is the input raster.
 - $W$ is a weight matrix of values between 0 and 1.
-  The matrix is square and has odd dimensions, e.g. $5 \times 5$, $31 \times 31$ ...
-- $N$ represents the focal count of pixels TODO (there can be NA values)
-- $M$ represents the focal mean TODO.
-- $S$ represents the focal standard deviation TODO.
-
-It can be seen that the formula can be nicely refactored into:
-
-- TODO
+  The matrix is square and has odd dimensions, e.g. $5 \times 5$, $31 \times 31$ etc. ...
+- $N$ represents the the number of pixels in the focal window (there can be NA values)
+- $M$ represents the focal mean.
+- $S$ represents the focal standard deviation.

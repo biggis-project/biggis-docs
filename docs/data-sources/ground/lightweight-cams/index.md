@@ -5,9 +5,6 @@
 
 ## RGB camera information
 
-!!! todo
-    Bodo
-
 As RGB camera systems the SONY Alpha series was used in the
 BigGIS-Project. These consumer market cameras are used due to the fact
 that the optical specification fits to the need of the project and that
@@ -53,9 +50,6 @@ Further information:
 
 
 ## Thermal IR camera information
-
-!!! todo
-    Bodo
 
 Like with the RGB camera the project used two types of IR cameras which
 could easily be mounted on a UAV. In the first flying campaign we
@@ -145,9 +139,6 @@ TaAx Technology ThermalCapture Grabber:
 
 
 ## Hyperspectral camera information
-
-!!! todo
-    Alex
 
 The reason to choose the Cubert UHD 186 Firefly as a specific
 hyperspectral camera depends on the scenario. It was aimed to detect

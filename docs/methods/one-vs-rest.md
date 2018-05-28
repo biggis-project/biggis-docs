@@ -39,7 +39,3 @@ highest confidence score:
 $$
 \hat{y} = \underset{k \in \{1 \ldots K\}}{\text{argmax}}\; f_k(x)
 $$
-
-
-!!! todo
-    Adrian Klink: Add references, optimize description

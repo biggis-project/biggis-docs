@@ -1,7 +1,4 @@
 # Land use data
-
-!!! todo
-    Hannes (LUBW)
     
 ## ATKIS
 

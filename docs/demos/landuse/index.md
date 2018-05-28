@@ -1,10 +1,5 @@
 # Landuse classification
 
-[Responsible person]: "Adrian Klink"
-
-!!! note
-    Related repository is https://github.com/biggis-project/biggis-landuse
-
 ## Problem definition
 
 - We have the following datasets:
@@ -18,17 +13,14 @@
     - see section [One vs. Rest](../../methods/one-vs-rest.md)
 - We want to parallelize the computation in our Spark cluster using [Geotrellis](https://geotrellis.io/) for data loading and export.
 
-!!! note "Responsible person for this section"
-    Adrian Klink (EFTAS)
-
 !!! TODO
     - Describe the idea
     - Maybe add some geotrellis examples
 
-
 ## Classification of Aerial Images according to Land Use Classes (using Land Cover Classes as intermediate)
 
 ## Tools
+
 - Machine Learning
 - Training: Multiclass SVM
 - Geotrellis
