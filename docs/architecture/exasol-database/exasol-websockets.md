@@ -1,4 +1,4 @@
-# Exasol JSON over WebSockets API
+# Exasol WebSockets API
 
 ## Why an WebSockets API?
 
