@@ -1,6 +1,3 @@
-!!! note "Responsible person for this section"
-    Alexander Groeschel
-
 # Gas Cloud Detection
 
 - Chlorophyll-Erkennung im Befliegungsexperiment
