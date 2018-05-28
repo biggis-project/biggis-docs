@@ -21,6 +21,8 @@ We provide new methods and models to identify, explain, predict and forecast tem
     ![](Smart_city_bild2.png)
 
 
-[^Rußig & Bruns, 2017]: Rußig, J. and J. Bruns (2017). Reducing individual heat stress through path planning. GI_Forum 1, 327–340.
-[^Hassid et al., 2000]: Hassid, S., M. Santamouris, N. Papanikolaou, A. Linardi, N. Klitsikas, C. Georgakis, and D. Assimakopoulos (2000). The effect of the Athens heat island on air conditioning load. Energy and Buildings 32(2), 131 –141.
-[^Benz et al., 2015]: Benz, S. A., P. Bayer, K. Menberg, S. Jung, and P. Blum (2015). Spatial resolution of anthropogenic heat fluxes into urban aquifers. Science of TheTotal Environment 524, 427 – 439.
+[^Rußig & Bruns, 2017]: Rußig, J. and J. Bruns (2017). **Reducing individual heat stress through path planning.** GI_Forum 1, 327–340.
+
+[^Hassid et al., 2000]: Hassid, S., M. Santamouris, N. Papanikolaou, A. Linardi, N. Klitsikas, C. Georgakis, and D. Assimakopoulos (2000). **The effect of the Athens heat island on air conditioning load.** Energy and Buildings 32(2), 131 –141.
+
+[^Benz et al., 2015]: Benz, S. A., P. Bayer, K. Menberg, S. Jung, and P. Blum (2015). **Spatial resolution of anthropogenic heat fluxes into urban aquifers.** Science of TheTotal Environment 524, 427 – 439.

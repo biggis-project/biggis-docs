@@ -1,9 +1,20 @@
+[^Rußig & Bruns, 2017]: Rußig, J. and J. Bruns (2017). **Reducing individual heat stress through path planning.** GI_Forum 1, 327–340.
+
+[^Steadman1979]: Steadman, R. G. **The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.** Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018<0861:TAOSPI>2.0.CO;2
+
 # Heatstress Routing App
+
+Thanks to recent advances in sensor system solutions together with the smart city movement, various data sources related to temperature are increasingly available. For instance, one can exploit temperature measurements to minimize the impact of heat stress on humans regarding their daily routines and walking paths [^Rußig & Bruns, 2017].
+
+!!! info "Example for Heat Based Routing, taken from Rußig & Bruns, 2017 [^Rußig & Bruns, 2017]."
+    ![](/scenarios/smartcity/Smart_city_bild1.png)
 
 !!! note
     Related repository is https://github.com/biggis-project/path-optimizer
 
-Related Scenarios: [Smart City](../scenarios/smartcity)
+    Related Scenarios: [Smart City](../scenarios/smartcity)
+
+## About the App backend
 
 The back-end exposes a simple REST-API, that can be used for routing or to find
 the optimal point in time. The API can be accessed on `http://localhost:8080/heatstressrouting/api/v1`.
@@ -258,7 +269,7 @@ The optimal point in time for each place found in the specified radius ranked by
     * `location`: the coordinates of the places as an array of `[lat, lng]`.
     * `opening_hours`: the opening hours of the place; the format specification can be found [here](http://wiki.openstreetmap.org/wiki/Key:opening_hours/specification).
     * `optimal_time`: the optimal point in time found for that place, e.g. `2015-08-31T20:00`
-    * `optimal_value`: the optimal value found for the place; the value considering the heat stress acording to steadman's heatindex [(Steadmean, 1979)](http://dx.doi.org/10.1175/1520-0450(1979)018%3C0861:taospi%3E2.0.co;2) as well as the distance between the start and the place.
+    * `optimal_value`: the optimal value found for the place; the value considering the heat stress acording to steadman's heatindex [(Steadmean, 1979)](^Steadmean1979) as well as the distance between the start and the place.
     * `distance`: the length of the optimal path (see [Routing](#routing) above) from the start to the place in meter.
     * `duration`: the time needed to walk from the start to the place (in milli seconds).
     * `path_optimal`: the geometry of the optimal path (see [Routing](#routing) above).
@@ -400,9 +411,3 @@ Example Response:
   ]
 }
 ``` 
-
-## References
-
-!!! cite "Reference"
-    Steadman, R. G. **The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.**
-    Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018<0861:TAOSPI>2.0.CO;2
