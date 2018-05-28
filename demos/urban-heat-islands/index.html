@@ -879,66 +879,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../heatstress/" title="Heatstress Routing App" class="md-nav__link">
-      Heatstress Routing App
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Urban Heat Islands
-      </label>
-    
-    <a href="./" title="Urban Heat Islands" class="md-nav__link md-nav__link--active">
-      Urban Heat Islands
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#related-scenarios" title="Related Scenarios" class="md-nav__link">
-    Related Scenarios
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
       Optimal Flight Plan for Drones
     </a>
@@ -953,6 +893,18 @@
   <li class="md-nav__item">
     <a href="../enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
       EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../heatstress-routing-app/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
     </a>
   </li>
 
@@ -1050,6 +1002,54 @@
     <a href="../uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
       Visual Analysis of Spatio-Temporal Event Predictions
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Urban Heat Islands
+      </label>
+    
+    <a href="./" title="Urban Heat Islands" class="md-nav__link md-nav__link--active">
+      Urban Heat Islands
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#related-scenarios" title="Related Scenarios" class="md-nav__link">
+    Related Scenarios
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1191,8 +1191,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../methods/getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
-      Standards Getis-Ord G*
+    <a href="../../methods/getis-ord/" title="Standard Getis-Ord G*" class="md-nav__link">
+      Standard Getis-Ord G*
     </a>
   </li>
 
@@ -1352,17 +1352,34 @@
               
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Julian Bruns</p>
+                <h1 id="urban-heat-islands">Urban Heat Islands<a class="headerlink" href="#urban-heat-islands" title="Permanent link">&para;</a></h1>
+<p>The Urban Heat Islands (UHI) effect describes the systematic differences between cities and the surrounding areas. It was termed in [Oke, T. R. (1982)] <sup id="fnref:Oke, T. R."><a class="footnote-ref" href="#fn:Oke, T. R." rel="footnote">1</a></sup>, but is the topic of studies in the 19<sup>th</sup> century. In the BigGIS Project it was the use case of the smart city scenario. While it is regularly observed that huge temperature differences exist not only between cities and rural areas but also
+between nearby locations within urbanizations, research focussed on the first phenomenon, referred to as urban heat islands (UHI). The second phenomenon of intra-urban head islands (IUHI) received scant attention so far. While underlying causal reasons for IUHI, such as different land use, albedo, or NDVI are generally known, no model exists that makes use of these data sources and their interaction to predict intra-urban temperature differences and their developments, e.g., between different neighborhoods or explains the reasons behind this.</p>
+<p>The overall goal is to produce an fine-grained overview of the temperature of a city for smarter planning (as shown in the figure below).</p>
+<div class="admonition info">
+<p class="admonition-title">Fine-grained overview of the temperature of a city for smarter planning.</p>
+<p><img alt="" src="./urban-heat-island_fig1.png" /></p>
 </div>
-<h1 id="urban-heat-islands">Urban Heat Islands<a class="headerlink" href="#urban-heat-islands" title="Permanent link">&para;</a></h1>
+<p>During the project, several advances in the area of analysis and data availability were achieved.</p>
+<p>1)  In Cooperation with the University of Münster as well as the LUBW several new weather stations are placed in the city of Karlsruhe. These are of the type sensebox (<a href="https://sensebox.de">https://sensebox.de</a>) and official stations. The data is openly available at the LUBW and the opensensemap. The placement is based on the uncertainty of the existing predictions and location optimization algorithms.</p>
+<p>2)  New methods to predict temperature data were researched. These are currently under review (example for the city of Aalen in figure below).</p>
+<div class="admonition info">
+<p class="admonition-title">Example for temperature prediction: predicted temperature distribution in the city of Aalen.</p>
+<p><img alt="" src="./urban-heat-island_fig2.png" /></p>
+</div>
+<p>3)  A more stable analysis and detection of hot spots based on the getis-ord statistic were developed and published; see Hot Spot Analysis
+Example for Aalen:</p>
+<div class="admonition info">
+<p class="admonition-title">Example: hot spot analysis for the city of Aalen.</p>
+<p><img alt="" src="./urban-heat-island_fig3.png" /></p>
+</div>
+<p>4)  The first quantifiable metric to detect the stability of found hot spots was developed, see <a href="../../methods/soh/">Stability of Hotspots</a>.</p>
+<p>5)  Existing VGI weather stations such as from the Wunderground project were used and their quality was automatically assessed, see [Bruns et al. (2018)] <sup id="fnref:Bruns et al. (2018)"><a class="footnote-ref" href="#fn:Bruns et al. (2018)" rel="footnote">2</a></sup>.</p>
+<p>6)  New Big Data parallel predictions of temperature based on VGI and Kriging methods were developed and tested based on the work in [Bruns et al. (2018)] <sup id="fnref2:Bruns et al. (2018)"><a class="footnote-ref" href="#fn:Bruns et al. (2018)" rel="footnote">2</a></sup>.</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <ul>
-<li>Translate to English</li>
 <li>add links to related github repos</li>
-<li>add some images (but not too many)</li>
 <li>add links to related papers</li>
 <li>describe APIs especially from the end-users' point of view</li>
 </ul>
@@ -1386,8 +1403,19 @@
 </ul>
 <h2 id="related-scenarios">Related Scenarios<a class="headerlink" href="#related-scenarios" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../scenarios/smartcity">Smart City</a></li>
+<li><a href="./../scenarios/smartcity">Smart City</a></li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Oke, T. R.">
+<p>Oke, T. R. (1982). The energetic basis of the urban heat island. Quarterly Journal of the Royal Meteorological Society 108(455), 1–24.)&#160;<a class="footnote-backref" href="#fnref:Oke, T. R." rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Bruns et al. (2018)">
+<p>Bruns, J., J. Riesterer, B. Wang, T. Riedel, and M. Beigl (2018). Automated quality assessment of (citizen) weather stations. Journal GI_Forum 2018 (Accepted)&#160;<a class="footnote-backref" href="#fnref:Bruns et al. (2018)" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Bruns et al. (2018)" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
@@ -1406,7 +1434,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../heatstress/" title="Heatstress Routing App" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1415,19 +1443,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Heatstress Routing App
+                Visual Analysis of Spatio-Temporal Event Predictions
               </span>
             </div>
           </a>
         
         
-          <a href="../drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../methods/" title="About Method" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Optimal Flight Plan for Drones
+                About Method
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

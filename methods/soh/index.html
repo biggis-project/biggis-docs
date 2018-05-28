@@ -877,30 +877,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../demos/heatstress/" title="Heatstress Routing App" class="md-nav__link">
-      Heatstress Routing App
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
-      Urban Heat Islands
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../demos/drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
       Optimal Flight Plan for Drones
     </a>
@@ -915,6 +891,18 @@
   <li class="md-nav__item">
     <a href="../../demos/enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
       EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/heatstress-routing-app/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
     </a>
   </li>
 
@@ -1011,6 +999,18 @@
   <li class="md-nav__item">
     <a href="../../demos/uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
       Visual Analysis of Spatio-Temporal Event Predictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
     </a>
   </li>
 
@@ -1155,8 +1155,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
-      Standards Getis-Ord G*
+    <a href="../getis-ord/" title="Standard Getis-Ord G*" class="md-nav__link">
+      Standard Getis-Ord G*
     </a>
   </li>
 
@@ -1312,12 +1312,34 @@
                 
                 
                 <h1 id="stability-of-hotspots">Stability of hotspots<a class="headerlink" href="#stability-of-hotspots" title="Permanent link">&para;</a></h1>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Intro text</p>
-</div>
-<p>Related demos:
-- <a href="../../demos/stability_of_hotspots/">stability of hotspots</a></p>
+<p>The Stability of Hotspots (SoH) is a metric to determine the stability between two different hot spot analyses.</p>
+<p>In its downward property (from parent to child, injective) it is defined as:
+$$
+  SoH^\downarrow
+    = \frac{ParentsWithChildNodes}{Parents}
+    = \frac{|Parents \cap Children|}{|Parents|}
+$$</p>
+<p>And for its upward property (from child to parent, surjective):
+$$
+   SoH^\uparrow
+    = \frac{ChildrenWithParent}{Children}
+    = 1 - \frac{|Children - Parents|}{|Children|}
+$$</p>
+<p>where:</p>
+<ul>
+<li><span><span class="MathJax_Preview">ParentsWithChildNodes</span><script type="math/tex">ParentsWithChildNodes</script></span> is the number of parents that have at least one child,
+  <span><span class="MathJax_Preview">Parents</span><script type="math/tex">Parents</script></span> is the total number of parents, </li>
+<li><span><span class="MathJax_Preview">ChildrenWithParent</span><script type="math/tex">ChildrenWithParent</script></span> is the number of children and
+  <span><span class="MathJax_Preview">Children</span><script type="math/tex">Children</script></span> as the total number of children.</li>
+</ul>
+<p>The SoH is defined for a range between 0 and 1, where 1 represents a perfectly 
+stable transformation while 0 would be a transformation with no stability at all.</p>
+<p>If <span><span class="MathJax_Preview">|Children|=0</span><script type="math/tex">|Children|=0</script></span> or <span><span class="MathJax_Preview">|Parents|=0</span><script type="math/tex">|Parents|=0</script></span> SoH is 0.</p>
+<p>Related demos:</p>
+<ul>
+<li><a href="../../demos/stability_of_hotspots/">stability of hotspots</a></li>
+<li><a href="../../demos/urban-heat-islands/">Urban Heat Islands</a></li>
+</ul>
                 
                   
                 

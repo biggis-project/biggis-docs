@@ -877,30 +877,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../demos/heatstress/" title="Heatstress Routing App" class="md-nav__link">
-      Heatstress Routing App
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
-      Urban Heat Islands
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../demos/drone-flight-planning/" title="Optimal Flight Plan for Drones" class="md-nav__link">
       Optimal Flight Plan for Drones
     </a>
@@ -915,6 +891,18 @@
   <li class="md-nav__item">
     <a href="../../demos/enviro-car/" title="EnviroCar (Smart City)" class="md-nav__link">
       EnviroCar (Smart City)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/heatstress-routing-app/" title="Heatstress Routing App" class="md-nav__link">
+      Heatstress Routing App
     </a>
   </li>
 
@@ -1011,6 +999,18 @@
   <li class="md-nav__item">
     <a href="../../demos/uhi-visual-analysis/" title="Visual Analysis of Spatio-Temporal Event Predictions" class="md-nav__link">
       Visual Analysis of Spatio-Temporal Event Predictions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../demos/urban-heat-islands/" title="Urban Heat Islands" class="md-nav__link">
+      Urban Heat Islands
     </a>
   </li>
 
@@ -1153,8 +1153,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../methods/getis-ord/" title="Standards Getis-Ord G*" class="md-nav__link">
-      Standards Getis-Ord G*
+    <a href="../../methods/getis-ord/" title="Standard Getis-Ord G*" class="md-nav__link">
+      Standard Getis-Ord G*
     </a>
   </li>
 
@@ -1247,9 +1247,36 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Smart City
+      </label>
+    
     <a href="./" title="Smart City" class="md-nav__link md-nav__link--active">
       Smart City
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1300,6 +1327,20 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1311,12 +1352,38 @@
               
                 
                 
-                <div class="admonition note">
-<p class="admonition-title">Responsible person for this section</p>
-<p>Julian Bruns</p>
+                <h1 id="smart-city">Smart City<a class="headerlink" href="#smart-city" title="Permanent link">&para;</a></h1>
+<div style="float:right">
+<img src="scen-smartcity.svg" alt="Smart City Scenario Icon"/>
 </div>
-<h1 id="smart-city">Smart City<a class="headerlink" href="#smart-city" title="Permanent link">&para;</a></h1>
-<p><img alt="Smart City Scenario Icon" src="./scen-smartcity.svg" /></p>
+
+<p>Today, the paradigm of Smart City is quite well-known. It is strongly connected to the rise of big data, as most big data applications are based on spatio-temporal data acquired in cities. These include such manifold of new data sources such as smartphones, humans as sensors for socio-economic changes, potential augmented applications as well as volunteered geographic information (VGI). Examples include the New York taxi data set or VGI temperature data such as from the Wunderground or OpenSenseMap platforms.</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<p>As temperature impacts human health, well-being, work performance (heat stress), energy consumption and many more factors, a sound understanding of causal dependencies and a respective prediction models is mandatory for smart city planning and operation. Thanks to recent advances in sensor system solutions together with the smart city movement, various data sources related to temperature are increasingly available. For instance, one can exploit temperature measurements to minimize the impact of heat stress on humans regarding their daily routines and walking paths <sup id="fnref:Rußig &amp; Bruns, 2017"><a class="footnote-ref" href="#fn:Rußig &amp; Bruns, 2017" rel="footnote">1</a></sup>.</p>
+<div class="admonition info">
+<p class="admonition-title">Example for Heat Based Routing, taken from Rußig &amp; Bruns, 2017 <sup id="fnref2:Rußig &amp; Bruns, 2017"><a class="footnote-ref" href="#fn:Rußig &amp; Bruns, 2017" rel="footnote">1</a></sup>.</p>
+<p><img alt="" src="./Smart_city_bild1.png" /></p>
+</div>
+<p>Furthermore, construction work and breaks could be scheduled according to the fine grained temperature forecasts. In addition, a better understanding of causal reasons for temperature differences in a city can help shaping decision for city planners regarding city development plans. In case of load planning for electric grids, the impact of air conditioning load on a grid can be forecasted depending on the temperature distribution in a fine grained manner <sup id="fnref:Hassid et al., 2000"><a class="footnote-ref" href="#fn:Hassid et al., 2000" rel="footnote">2</a></sup>. Other options include the use of groundwater for heat saving <sup id="fnref:Benz et al., 2015"><a class="footnote-ref" href="#fn:Benz et al., 2015" rel="footnote">3</a></sup>. Unfortunately, existing models do not allow for such smart city operations, or only in a limited fashion. As of today, temperature models are either too coarse-grained (modelling differences between larger regions such as between urban and rural areas) or very detailed (modelling single buildings). Therefore, we focus in the smart city scenario on the understanding of temperature by using and combining official and VGI data to further this understanding.</p>
+<p>We provide new methods and models to identify, explain, predict and forecast temperature, its local differences and critical areas for a smart city planner. More details are found in the UHI page.</p>
+<div class="admonition info">
+<p class="admonition-title">Example for temperature prediction with different data sets and prediction methods.</p>
+<p><img alt="" src="./Smart_city_bild2.png" /></p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Rußig &amp; Bruns, 2017">
+<p>Rußig, J. and J. Bruns (2017). Reducing individual heat stress through path planning. GI_Forum 1, 327–340.&#160;<a class="footnote-backref" href="#fnref:Rußig &amp; Bruns, 2017" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Rußig &amp; Bruns, 2017" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Hassid et al., 2000">
+<p>Hassid, S., M. Santamouris, N. Papanikolaou, A. Linardi, N. Klitsikas, C. Georgakis, and D. Assimakopoulos (2000). The effect of the Athens heat island on air conditioning load. Energy and Buildings 32(2), 131 –141.&#160;<a class="footnote-backref" href="#fnref:Hassid et al., 2000" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Benz et al., 2015">
+<p>Benz, S. A., P. Bayer, K. Menberg, S. Jung, and P. Blum (2015). Spatial resolution of anthropogenic heat fluxes into urban aquifers. Science of TheTotal Environment 524, 427 – 439.&#160;<a class="footnote-backref" href="#fnref:Benz et al., 2015" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
                   
                 
