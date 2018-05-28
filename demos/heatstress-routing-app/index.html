@@ -1014,6 +1014,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#about-the-app-backend" title="About the App backend" class="md-nav__link">
+    About the App backend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#server-information" title="Server information" class="md-nav__link">
     Server information
   </a>
@@ -1132,13 +1139,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
-  </a>
   
 </li>
       
@@ -1465,6 +1465,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#about-the-app-backend" title="About the App backend" class="md-nav__link">
+    About the App backend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#server-information" title="Server information" class="md-nav__link">
     Server information
   </a>
@@ -1586,13 +1593,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-      
       
       
     </ul>
@@ -1609,11 +1609,17 @@
                 
                 
                 <h1 id="heatstress-routing-app">Heatstress Routing App<a class="headerlink" href="#heatstress-routing-app" title="Permanent link">&para;</a></h1>
+<p>Thanks to recent advances in sensor system solutions together with the smart city movement, various data sources related to temperature are increasingly available. For instance, one can exploit temperature measurements to minimize the impact of heat stress on humans regarding their daily routines and walking paths <sup id="fnref:Rußig &amp; Bruns, 2017"><a class="footnote-ref" href="#fn:Rußig &amp; Bruns, 2017" rel="footnote">1</a></sup>.</p>
+<div class="admonition info">
+<p class="admonition-title">Example for Heat Based Routing, taken from Rußig &amp; Bruns, 2017 <sup id="fnref2:Rußig &amp; Bruns, 2017"><a class="footnote-ref" href="#fn:Rußig &amp; Bruns, 2017" rel="footnote">1</a></sup>.</p>
+<p><img alt="" src="../../scenarios/smartcity/Smart_city_bild1.png" /></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Related repository is <a href="https://github.com/biggis-project/path-optimizer">https://github.com/biggis-project/path-optimizer</a></p>
-</div>
 <p>Related Scenarios: <a href="./../scenarios/smartcity">Smart City</a></p>
+</div>
+<h2 id="about-the-app-backend">About the App backend<a class="headerlink" href="#about-the-app-backend" title="Permanent link">&para;</a></h2>
 <p>The back-end exposes a simple REST-API, that can be used for routing or to find
 the optimal point in time. The API can be accessed on <code>http://localhost:8080/heatstressrouting/api/v1</code>.
 JSON is supported as the only output format.</p>
@@ -1848,7 +1854,7 @@ a specified criterion an optimal point in time, i.e. the time with the minimal h
 <li><code>location</code>: the coordinates of the places as an array of <code>[lat, lng]</code>.</li>
 <li><code>opening_hours</code>: the opening hours of the place; the format specification can be found <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours/specification">here</a>.</li>
 <li><code>optimal_time</code>: the optimal point in time found for that place, e.g. <code>2015-08-31T20:00</code></li>
-<li><code>optimal_value</code>: the optimal value found for the place; the value considering the heat stress acording to steadman's heatindex <a href="http://dx.doi.org/10.1175/1520-0450(1979)018%3C0861:taospi%3E2.0.co;2">(Steadmean, 1979)</a> as well as the distance between the start and the place.</li>
+<li><code>optimal_value</code>: the optimal value found for the place; the value considering the heat stress acording to steadman's heatindex <a href="./^Steadmean1979">(Steadmean, 1979)</a> as well as the distance between the start and the place.</li>
 <li><code>distance</code>: the length of the optimal path (see <a href="#routing">Routing</a> above) from the start to the place in meter.</li>
 <li><code>duration</code>: the time needed to walk from the start to the place (in milli seconds).</li>
 <li><code>path_optimal</code>: the geometry of the optimal path (see <a href="#routing">Routing</a> above).</li>
@@ -1982,11 +1988,16 @@ a specified criterion an optimal point in time, i.e. the time with the minimal h
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div></p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<div class="admonition cite">
-<p class="admonition-title">Reference</p>
-<p>Steadman, R. G. <strong>The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.</strong>
-Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018&lt;0861:TAOSPI&gt;2.0.CO;2</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Rußig &amp; Bruns, 2017">
+<p>Rußig, J. and J. Bruns (2017). <strong>Reducing individual heat stress through path planning.</strong> GI_Forum 1, 327–340.&#160;<a class="footnote-backref" href="#fnref:Rußig &amp; Bruns, 2017" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Rußig &amp; Bruns, 2017" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Steadman1979">
+<p>Steadman, R. G. <strong>The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing.</strong> Science Journal of Applied Meteorology, 1979, 18, 861-873, DOI: 10.1175/1520-0450(1979)018&lt;0861:TAOSPI&gt;2.0.CO;2&#160;<a class="footnote-backref" href="#fnref:Steadman1979" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
                   
