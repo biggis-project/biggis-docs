@@ -1,5 +1,5 @@
 site/
 .idea/
+.vscode/
 node_modules
-yarn.lock
 biggis-docs.iml
