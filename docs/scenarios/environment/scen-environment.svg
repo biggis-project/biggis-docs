@@ -20,14 +20,14 @@
      id="defs3365" />
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#e3e3e3"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="-20.729987"
-     inkscape:cy="36.943906"
+     inkscape:cx="-96.622844"
+     inkscape:cy="36.22962"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,9 +36,9 @@
      fit-margin-right="3"
      fit-margin-bottom="3"
      inkscape:window-width="1920"
-     inkscape:window-height="1149"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-height="1152"
+     inkscape:window-x="1600"
+     inkscape:window-y="2"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3368">
@@ -58,7 +58,7 @@
      id="layer1"
      transform="translate(-215.74016,-448.43361)">
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4138-9"
        cx="299.65579"
        cy="532.34924"
