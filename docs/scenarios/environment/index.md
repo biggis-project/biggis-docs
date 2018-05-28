@@ -1,15 +1,15 @@
 # Environment
 
-!!! note "Responsible person for this section"
-    - Hannes Müller (LUBW)
-    - Andreas Abecker (Disy)
-    - Johannes Kutterer (Disy)
-
-![Environment Scenario Icon](scen-environment.svg)
+<div style="float:right">
+<img src="scen-environment.svg" alt="Environment Scenario Icon"/>
+</div>
 
 In the globalized world invasive species are a growing concern. Certain invasive species can lead to ecological damage
 and commercial losses and eventually health problem for humans and animals. The geographical nature of these phenomena
 advise the analysis, evaluation and visualization with geographic information system (GIS).
+
+One invasive species which called attention in the last years is the Drosophila suzukii, commonly named the spotted wing
+drosophila.
 
 !!! info "Drosophila suzukii (male)"
     ![Drosophila suzukii](spotted-winged-drosophila.jpg)
@@ -17,9 +17,7 @@ advise the analysis, evaluation and visualization with geographic information sy
     shows an male individual. (Photo: Judy Gallagher, http://www.flickr.com/photos/52450054@N04/15675291741/,
     [Creative Commons Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/))
 
-
-One invasive species which called attention in the last years is the Drosophila suzukii, commonly named the spotted wing
-drosophila. The vinegar fly was widely observed in parts of Japan,Korea and China. From there the fly was spreaded
+The vinegar fly was widely observed in parts of Japan, Korea and China. From there the fly was spreaded
 arround the world. In the last 10 years they could be observed in Swisserland and in South-West Germany (Rhine Vallay).
 In other parts of the world e.g. the United States this spread has also been observed.
 

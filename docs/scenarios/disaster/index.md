@@ -1,18 +1,14 @@
-!!! note "Responsible person for this section"
-    - Alexander Groeschel
-    - Bodo Bernsdorf
-
 # Disaster Management
 
-![Disaster Management Icon](scen-disaster.svg)
-
-## General
+<div style="float:right">
+<img src="scen-disaster.svg" alt="Disaster Management Icon"/>
+</div>
 
 Disasters and accidents always happen somewhere. Therefore, it is necessary to use geodata even in the case of small
 accident scenarios in order to assess access routes and their impact on the environment. Information support for the
 safety authorities is necessary in many cases.
 
-### Some examples
+## Some examples
 
 Complex traffic accidents require indications of conceivable access routes for the rescue services and, in particular,
 indications of departure routes for the rescue service in order to be able to supply patients quickly.
