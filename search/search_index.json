@@ -1037,7 +1037,7 @@
         },
         {
             "location": "/data-sources/socio-economic/landuse/",
-            "text": "Land use data\n\u00b6\n\n\nATKIS\n\u00b6\n\n\n\n\nATKIS land use data (multiple options possible)\n\n\nshapefiles in a directory\n\n\ndata in Accumulo/Exasolution\n\n\n\n\n\n\n\n\nALKIS\n\u00b6",
+            "text": "Land use data\n\u00b6\n\n\nATKIS/ALKIS\n\u00b6\n\n\nThe ATKIS/ALKIS Dataset is a mixure of official property data (ALKIS) on topographic basis (ATKIS) provided by State Agency for Spatial Information and Rural Development Baden-W\u00fcrttemberg. The dataset is the primary source for spatially explicit land use information in Baden-W\u00fcrttemberg and needs explicit authorisation before usage. The data was stored as shapefiles in a directory and ingested into Accumolo/Exasolution. \n\n\nATKIS/ALKIS Data was used to analylize distribution of D. suzukii  (\nInvasive Species Demo\n) and to find training areas for the \nLanduse Classification Demo\n).",
             "title": "Land use data"
         },
         {
@@ -1046,14 +1046,9 @@
             "title": "Land use data"
         },
         {
-            "location": "/data-sources/socio-economic/landuse/#atkis",
-            "text": "ATKIS land use data (multiple options possible)  shapefiles in a directory  data in Accumulo/Exasolution",
-            "title": "ATKIS"
-        },
-        {
-            "location": "/data-sources/socio-economic/landuse/#alkis",
-            "text": "",
-            "title": "ALKIS"
+            "location": "/data-sources/socio-economic/landuse/#atkisalkis",
+            "text": "The ATKIS/ALKIS Dataset is a mixure of official property data (ALKIS) on topographic basis (ATKIS) provided by State Agency for Spatial Information and Rural Development Baden-W\u00fcrttemberg. The dataset is the primary source for spatially explicit land use information in Baden-W\u00fcrttemberg and needs explicit authorisation before usage. The data was stored as shapefiles in a directory and ingested into Accumolo/Exasolution.   ATKIS/ALKIS Data was used to analylize distribution of D. suzukii  ( Invasive Species Demo ) and to find training areas for the  Landuse Classification Demo ).",
+            "title": "ATKIS/ALKIS"
         },
         {
             "location": "/data-sources/socio-economic/newyork-taxi/",
@@ -1131,26 +1126,6 @@
             "title": "Features"
         },
         {
-            "location": "/demos/gas-detect/",
-            "text": "Gas Cloud Detection\n\u00b6\n\n\n\n\nChlorophyll-Erkennung im Befliegungsexperiment\n\n\nUnsichtbare Schadgaswolke (IR-Bereich)\n\n\nHei\u00dfe oder kalte Gase/Gegenst\u00e4nde leicht zu erkennen\n\n\nGase mit Umgebungstemperatur im IR-Bild nicht zu erkennen.\n\n\nSubtraktion von georeferenzierten und zus\u00e4tzlich positionskorrigierten Bildern aus Zeitreihen macht kleine \n  Abweichungen in Bildern sichtbar \u2192 Wolken unsichtbarer Gase im Bild sichtbar\n\n\n\n\nBefliegungskampagne am 15./16.07.17\n\u00b6\n\n\n\n\nAnalyse von Gaswolken aus der Luft\n\n\nTools:\n\n\nIR/RGB-Kamera\n\n\nHyperspektralkamera\n\n\n\n\n\n\n\n\n\n\nEtablierung einer Funkstrecke\n\n\n\u00dcbertragung von Flugplan-Daten/Bildergebnissen\n\n\n\n\n\n\n\n\nRelated Scenarios\n\u00b6\n\n\n\n\nDisaster Management\n\n\nSmart City",
-            "title": "Gas Cloud Detection"
-        },
-        {
-            "location": "/demos/gas-detect/#gas-cloud-detection",
-            "text": "Chlorophyll-Erkennung im Befliegungsexperiment  Unsichtbare Schadgaswolke (IR-Bereich)  Hei\u00dfe oder kalte Gase/Gegenst\u00e4nde leicht zu erkennen  Gase mit Umgebungstemperatur im IR-Bild nicht zu erkennen.  Subtraktion von georeferenzierten und zus\u00e4tzlich positionskorrigierten Bildern aus Zeitreihen macht kleine \n  Abweichungen in Bildern sichtbar \u2192 Wolken unsichtbarer Gase im Bild sichtbar",
-            "title": "Gas Cloud Detection"
-        },
-        {
-            "location": "/demos/gas-detect/#befliegungskampagne-am-15160717",
-            "text": "Analyse von Gaswolken aus der Luft  Tools:  IR/RGB-Kamera  Hyperspektralkamera      Etablierung einer Funkstrecke  \u00dcbertragung von Flugplan-Daten/Bildergebnissen",
-            "title": "Befliegungskampagne am 15./16.07.17"
-        },
-        {
-            "location": "/demos/gas-detect/#related-scenarios",
-            "text": "Disaster Management  Smart City",
-            "title": "Related Scenarios"
-        },
-        {
             "location": "/demos/drone-flight-planning/",
             "text": "Optimal Flight Plan for Drones\n\u00b6\n\n\nMotivation\n\u00b6\n\n\nDrones equipped with remote sensing systems are rapidly becoming a valuable tool for emergency response units as they\ncan quickly provide reliable information after an incident. However, controlling these vehicles and interpreting the\nobtained measurements also imposes further demands on the response squad in an already stressful situation. Therefore,\nintegrated and automatic mission planning tools are needed that plan drone routes such that the maximum amount of\ninformation is provided within as short a delay as possible.\n\n\nVision: Interactive UAV Deployment\n\u00b6\n\n\nOur vision for an interactive tool supporting automated UAV deployment is depicted in Figure 1. In this scenario, we\nconsider a drone equipped with a hyperspectral camera that is used to identify hazardous substances. This drone is\nstarted immediately after the response unit arrives on scene. First, it takes an initial survey image at high altitude,\nproviding a first overview of the target region. This serves as an initial data source for planning the remainder of the\nflight. It also represents the first data source for identifying and prediction gas clouds. The drone then proceeds with\nits tour, making more measurements as it travels across the target area. During this time, the planned route is modified\nin an iterative process: The newly obtained images are prepared and preprocessed in order to be transmitted to the base\nstation. They are used as updates for the gas cloud prediction and are communicated to the user. The drone mission can\nfurthermore be adapted based on these measurements, e.g. moving to areas where hazardous gases are most likely to be\npresent. Furthermore, the user can define additional POIs such as public building\n\n\n\n\nFigure 1: Interactive drone deployment\n\n\n\n\n\n\nInformative Path Planning\n\u00b6\n\n\nThe planning problem consists of determining a path \nP\nP\n, i.e. an ordered sequence of target locations for the drone. The\ncost of this path \ncost(P)\ncost(P)\n, e.g. in terms of required flight time, needs to be less or equal to the maximum budget\n\nC_{max}\nC_{max}\n available. Specifically, the drone needs to return before its energy supply is depleted. The objective is to\nfind a path \nP\nP\n that maximises some measure of informativeness \nI(P)\nI(P)\n. Hence, the fundamental planning problem is to\nbalance resource consumption and information gain during the trip. This problem can be formulated as follows:\n\n\n\n\n\\max I(P) \\\\\ns.t. cost(P) <= C_{max}\n\n\n\\max I(P) \\\\\ns.t. cost(P) <= C_{max}\n\n\n\n\nSeveral objective functions \nI(P)\nI(P)\n exist to describe this informativeness.\nTwo of the most frequently used ones in literature are\n- Maximising the achieved reduction of the prediction error variance,\n- Maximising the mutual information between observed and unobserved locations.\n\n\nThe prediction error variance increases the further away an unobserved location is from a selected sensing location.\nSimilarly, the mutual information typically decreases the farther locations are from one another. Hence, both measures\nfavour sensing locations that are well distributed across the region of interest. However, both of these approaches\nrequire a reliable model of the observed phenomenon in form of a Gaussian Process in order to determine error variances\nand mutual information. In practice, it is unlikely that an accurate process model is available before the start of the\ndrone flight. We therefore use an approximate model of spatial correlations. While this approximation is not an accurate\ndescription of the observed phenomenon, it can be computed more efficiently, which is highly relevant for a\ntime-constraint application such as the use case considered here. Similar to the two measures discussed above, it\nconsiders paths as \u201cinformative\u201d that consist of sensing locations distributed as evenly as possible within the target\nregion.\n\n\nHeuristic Solution Approach\n\u00b6\n\n\nRather than solving an exact model, we use a heuristic solution approach for determining drone routes. An initial path\nis determined using a simple construction strategy. Then, this path is iteratively improved by destroying and rebuilding\nparts of a solution using an Adaptive Large Neighbourhood Search approach. These approaches have been shown to quickly\ndetermine high-quality solutions even for large vehicle routing problems with several hundred candidate sensing\nlocations.\n\n\nEvaluation and Results\n\u00b6\n\n\nWe evaluate the proposed model and solution approach in an extensive simulative study on artificial spatially correlated\nrandom fields. This way, we can consider scenarios larger than any that would be possible in preliminary test flights,\nand validate the robustness and effectiveness of our approach on a wide range of possible situations.\n\n\nFigure 2 gives one example of such a scenario: We consider a target region of 1200 x 1200 m, and a drone with a maximum\nflight time of 900 seconds at a maximum speed of 10 m/s. The left image represents the actual distribution of values\nwithin the target region, i.e. the simulated smoke cloud. Below, we present the results of the solution approach. The\nmiddle image indicates the remaining prediction error variance. Here we can recognize selected sensing locations for the\ndrone flight dark red. At these locations, the drone obtains accurate information about the random field, which means\nthat error variance is minimal. For the remainder of the target region, error variance increases with increasing\ndistance to the next sensing locations, since there is less information is available about these locations. The\nresulting prediction is indicated on the right hand side. Obviously, the information gained about the underlying process\nis rather accurate, as the prediction closely follows the actual distribution. Hence, even though the maximum flight\ntime would be insufficient to survey each location within the target area, it still allows to accurately detect the\nsmoke cloud and to provide detailed information about the spatial distribution of hazardous gases.\n\n\n\n\nFigure 2: Autocorrelated field, predicted values and prediction quality.",
             "title": "Optimal Flight Plan for Drones"
@@ -1223,6 +1198,26 @@
         {
             "location": "/demos/enviro-car/#related-scenarios",
             "text": "Smart City  Environment",
+            "title": "Related Scenarios"
+        },
+        {
+            "location": "/demos/gas-detect/",
+            "text": "Gas Cloud Detection\n\u00b6\n\n\n\n\nChlorophyll-Erkennung im Befliegungsexperiment\n\n\nUnsichtbare Schadgaswolke (IR-Bereich)\n\n\nHei\u00dfe oder kalte Gase/Gegenst\u00e4nde leicht zu erkennen\n\n\nGase mit Umgebungstemperatur im IR-Bild nicht zu erkennen.\n\n\nSubtraktion von georeferenzierten und zus\u00e4tzlich positionskorrigierten Bildern aus Zeitreihen macht kleine \n  Abweichungen in Bildern sichtbar \u2192 Wolken unsichtbarer Gase im Bild sichtbar\n\n\n\n\nBefliegungskampagne am 15./16.07.17\n\u00b6\n\n\n\n\nAnalyse von Gaswolken aus der Luft\n\n\nTools:\n\n\nIR/RGB-Kamera\n\n\nHyperspektralkamera\n\n\n\n\n\n\n\n\n\n\nEtablierung einer Funkstrecke\n\n\n\u00dcbertragung von Flugplan-Daten/Bildergebnissen\n\n\n\n\n\n\n\n\nRelated Scenarios\n\u00b6\n\n\n\n\nDisaster Management\n\n\nSmart City",
+            "title": "Gas Cloud Detection"
+        },
+        {
+            "location": "/demos/gas-detect/#gas-cloud-detection",
+            "text": "Chlorophyll-Erkennung im Befliegungsexperiment  Unsichtbare Schadgaswolke (IR-Bereich)  Hei\u00dfe oder kalte Gase/Gegenst\u00e4nde leicht zu erkennen  Gase mit Umgebungstemperatur im IR-Bild nicht zu erkennen.  Subtraktion von georeferenzierten und zus\u00e4tzlich positionskorrigierten Bildern aus Zeitreihen macht kleine \n  Abweichungen in Bildern sichtbar \u2192 Wolken unsichtbarer Gase im Bild sichtbar",
+            "title": "Gas Cloud Detection"
+        },
+        {
+            "location": "/demos/gas-detect/#befliegungskampagne-am-15160717",
+            "text": "Analyse von Gaswolken aus der Luft  Tools:  IR/RGB-Kamera  Hyperspektralkamera      Etablierung einer Funkstrecke  \u00dcbertragung von Flugplan-Daten/Bildergebnissen",
+            "title": "Befliegungskampagne am 15./16.07.17"
+        },
+        {
+            "location": "/demos/gas-detect/#related-scenarios",
+            "text": "Disaster Management  Smart City",
             "title": "Related Scenarios"
         },
         {

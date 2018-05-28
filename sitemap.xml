@@ -154,12 +154,6 @@
     </url>
         
     <url>
-     <loc>/demos/gas-detect/</loc>
-     <lastmod>2018-05-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/demos/drone-flight-planning/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
@@ -167,6 +161,12 @@
         
     <url>
      <loc>/demos/enviro-car/</loc>
+     <lastmod>2018-05-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/demos/gas-detect/</loc>
      <lastmod>2018-05-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
