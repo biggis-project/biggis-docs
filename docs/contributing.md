@@ -33,4 +33,4 @@ discussion and refinement before merging.
 Contributing documentation
 --------------------------
 
-see [Documentation Howto](Documentation Howto)
+see [Documentation Howto](docs-howto)
