@@ -95,7 +95,7 @@ In order to make efficient use of such drones, the BigGIS project is offers an i
 flight planning](../../demos/drone-flight-planning) by the drone itself.
 
 At the same time, models are being developed that can [predict the propagation of a detected gas
-cloud](../../demos/gas-predict.md). The aim is to predict possible future scenarios for the spread of the pollutant,
+cloud](../../demos/gas-predict). The aim is to predict possible future scenarios for the spread of the pollutant,
 wind directions and strengths (e. g. taken from FeWIS), the geo-positions of neighbouring residential areas and their
 surrounding structure, for example via satellite images, geographical characteristics of the accident area, depending on
 the information on the spread of the pollutant, wind direction and strength (e. g. taken from FeWIS). The predicted
