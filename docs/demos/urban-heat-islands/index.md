@@ -29,28 +29,6 @@ Example for Aalen:
 
 6)	New Big Data parallel predictions of temperature based on VGI and Kriging methods were developed and tested based on the work in [Bruns et al. (2018)] [^Bruns et al. (2018)].
 
-
-
-!!! TODO
-
-    - add links to related github repos
-    - add links to related papers
-    - describe APIs especially from the end-users' point of view
-
-- Temperaturinseln in Karlsruhe und anderen Städten
-- Temperaturdaten: Volunteered geographic data (z.B. wunderground.com)
-- Korrelation zwischen Bereichen in verschiedenen Städten mit ähnlichem Temperaturverlauf --> Zugang zu Ursachen für Temperaturentwicklung
-
-- Vorstellung der Heat-Islands-Analyse
-- Wetterstationen
-- Technik: Sensebox (<https://sensebox.de>)
-- Beispielstation (<https://opensensemap.org/explore/58b4354fe53e0b001251119d>)
-- Hotspotanalyse (SoH, Stability of Hotspots):
-- Abhängigkeit des Auftretens von Hotspots von der Aggregationsstufe
-- Ausblick:
-- Sensorfusion in Kooperation mit SDIL (smart data innovation lab)
-
-
 ## Related Scenarios
 
   - [Smart City](../scenarios/smartcity)
